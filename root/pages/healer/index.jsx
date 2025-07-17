@@ -6,12 +6,41 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
-import doctors from '../../../doctorsData.json';
-
 export default function DoctorsCarousel() {
   const swiperRef = useRef(null);
   const [autoplayStarted, setAutoplayStarted] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
+
+  const doctors = [
+    {
+      id: 1,
+      name: 'Др. Ахмедов Бекзод',
+      specialty: 'Кардиолог',
+      subSpecialty: 'Интервенционный кардиолог',
+      image: '/images/doctors/doctor1.jpg',
+    },
+    {
+      id: 2,
+      name: 'Др. Саидова Нигина',
+      specialty: 'Невролог',
+      subSpecialty: '',
+      image: '/images/doctors/doctor2.jpg',
+    },
+    {
+      id: 3,
+      name: 'Др. Рахимов Шухрат',
+      specialty: 'Ортопед',
+      subSpecialty: 'Хирург-ортопед',
+      image: '/images/doctors/doctor3.jpg',
+    },
+    {
+      id: 4,
+      name: 'Др. Махмудова Зарина',
+      specialty: 'Терапевт',
+      subSpecialty: '',
+      image: '/images/doctors/doctor4.jpg',
+    },
+  ];
 
   useEffect(() => {
     if (doctors.length > 0) {
@@ -31,7 +60,7 @@ export default function DoctorsCarousel() {
     handleMouseInteraction();
   };
 
-  if (!selectedDoctor) return null; // Ma’lumot hali yuklanmagan
+  if (!selectedDoctor) return null;
 
   return (
     <div className='bg-white py-60'>

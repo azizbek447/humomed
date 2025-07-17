@@ -1,25 +1,26 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import { privateRoutes, publicRoutes } from './routes';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import routes from './routes';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
-
-
   return (
     <>
-      <div className='overflow-x-hidden'>
+      <div className="overflow-x-hidden">
         <Router>
           <Routes>
-            {[...publicRoutes, ...privateRoutes].map((route, idx) => {
-              const ElementLayout = route.layout;
-              const element = route.component;
+            {routes.map((route, idx) => {
+              const Layout = route.layout || (({ children }) => <>{children}</>);
+              const Component = route.component;
 
               return (
                 <Route
                   key={idx}
                   path={route.path}
-                  element={<ElementLayout>{element}</ElementLayout>}
+                  element={
+                    <Layout>
+                      <Component />
+                    </Layout>
+                  }
                 />
               );
             })}

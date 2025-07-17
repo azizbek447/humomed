@@ -1,15 +1,35 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-
-import data from '../../../doctorsData.json';
 import { appPaths } from '../../constants/paths';
 
 const ClinicNews = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const newsItems = data.news;
+  const newsItems = [
+    {
+      id: 1,
+      image: '/images/news1.jpg',
+      title: 'Открытие нового отделения',
+      date: '12 Июль',
+      description: 'Мы рады сообщить об открытии нового отделения кардиологии в нашей клинике.',
+    },
+    {
+      id: 2,
+      image: '/images/news2.jpg',
+      title: 'Прибытие нового оборудования',
+      date: '05 Июль',
+      description: 'Новое МРТ оборудование уже доступно для наших пациентов.',
+    },
+    {
+      id: 3,
+      image: '/images/news3.jpg',
+      title: 'Прием нового специалиста',
+      date: '28 Июнь',
+      description: 'Доктор Ахмедов теперь ведет прием по вторникам и четвергам.',
+    },
+  ];
 
   return (
     <div className='bg-white py-60'>

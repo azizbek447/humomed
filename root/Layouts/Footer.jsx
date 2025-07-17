@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div className="flex flex-col items-center sm:items-start text-center  sm:text-left">
-          <img src={logo} alt="Humo Med" className="w-24 h-24 mb-4 object-contain" />
+          <img src={logo} alt="Humo Med" className="w-20 h-20 mb-4 object-contain" />
           <div className="flex gap-4">
             {[
               { icon: <FaFacebookF />, link: 'https://facebook.com' },

@@ -8,6 +8,8 @@ import {
   FaFacebookF,
   FaBars,
   FaTimes,
+  FaMapMarkerAlt,
+  FaEnvelope
 } from 'react-icons/fa';
 import ru from '../assets/svg/russia.svg';
 import en from '../assets/svg/us.svg';
@@ -98,7 +100,37 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 text-[18px] font-medium">
       {showTopBar && (
-        <div className="bg-green-600 text-white py-2 px-4 flex justify-center items-center">
+        <div className="bg-green-600 text-white py-2 px-4 hidden lg:flex justify-between items-center text-sm">
+          <div className="flex gap-8">
+            <div className="flex items-center gap-2">
+              <FaMapMarkerAlt /> <span>Yunusobod tumani, TATU yonida</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaPhoneAlt /> <span>+998 90 123 45 67</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaEnvelope /> <span>info@humo.uz</span>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            {[FaFacebookF, FaTelegramPlane, FaInstagram].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white text-green-600 hover:bg-green-700 hover:text-white transition-colors duration-300"
+              >
+                <Icon />
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Topbar: only social icons */}
+      {showTopBar && (
+        <div className="bg-green-600 text-white py-2 px-4 flex justify-center items-center lg:hidden">
           <div className="flex gap-4">
             {[FaFacebookF, FaTelegramPlane, FaInstagram].map((Icon, i) => (
               <a
