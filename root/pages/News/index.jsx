@@ -10,24 +10,24 @@ const ClinicNews = () => {
   const newsItems = [
     {
       id: 1,
-      image: '/images/news1.jpg',
-      title: 'Открытие нового отделения',
-      date: '12 Июль',
-      description: 'Мы рады сообщить об открытии нового отделения кардиологии в нашей клинике.',
+      title: 'Yangi kardiologiya bo‘limi ochildi',
+      description: 'Klinikamizda zamonaviy kardiologiya bo‘limi ishga tushdi.',
+      date: '17 IYUL',
+      image: '/images/news/1.jpg',
     },
     {
       id: 2,
-      image: '/images/news2.jpg',
-      title: 'Прибытие нового оборудования',
-      date: '05 Июль',
-      description: 'Новое МРТ оборудование уже доступно для наших пациентов.',
+      title: 'Yangi uskunalar keldi',
+      description: 'MRI va UTT uchun yangi avlod tibbiy uskunalar o‘rnatildi.',
+      date: '10 IYUL',
+      image: '/images/news/2.jpg',
     },
     {
       id: 3,
-      image: '/images/news3.jpg',
-      title: 'Прием нового специалиста',
-      date: '28 Июнь',
-      description: 'Доктор Ахмедов теперь ведет прием по вторникам и четвергам.',
+      title: 'Tibbiy seminar o‘tkazildi',
+      description: 'Xorijiy mutaxassislar ishtirokida malaka oshirish seminar bo‘lib o‘tdi.',
+      date: '05 IYUL',
+      image: '/images/news/3.jpg',
     },
   ];
 

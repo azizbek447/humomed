@@ -44,6 +44,27 @@ export default function DoctorsGrid() {
       image: '/images/doctors/doctor6.jpg',
       path: '/doctors/6',
     },
+    {
+      id: 7,
+      name: 'Dr. Sanjar Xasanov',
+      specialty: 'Kardiolog',
+      image: '/images/doctors/sanjar.jpg',
+      path: '/doctors/sanjar-xasanov',
+    },
+    {
+      id: 8,
+      name: 'Dr. Malika Karimova',
+      specialty: 'Nevropatolog',
+      image: '/images/doctors/malika.jpg',
+      path: '/doctors/malika-karimova',
+    },
+    {
+      id: 9,
+      name: 'Dr. Akmal Shukurov',
+      specialty: 'Travmatolog',
+      image: '/images/doctors/akmal.jpg',
+      path: '/doctors/akmal-shukurov',
+    },
   ];
 
   return (

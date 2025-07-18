@@ -3,9 +3,10 @@ import InnerLayout from '../Layouts/InnerLayout';
 
 import { appPaths } from '../constants/paths';
 
+// Pages
 import Home from '../pages/home';
 import Error404 from '../pages/error/Error.404';
-import Doctors from '.././pages/ Doctors'; // ✅ Import yetishmagan edi
+import Doctors from '../../root/pages/ Doctors';
 import Aboutus from '../pages/aboutUs';
 import Callcenter from '../pages/callcenter';
 import Cardiology from '../pages/cardiology';
@@ -13,19 +14,19 @@ import Cardiology from '../pages/cardiology';
 import Calculation from '../pages/services/calculation';
 import Integration from '../pages/services/integration';
 import Scheduling from '../pages/services/scheduling';
-import NeurosurgeryPage from '.././pages/neurosurgery'; // ✅ Import yetishmagan edi
+import NeurosurgeryPage from '../pages/neurosurgery';
 
-import AboutTheClinic from 'root/pages/AboutTheClinic';
-import Contacts from 'root/pages/contacts';
-import Control from 'root/pages/control';
-import Healer from 'root/pages/healer';
-import News from 'root/pages/News';
-import NewsDetail from 'root/pages/newsDetail';
-import Orthopedics from 'root/pages/orthopedics';
-import Physiotherapy from 'root/pages/physiotherapy';
-import ResidencyForm from 'root/pages/submission/Submission';
-import Submission from 'root/pages/submission/Submission';
-import Otolaryngology from 'root/pages/otolaryngology';
+import AboutTheClinic from '../pages/AboutTheClinic';
+import Contacts from '../pages/contacts';
+import Control from '../pages/control';
+import Healer from '../pages/healer';
+import News from '../pages/News';
+import NewsDetail from '../pages/newsDetail';
+import Orthopedics from '../pages/orthopedics';
+import Physiotherapy from '../pages/physiotherapy';
+import ResidencyForm from '../../root/pages/residency';
+import Submission from '../pages/submission/Submission';
+import Otolaryngology from '../pages/otolaryngology';
 
 const routes = [
   {
