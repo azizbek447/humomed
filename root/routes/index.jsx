@@ -1,22 +1,19 @@
 import MainLayout from '../Layouts';
 import InnerLayout from '../Layouts/InnerLayout';
+import SectionalLayout from '../Layouts/SectionLayout';
 
 import { appPaths } from '../constants/paths';
 
-// Pages
 import Home from '../pages/home';
 import Error404 from '../pages/error/Error.404';
-import Doctors from '../../root/pages/ Doctors';
 import Aboutus from '../pages/aboutUs';
+import Doctors from '../pages/Doctors';
 import Callcenter from '../pages/callcenter';
 import Cardiology from '../pages/cardiology';
 
-import Calculation from '../pages/services/calculation';
-import Integration from '../pages/services/integration';
-import Scheduling from '../pages/services/scheduling';
 import NeurosurgeryPage from '../pages/neurosurgery';
 
-import AboutTheClinic from '../pages/AboutTheClinic';
+import AboutTheClinic from '../pages/About_Clinic';
 import Contacts from '../pages/contacts';
 import Control from '../pages/control';
 import Healer from '../pages/healer';
@@ -24,115 +21,107 @@ import News from '../pages/News';
 import NewsDetail from '../pages/newsDetail';
 import Orthopedics from '../pages/orthopedics';
 import Physiotherapy from '../pages/physiotherapy';
-import ResidencyForm from '../../root/pages/residency';
+import ResidencyForm from '../pages/residency';
 import Submission from '../pages/submission/Submission';
 import Otolaryngology from '../pages/otolaryngology';
 
 const routes = [
   {
     path: appPaths.HOME,
-    component: Home,
+    element: <Home />,
     layout: MainLayout,
   },
   {
     path: appPaths.DOCTORS,
-    component: Doctors,
+    element: <Doctors />,
     layout: MainLayout,
   },
   {
     path: appPaths.ABOUT_US,
-    component: Aboutus,
+    element: <Aboutus />,
     layout: MainLayout,
   },
   {
     path: appPaths.CALL_CENTER,
-    component: Callcenter,
+    element: <Callcenter />,
     layout: MainLayout,
   },
   {
     path: appPaths.CARDIOLOGY,
-    component: Cardiology,
-    layout: MainLayout,
+    element: <Cardiology />,
+    layout: SectionalLayout,
+  },
+
+
+  {
+    path: appPaths.WORK_SCHEDULE,
+    element: <Scheduling />,
+    layout: InnerLayout,
   },
   {
-    path: appPaths.SERVICE_CALCULATION,
-    component: Calculation,
-    layout: MainLayout,
+    path: appPaths.NEUROSURGERY,
+    element: <NeurosurgeryPage />,
+    layout:  SectionalLayout,
   },
   {
-    path: appPaths.SERVICE_INTEGRATION,
-    component: Integration,
-    layout: MainLayout,
+    path: appPaths.OTOLARYNGOLOGY,
+    element: <Otolaryngology />,
+    layout:  SectionalLayout,
   },
   {
-    path: appPaths.SERVICE_SCHEDULING,
-    component: Scheduling,
-    layout: MainLayout,
+    path: appPaths.PHYSIOTHERAPY,
+    element: <Physiotherapy />,
+    layout:  SectionalLayout,
   },
   {
-    path: appPaths.SERVICE_NEUROSURGERY,
-    component: NeurosurgeryPage,
-    layout: MainLayout,
+    path: appPaths.RESIDENCY,
+    element: <ResidencyForm />,
+    layout: InnerLayout,
   },
   {
-    path: appPaths.SERVICE_OTOLARYNGOLOGY,
-    component: Otolaryngology,
-    layout: MainLayout,
-  },
-  {
-    path: appPaths.SERVICE_PHYSIOTHERAPY,
-    component: Physiotherapy,
-    layout: MainLayout,
-  },
-  {
-    path: appPaths.SERVICE_RESIDENCY,
-    component: ResidencyForm,
-    layout: MainLayout,
-  },
-  {
-    path: appPaths.SERVICE_SUBMISSION,
-    component: Submission,
+    path: appPaths.SUBMISSION,
+    element: <Submission />,
     layout: MainLayout,
   },
   {
     path: appPaths.ABOUT_CLINIC,
-    component: AboutTheClinic,
+    element: <AboutTheClinic />,
     layout: MainLayout,
   },
   {
     path: appPaths.CONTACTS,
-    component: Contacts,
+    element: <Contacts />,
     layout: MainLayout,
   },
   {
     path: appPaths.CONTROL,
-    component: Control,
+    element: <Control />,
     layout: MainLayout,
   },
   {
     path: appPaths.HEALER,
-    component: Healer,
+    element: <Healer />,
     layout: MainLayout,
   },
   {
     path: appPaths.NEWS,
-    component: News,
+    element: <News />,
     layout: MainLayout,
   },
   {
     path: appPaths.NEWS_DETAIL,
-    component: NewsDetail,
+    element: <NewsDetail />,
     layout: MainLayout,
   },
   {
     path: appPaths.ORTHOPEDICS,
-    component: Orthopedics,
-    layout: MainLayout,
+    element: <Orthopedics />,
+    layout:  SectionalLayout,
   },
   {
     path: '*',
-    component: Error404,
-    layout: InnerLayout,
+    element: <Error404 />,
+    layout: SectionalLayout,
   },
 ];
 

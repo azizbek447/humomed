@@ -22,14 +22,14 @@ const schema = yup.object().shape({
 });
 
 const branchList = [
-  { name: 'Отоларингология', path: '/service/otolaryngology' },
-  { name: 'Кардиология', path: '/service/cardiology' },
-  { name: 'Физиотерапия', path: '/service/physiotherapy' },
-  { name: 'Ортопедия-вертебрология', path: '/service/orthopedics' },
-  { name: 'Нейрохирургия', path: '/service/neurosurgery' },
+  { name: 'Отоларингология', path: '/otolaryngology' },
+  { name: 'Кардиология', path: '/cardiology' },
+  { name: 'Физиотерапия', path: '/physiotherapy' },
+  { name: 'Ортопедия-вертебрология', path: '/orthopedics' },
+  { name: 'Нейрохирургия', path: '/neurosurgery' },
 ];
 
-const ThreePartMedicalForm = () => {
+const Sidebar = () => {
   const {
     register,
     handleSubmit,
@@ -204,4 +204,4 @@ const ThreePartMedicalForm = () => {
   );
 };
 
-export default ThreePartMedicalForm;
+export default Sidebar;

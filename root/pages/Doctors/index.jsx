@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DoctorsGrid() {
+function DoctorsGrid() {
   const doctors = [
     {
       id: 1,
@@ -108,3 +108,5 @@ export default function DoctorsGrid() {
     </div>
   );
 }
+
+export default DoctorsGrid

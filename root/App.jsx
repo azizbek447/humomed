@@ -9,8 +9,7 @@ function App() {
         <Router>
           <Routes>
             {routes.map((route, idx) => {
-              const Layout = route.layout || (({ children }) => <>{children}</>);
-              const Component = route.component;
+              const Layout = route.layout;
 
               return (
                 <Route
@@ -18,7 +17,7 @@ function App() {
                   path={route.path}
                   element={
                     <Layout>
-                      <Component />
+                      {route.element}
                     </Layout>
                   }
                 />

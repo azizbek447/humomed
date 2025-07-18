@@ -29,6 +29,27 @@ const ClinicNews = () => {
       date: '05 IYUL',
       image: '/images/news/3.jpg',
     },
+     {
+      id: 1,
+      title: 'Yangi kardiologiya bo‘limi ochildi',
+      description: 'Klinikamizda zamonaviy kardiologiya bo‘limi ishga tushdi.',
+      date: '17 IYUL',
+      image: '/images/news/1.jpg',
+    },
+    {
+      id: 2,
+      title: 'Yangi uskunalar keldi',
+      description: 'MRI va UTT uchun yangi avlod tibbiy uskunalar o‘rnatildi.',
+      date: '10 IYUL',
+      image: '/images/news/2.jpg',
+    },
+    {
+      id: 3,
+      title: 'Tibbiy seminar o‘tkazildi',
+      description: 'Xorijiy mutaxassislar ishtirokida malaka oshirish seminar bo‘lib o‘tdi.',
+      date: '05 IYUL',
+      image: '/images/news/3.jpg',
+    },
   ];
 
   return (

@@ -2,22 +2,17 @@ import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
-  FaInstagram,
-  FaTelegramPlane,
-  FaPhoneAlt,
-  FaFacebookF,
-  FaBars,
-  FaTimes,
-  FaMapMarkerAlt,
-  FaEnvelope
+  FaInstagram, FaTelegramPlane, FaPhoneAlt, FaFacebookF,
+  FaBars, FaTimes, FaMapMarkerAlt, FaEnvelope
 } from 'react-icons/fa';
+
 import ru from '../assets/svg/russia.svg';
 import en from '../assets/svg/us.svg';
 import uz from '../assets/svg/uz.svg';
 import logo from '../assets/images/logo.png';
 
 const Header = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [showTopBar, setShowTopBar] = useState(true);
   const [lang, setLang] = useState(localStorage.getItem('lang') || 'uz');
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +25,25 @@ const Header = () => {
     { code: 'uz', label: "O'zbekcha", icon: uz },
     { code: 'ru', label: 'Русский', icon: ru },
     { code: 'en', label: 'English', icon: en },
+  ];
+
+  const navLinks = [
+    { path: '/', label: t('nav.home') },
+    { path: '/about-clinic', label: t('nav.about') },
+    {
+      label: t('nav.departments'),
+      children: [
+        { path: '/cardiology', label: t('nav.cardio') },
+        { path: '/neurosurgery', label: t('nav.neuro') },
+        { path: '/physiotherapy', label: t('nav.uro') },
+        { path: '/otolaryngology', label: t('nav.gyn') },
+        { path: '/orthopedics', label: t('nav.derma') },
+      ],
+    },
+    { path: '/Doctors', label: t('nav.doctors') },
+    { path: '/news', label: t('nav.news') },
+    { path: '/residency', label: t('nav.residency') },
+    { path: '/contacts', label: t('nav.contact') },
   ];
 
   const handleLanguageChange = (code) => {
@@ -57,6 +71,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [mobileMenu]);
+
   const currentLang = languages.find((l) => l.code === lang);
 
   const handleMouseEnter = () => {
@@ -70,57 +92,53 @@ const Header = () => {
     }, 300);
   };
 
-  const navLinks = (
-    <>
-      <Link to="/" className="hover:text-green-600 transition">Bosh sahifa</Link>
-      <Link to="/about" className="hover:text-green-600 transition">Klinika haqida</Link>
-
-      <div
-        className="relative group"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <span className="hover:text-green-800 transition cursor-pointer">Bo‘limlar</span>
-        <div className={`absolute left-0 mt-2 w-56 bg-white border shadow-lg rounded-md z-50 transition-all duration-200 ${dropdown ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-          <Link to="/departments/cardiology" className="block px-4 py-2 hover:bg-green-50">Kardiologiya</Link>
-          <Link to="/departments/neurology" className="block px-4 py-2 hover:bg-green-50">Nevrologiya</Link>
-          <Link to="/departments/urology" className="block px-4 py-2 hover:bg-green-50">Urologiya</Link>
-          <Link to="/departments/gynecology" className="block px-4 py-2 hover:bg-green-50">Ginekologiya</Link>
-          <Link to="/departments/dermatology" className="block px-4 py-2 hover:bg-green-50">Dermatologiya</Link>
+  const renderNavLinks = () => (
+    navLinks.map((item) => (
+      item.children ? (
+        <div
+          key={item.label}
+          className="relative group"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <span className="hover:text-green-800 transition cursor-pointer">
+            {t(item.label)}
+          </span>
+          <div className={`absolute left-0 mt-2 w-56 bg-white border shadow-lg rounded-md z-50 transition-all duration-200 ease-in-out ${dropdown ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1'}`}>
+            {item.children.map((child) => (
+              <Link key={child.path} to={child.path} className="block px-4 py-2 hover:bg-green-100">
+                {t(child.label)}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
-
-      <Link to="/doctors" className="hover:text-green-600 transition">Shifokorlar</Link>
-      <Link to="/news" className="hover:text-green-600 transition">Yangiliklar</Link>
-      <Link to="/residency" className="hover:text-green-600 transition">Ordinatura</Link>
-      <Link to="/contact" className="hover:text-green-600 transition">Kontakt</Link>
-    </>
+      ) : (
+        <Link key={item.path} to={item.path} className="hover:text-green-600 transition">
+          {t(item.label)}
+        </Link>
+      )
+    ))
   );
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 text-[18px] font-medium">
+    <header className="fixed top-0 left-0 w-full z-50 font-medium text-[17px] bg-white shadow-sm">
+      {/* Top bar for large screens */}
       {showTopBar && (
-        <div className="bg-green-600 text-white py-2 px-4 hidden lg:flex justify-between items-center text-sm">
-          <div className="flex gap-8">
-            <div className="flex items-center gap-2">
-              <FaMapMarkerAlt /> <span>Yunusobod tumani, TATU yonida</span>
+        <div className="bg-green-600 text-white py-2 px-6  hidden lg:flex justify-between  text-sm">
+  <div className="flex items-center gap-6">
+    <div className="flex ml-30 text-[18px] items-center gap-2">
+              <FaMapMarkerAlt /> <span>{t('topbar.address')}</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center  text-[18px] gap-2">
               <FaPhoneAlt /> <span>+998 90 123 45 67</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center  text-[18px] gap-2">
               <FaEnvelope /> <span>info@humo.uz</span>
             </div>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 mr-30">
             {[FaFacebookF, FaTelegramPlane, FaInstagram].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-green-600 hover:bg-green-700 hover:text-white transition-colors duration-300"
-              >
+              <a key={i} href="#" aria-label="Social" className="p-2 rounded-full bg-white  text-green-600 hover:bg-green-700 hover:text-white">
                 <Icon />
               </a>
             ))}
@@ -128,18 +146,12 @@ const Header = () => {
         </div>
       )}
 
-      {/* Mobile Topbar: only social icons */}
+      {/* Top bar for mobile */}
       {showTopBar && (
-        <div className="bg-green-600 text-white py-2 px-4 flex justify-center items-center lg:hidden">
+        <div className="bg-green-600 text-white py-2 px- flex justify-center items-center lg:hidden">
           <div className="flex gap-4">
             {[FaFacebookF, FaTelegramPlane, FaInstagram].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-green-600 hover:bg-green-700 hover:text-white transition-colors duration-300"
-              >
+              <a key={i} href="#" aria-label="Social" className="p-2 rounded-full bg-white text-green-600 hover:bg-green-700 hover:text-white">
                 <Icon />
               </a>
             ))}
@@ -147,16 +159,19 @@ const Header = () => {
         </div>
       )}
 
-      <div className="bg-white shadow-md">
+      {/* Main nav */}
+      <div className="shadow-md">
         <div className="max-w-[1300px] mx-auto flex justify-between items-center px-6 py-4">
-          <Link to="/">
+          <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Logo" className="h-16 w-auto object-contain" />
           </Link>
 
-          <div className="hidden md:flex gap-8 text-gray-800">
-            {navLinks}
+          {/* Desktop Nav */}
+          <div className="hidden md:flex gap-8 text-gray-800 items-center">
+            {renderNavLinks()}
           </div>
 
+          {/* Language Switcher */}
           <div className="relative hidden md:block ml-4" ref={langRef}>
             <button onClick={() => setIsOpen(!isOpen)} className="flex items-center px-3 py-1 hover:border-green-900">
               <img src={currentLang.icon} alt={currentLang.label} className="h-4 w-6 object-cover" />
@@ -177,6 +192,7 @@ const Header = () => {
             )}
           </div>
 
+          {/* Mobile burger */}
           <button
             className="md:hidden ml-4 text-2xl text-green-700"
             onClick={() => setMobileMenu(!mobileMenu)}
@@ -185,10 +201,11 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         {mobileMenu && (
           <div className="md:hidden flex flex-col gap-4 px-6 pb-4 bg-white text-gray-800">
-            {navLinks}
-            <div className="mt-4">
+            {renderNavLinks()}
+            <div className="mt-4 border-t pt-4">
               {languages.map((langItem) => (
                 <button
                   key={langItem.code}
