@@ -6,7 +6,37 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
-import doctors from '../../../doctorsData.json';
+// Statik doktorlar ma'lumotlari
+const doctors = [
+  {
+    id: 1,
+    name: 'Dr. Nodira Alimova',
+    specialty: 'Kardiolog',
+    subSpecialty: 'Yurak qon-tomir kasalliklari',
+    image: '/images/doctors/doc1.jpg',
+  },
+  {
+    id: 2,
+    name: 'Dr. Jamshid Bekmurodov',
+    specialty: 'Nevrolog',
+    subSpecialty: 'Markaziy asab tizimi',
+    image: '/images/doctors/doc2.jpg',
+  },
+  {
+    id: 3,
+    name: 'Dr. Laylo Karimova',
+    specialty: 'LOR (otolaringolog)',
+    subSpecialty: 'Burun va quloq jarrohligi',
+    image: '/images/doctors/doc3.jpg',
+  },
+  {
+    id: 4,
+    name: 'Dr. Aziz Xolmurodov',
+    specialty: 'Ortoped',
+    subSpecialty: 'Suyak va bo‘g‘imlar',
+    image: '/images/doctors/doc4.jpg',
+  },
+];
 
 export default function DoctorsCarousel() {
   const swiperRef = useRef(null);
@@ -31,7 +61,7 @@ export default function DoctorsCarousel() {
     handleMouseInteraction();
   };
 
-  if (!selectedDoctor) return null; // Ma’lumot hali yuklanmagan
+  if (!selectedDoctor) return null;
 
   return (
     <div className='bg-white py-60'>

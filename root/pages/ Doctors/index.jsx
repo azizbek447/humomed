@@ -1,9 +1,30 @@
-import 'react';
-
-import clinicData from '../../../doctorsData.json';
+import React from 'react';
 
 export default function DoctorsGrid() {
-  const doctors = clinicData.doctors;
+  const doctors = [
+    {
+      id: 1,
+      name: 'Dr. Sanjar Xasanov',
+      specialty: 'Kardiolog',
+      image: '/images/doctors/sanjar.jpg',
+      path: '/doctors/sanjar-xasanov',
+    },
+    {
+      id: 2,
+      name: 'Dr. Malika Karimova',
+      specialty: 'Nevropatolog',
+      image: '/images/doctors/malika.jpg',
+      path: '/doctors/malika-karimova',
+    },
+    {
+      id: 3,
+      name: 'Dr. Akmal Shukurov',
+      specialty: 'Travmatolog',
+      image: '/images/doctors/akmal.jpg',
+      path: '/doctors/akmal-shukurov',
+    },
+    // Qo‘shimcha shifokorlar kerak bo‘lsa shu yerga yoziladi
+  ];
 
   return (
     <div className='bg-white pt-60 pb-60'>
