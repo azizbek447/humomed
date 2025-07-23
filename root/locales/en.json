@@ -1,249 +1,42 @@
 {
-  "main": "Home",
-  "features": "Features",
-  "prices": "Prices",
-  "services": "Services",
-  "solutions": "Solutions",
-  "clients": "Clients",
-  "contact": "Contact",
-  "demo": "Request Demo",
-  "login": "Login",
-  "Hrplus": {
-    "title": "– a system for tracking and managing employees’ working hours",
-    "description": "Hrplus is a convenient and efficient system that automates HR processes, employee discipline, KPIs, and payroll."
+  "topbar": {
+    "address": "Tashkent city, Yakkasaray district"
   },
-  "hrplusSection": {
-    "title": "Automate employee performance evaluation processes",
-    "description": "Get rid of paperwork and routine spreadsheets",
-    "hrTitle": "Benefits for HR",
-    "hrDescription": "Offers a transparent and accurate system for evaluating employee performance, saving dozens of hours monthly",
-    "leaderTitle": "Benefits for Managers",
-    "leaderDescription": "You achieve set goals faster, increasing employee productivity and engagement"
+  "nav": {
+    "home": "Home",
+    "about": "About Clinic",
+    "departments": "Departments",
+    "cardio": "Cardiology",
+    "neuro": "Neurosurgery",
+    "uro": "Physiotherapy",
+    "gyn": "Otolaryngology",
+    "derma": "Orthopedics",
+    "doctors": "Doctors",
+    "residency": "Residency",
+    "news": "News",
+    "contact": "Contact"
   },
-  "control": {
-    "header": "Control working hours. Create schedules. Generate payroll reports.",
-    "learnMore": "Learn more",
-    "features": {
-      "clock": {
-        "title": "Time tracking",
-        "description": "The system precisely records employees’ check-in and check-out times."
-      },
-      "chart": {
-        "title": "Flexible work schedule",
-        "description": "Create employee work schedules for the required period."
-      },
-      "task": {
-        "title": "Assign and monitor tasks",
-        "description": "Assign tasks to employees and ensure timely completion."
-      },
-      "remote": {
-        "title": "Remote employee monitoring",
-        "description": "Know whether employees are at the assigned location during remote work hours."
-      },
-      "salary": {
-        "title": "Payroll calculation",
-        "description": "Get 100% accurate payroll reports considering penalties."
-      },
-      "faceid": {
-        "title": "Face recognition (Face ID)",
-        "description": "Employees must pass Face ID devices when coming to work."
-      }
-    },
-    "bottom": {
-      "mobile": {
-        "title": "Bot interface or mobile app",
-        "description": "Employees can use a convenient interface or mobile app."
-      },
-      "api": {
-        "title": "API integration",
-        "description": "Hrplus offers integration with Medplus."
-      }
-    }
-  },
-  "Cooperate": {
-    "title": "Cooperate with us",
-    "button": "Contact"
-  },
-  "automates": {
-    "subtitle": "Automates employee management in any business sector",
-    "viewButton": "View",
-    "sections": {
-      "retail": {
-        "title": "Retail",
-        "description": "The {{hrplus}} system helps plan the required number of staff per shift and automatically tracks working hours."
-      },
-      "catering": {
-        "title": "Catering",
-        "description": "The {{hrplus}} system performs essential functions for catering institutions, plans labor resources, and monitors employee discipline."
-      },
-      "production": {
-        "title": "Production",
-        "description": "The {{hrplus}} system addresses safety issues in production, accurately records employee check-in and check-out times, and automates scheduling."
-      },
-      "office": {
-        "title": "Office",
-        "description": "The {{hrplus}} system monitors office employees’ check-in and check-out times, automating personnel accounting and scheduling."
-      },
-      "clinics": {
-        "title": "Clinics",
-        "description": "The {{hrplus}} system helps increase the efficiency and motivation of medical staff."
-      },
-      "education": {
-        "title": "Educational institutions",
-        "description": "The {{hrplus}} system effectively solves key tasks in managing staff and maintaining discipline in educational institutions."
-      }
-    }
-  },
-  "contactUs": {
-    "title": "Contact us",
-    "description": "If you have questions, you can visit us at the address below or contact us online.",
-    "addressLabel": "ADDRESS:",
-    "address": {
-      "line1": "Tashkent city,",
-      "line2": "Olmazor district,",
-      "line3": "Talabalar street,",
-      "line4": "House 2"
-    },
-    "hoursLabel": "WORKING HOURS:",
-    "workingHours": "9:00 AM - 6:00 PM",
-    "name": "Name",
+  "question": {
+    "title": "Have a question?",
+    "description": "Our doctors are highly qualified, experienced, and constantly improving through seminars and conferences.",
+    "name": "Your name",
     "namePlaceholder": "Enter your name",
-    "phone": "Phone number",
+    "phone": "Phone",
     "phonePlaceholder": "Enter your phone number",
-    "question": "Question",
-    "questionPlaceholder": "Write your question...",
-    "send": "Send"
-  },
-  "whyHrplus": {
-    "title": "WHY HRplus?",
-    "reasons": [
-      {
-        "title": "MAXIMUM FLEXIBILITY",
-        "description": "HRplus consists of several modules that easily adapt to client and business functions."
-      },
-      {
-        "title": "INDUSTRY EXPERTISE",
-        "description": "We understand HR processes and know how to optimize and automate them in companies of any size."
-      },
-      {
-        "title": "EXPERIENCED TEAM",
-        "description": "Our experts help you choose the right solution and smoothly implement it into your business."
-      },
-      {
-        "title": "CONTINUOUS IMPROVEMENT",
-        "description": "The software team constantly works on improving the product."
-      },
-      {
-        "title": "TRAINING AND EDUCATION",
-        "description": "We train staff to use HRplus and provide additional education if needed."
-      },
-      {
-        "title": "SOLUTION DELIVERY SERVICE",
-        "description": "Got questions? We are ready 24/7 to provide solutions as quickly as possible."
-      },
-      {
-        "title": "STRONG REPUTATION",
-        "description": "The whole of Uzbekistan trusts us."
-      },
-      {
-        "title": "FLEXIBLE PRICING",
-        "description": "You can choose a tariff plan, number of licenses, and install the app."
-      },
-      {
-        "title": "FAST IMPLEMENTATION",
-        "description": "HRplus integration time — within 5 business days."
-      }
-    ]
-  },
-  "workflow": {
-    "title": "Our workflow",
-    "subtitle": "We study client feedback and introduce new changes to meet their needs.",
-    "steps": [
-      {
-        "title": "Tell us what you need",
-        "description": "Your opinion matters to us."
-      },
-      {
-        "title": "Get a response",
-        "description": "Get clear answers to your questions quickly."
-      },
-      {
-        "title": "Quality product",
-        "description": "We create high-quality products based on requirements to delight clients."
-      }
-    ]
-  },
-  "search": {
-    "imageAlt": "Smartly platform image",
-    "title": "Convenient at work, excellent design",
-    "subtitle": "Adapts to modern requirements and is easy to use",
-    "point1": "Menu is located on the left, like in simple apps",
-    "point2": "Option to choose and use day or night mode"
-  },
-  "hrplus": {
-    "title": "Automate the difficult processes for employee performance",
-    "description": "Get rid of the same typical work, working with papers and spreadsheets",
-    "hr_title": "Benefits for HR",
-    "hr_text": "Hrplus offers a transparent and scrubbing system to assess employee performance efficiently, which saves tens of hours a month",
-    "leader_title": "Benefits for Leaders",
-    "leader_text": "You will achieve the goals set more quickly by increasing the efficiency and engagement of employees",
-    "image_alt": "Hrplus app demo"
-  },
-  "ourRates": {
-    "title": "Our rates",
-    "subtitle": "Choose the plan that suits you",
-    "employees": "Employees",
-    "calculate": "Calculate"
-  },
-  "footer": {
-    "companyTitle": "Company",
-    "aboutUs": "About us",
-    "productsTitle": "Products",
-    "liveLocation": "Live location",
-    "assignTasks": "Assign tasks",
-    "contactTitle": "Contact",
-    "telegramLink": "Telegram link",
-    "copyright": "2023 © Hrplus - All rights reserved"
-  },
-  "modal": {
-    "header": "Employees up to {{count}}",
-    "services": {
-      "employeeManagement": "Employee management system",
-      "timeTracking": "Work time tracking",
-      "monthlyReport": "Monthly report",
-      "support": "24/7 technical support",
-      "backup": "Data backup",
-      "mobileApp": "Mobile app"
+    "comment": "Comment",
+    "commentPlaceholder": "Write your comment",
+    "send": "Send",
+    "sending": "Sending..."},
+    "errors": {
+      "name": "This field is required",
+      "phone": "This field is required",
+      "phoneMin": "Phone number is incomplete"
     },
-    "extras": {
-      "analytics": "Advanced analytics",
-      "design": "Premium design",
-      "integration": "Additional integration",
-      "manager": "Personal manager"
-    },
-    "pricePerEmployee": "Price per employee:",
-    "totalPrice": "Price for {{count}} employees:",
-    "useTariff": "Use tariff"
+    "whoAreWe": {
+    "title": "Who are we?"
   },
-  "modal2": {
-    "title": "Register Your Company",
-    "close": "Close modal",
-    "description": "Please fill out the form below to register your company.",
-    "fullName": "Full Name",
-    "fullNamePlaceholder": "Enter your full name",
-    "companyName": "Company Name",
-    "companyNamePlaceholder": "Enter your company name",
-    "employeeCount": "Number of Employees",
-    "employeeCountPlaceholder": "Enter number of employees",
-    "phoneNumber": "Phone Number",
-    "phoneNumberPlaceholder": "Enter your phone number",
-    "smsInfo": "We will send an SMS confirmation to this number.",
-    "register": "Register",
-    "alreadyRegistered": "Already registered?",
-    "login": "Login"
-  },
-  "error": {
-    "required": "This field is required.",
-    "onlyNumbers": "Please enter only numbers."
+   "map": {
+    "title": "Our Location",
+    "balloon": "Our address"
   }
 }

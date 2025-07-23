@@ -6,7 +6,7 @@ import viteConfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   server: {
     port: 3010,
-    historyApiFallback: true,
+    historyApiFallback: true, // ⚠️ Bu qator muhim!
   },
   build: {
     reportCompressedSize: false,

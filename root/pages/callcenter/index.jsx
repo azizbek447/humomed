@@ -32,8 +32,8 @@ const ResidencyNom = () => {
               to={btn.path}
               className={`rounded-lg border px-6 py-3 text-sm font-medium shadow transition ${
                 isActive
-                  ? 'bg-green-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-green-600 hover:text-white'
+                  ? 'bg-[var(--success-strong)] text-white'
+                  : 'bg-white text-gray-700 hover:bg-[var(--success-strong)] hover:text-white'
               }`}
             >
               → {btn.label}
@@ -49,19 +49,19 @@ const ResidencyNom = () => {
             ОБЪЯВЛЕН ПРИЁМ В КЛИНИЧЕСКУЮ ОРДИНАТУРУ «PROF MED TURIZM»
           </p>
           <p>Подавшие документы на поступление в клиническую ординатуру в 2024/2025 учебном году</p>
-          <p className='cursor-pointer text-green-600 underline'>
+          <p className='cursor-pointer text-[var(--success-strong)] underline'>
             Список для подачи в Агентство по оценке знаний и навыков
           </p>
         </div>
 
         <div className='mx-auto mt-10 max-w-4xl space-y-4 text-gray-800'>
-          <p className='cursor-pointer text-green-600 underline'>Ординатура Список.docx</p>
+          <p className='cursor-pointer text-[var(--success-strong)] underline'>Ординатура Список.docx</p>
 
           <p>
             С целью создания удобства для абитуриентов, подающих документы в клиническую ординатуру
             в 2024-2025 учебном году, приём документов будет осуществляться в онлайн режиме на
             официальном веб-сайте. Чтобы отправить заявку — перейдите по этой{' '}
-            <span className='cursor-pointer text-green-600 underline'>ССЫЛКЕ</span>
+            <span className='cursor-pointer text-[var(--success-strong)] underline'>ССЫЛКЕ</span>
           </p>
 
           <p>
@@ -82,7 +82,7 @@ const ResidencyNom = () => {
 
           <div>
             <strong>Телефоны call-центра:</strong> <br />
-            <span className='text-green-600'>+998 55 5010303, 1210</span>
+            <span className='text-[var(--success-strong)]'>+998 55 5010303, 1210</span>
           </div>
 
           <div>

@@ -1,10 +1,9 @@
-import 'react';
-
+import React from 'react';
 import Neurosurgery from '../../assets/img/neyxuriga.png';
 
 const NeurosurgeryPage = () => {
   return (
-    <div className='pt-60 pb-60'>
+    <div className='pt-16 pb-60 max-w-7xl  '>
       <h1 className='mb-6 text-xl font-bold text-gray-800 md:text-2xl lg:text-3xl'>
         Нейрохирургия
       </h1>
@@ -17,7 +16,7 @@ const NeurosurgeryPage = () => {
             className='max-h-[500px] w-full rounded-xl object-cover'
           />
 
-          <div className='text-gra y-700 space-y-4 text-sm leading-relaxed md:text-base'>
+          <div className='space-y-4 text-sm leading-relaxed text-gray-700 md:text-base'>
             <p>
               <strong>Нейрохирургия в современной медицине</strong>
             </p>

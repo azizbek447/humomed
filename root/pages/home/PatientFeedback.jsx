@@ -36,11 +36,11 @@ const testimonials = [
 const TestimonialsCarousel = () => {
   return (
     <div className="bg-white py-16">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-7xl px-4">
         <h2 className="text-center text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
           Отзывы наших пациентов
         </h2>
-        <div className="mx-auto mb-10 h-1 w-16 rounded bg-green-600" />
+        <div className="mx-auto mb-10 h-1 w-16 rounded bg-[var(--success-strong)]" />
 
         <Swiper
           slidesPerView={1}
@@ -58,7 +58,7 @@ const TestimonialsCarousel = () => {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="w-full max-w-sm bg-green-600 text-white rounded-2xl shadow-md p-6 flex flex-col">
+              <div className="w-full max-w-sm bg-[var(--success-strong)] text-white rounded-2xl shadow-md p-6 flex flex-col">
                 <div className="flex items-center mb-4">
                   <div className="w-14 h-14 rounded-full bg-white/30 p-1 mr-4">
                     <img

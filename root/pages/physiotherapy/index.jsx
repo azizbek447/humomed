@@ -3,7 +3,7 @@ import Neurosurgery from '../../assets/img/neyxuriga.png';
 
 const NeurosurgeryPage = () => {
   return (
-    <div className='pt-60 pb-60'>
+    <div className='pt-16 pb-60  '>
       <h1 className='mb-6 text-xl font-bold text-gray-800 md:text-2xl lg:text-3xl'>
         Нейрохирургия
       </h1>

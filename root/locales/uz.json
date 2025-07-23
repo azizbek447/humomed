@@ -1,249 +1,42 @@
 {
-  "main": "Bosh sahifa",
-  "features": "Xususiyatlar",
-  "prices": "Narxlar",
-  "services": "Xizmatlar",
-  "solutions": "Yechimlar",
-  "clients": "Mijozlar",
-  "contact": "Bog'lanish",
-  "demo": "Demo so‘rash",
-  "login": "Kirish",
-  "Hrplus": {
-    "title": "– xodimlarning ish vaqtini nazorat qilish va boshqarish tizimi",
-    "description": "Hrplus - HR jarayonlarini, xodim intizomini, KPI va ish haqi hisob-kitoblarini avtomatlashtiruvchi qulay va samarali tizim."
+  "topbar": {
+    "address": "Toshkent shahri, Yakkasaroy tumani"
   },
-  "hrplusSection": {
-    "title": "Xodimlarning ish faoliyatini baholash jarayonlarini avtomatlashtirish",
-    "description": "Qog‘oz ishlaridan va oddiy jadvalardan qutuling",
-    "hrTitle": "HR uchun foydalari",
-    "hrDescription": "Xodimlarning ish faoliyatini aniq va oshkora baholash tizimini taqdim etadi, har oy o‘nlab soatlarni tejaydi",
-    "leaderTitle": "Rahbarlar uchun foydalari",
-    "leaderDescription": "Belgilangan maqsadlarga tezroq erishasiz, xodimlar samaradorligi va jalb etilishini oshirasiz"
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Klinika haqida",
+    "departments": "Bo‘limlar",
+    "cardio": "Kardiologiya",
+    "neuro": "Neyroxirurgiya",
+    "uro": "Fizioterapiya",
+    "gyn": "Otorinolaringologiya",
+    "derma": "Ortopediya",
+    "doctors": "Shifokorlar",
+    "residency": "Rezidentura",
+    "news": "Yangiliklar",
+    "contact": "Bog‘lanish"
   },
-  "control": {
-    "header": "Ish vaqtini nazorat qiling. Jadval tuzing. Ish haqi hisobotlarini yarating.",
-    "learnMore": "Batafsil",
-    "features": {
-      "clock": {
-        "title": "Vaqtni kuzatish",
-        "description": "Tizim xodimlarning kirish va chiqish vaqtlarini aniq qayd etadi."
-      },
-      "chart": {
-        "title": "Moslashuvchan ish jadvali",
-        "description": "Kerakli davr uchun xodimlarning ish jadvalini tuzing."
-      },
-      "task": {
-        "title": "Vazifalarni tayinlash va nazorat qilish",
-        "description": "Xodimlarga vazifalar tayinlang va ularning o‘z vaqtida bajarilishini ta’minlang."
-      },
-      "remote": {
-        "title": "Masofadan xodimlarni kuzatish",
-        "description": "Xodimlar masofadan ishlash vaqtida belgilangan joyda ekanligini bilib oling."
-      },
-      "salary": {
-        "title": "Ish haqi hisoblash",
-        "description": "Jarimalarni hisobga olgan holda 100% aniq ish haqi hisobotlarini oling."
-      },
-      "faceid": {
-        "title": "Yuzni tanish (Face ID)",
-        "description": "Xodimlar ishga kelganda Face ID qurilmalaridan o'tishi kerak."
-      }
-    },
-    "bottom": {
-      "mobile": {
-        "title": "Bot interfeysi yoki mobil ilova",
-        "description": "Xodimlar qulay interfeys yoki mobil ilovani ishlatishi mumkin."
-      },
-      "api": {
-        "title": "API integratsiyasi",
-        "description": "Hrplus Medplus bilan integratsiyani taklif etadi."
-      }
-    }
-  },
-  "Cooperate": {
-    "title": "Biz bilan hamkorlik qiling",
-    "button": "Bog'lanish"
-  },
-  "automates": {
-    "subtitle": "Har qanday biznes sohasida xodimlarni boshqarishni avtomatlashtiradi",
-    "viewButton": "Ko‘rish",
-    "sections": {
-      "retail": {
-        "title": "Chakana savdo",
-        "description": "{{hrplus}} tizimi smenada zarur xodim sonini rejalashtirishga yordam beradi va ish vaqtini avtomatik kuzatadi."
-      },
-      "catering": {
-        "title": "Ovqatlanish",
-        "description": "{{hrplus}} tizimi ovqatlanish muassasalari uchun muhim funksiyalarni bajaradi, ishchi resurslarni rejalashtiradi va xodim intizomini nazorat qiladi."
-      },
-      "production": {
-        "title": "Ishlab chiqarish",
-        "description": "{{hrplus}} tizimi ishlab chiqarishdagi xavfsizlik masalalarini hal qiladi, xodimlarning kirish-chiqish vaqtlarini aniq qayd etadi va jadval tuzishni avtomatlashtiradi."
-      },
-      "office": {
-        "title": "Ofis",
-        "description": "{{hrplus}} tizimi ofis xodimlarining kirish-chiqish vaqtlarini nazorat qiladi, kadrlar hisobini va jadval tuzishni avtomatlashtiradi."
-      },
-      "clinics": {
-        "title": "Klinikalar",
-        "description": "{{hrplus}} tizimi tibbiyot xodimlarining samaradorligi va motivatsiyasini oshirishga yordam beradi."
-      },
-      "education": {
-        "title": "Ta’lim muassasalari",
-        "description": "{{hrplus}} tizimi ta’lim muassasalarida xodimlarni boshqarish va intizomni saqlash bo‘yicha asosiy vazifalarni samarali hal qiladi."
-      }
-    }
-  },
-  "contactUs": {
-    "title": "Bog'lanish",
-    "description": "Savollaringiz bo‘lsa, quyidagi manzilda bizga tashrif buyuring yoki onlayn bog‘laning.",
-    "addressLabel": "MANZIL:",
-    "address": {
-      "line1": "Toshkent shahar,",
-      "line2": "Olmazor tumani,",
-      "line3": "Talabalar ko‘chasi,",
-      "line4": "2-uy"
-    },
-    "hoursLabel": "ISH VAQTI:",
-    "workingHours": "9:00 dan 18:00 gacha",
-    "name": "Ism",
+  "question": {
+    "title": "Savolingiz bormi?",
+    "description": "Shifokorlarimiz yuqori malakaga ega, katta tajribaga ega va doimiy o‘qib borishadi...",
+    "name": "Ismingiz",
     "namePlaceholder": "Ismingizni kiriting",
-    "phone": "Telefon raqami",
+    "phone": "Telefon",
     "phonePlaceholder": "Telefon raqamingizni kiriting",
-    "question": "Savol",
-    "questionPlaceholder": "Savolingizni yozing...",
-    "send": "Yuborish"
-  },
-  "whyHrplus": {
-    "title": "NIMAGA HRplus?",
-    "reasons": [
-      {
-        "title": "MAKSIMAL MOSLASHUVCHANLIK",
-        "description": "HRplus bir nechta modullardan iborat bo‘lib, mijoz va biznes funksiyalariga oson moslashadi."
-      },
-      {
-        "title": "SOHA TAJRIBASI",
-        "description": "Biz HR jarayonlarini tushunamiz va ularni har qanday o‘lchamdagi kompaniyalarda optimallashtirish va avtomatlashtirishni bilamiz."
-      },
-      {
-        "title": "TAJRIBALI JAMOA",
-        "description": "Mutaxassislarimiz sizga to‘g‘ri yechimni tanlashda yordam beradi va uni biznesingizga muammosiz joriy etadi."
-      },
-      {
-        "title": "DOIMIY TAKOMILLASHTIRISH",
-        "description": "Dasturiy ta’minot jamoasi mahsulotni doimiy ravishda yaxshilash ustida ishlaydi."
-      },
-      {
-        "title": "TRENING VA TA’LIM",
-        "description": "Biz HRplusdan foydalanishni o‘rgatamiz va kerak bo‘lsa qo‘shimcha ta’lim beramiz."
-      },
-      {
-        "title": "YECHIM TAQDIMOT XIZMATI",
-        "description": "Savollaringiz bormi? Biz 24/7 tezkor yechimlar taqdim etishga tayyormiz."
-      },
-      {
-        "title": "KUCHLI OBRO‘",
-        "description": "Butun O‘zbekiston bizga ishonadi."
-      },
-      {
-        "title": "MOSLASHUVCHAN NARXLAR",
-        "description": "Siz tarif rejasini, litsenziya sonini tanlashingiz va ilovani o‘rnatishingiz mumkin."
-      },
-      {
-        "title": "TEZ JORIY ETISH",
-        "description": "HRplus integratsiyasi 5 ish kuni ichida amalga oshiriladi."
-      }
-    ]
-  },
-  "workflow": {
-    "title": "Ish jarayonimiz",
-    "subtitle": "Mijoz fikrlarini o‘rganamiz va ularning ehtiyojlariga mos yangi o‘zgarishlarni kiritamiz.",
-    "steps": [
-      {
-        "title": "Nima kerakligini ayting",
-        "description": "Sizning fikringiz biz uchun muhim."
-      },
-      {
-        "title": "Javob oling",
-        "description": "Savollaringizga tez va aniq javoblar oling."
-      },
-      {
-        "title": "Sifatli mahsulot",
-        "description": "Talablarga asoslangan yuqori sifatli mahsulotlar yaratamiz, mijozlarni xursand qilamiz."
-      }
-    ]
-  },
-  "search": {
-    "imageAlt": "Smartly platformasi rasmi",
-    "title": "Ishda qulay, ajoyib dizayn",
-    "subtitle": "Zamonaviy talablar uchun moslashadi va ishlatishda oson",
-    "point1": "Menyu chapda joylashgan, oddiy ilovalar kabi",
-    "point2": "Kunning yorug‘ yoki tun rejimini tanlash va ishlatish imkoniyati"
-  },
-  "hrplus": {
-    "title": "Xodimlar samaradorligini baholashdagi murakkab jarayonlarni avtomatlashtiring",
-    "description": "Bir xil qog'ozbozlik va Excel fayllari bilan ishlashdan xalos bo'ling",
-    "hr_title": "HR uchun foyda",
-    "hr_text": "Hrplus xodimlar samaradorligini samarali baholash uchun shaffof va tozalovchi tizimni taklif qiladi, bu esa oyiga o‘nlab soatlarni tejaydi",
-    "leader_title": "Rahbarlar uchun foyda",
-    "leader_text": "Xodimlarning samaradorligi va ishtirokini oshirish orqali belgilangan maqsadlarga tezroq erishasiz",
-    "image_alt": "Hrplus ilovasi namoyishi"
-  },
-  "ourRates": {
-    "title": "Bizning tariflar",
-    "subtitle": "Sizga mos rejani tanlang",
-    "employees": "Xodimlar",
-    "calculate": "Hisoblash"
-  },
-  "footer": {
-    "companyTitle": "Kompaniya",
-    "aboutUs": "Biz haqimizda",
-    "productsTitle": "Mahsulotlar",
-    "liveLocation": "Jonli joylashuv",
-    "assignTasks": "Vazifalarni biriktirish",
-    "contactTitle": "Bog‘lanish",
-    "telegramLink": "Telegram havola",
-    "copyright": "2023 © Hrplus - Barcha huquqlar himoyalangan"
-  },
-  "modal": {
-    "header": "{{count}} tagacha xodimlar",
-    "services": {
-      "employeeManagement": "Xodimlarni boshqarish tizimi",
-      "timeTracking": "Ish vaqtini kuzatish",
-      "monthlyReport": "Oylik hisobot",
-      "support": "24/7 texnik yordam",
-      "backup": "Ma'lumotlarni zaxiralash",
-      "mobileApp": "Mobil ilova"
+    "comment": "Izoh",
+    "commentPlaceholder": "Izohingizni yozing",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda..."},
+    "errors": {
+      "name": "Maydon toʻldirilishi shart",
+      "phone": "Maydon toʻldirilishi shart",
+      "phoneMin": "Telefon raqami to‘liq emas"
     },
-    "extras": {
-      "analytics": "Kengaytirilgan tahlil",
-      "design": "Premium dizayn",
-      "integration": "Qo‘shimcha integratsiya",
-      "manager": "Shaxsiy menejer"
-    },
-    "pricePerEmployee": "Har bir xodim uchun narx:",
-    "totalPrice": "{{count}} xodim uchun umumiy narx:",
-    "useTariff": "Tarifni tanlash"
+     "whoAreWe": {
+    "title": "Biz kimmiz?"
   },
-  "modal2": {
-    "title": "Kompaniyangizni ro‘yxatdan o‘tkazing",
-    "close": "Yopish",
-    "description": "Iltimos, kompaniyangizni ro‘yxatdan o‘tkazish uchun quyidagi formani to‘ldiring.",
-    "fullName": "To‘liq ism",
-    "fullNamePlaceholder": "To‘liq ismingizni kiriting",
-    "companyName": "Kompaniya nomi",
-    "companyNamePlaceholder": "Kompaniya nomini kiriting",
-    "employeeCount": "Xodimlar soni",
-    "employeeCountPlaceholder": "Xodimlar sonini kiriting",
-    "phoneNumber": "Telefon raqami",
-    "phoneNumberPlaceholder": "Telefon raqamingizni kiriting",
-    "smsInfo": "Tasdiqlash uchun SMS shu raqamga yuboriladi.",
-    "register": "Ro‘yxatdan o‘tish",
-    "alreadyRegistered": "Allaqachon ro‘yxatdan o‘tgansizmi?",
-    "login": "Kirish"
-  },
-  "error": {
-    "required": "Bu maydon to‘ldirilishi shart.",
-    "onlyNumbers": "Faqat raqamlarni kiriting."
+  "map": {
+    "title": "Bizning manzil",
+    "balloon": "Bizning manzil"
   }
 }

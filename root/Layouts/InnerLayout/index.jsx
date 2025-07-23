@@ -1,13 +1,17 @@
+import ScrollToTop from 'root/components/ScrollToTop.jsx';
 import Footer from '../Footer.jsx';
 import Header from '../innerLayout/Header';
+import ScrollToTopButton from 'root/components/ScrollToTopButton.jsx';
 
 const Index = ({ children }) => {
   return (
-    <div className='flex min-h-screen flex-col'>
+    <div className='min-h-screen'>
       <Header />
 
-      <main className='flex-grow'>{children}</main>
+      <main>{children}</main>
       <Footer />
+      <ScrollToTop />
+      <ScrollToTopButton />
     </div>
   );
 };

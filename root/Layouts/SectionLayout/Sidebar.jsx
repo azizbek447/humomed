@@ -22,11 +22,11 @@ const schema = yup.object().shape({
 });
 
 const branchList = [
-  { name: 'Отоларингология', path: '/service/otolaryngology' },
-  { name: 'Кардиология', path: '/service/cardiology' },
-  { name: 'Физиотерапия', path: '/service/physiotherapy' },
-  { name: 'Ортопедия-вертебрология', path: '/service/orthopedics' },
-  { name: 'Нейрохирургия', path: '/service/neurosurgery' },
+  { name: 'Отоларингология', path: '/otolaryngology' },
+  { name: 'Кардиология', path: '/cardiology' },
+  { name: 'Физиотерапия', path: '/physiotherapy' },
+  { name: 'Ортопедия-вертебрология', path: '/orthopedics' },
+  { name: 'Нейрохирургия', path: '/neurosurgery' },
 ];
 
 const ThreePartMedicalForm = () => {
@@ -64,16 +64,16 @@ const ThreePartMedicalForm = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`border-t transition duration-200 ease-in-out ${
                   isHovered
-                    ? 'bg-green-500 text-white'
-                    : 'text-gray-700 hover:bg-green-50 hover:text-green-600'
+                    ? 'bg-[var(--success-strong)]  text-white'
+                    : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-[var(--success-strong)]'
                 }`}
               >
                 <Link
                   to={item.path}
                   className={`flex items-center gap-2 border-t px-4 py-2 text-base transition duration-200 ease-in-out ${
                     isActive || isHovered
-                      ? 'bg-green-500 text-white'
-                      : 'text-gray-700 hover:bg-green-50 hover:text-green-600'
+                      ? 'bg-[var(--success-strong)]  text-white'
+                      : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-[var(--success-strong)]'
                   }`}
                 >
                   {isActive || isHovered ? (
@@ -89,7 +89,7 @@ const ThreePartMedicalForm = () => {
         </ul>
       </div>
 
-      <div className='rounded-xl bg-green-400 text-white shadow-md'>
+      <div className='rounded-xl bg-[var(--success-strong)] text-white shadow-md'>
         <div className='border-b border-white/30 px-4 py-3'>
           <h3 className='mb-1 text-lg font-bold'>График</h3>
           <div className='flex items-center space-x-2'>
@@ -110,7 +110,7 @@ const ThreePartMedicalForm = () => {
             </div>
             <div className='flex items-center gap-2'>
               <FaEnvelope />
-              <a href='mailto:pmstashkent@gmail.com' className='underline hover:text-green-200'>
+              <a href='mailto:pmstashkent@gmail.com' className='underline hover:text-[var(--success-strong)]'>
                 pmstashkent@gmail.com
               </a>
             </div>
@@ -130,7 +130,7 @@ const ThreePartMedicalForm = () => {
               placeholder='Введите ваше имя'
               className={`w-full rounded-lg border ${
                 errors.name ? 'border-red-500' : 'border-gray-200'
-              } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
+              } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)]  focus:outline-none`}
               {...register('name')}
             />
             {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
@@ -145,7 +145,7 @@ const ThreePartMedicalForm = () => {
               placeholder='Введите e-mail'
               className={`w-full rounded-lg border ${
                 errors.email ? 'border-red-500' : 'border-gray-200'
-              } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
+              } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)]  focus:outline-none`}
               {...register('email')}
             />
             {errors.email && <p className='mt-1 text-sm text-red-500'>{errors.email.message}</p>}
@@ -165,7 +165,7 @@ const ThreePartMedicalForm = () => {
                 placeholder='Введите номер телефона'
                 className={`flex-1 rounded-r-lg border ${
                   errors.phone ? 'border-red-500' : 'border-gray-200'
-                } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
+                } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)]  focus:outline-none`}
                 {...register('phone')}
               />
             </div>
@@ -177,7 +177,7 @@ const ThreePartMedicalForm = () => {
             <textarea
               rows={4}
               placeholder='Введите ваш комментарий'
-              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none'
+              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)]  focus:outline-none'
               {...register('comment')}
             />
           </div>
@@ -185,7 +185,7 @@ const ThreePartMedicalForm = () => {
           <button
             type='submit'
             disabled={isSubmitting}
-            className='flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-4 py-3 text-white transition hover:bg-green-600 disabled:opacity-50'
+            className='flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--success-strong)]  px-4 py-3 text-white transition hover:bg-[var(--success-strong)] disabled:opacity-50'
           >
             {isSubmitting ? (
               <>
