@@ -90,17 +90,22 @@ const HaveAQuestion = () => {
                 {t('question.phone')} <span className='text-red-500'>*</span>
               </label>
               <Controller
-                name='phone'
+                name="phone"
                 control={control}
                 render={({ field }) => (
                   <PhoneInput
                     {...field}
                     inputRef={field.ref}
-                    country={'uz'}
+                    country="uz"
+                    onlyCountries={['uz']}
+                    countryCodeEditable={false}
                     placeholder={t('question.phonePlaceholder')}
+                    masks={{ uz: '.. ...-..-..' }}
+                    enableAreaCodes={true}
                     inputStyle={{
                       width: '100%',
                       padding: '24px',
+                      paddingLeft: '50px',
                       borderRadius: '0.5rem',
                       borderColor: errors.phone ? 'red' : '#e5e7eb',
                       backgroundColor: '#f9fafb',
@@ -109,12 +114,16 @@ const HaveAQuestion = () => {
                       borderTopLeftRadius: '0.5rem',
                       borderBottomLeftRadius: '0.5rem',
                       borderColor: '#e5e7eb',
+                      backgroundColor: '#f9fafb',
                     }}
-                    specialLabel=''
-                    masks={{ uz: '.. ...-..-..' }}
+                    containerStyle={{
+                      width: '100%',
+                    }}
+                    specialLabel=""
                   />
                 )}
               />
+
               {errors.phone && (
                 <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>
               )}

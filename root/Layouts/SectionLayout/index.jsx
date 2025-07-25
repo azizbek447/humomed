@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+
 import Footer from '../Footer';
 import Header from '../Header';
 import Sidebar from './Sidebar';
@@ -14,14 +15,10 @@ const SectionalLayout = ({ children }) => {
   const isMobile = width < 1024;
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -31,7 +28,11 @@ const SectionalLayout = ({ children }) => {
       {!isScrolled && <HeaderInfo />}
       <Header isScrolled={isScrolled} />
 
-      <div className={`flex w-full ${isMobile ? 'flex-col' : 'flex-row'} mx-auto max-w-7xl gap-6 px-4 py-6 md:px-6 lg:px-8`}>
+      <div
+        className={`flex w-full ${
+          isMobile ? 'flex-col' : 'flex-row'
+        } mx-auto max-w-7xl gap-6 px-4 py-6 md:px-6 lg:px-8`}
+      >
         <main className={`${isMobile ? 'order-1' : ''} w-full lg:w-[72%]`}>
           {!isHomePage && <Breadcrumbs />}
           <div className="w-full">{children}</div>

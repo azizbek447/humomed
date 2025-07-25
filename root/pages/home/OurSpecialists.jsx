@@ -45,28 +45,14 @@ const clinicData = {
       path: '/healer',
     },
     {
-      id: 5,
+      id: 6,
       name: 'Dr. Farangiz Qodirova',
       specialty: 'Ginekolog',
       image: '/images/healer/qodirova.jpg',
       path: '/healer',
     },
     {
-      id: 5,
-      name: 'Dr. Farangiz Qodirova',
-      specialty: 'Ginekolog',
-      image: '/images/healer/qodirova.jpg',
-      path: '/healer',
-    },
-    {
-      id: 5,
-      name: 'Dr. Farangiz Qodirova',
-      specialty: 'Ginekolog',
-      image: '/images/healer/qodirova.jpg',
-      path: '/healer',
-    },
-    {
-      id: 5,
+      id: 7,
       name: 'Dr. Farangiz Qodirova',
       specialty: 'Ginekolog',
       image: '/images/healer/qodirova.jpg',
@@ -119,13 +105,13 @@ export default function DoctorsCarousel() {
             1024: { slidesPerView: 3 },
           }}
         >
-          {doctors.map((doctor) => (
+          {doctors.map((doctor, index) => (
             <SwiperSlide
-              key={doctor.id}
+              key={`${doctor.id}-${index}`}
               onMouseEnter={handleMouseInteraction}
               onClick={handleMouseInteraction}
             >
-              <div className='flex h-[500px] w-[390px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+              <div className='flex h-[500px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
                 <img
                   src={doctor.image}
                   alt={doctor.name}

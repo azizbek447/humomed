@@ -72,7 +72,7 @@ export default function DoctorsCarousel() {
   return (
     <div className='bg-white py-10'>
       <div className='mx-auto max-w-7xl px-4'>
-        <div className="mb-20 ">
+        <div className='mb-20'>
           <Breadcrumb />
         </div>
 
@@ -81,12 +81,14 @@ export default function DoctorsCarousel() {
             <img
               src={selectedDoctor.image}
               alt={selectedDoctor.name}
-              className='h-[350px] w-[350px] rounded-xl object-cover shadow-xl'
+              className='h-[350px] rounded-xl object-cover shadow-xl'
             />
           </div>
           <div className='text-center md:w-1/2 md:text-left'>
             <h2 className='mb-2 text-3xl font-bold text-gray-800'>{selectedDoctor.name}</h2>
-            <p className='mb-1 text-xl font-medium text-[var(--success-strong)]'>{selectedDoctor.specialty}</p>
+            <p className='mb-1 text-xl font-medium text-[var(--success-strong)]'>
+              {selectedDoctor.specialty}
+            </p>
             {selectedDoctor.subSpecialty && (
               <p className='mb-4 text-lg text-gray-600'>{selectedDoctor.subSpecialty}</p>
             )}
@@ -118,7 +120,7 @@ export default function DoctorsCarousel() {
             pauseOnMouseEnter: true,
           }}
           modules={[FreeMode, Pagination, Autoplay]}
-          className='h-[540px] '
+          className='h-[540px]'
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
@@ -129,7 +131,7 @@ export default function DoctorsCarousel() {
             .filter((doc) => doc.id !== selectedDoctor.id)
             .map((doctor) => (
               <SwiperSlide key={doctor.id} onClick={() => handleDoctorClick(doctor)}>
-                <div className='flex h-[500px] w-[390px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md cursor-pointer'>
+                <div className='flex h-[500px]  cursor-pointer flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
                   <img
                     src={doctor.image}
                     alt={doctor.name}
@@ -140,7 +142,7 @@ export default function DoctorsCarousel() {
                     <p className='text-sm text-gray-600'>{doctor.specialty}</p>
                   </div>
                   <div>
-                    <span className='mt-4 inline-block text-sm font-medium text-[var(--success-strong)]hover:text-green-800 hover:underline'>
+                    <span className='text-[var(--success-strong)]hover:text-green-800 mt-4 inline-block text-sm font-medium hover:underline'>
                       Подробнее →
                     </span>
                   </div>
@@ -148,7 +150,6 @@ export default function DoctorsCarousel() {
               </SwiperSlide>
             ))}
         </Swiper>
-
       </div>
     </div>
   );

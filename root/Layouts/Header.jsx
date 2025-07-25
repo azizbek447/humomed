@@ -38,15 +38,37 @@ const Header = ({ isScrolled }) => {
     {
       label: 'nav.departments',
       children: [
-        { path: '/cardiology', label: 'nav.cardio' },
-        { path: '/neurosurgery', label: 'nav.neuro' },
-        { path: '/physiotherapy', label: 'nav.uro' },
-        { path: '/otolaryngology', label: 'nav.gyn' },
-        { path: '/orthopedics', label: 'nav.derma' },
-      ],
+  { path: '/hirurg-travmatolog', label: 'nav.hirurgTravmatolog' },
+  { path: '/kardiolog', label: 'nav.kardiolog' },
+  { path: '/terapevt', label: 'nav.terapevt' },
+  { path: '/gastroenterolog', label: 'nav.gastroenterolog' },
+  { path: '/endokrinolog', label: 'nav.endokrinolog' },
+  { path: '/ginekolog', label: 'nav.ginekolog' },
+  { path: '/revmatolog', label: 'nav.revmatolog' },
+  { path: '/pulmonolog', label: 'nav.pulmonolog' },
+  { path: '/infeksionist', label: 'nav.infeksionist' },
+  { path: '/gepatolog', label: 'nav.gepatolog' },
+  { path: '/allergolog', label: 'nav.allergolog' },
+  { path: '/pragtolog', label: 'nav.pragtolog' },
+  { path: '/lor', label: 'nav.lor' },
+  { path: '/dermatolog', label: 'nav.dermatolog' },
+  { path: '/nevropatolog', label: 'nav.nevropatolog' },
+  { path: '/urolog', label: 'nav.urolog' },
+  { path: '/detskiy-nevropatolog', label: 'nav.detskiyNevropatolog' },
+  { path: '/detskiy-gastroenterolog', label: 'nav.detskiyGastroenterolog' },
+  { path: '/pediator', label: 'nav.pediator' },
+  { path: '/uzd', label: 'nav.uzd' },
+  { path: '/rentgen', label: 'nav.rentgen' },
+  { path: '/fizioterapiya', label: 'nav.fizioterapiya' },
+  { path: '/massaj', label: 'nav.massaj' },
+  { path: '/procedurniy', label: 'nav.procedurniy' },
+  { path: '/laboratoriya', label: 'nav.laboratoriya' },
+  { path: '/oper-block', label: 'nav.operBlock' },
+  { path: '/statsionar', label: 'nav.statsionar' },
+]
+
     },
     { path: '/Doctors', label: 'nav.doctors' },
-    { path: '/residency', label: 'nav.residency' },
     { path: '/news', label: 'nav.news' },
     { path: '/contacts', label: 'nav.contact' },
   ];
@@ -69,7 +91,7 @@ const Header = ({ isScrolled }) => {
         isMobile ? (
           <div key={item.label}>
             <button
-              className="w-full text-left text-[18px] font-semibold text-black flex justify-between items-center"
+              className="w-full text-left text-base sm:text-[17px] font-semibold text-black flex justify-between items-center"
               onClick={() =>
                 setMobileDropdownOpen((prev) =>
                   prev === item.label ? null : item.label
@@ -80,12 +102,12 @@ const Header = ({ isScrolled }) => {
               <span>{mobileDropdownOpen === item.label ? '▲' : '▼'}</span>
             </button>
             {mobileDropdownOpen === item.label && (
-              <div className="ml-4 mt-2 space-y-2">
+              <div className="ml-3 mt-2 space-y-1">
                 {item.children.map((child) => (
                   <Link
                     key={child.path}
                     to={child.path}
-                    className={`block text-[16px] font-medium px-2 py-1 rounded hover:bg-[var(--success-light)] ${
+                    className={`block text-sm sm:text-[15px] font-medium px-2 py-1 rounded hover:bg-[var(--success-light)] ${
                       isActive(child.path)
                         ? 'text-[var(--success-strong)] bg-[var(--success-light)]'
                         : 'text-gray-800'
@@ -110,11 +132,11 @@ const Header = ({ isScrolled }) => {
               dropdownTimeout.current = setTimeout(() => setDropdown(false), 300);
             }}
           >
-            <span className="cursor-pointer text-[18px] font-semibold hover:text-[var(--success-strong)] text-black">
+            <span className="cursor-pointer text-base lg:text-[18px] font-semibold hover:text-[var(--success-strong)] text-black">
               {t(item.label)}
             </span>
             <div
-              className={`absolute left-0 mt-2 w-56 bg-white border shadow-lg rounded-md z-50 transition-all duration-200 ${
+              className={`absolute left-0 mt-2 w-40 sm:w-52 bg-white border shadow-lg rounded-md z-50 transition-all duration-200 ${
                 dropdown ? 'opacity-100 visible' : 'opacity-0 invisible'
               }`}
             >
@@ -122,7 +144,7 @@ const Header = ({ isScrolled }) => {
                 <Link
                   key={child.path}
                   to={child.path}
-                  className={`block px-4 py-2 text-[16px] font-semibold hover:bg-[var(--success-light)] transition ${
+                  className={`block px-4 py-2 text-sm font-semibold hover:bg-[var(--success-light)] transition ${
                     isActive(child.path)
                       ? 'bg-[var(--success-light)] text-[var(--success-strong)]'
                       : 'text-gray-800'
@@ -138,7 +160,7 @@ const Header = ({ isScrolled }) => {
         <Link
           key={item.path}
           to={item.path}
-          className={`text-[18px] font-semibold transition hover:text-[var(--success-strong)] ${
+          className={`text-base lg:text-[18px] font-semibold transition hover:text-[var(--success-strong)] ${
             isActive(item.path) ? 'text-[var(--success-strong)]' : 'text-black'
           }`}
           onClick={() => isMobile && setMobileMenu(false)}
@@ -154,34 +176,34 @@ const Header = ({ isScrolled }) => {
         isScrolled ? 'top-0' : 'top-[50px]'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-4 md:py-3">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-2 sm:px-4 py-3">
         <Link to="/">
           <img
             src={logo}
             alt="Logo"
             className={`w-auto object-contain transition-all duration-300 ${
-              isScrolled ? 'h-14' : 'h-20'
+              isScrolled ? 'h-12' : 'h-16 sm:h-20'
             }`}
           />
         </Link>
 
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-3 lg:gap-6 items-center">
           {renderNavLinks()}
-          <div className="relative ml-4">
+          <div className="relative ml-3">
             <button onClick={() => setIsOpen(!isOpen)} className="flex items-center">
               <img
                 src={currentLang.icon}
                 alt={currentLang.label}
-                className="h-5 w-7 object-cover"
+                className="h-4 w-6 object-cover"
               />
             </button>
             {isOpen && (
-              <div className="absolute right-0 mt-2 w-44 bg-white border shadow-md rounded-md z-50 text-black">
+              <div className="absolute right-0 mt-2 w-36 sm:w-44 bg-white border shadow-md rounded-md z-50 text-black">
                 {languages.map((langItem) => (
                   <button
                     key={langItem.code}
                     onClick={() => handleLanguageChange(langItem.code)}
-                    className="flex w-full items-center gap-2 px-3 py-2 text-[16px] font-semibold hover:bg-gray-100"
+                    className="flex w-full items-center gap-2 px-3 py-2 text-sm font-semibold hover:bg-gray-100"
                   >
                     <img
                       src={langItem.icon}
@@ -208,9 +230,9 @@ const Header = ({ isScrolled }) => {
       </div>
 
       {mobileMenu && (
-        <div className="flex flex-col gap-4 px-6 pb-4 bg-white text-gray-800">
+        <div className="flex flex-col gap-3 px-3 pb-4 bg-white text-gray-800 md:hidden">
           {renderNavLinks(true)}
-          <div className="mt-4">
+          <div className="mt-3">
             {languages.map((langItem) => (
               <button
                 key={langItem.code}
