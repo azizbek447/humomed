@@ -23,5 +23,44 @@ export const appPaths = {
   OTOLARYNGOLOGY: '/otolaryngology',
   PHYSIOTHERAPY: '/physiotherapy',
   RESIDENCY: '/residency',
+<<<<<<< HEAD
   SUBMISSION: '/submission',
 };
+=======
+  ABOUT_CLINIC: '/about-clinic',
+  CONTACTS: '/contacts',
+  CONTROL: '/control',
+  HEALER: '/healer',
+  NEWS: '/news',
+  NEWS_DETAIL: '/news-detail',
+  ORTHOPEDICS: '/orthopedics',
+  ALLSERVICES: '/allservices',
+
+
+  
+  ALLERGIST: '/allergist',
+  DERMATOLOGIST: '/dermatologist',
+  ENDOCRINOLOGIST: '/endocrinologist',
+  GASTROENTEROLOGIST: '/gastroenterologist',
+  GYNECOLOGIST: '/gynecologist',
+  HEPATOLOGIST: '/hepatologist',
+  INFECTIOUSDOC: '/infectiousdoc',
+  INPATIENTWARD: '/inpatient-ward',
+  LABORATORY: '/laboratory',
+  MASSAGETHERAPY: '/massage-therapy',
+  NEUROLOGIST: '/neurologist',
+  OPERATINGROOM: '/operating-room',
+  PEDIATRICGASTRO: '/pediatric-gastro',
+  PEDIATRICIAN: '/pediatrician',
+  PEDIATRICNEURO: '/pediatric-neuro',
+  PROCEDUREROOM: '/procedure-room',
+  PROCTOLOGIST: '/proctologist',
+  PULMONOLOGIST: '/pulmonologist',
+  RHEUMATOLOGIST: '/rheumatologist',
+  THERAPIST: '/therapist',
+  TRAUMASURGEON: '/trauma-surgeon',
+  ULTRASOUND: '/ultrasound',
+  UROLOGIST: '/urologist',
+  XRAY: '/xray',
+};
+>>>>>>> ec83732 (Bo'lim yangilandi)

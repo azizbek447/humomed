@@ -42,8 +42,27 @@ const clinicData = {
       id: 5,
       name: 'Dr. Farangiz Qodirova',
       specialty: 'Ginekolog',
+<<<<<<< HEAD
       image: '/images/doctors/qodirova.jpg',
       path: '/doctors/qodirova',
+=======
+      image: '/images/healer/qodirova.jpg',
+      path: '/healer',
+    },
+    {
+      id: 6,
+      name: 'Dr. Farangiz Qodirova',
+      specialty: 'Ginekolog',
+      image: '/images/healer/qodirova.jpg',
+      path: '/healer',
+    },
+    {
+      id: 7,
+      name: 'Dr. Farangiz Qodirova',
+      specialty: 'Ginekolog',
+      image: '/images/healer/qodirova.jpg',
+      path: '/healer',
+>>>>>>> ec83732 (Bo'lim yangilandi)
     },
   ],
 };
@@ -92,13 +111,17 @@ export default function DoctorsCarousel() {
             1024: { slidesPerView: 3 },
           }}
         >
-          {doctors.map((doctor) => (
+          {doctors.map((doctor, index) => (
             <SwiperSlide
-              key={doctor.id}
+              key={`${doctor.id}-${index}`}
               onMouseEnter={handleMouseInteraction}
               onClick={handleMouseInteraction}
             >
+<<<<<<< HEAD
               <div className='flex h-[480px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+=======
+              <div className='flex h-[500px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+>>>>>>> ec83732 (Bo'lim yangilandi)
                 <img
                   src={doctor.image}
                   alt={doctor.name}

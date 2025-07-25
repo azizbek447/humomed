@@ -13,7 +13,110 @@
     "derma": "Дерматология",
     "doctors": "Врачи",
     "news": "Новости",
+<<<<<<< HEAD
     "residency": "Резидентура",
     "contact": "Контакты"
+=======
+    "contact": "Контакты",
+    "hirurgTravmatolog": "Хирург-Травматолог",
+    "kardiolog": "Кардиолог",
+    "terapevt": "Терапевт",
+    "gastroenterolog": "Гастроэнтеролог",
+    "endokrinolog": "Эндокринолог",
+    "ginekolog": "Гинеколог",
+    "revmatolog": "Ревматолог",
+    "pulmonolog": "Пульмонолог",
+    "infeksionist": "Инфекционист",
+    "gepatolog": "Гепатолог",
+    "allergolog": "Аллерголог",
+    "pragtolog": "Проктолог",
+    "lor": "ЛОР",
+    "dermatolog": "Дерматолог",
+    "nevropatolog": "Невропатолог",
+    "urolog": "Уролог",
+    "detskiyNevropatolog": "Детский невропатолог",
+    "detskiyGastroenterolog": "Детский гастроэнтеролог",
+    "pediator": "Педиатр",
+    "uzd": "УЗИ",
+    "rentgen": "Рентген",
+    "fizioterapiya": "Физиотерапия",
+    "massaj": "Массаж",
+    "procedurniy": "Процедурный кабинет",
+    "laboratoriya": "Лаборатория",
+    "operBlock": "Опер блок",
+    "statsionar": "Стационар"
+  },
+  "question": {
+    "title": "Возник вопрос?",
+    "description": "Наши врачи обладают высокой квалификацией, большим опытом работы...",
+    "name": "Ваше имя",
+    "namePlaceholder": "Введите ваше имя",
+    "phone": "Телефон",
+    "phonePlaceholder": "Введите номер телефона",
+    "comment": "Комментарий",
+    "commentPlaceholder": "Введите ваш комментарий",
+    "send": "Отправить",
+    "sending": "Отправка..."
+  },
+  "errors": {
+    "name": "Обязательное поле",
+    "phone": "Обязательное поле",
+    "phoneMin": "Неполный номер телефона"
+  },
+  "whoAreWe": {
+    "title": "Кто мы такие?"
+  },
+  "map": {
+    "title": "Где мы находимся?",
+    "balloon": "Наш адрес"
+  },
+  "clinic": {
+    "title": "Направления клиники",
+    "surgeon": "Хирург-Травматолог",
+    "cardiologist": "Кардиолог",
+    "therapist": "Терапевт",
+    "gastroenterologist": "Гастроэнтеролог",
+    "endocrinologist": "Эндокринолог",
+    "gynecologist": "Гинеколог",
+    "rheumatologist": "Ревматолог",
+    "pulmonologist": "Пульмонолог",
+    "infectious": "Инфекционист",
+    "hepatologist": "Гепатолог",
+    "allergist": "Аллерголог",
+    "proctologist": "Проктолог",
+    "ent": "ЛОР (отоларинголог)",
+    "dermatologist": "Дерматолог",
+    "neurologist": "Невропатолог",
+    "urologist": "Уролог",
+    "child_neuro": "Детский невропатолог",
+    "child_gastro": "Детский гастроэнтеролог",
+    "pediatrician": "Педиатр",
+    "usg": "УЗИ",
+    "xray": "Рентген",
+    "physiotherapy": "Физиотерапия",
+    "massage": "Массаж",
+    "procedure_room": "Процедурная",
+    "laboratory": "Лаборатория",
+    "operating_room": "Операционный блок",
+    "inpatient": "Стационар"
+  },
+  "ourServices": {
+    "title": "Отделения клиники",
+    "all": "Все направления"
+  },
+  "services": {
+    "allergology": "Аллергология",
+    "andrology": "Андрология",
+    "bariatrics": "Бариатрия",
+    "gastroenterology": "Гастроэнтерология",
+    "gynecology": "Гинекология",
+    "dermatology": "Дерматология",
+    "pediatric_dentistry": "Детская стоматология",
+    "cardiology": "Кардиология",
+    "ent": "ЛОР (отоларингология)",
+    "mammology": "Маммология",
+    "neurology": "Неврология",
+    "neurosurgery": "Нейрохирургия"
+>>>>>>> ec83732 (Bo'lim yangilandi)
   }
 }

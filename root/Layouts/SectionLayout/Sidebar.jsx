@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -10,14 +10,17 @@ import {
   FaPhone,
   FaSpinner,
 } from 'react-icons/fa';
-import InputMask from 'react-input-mask';
+import { IMaskInput } from 'react-imask';
 import * as yup from 'yup';
 import { Link, useLocation } from 'react-router-dom';
 
 const schema = yup.object().shape({
   name: yup.string().required('Имя обязательно'),
   email: yup.string().email('Неверный email').required('Email обязателен'),
-  phone: yup.string().required('Телефон обязателен'),
+  phone: yup
+    .string()
+    .matches(/^\d{2} \d{3}-\d{2}-\d{2}$/, 'Формат: 90 123-45-67')
+    .required('Телефон обязателен'),
   comment: yup.string(),
 });
 
@@ -33,6 +36,7 @@ const Sidebar = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -45,7 +49,7 @@ const Sidebar = () => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
+    console.log({ ...data, phone: '+998 ' + data.phone });
     setIsSubmitting(false);
   };
 
@@ -64,23 +68,29 @@ const Sidebar = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`border-t transition duration-200 ease-in-out ${
                   isHovered
+<<<<<<< HEAD
                     ? 'bg-green-500 text-white'
                     : 'text-gray-700 hover:bg-green-50 hover:text-green-600'
+=======
+                    ? 'bg-[var(--success-strong)] text-white'
+                    : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-white'
+>>>>>>> ec83732 (Bo'lim yangilandi)
                 }`}
               >
                 <Link
                   to={item.path}
                   className={`flex items-center gap-2 border-t px-4 py-2 text-base transition duration-200 ease-in-out ${
                     isActive || isHovered
+<<<<<<< HEAD
                       ? 'bg-green-500 text-white'
                       : 'text-gray-700 hover:bg-green-50 hover:text-green-600'
+=======
+                      ? 'bg-[var(--success-strong)] text-white'
+                      : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-white'
+>>>>>>> ec83732 (Bo'lim yangilandi)
                   }`}
                 >
-                  {isActive || isHovered ? (
-                    <FaArrowLeft className='text-sm' />
-                  ) : (
-                    <FaArrowRight className='text-sm' />
-                  )}
+                  {isActive || isHovered ? <FaArrowLeft /> : <FaArrowRight />}
                   <span className='truncate'>{item.name}</span>
                 </Link>
               </li>
@@ -120,45 +130,52 @@ const Sidebar = () => {
 
       <div className='rounded-xl bg-white p-4 shadow-md'>
         <h3 className='mb-4 text-lg font-bold'>Задать вопрос</h3>
-        <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
+        <form onSubmit={handleSubmit(onSubmit)} className='space-y-4' noValidate>
           <div>
-            <label className='mb-2 block text-sm font-medium text-gray-700'>
-              Ваше имя <span className='text-red-500'>*</span>
-            </label>
+            <label className='mb-2 block font-medium'>Ваше имя <span className='text-red-500'>*</span></label>
             <input
               type='text'
               placeholder='Введите ваше имя'
+<<<<<<< HEAD
               className={`w-full rounded-lg border ${
                 errors.name ? 'border-red-500' : 'border-gray-200'
               } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
+=======
+>>>>>>> ec83732 (Bo'lim yangilandi)
               {...register('name')}
+              className={`w-full rounded-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
+                errors.name ? 'border-red-500' : 'border-gray-200'
+              }`}
             />
             {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
           </div>
 
           <div>
-            <label className='mb-2 block text-sm font-medium text-gray-700'>
-              Ваш e-mail <span className='text-red-500'>*</span>
-            </label>
+            <label className='mb-2 block font-medium'>Ваш e-mail <span className='text-red-500'>*</span></label>
             <input
               type='email'
               placeholder='Введите e-mail'
+<<<<<<< HEAD
               className={`w-full rounded-lg border ${
                 errors.email ? 'border-red-500' : 'border-gray-200'
               } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
+=======
+>>>>>>> ec83732 (Bo'lim yangilandi)
               {...register('email')}
+              className={`w-full rounded-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
+                errors.email ? 'border-red-500' : 'border-gray-200'
+              }`}
             />
             {errors.email && <p className='mt-1 text-sm text-red-500'>{errors.email.message}</p>}
           </div>
 
           <div>
-            <label className='mb-2 block text-sm font-medium text-gray-700'>
-              Телефон <span className='text-red-500'>*</span>
-            </label>
+            <label className='mb-2 block font-medium'>Телефон <span className='text-red-500'>*</span></label>
             <div className='flex'>
               <span className='inline-flex items-center rounded-l-lg border border-r-0 border-gray-200 bg-gray-50 px-3 py-3 text-sm text-gray-600'>
                 +998
               </span>
+<<<<<<< HEAD
               <InputMask
                 mask='99 999-99-99'
                 maskChar='_'
@@ -167,30 +184,53 @@ const Sidebar = () => {
                   errors.phone ? 'border-red-500' : 'border-gray-200'
                 } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
                 {...register('phone')}
+=======
+              <Controller
+                name='phone'
+                control={control}
+                render={({ field }) => (
+                  <IMaskInput
+                    {...field}
+                    mask='00 000-00-00'
+                    unmask={false}
+                    className={`flex-1 rounded-r-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
+                      errors.phone ? 'border-red-500' : 'border-gray-200'
+                    }`}
+                    placeholder='90 123-45-67'
+                  />
+                )}
+>>>>>>> ec83732 (Bo'lim yangilandi)
               />
             </div>
             {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>}
           </div>
 
           <div>
-            <label className='mb-2 block text-sm font-medium text-gray-700'>Комментарий</label>
+            <label className='mb-2 block font-medium'>Комментарий</label>
             <textarea
               rows={4}
               placeholder='Введите ваш комментарий'
+<<<<<<< HEAD
               className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none'
+=======
+>>>>>>> ec83732 (Bo'lim yangilandi)
               {...register('comment')}
+              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none'
             />
           </div>
 
           <button
             type='submit'
             disabled={isSubmitting}
+<<<<<<< HEAD
             className='flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-4 py-3 text-white transition hover:bg-green-600 disabled:opacity-50'
+=======
+            className='flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--success-strong)] px-4 py-3 text-white transition hover:bg-[var(--success-strong)] disabled:opacity-50'
+>>>>>>> ec83732 (Bo'lim yangilandi)
           >
             {isSubmitting ? (
               <>
-                <FaSpinner className='animate-spin' />
-                Отправка...
+                <FaSpinner className='animate-spin' /> Отправка...
               </>
             ) : (
               <>

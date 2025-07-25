@@ -7,13 +7,122 @@
     "about": "Klinika haqida",
     "departments": "Bo‘limlar",
     "cardio": "Kardiologiya",
+<<<<<<< HEAD
     "neuro": "Nevrologiya",
     "uro": "Urologiya",
     "gyn": "Ginekologiya",
     "derma": "Dermatologiya",
+=======
+    "neuro": "Neyroxirurgiya",
+    "uro": "Fizioterapiya",
+    "gyn": "Otorinolaringologiya",
+    "derma": "Ortopediya",
+    "hirurgTravmatolog": "Xirurg-Travmatolog",
+    "kardiolog": "Kardiolog",
+    "terapevt": "Terapevt",
+    "gastroenterolog": "Gastroenterolog",
+    "endokrinolog": "Endokrinolog",
+    "ginekolog": "Ginekolog",
+    "revmatolog": "Revmatolog",
+    "pulmonolog": "Pulmonolog",
+    "infeksionist": "Infeksionist",
+    "gepatolog": "Gepatolog",
+    "allergolog": "Allergolog",
+    "pragtolog": "Pragtolog",
+    "lor": "Lor",
+    "dermatolog": "Dermatolog",
+    "nevropatolog": "Nevropatolog",
+    "urolog": "Urolog",
+    "detskiyNevropatolog": "Detskiy Nevropatolog",
+    "detskiyGastroenterolog": "Detskiy Gastroenterolog",
+    "pediator": "Pediator",
+    "uzd": "UZD",
+    "rentgen": "RENTGEN",
+    "fizioterapiya": "Fizioterapiya",
+    "massaj": "Massaj",
+    "procedurniy": "Procedurniy",
+    "laboratoriya": "Laboratoriya",
+    "operBlock": "Опер блок",
+    "statsionar": "Стационар",  
+>>>>>>> ec83732 (Bo'lim yangilandi)
     "doctors": "Shifokorlar",
     "news": "Yangiliklar",
     "residency": "Rezidentura",
     "contact": "Bog‘lanish"
+<<<<<<< HEAD
+=======
+  },
+  "question": {
+    "title": "Savolingiz bormi?",
+    "description": "Shifokorlarimiz yuqori malakaga ega, katta tajribaga ega va doimiy o‘qib borishadi...",
+    "name": "Ismingiz",
+    "namePlaceholder": "Ismingizni kiriting",
+    "phone": "Telefon",
+    "phonePlaceholder": "Telefon raqamingizni kiriting",
+    "comment": "Izoh",
+    "commentPlaceholder": "Izohingizni yozing",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda..."
+  },
+  "errors": {
+    "name": "Maydon toʻldirilishi shart",
+    "phone": "Maydon toʻldirilishi shart",
+    "phoneMin": "Telefon raqami to‘liq emas"
+  },
+  "whoAreWe": {
+    "title": "Biz kimmiz?"
+  },
+  "map": {
+    "title": "Bizning manzil",
+    "balloon": "Bizning manzil"
+  },
+  "clinic": {
+    "title": "Klinikalar yo‘nalishlari",
+    "surgeon": "Xirurg-Travmatolog",
+    "cardiologist": "Kardiolog",
+    "therapist": "Terapevt",
+    "gastroenterologist": "Gastroenterolog",
+    "endocrinologist": "Endokrinolog",
+    "gynecologist": "Ginekolog",
+    "rheumatologist": "Revmatolog",
+    "pulmonologist": "Pulmonolog",
+    "infectious": "Infeksionist",
+    "hepatologist": "Gepatolog",
+    "allergist": "Allergolog",
+    "proctologist": "Proktolog",
+    "ent": "LOR (otolaringologiya)",
+    "dermatologist": "Dermatolog",
+    "neurologist": "Nevropatolog",
+    "urologist": "Urolog",
+    "child_neuro": "Bola Nevropatologi",
+    "child_gastro": "Bola Gastroenterologi",
+    "pediatrician": "Pediatr",
+    "usg": "UZD",
+    "xray": "Rentgen",
+    "physiotherapy": "Fizioterapiya",
+    "massage": "Massaj",
+    "procedure_room": "Protsedura xonasi",
+    "laboratory": "Laboratoriya",
+    "operating_room": "Operatsion blok",
+    "inpatient": "Statsionar"
+  },
+   "ourServices": {
+    "title": "Klinikalar yo‘nalishlari",
+    "all": "Barcha yo‘nalishlar"
+  },
+  "services": {
+    "allergology": "Allergologiya",
+    "andrology": "Andrologiya",
+    "bariatrics": "Bariatriya",
+    "gastroenterology": "Gastroenterologiya",
+    "gynecology": "Ginekologiya",
+    "dermatology": "Dermatologiya",
+    "pediatric_dentistry": "Bolalar stomatologiyasi",
+    "cardiology": "Kardiologiya",
+    "ent": "LOR (otolaringologiya)",
+    "mammology": "Mammologiya",
+    "neurology": "Nevrologiya",
+    "neurosurgery": "Neyroxirurgiya"
+>>>>>>> ec83732 (Bo'lim yangilandi)
   }
 }

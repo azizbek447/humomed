@@ -13,7 +13,128 @@
     "derma": "Dermatology",
     "doctors": "Doctors",
     "news": "News",
+<<<<<<< HEAD
     "residency": "Residency",
     "contact": "Contact"
+=======
+    "contact": "Contact",
+    "hirurgTravmatolog": "Surgeon-Traumatologist",
+    "kardiolog": "Cardiologist",
+    "terapevt": "Therapist",
+    "gastroenterolog": "Gastroenterologist",
+    "endokrinolog": "Endocrinologist",
+    "ginekolog": "Gynecologist",
+    "revmatolog": "Rheumatologist",
+    "pulmonolog": "Pulmonologist",
+    "infeksionist": "Infectious Disease Specialist",
+    "gepatolog": "Hepatologist",
+    "allergolog": "Allergist",
+    "pragtolog": "Proctologist",
+    "lor": "ENT Specialist",
+    "dermatolog": "Dermatologist",
+    "nevropatolog": "Neurologist",
+    "urolog": "Urologist",
+    "detskiyNevropatolog": "Pediatric Neurologist",
+    "detskiyGastroenterolog": "Pediatric Gastroenterologist",
+    "pediator": "Pediatrician",
+    "uzd": "Ultrasound (USG)",
+    "rentgen": "X-ray",
+    "fizioterapiya": "Physiotherapy",
+    "massaj": "Massage",
+    "procedurniy": "Procedure Room",
+    "laboratoriya": "Laboratory",
+    "operBlock": "Operating Block",
+    "statsionar": "Inpatient Department"
+  },
+  "question": {
+    "title": "Have a question?",
+    "description": "Our doctors are highly qualified, experienced, and constantly improving through seminars and conferences.",
+    "name": "Your name",
+    "namePlaceholder": "Enter your name",
+    "phone": "Phone",
+    "phonePlaceholder": "Enter your phone number",
+    "comment": "Comment",
+    "commentPlaceholder": "Write your comment",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+  "errors": {
+    "name": "This field is required",
+    "phone": "This field is required",
+    "phoneMin": "Phone number is incomplete"
+  },
+  "whoAreWe": {
+    "title": "Who are we?"
+  },
+  "map": {
+    "title": "Our Location",
+    "balloon": "Our address"
+  },
+   "clinic": {
+    "title": "Clinic Departments",
+    "surgeon": "Surgeon-Traumatologist",
+    "cardiologist": "Cardiologist",
+    "therapist": "Therapist",
+    "gastroenterologist": "Gastroenterologist",
+    "endocrinologist": "Endocrinologist",
+    "gynecologist": "Gynecologist",
+    "rheumatologist": "Rheumatologist",
+    "pulmonologist": "Pulmonologist",
+    "infectious": "Infectious Disease Specialist",
+    "hepatologist": "Hepatologist",
+    "allergist": "Allergist",
+    "proctologist": "Proctologist",
+    "ent": "ENT Specialist",
+    "dermatologist": "Dermatologist",
+    "neurologist": "Neurologist",
+    "urologist": "Urologist",
+    "child_neuro": "Pediatric Neurologist",
+    "child_gastro": "Pediatric Gastroenterologist",
+    "pediatrician": "Pediatrician",
+    "usg": "Ultrasound (USG)",
+    "xray": "X-ray",
+    "physiotherapy": "Physiotherapy",
+    "massage": "Massage Therapy",
+    "procedure_room": "Procedure Room",
+    "laboratory": "Laboratory",
+    "operating_room": "Operating Room",
+    "inpatient": "Inpatient Ward"
+  },
+   "ourServices": {
+    "title": "Clinic Departments",
+    "all": "All Services"
+  },
+  "services": {
+    "allergology": "Allergology",
+    "andrology": "Andrology",
+    "bariatrics": "Bariatrics",
+    "gastroenterology": "Gastroenterology",
+    "gynecology": "Gynecology",
+    "dermatology": "Dermatology",
+    "pediatric_dentistry": "Pediatric Dentistry",
+    "cardiology": "Cardiology",
+    "ent": "ENT (Otolaryngology)",
+    "mammology": "Mammology",
+    "neurology": "Neurology",
+    "neurosurgery": "Neurosurgery"
+  },
+   "ourServicese": {
+    "title": "Отделения клиники",
+    "all": "Все направления"
+  },
+  "servicess": {
+    "allergology": "Аллергология",
+    "andrology": "Андрология",
+    "bariatrics": "Бариатрия",
+    "gastroenterology": "Гастроэнтерология",
+    "gynecology": "Гинекология",
+    "dermatology": "Дерматология",
+    "pediatric_dentistry": "Детская стоматология",
+    "cardiology": "Кардиология",
+    "ent": "ЛОР (отоларингология)",
+    "mammology": "Маммология",
+    "neurology": "Неврология",
+    "neurosurgery": "Нейрохирургия"
+>>>>>>> ec83732 (Bo'lim yangilandi)
   }
 }

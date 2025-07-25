@@ -60,7 +60,16 @@ export default function DoctorsCarousel() {
     handleMouseInteraction();
   };
 
+<<<<<<< HEAD
   if (!selectedDoctor) return null;
+=======
+  return (
+    <div className='bg-white py-10'>
+      <div className='mx-auto max-w-7xl px-4'>
+        <div className='mb-20'>
+          <Breadcrumb />
+        </div>
+>>>>>>> ec83732 (Bo'lim yangilandi)
 
   return (
     <div className='bg-white py-60'>
@@ -70,12 +79,18 @@ export default function DoctorsCarousel() {
             <img
               src={selectedDoctor.image}
               alt={selectedDoctor.name}
-              className='h-[350px] w-[350px] rounded-xl object-cover shadow-xl'
+              className='h-[350px] rounded-xl object-cover shadow-xl'
             />
           </div>
           <div className='text-center md:w-1/2 md:text-left'>
             <h2 className='mb-2 text-3xl font-bold text-gray-800'>{selectedDoctor.name}</h2>
+<<<<<<< HEAD
             <p className='mb-1 text-xl font-medium text-green-700'>{selectedDoctor.specialty}</p>
+=======
+            <p className='mb-1 text-xl font-medium text-[var(--success-strong)]'>
+              {selectedDoctor.specialty}
+            </p>
+>>>>>>> ec83732 (Bo'lim yangilandi)
             {selectedDoctor.subSpecialty && (
               <p className='mb-4 text-lg text-gray-600'>{selectedDoctor.subSpecialty}</p>
             )}
@@ -106,7 +121,11 @@ export default function DoctorsCarousel() {
             pauseOnMouseEnter: false,
           }}
           modules={[FreeMode, Pagination, Autoplay]}
+<<<<<<< HEAD
           className='h-[520px] w-[1000px]'
+=======
+          className='h-[540px]'
+>>>>>>> ec83732 (Bo'lim yangilandi)
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
@@ -117,7 +136,11 @@ export default function DoctorsCarousel() {
             .filter((doctor) => doctor.id !== selectedDoctor.id)
             .map((doctor) => (
               <SwiperSlide key={doctor.id} onClick={() => handleDoctorClick(doctor)}>
+<<<<<<< HEAD
                 <div className='flex h-[480px] w-[320px] cursor-pointer flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+=======
+                <div className='flex h-[500px]  cursor-pointer flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+>>>>>>> ec83732 (Bo'lim yangilandi)
                   <img
                     src={doctor.image}
                     alt={doctor.name}
@@ -128,7 +151,11 @@ export default function DoctorsCarousel() {
                     <p className='text-sm text-gray-600'>{doctor.specialty}</p>
                   </div>
                   <div>
+<<<<<<< HEAD
                     <span className='mt-4 inline-block text-sm font-medium text-green-600 hover:text-green-800 hover:underline'>
+=======
+                    <span className='text-[var(--success-strong)]hover:text-green-800 mt-4 inline-block text-sm font-medium hover:underline'>
+>>>>>>> ec83732 (Bo'lim yangilandi)
                       Подробнее →
                     </span>
                   </div>
