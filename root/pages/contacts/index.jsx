@@ -12,7 +12,7 @@ const MapLocation = () => {
   return (
     <div className='bg-white pt-20 text-center'>
       {/* Map */}
-      <div className='h-[400px] w-[1200px] w-full'>
+      <div className='h-[400px]  w-full'>
         <YMaps
           query={{
             lang: i18n.language === 'en' ? 'en_US' : 'ru_RU',
@@ -45,7 +45,7 @@ const MapLocation = () => {
           <div>
             <h3 className='mb-2 text-lg font-bold'>Локация</h3>
             <p>Юнусабадский р-н, проспект А.Тимура, 119А</p>
-            <a href='#' className='mt-2 inline-block text-blue-500 hover:underline'>
+            <a href='#' className='mt-2 inline-block text-[var(--success-strong)] hover:underline'>
               Показать локацию на карте
             </a>
           </div>

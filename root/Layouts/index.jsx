@@ -1,21 +1,29 @@
-import { useState } from 'react';
-
-import Modal2 from './components/modal/Modal2.jsx';
-import Footer from './Footer.jsx';
-import Header from './Header.jsx';
+import { useEffect, useState } from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import HeaderInfo from './HeaderInfo';
+import ScrollToTopButton from 'root/components/ScrollToTopButton';
 
 const Layout = ({ children }) => {
-  const [isModal2Open, setIsModal2Open] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
 
-  const handleOpenModal2 = () => setIsModal2Open(true);
-  const handleCloseModal2 = () => setIsModal2Open(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className='flex min-h-screen flex-col'>
-      <Header onDemoClick={handleOpenModal2} />
-      <main className='flex-grow'>{children}</main>
+    <div className="min-h-screen">
+      <HeaderInfo isScrolled={isScrolled} />
+      <Header isScrolled={isScrolled} />
+      
+      {children}
       <Footer />
-      {isModal2Open && <Modal2 onClose={handleCloseModal2} />}
+      <ScrollToTopButton />
     </div>
   );
 };

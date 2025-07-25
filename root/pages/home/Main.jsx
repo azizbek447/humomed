@@ -6,11 +6,7 @@ const Home = () => {
   const { t } = useTranslation();
 
   return (
-<<<<<<< HEAD
-    <div className='relative w-full pt-30'>
-=======
     <div className='relative w-full pt-23'>
->>>>>>> ec83732 (Bo'lim yangilandi)
       <img src={heder} alt='header' className='h-screen w-full object-cover sm:h-[80vh]' />
 
       <div className='absolute inset-0 bg-black/60' />

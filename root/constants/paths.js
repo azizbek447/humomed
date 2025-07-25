@@ -1,32 +1,14 @@
 export const appPaths = {
+  // Asosiy sahifalar
   HOME: '/',
-  SERVICE_RECORD_BY_FACT: '/service/by-fact',
-  SERVICE_WORK_SCHEDULE: '/service/work-schedule',
-  SERVICE_TASKS: '/service/tasks',
-  SERVICE_SALARY: '/service/salary',
-  SERVICE_REMOTE_EMPLOYEES: '/service/remote-employees',
-  SERVICE_FACE_ID: '/service/face-id',
-  SERVICE_MOBILE_APP: '/service/mobile-app',
-
   DOCTORS: '/doctors',
-  ABOUT_CLINIC: '/about-clinic',
   ABOUT_US: '/about-us',
   CALL_CENTER: '/call-center',
   CARDIOLOGY: '/cardiology',
-  CONTACTS: '/contacts',
-  CONTROL: '/control',
-  HEALER: '/healer',
   NEUROSURGERY: '/neurosurgery',
-  NEWS: '/news',
-  NEWS_DETAIL: '/news-detail',
-  ORTHOPEDICS: '/orthopedics',
   OTOLARYNGOLOGY: '/otolaryngology',
   PHYSIOTHERAPY: '/physiotherapy',
   RESIDENCY: '/residency',
-<<<<<<< HEAD
-  SUBMISSION: '/submission',
-};
-=======
   ABOUT_CLINIC: '/about-clinic',
   CONTACTS: '/contacts',
   CONTROL: '/control',
@@ -63,4 +45,3 @@ export const appPaths = {
   UROLOGIST: '/urologist',
   XRAY: '/xray',
 };
->>>>>>> ec83732 (Bo'lim yangilandi)

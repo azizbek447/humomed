@@ -1,18 +1,12 @@
 {
   "topbar": {
-    "address": "Yunusobod tumani, TATU yonida"
+    "address": "Toshkent shahri, Yakkasaroy tumani"
   },
   "nav": {
     "home": "Bosh sahifa",
     "about": "Klinika haqida",
     "departments": "Bo‘limlar",
     "cardio": "Kardiologiya",
-<<<<<<< HEAD
-    "neuro": "Nevrologiya",
-    "uro": "Urologiya",
-    "gyn": "Ginekologiya",
-    "derma": "Dermatologiya",
-=======
     "neuro": "Neyroxirurgiya",
     "uro": "Fizioterapiya",
     "gyn": "Otorinolaringologiya",
@@ -44,13 +38,10 @@
     "laboratoriya": "Laboratoriya",
     "operBlock": "Опер блок",
     "statsionar": "Стационар",  
->>>>>>> ec83732 (Bo'lim yangilandi)
     "doctors": "Shifokorlar",
-    "news": "Yangiliklar",
     "residency": "Rezidentura",
+    "news": "Yangiliklar",
     "contact": "Bog‘lanish"
-<<<<<<< HEAD
-=======
   },
   "question": {
     "title": "Savolingiz bormi?",
@@ -123,6 +114,5 @@
     "mammology": "Mammologiya",
     "neurology": "Nevrologiya",
     "neurosurgery": "Neyroxirurgiya"
->>>>>>> ec83732 (Bo'lim yangilandi)
   }
 }

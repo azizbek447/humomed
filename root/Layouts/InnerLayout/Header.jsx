@@ -1,20 +1,21 @@
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-
-import Humomed from '../../assets/images/i.webp';
+import { useLocation, Link } from 'react-router-dom'; 
+import Humomed from '../../assets/images/logo.png';
 
 const Header = () => {
+  const { t } = useTranslation(); 
   const [isTop] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
     { path: '/', label: t('Home') },
-    { path: '/service/residency', label: t('Clinical Residency') },
-    { path: '/service/submission', label: t('Submission Form') },
-    { path: '/service/contacts', label: t('Contact') },
+    { path: '/residency', label: t('Clinical Residency') },
+    { path: '/submission', label: t('Submission Form') },
+    { path: '/contacts', label: t('Contact') },
   ];
+  
 
   return (
     <nav
@@ -22,30 +23,30 @@ const Header = () => {
         isTop ? 'bg-transparent shadow-none' : 'bg-white shadow-md'
       }`}
     >
-      <div className='mx-auto flex h-20 max-w-[1200px] items-center justify-between px-4 md:px-6'>
+      <div className='mx-auto flex h-20 max-w-[1440px] items-center justify-between px-4 md:px-6'>
         <div className='flex-shrink-0'>
-          <a href='/'>
+          <Link to='/'>
             <img
               src={Humomed}
               alt='logo'
               className='h-12 w-auto object-contain transition-all duration-300'
             />
-          </a>
+          </Link>
         </div>
 
         <div className='hidden items-center space-x-8 text-[16px] font-medium md:flex'>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.path}
-              href={item.path}
+              to={item.path}
               className={`transition ${
                 location.pathname === item.path
-                  ? 'text-green-600'
-                  : 'text-gray-800 hover:text-green-600'
+                  ? 'text-[var(--success-strong)]'
+                  : 'text-gray-800 hover:text-[var(--success-strong)]'
               }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -84,18 +85,18 @@ const Header = () => {
       {menuOpen && (
         <div className='bg-white px-4 pt-2 pb-4 text-[16px] font-medium shadow-md md:hidden'>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.path}
-              href={item.path}
+              to={item.path}
               className={`block py-2 transition ${
                 location.pathname === item.path
-                  ? 'text-green-600'
-                  : 'text-gray-800 hover:text-green-600'
+                  ? 'text-[var(--success-strong)]'
+                  : 'text-gray-800 hover:text-[var(--success-strong)]'
               }`}
-              onClick={() => setMenuOpen(false)} // menyuni yopish
+              onClick={() => setMenuOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}

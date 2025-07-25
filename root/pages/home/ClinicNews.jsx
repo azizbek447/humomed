@@ -35,12 +35,12 @@ const ClinicNews = () => {
   const newsItems = data.news.slice(0, 3);
 
   return (
-    <div className='bg-white py-10'>
+    <div className='bg-white max-w-7xl mx-auto py-10'>
       <div className='container mx-auto px-4'>
         <h2 className='mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl'>
           {t('ClinicNews.title', 'Новости клиники')}
         </h2>
-        <div className='mx-auto mb-12 h-1 w-16 rounded bg-green-600' />
+        <div className='mx-auto mb-12 h-1 w-16 rounded bg-[var(--success-strong)]' />
 
         <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
           {newsItems.map((item) => {
@@ -68,7 +68,7 @@ const ClinicNews = () => {
                     </div>
 
                     <h3
-                      className='cursor-pointer text-base font-bold text-gray-800 hover:text-green-500 sm:text-lg'
+                      className='cursor-pointer text-base font-bold text-gray-800 hover:text-[var(--success-strong)] sm:text-lg'
                       onClick={() => navigate(path)}
                     >
                       {item.title}
@@ -79,7 +79,7 @@ const ClinicNews = () => {
 
                   <button
                     onClick={() => navigate(path)}
-                    className='inline-flex items-center rounded-full border border-green-500 px-4 py-2 text-sm font-medium text-green-600 transition hover:bg-green-500 hover:text-white'
+                    className='inline-flex items-center rounded-full border border-[var(--success-strong)] px-4 py-2 text-sm font-medium text-[var(--success-strong)] transition hover:bg-[var(--success-strong)] hover:text-white'
                   >
                     {t('ClinicNews.readMore', 'Подробнее')} →
                   </button>
@@ -92,7 +92,7 @@ const ClinicNews = () => {
         <div className='mt-10 text-center'>
           <button
             onClick={() => navigate('/service/news')}
-            className='rounded-full border border-green-500 px-6 py-2 text-green-600 transition hover:bg-green-500 hover:text-white'
+            className='rounded-full border border-[var(--success-strong)] px-6 py-2 text-[var(--success-strong)] transition hover:bg-[var(--success-strong)] hover:text-white'
           >
             {t('ClinicNews.allArticles', 'Все статьи')} →
           </button>

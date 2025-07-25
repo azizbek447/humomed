@@ -1,22 +1,19 @@
 {
   "topbar": {
-    "address": "Yunusabad district, near TUIT"
+    "address": "Tashkent city, Yakkasaray district"
   },
   "nav": {
     "home": "Home",
     "about": "About Clinic",
     "departments": "Departments",
     "cardio": "Cardiology",
-    "neuro": "Neurology",
-    "uro": "Urology",
-    "gyn": "Gynecology",
-    "derma": "Dermatology",
+    "neuro": "Neurosurgery",
+    "uro": "Physiotherapy",
+    "gyn": "Otolaryngology",
+    "derma": "Orthopedics",
     "doctors": "Doctors",
-    "news": "News",
-<<<<<<< HEAD
     "residency": "Residency",
-    "contact": "Contact"
-=======
+    "news": "News",
     "contact": "Contact",
     "hirurgTravmatolog": "Surgeon-Traumatologist",
     "kardiolog": "Cardiologist",
@@ -135,6 +132,5 @@
     "mammology": "Маммология",
     "neurology": "Неврология",
     "neurosurgery": "Нейрохирургия"
->>>>>>> ec83732 (Bo'lim yangilandi)
   }
 }

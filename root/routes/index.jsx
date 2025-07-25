@@ -1,3 +1,5 @@
+import React from 'react';
+
 import MainLayout from '../Layouts';
 import InnerLayout from '../Layouts/InnerLayout';
 import SectionalLayout from '../Layouts/SectionLayout';
@@ -11,10 +13,8 @@ import Aboutus from '../pages/aboutUs';
 import Doctors from '../pages/Doctors';
 import Callcenter from '../pages/callcenter';
 import Cardiology from '../pages/cardiology';
-
 import NeurosurgeryPage from '../pages/neurosurgery';
-
-import AboutTheClinic from '../pages/About_Clinic';
+import AboutClinic from '../pages/AbouClinic';
 import Contacts from '../pages/contacts';
 import Control from '../pages/control';
 import Healer from '../pages/healer';
@@ -24,9 +24,6 @@ import Orthopedics from '../pages/orthopedics';
 import Physiotherapy from '../pages/physiotherapy';
 import Otolaryngology from '../pages/otolaryngology';
 
-<<<<<<< HEAD
-const routes = [
-=======
 // Allservices
 import Allservices from '../pages/allservices';
 import Allergist from '../pages/allservices/allergist';
@@ -54,136 +51,64 @@ import Xray from '../pages/allservices/XRay';
 import Infectiousdoc from '../pages/allservices/infectiousDoc';
 
 export const publicRoutes = [
->>>>>>> ec83732 (Bo'lim yangilandi)
   {
     path: appPaths.HOME,
     element: <Home />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'main' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.DOCTORS,
     element: <Doctors />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'doctors' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.ABOUT_US,
     element: <Aboutus />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'about_us' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.CALL_CENTER,
     element: <Callcenter />,
     layout: MainLayout,
-<<<<<<< HEAD
-  },
-  {
-    path: appPaths.CARDIOLOGY,
-    element: <Cardiology />,
-    layout: SectionalLayout,
-  },
-
-
-  {
-    path: appPaths.WORK_SCHEDULE,
-    element: <Scheduling />,
-    layout: InnerLayout,
-  },
-  {
-    path: appPaths.NEUROSURGERY,
-    element: <NeurosurgeryPage />,
-    layout:  SectionalLayout,
-  },
-  {
-    path: appPaths.OTOLARYNGOLOGY,
-    element: <Otolaryngology />,
-    layout:  SectionalLayout,
-  },
-  {
-    path: appPaths.PHYSIOTHERAPY,
-    element: <Physiotherapy />,
-    layout:  SectionalLayout,
-  },
-  {
-    path: appPaths.RESIDENCY,
-    element: <ResidencyForm />,
-    layout: InnerLayout,
-  },
-  {
-    path: appPaths.SUBMISSION,
-    element: <Submission />,
-    layout: MainLayout,
-=======
     breadcrumb: { title: 'call_center' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.ABOUT_CLINIC,
-    element: <AboutTheClinic />,
+    element: <AboutClinic />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'about_clinic' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.CONTACTS,
     element: <Contacts />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'contacts' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.CONTROL,
     element: <Control />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'control' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.HEALER,
     element: <Healer />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'healer' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.NEWS,
     element: <News />,
     layout: MainLayout,
-<<<<<<< HEAD
-=======
     breadcrumb: { title: 'news' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: appPaths.NEWS_DETAIL,
     element: <NewsDetail />,
     layout: MainLayout,
-<<<<<<< HEAD
-  },
-  {
-    path: appPaths.ORTHOPEDICS,
-    element: <Orthopedics />,
-    layout:  SectionalLayout,
-=======
     breadcrumb: { title: 'news_detail' }
   },
   {
@@ -329,7 +254,6 @@ export const publicRoutes = [
     element: <Xray />,
     layout: SectionalLayout,
     breadcrumb: { title: 'xray' }
->>>>>>> ec83732 (Bo'lim yangilandi)
   },
   {
     path: '*',
@@ -338,8 +262,6 @@ export const publicRoutes = [
   }
 ];
 
-<<<<<<< HEAD
-=======
 export const privateRoutes = [
   {
     path: appPaths.CARDIOLOGY,
@@ -375,5 +297,4 @@ export const privateRoutes = [
 
 const routes = [...publicRoutes, ...privateRoutes];
 
->>>>>>> ec83732 (Bo'lim yangilandi)
 export default routes;

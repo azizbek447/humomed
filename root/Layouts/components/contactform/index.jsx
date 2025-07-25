@@ -47,7 +47,7 @@ const ContactForm = () => {
       <div className='grid items-start gap-12 lg:grid-cols-2'>
         <div>
           <h2 className='mb-4 text-3xl font-semibold text-gray-800'>Возник вопрос?</h2>
-          <div className='mx-auto mb-12 h-1 w-16 rounded bg-green-500'></div>
+          <div className='mx-auto mb-12 h-1 w-16 rounded bg-[var(--success-strong)]'></div>
           <p className='mb-12 text-gray-500'>
             Наши врачи обладают высокой квалификации, большим опытом работы, постоянно обучаются,
             участвуют в семинарах и конференциях.
@@ -66,7 +66,7 @@ const ContactForm = () => {
             <input
               type='text'
               placeholder='Введите ваше имя'
-              className={`w-full rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none`}
+              className={`w-full rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none`}
               {...register('name')}
             />
             {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
@@ -79,7 +79,7 @@ const ContactForm = () => {
             <input
               type='email'
               placeholder='Введите ваш e-mail'
-              className={`w-full rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none`}
+              className={`w-full rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none`}
               {...register('email')}
             />
             {errors.email && <p className='mt-1 text-sm text-red-500'>{errors.email.message}</p>}
@@ -97,7 +97,7 @@ const ContactForm = () => {
                 mask='99 999-99-99'
                 maskChar='_'
                 placeholder='Введите номер телефона'
-                className={`flex-1 rounded-r-lg border ${errors.phone ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none`}
+                className={`flex-1 rounded-r-lg border ${errors.phone ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none`}
                 {...register('phone')}
               />
             </div>
@@ -108,7 +108,7 @@ const ContactForm = () => {
             <label className='mb-2 block text-sm font-medium text-gray-700'>Сообщение</label>
             <textarea
               placeholder='Введите ваше сообщение'
-              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none'
+              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none'
               rows={5}
               {...register('message')}
               onKeyDown={(e) => {
@@ -124,7 +124,7 @@ const ContactForm = () => {
             <button
               type='submit'
               disabled={isSubmitting}
-              className='inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-green-600 disabled:bg-green-400'
+              className='inline-flex items-center gap-2 rounded-lg bg-[var(--success-strong)] px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-[var(--success-strong)] disabled:bg-[var(--success-strong)]'
             >
               {isSubmitting ? (
                 <>

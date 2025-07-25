@@ -32,7 +32,7 @@ const branchList = [
   { name: 'Нейрохирургия', path: '/neurosurgery' },
 ];
 
-const Sidebar = () => {
+const ThreePartMedicalForm = () => {
   const {
     register,
     handleSubmit,
@@ -68,26 +68,16 @@ const Sidebar = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`border-t transition duration-200 ease-in-out ${
                   isHovered
-<<<<<<< HEAD
-                    ? 'bg-green-500 text-white'
-                    : 'text-gray-700 hover:bg-green-50 hover:text-green-600'
-=======
                     ? 'bg-[var(--success-strong)] text-white'
                     : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-white'
->>>>>>> ec83732 (Bo'lim yangilandi)
                 }`}
               >
                 <Link
                   to={item.path}
                   className={`flex items-center gap-2 border-t px-4 py-2 text-base transition duration-200 ease-in-out ${
                     isActive || isHovered
-<<<<<<< HEAD
-                      ? 'bg-green-500 text-white'
-                      : 'text-gray-700 hover:bg-green-50 hover:text-green-600'
-=======
                       ? 'bg-[var(--success-strong)] text-white'
                       : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-white'
->>>>>>> ec83732 (Bo'lim yangilandi)
                   }`}
                 >
                   {isActive || isHovered ? <FaArrowLeft /> : <FaArrowRight />}
@@ -99,7 +89,7 @@ const Sidebar = () => {
         </ul>
       </div>
 
-      <div className='rounded-xl bg-green-400 text-white shadow-md'>
+      <div className='rounded-xl bg-[var(--success-strong)] text-white shadow-md'>
         <div className='border-b border-white/30 px-4 py-3'>
           <h3 className='mb-1 text-lg font-bold'>График</h3>
           <div className='flex items-center space-x-2'>
@@ -120,7 +110,7 @@ const Sidebar = () => {
             </div>
             <div className='flex items-center gap-2'>
               <FaEnvelope />
-              <a href='mailto:pmstashkent@gmail.com' className='underline hover:text-green-200'>
+              <a href='mailto:pmstashkent@gmail.com' className='underline hover:text-[var(--success-strong)]'>
                 pmstashkent@gmail.com
               </a>
             </div>
@@ -136,12 +126,6 @@ const Sidebar = () => {
             <input
               type='text'
               placeholder='Введите ваше имя'
-<<<<<<< HEAD
-              className={`w-full rounded-lg border ${
-                errors.name ? 'border-red-500' : 'border-gray-200'
-              } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
-=======
->>>>>>> ec83732 (Bo'lim yangilandi)
               {...register('name')}
               className={`w-full rounded-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
                 errors.name ? 'border-red-500' : 'border-gray-200'
@@ -155,12 +139,6 @@ const Sidebar = () => {
             <input
               type='email'
               placeholder='Введите e-mail'
-<<<<<<< HEAD
-              className={`w-full rounded-lg border ${
-                errors.email ? 'border-red-500' : 'border-gray-200'
-              } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
-=======
->>>>>>> ec83732 (Bo'lim yangilandi)
               {...register('email')}
               className={`w-full rounded-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
                 errors.email ? 'border-red-500' : 'border-gray-200'
@@ -175,16 +153,6 @@ const Sidebar = () => {
               <span className='inline-flex items-center rounded-l-lg border border-r-0 border-gray-200 bg-gray-50 px-3 py-3 text-sm text-gray-600'>
                 +998
               </span>
-<<<<<<< HEAD
-              <InputMask
-                mask='99 999-99-99'
-                maskChar='_'
-                placeholder='Введите номер телефона'
-                className={`flex-1 rounded-r-lg border ${
-                  errors.phone ? 'border-red-500' : 'border-gray-200'
-                } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
-                {...register('phone')}
-=======
               <Controller
                 name='phone'
                 control={control}
@@ -199,7 +167,6 @@ const Sidebar = () => {
                     placeholder='90 123-45-67'
                   />
                 )}
->>>>>>> ec83732 (Bo'lim yangilandi)
               />
             </div>
             {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>}
@@ -210,10 +177,6 @@ const Sidebar = () => {
             <textarea
               rows={4}
               placeholder='Введите ваш комментарий'
-<<<<<<< HEAD
-              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none'
-=======
->>>>>>> ec83732 (Bo'lim yangilandi)
               {...register('comment')}
               className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none'
             />
@@ -222,11 +185,7 @@ const Sidebar = () => {
           <button
             type='submit'
             disabled={isSubmitting}
-<<<<<<< HEAD
-            className='flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-4 py-3 text-white transition hover:bg-green-600 disabled:opacity-50'
-=======
             className='flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--success-strong)] px-4 py-3 text-white transition hover:bg-[var(--success-strong)] disabled:opacity-50'
->>>>>>> ec83732 (Bo'lim yangilandi)
           >
             {isSubmitting ? (
               <>
@@ -244,4 +203,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default ThreePartMedicalForm;
