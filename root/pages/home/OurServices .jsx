@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -7,23 +7,36 @@ import {
   FaUserInjured, FaProcedures, FaVenus
 } from 'react-icons/fa';
 
-const services = [
-  { path: '/allergist', titleKey: 'services.allergology', icon: <FaVial /> },
-  { path: '/androlog', titleKey: 'services.andrology', icon: <FaUserMd /> },
-  { path: '/bariatr', titleKey: 'services.bariatrics', icon: <FaProcedures /> },
-  { path: '/gastroenterologist', titleKey: 'services.gastroenterology', icon: <FaLungs /> },
-  { path: '/gynecologist', titleKey: 'services.gynecology', icon: <FaVenus /> },
-  { path: '/dermatologist', titleKey: 'services.dermatology', icon: <FaNotesMedical /> },
-  { path: '/pediatric-dentist', titleKey: 'services.pediatric_dentistry', icon: <FaBaby /> },
-  { path: '/cardiology', titleKey: 'services.cardiology', icon: <FaHeart /> },
-  { path: '/otolaryngology', titleKey: 'services.ent', icon: <FaStethoscope /> },
-  { path: '/mammologist', titleKey: 'services.mammology', icon: <FaUserNurse /> },
-  { path: '/neurologist', titleKey: 'services.neurology', icon: <FaBrain /> },
-  { path: '/neurosurgery', titleKey: 'services.neurosurgery', icon: <FaUserInjured /> },
-];
 
+
+const services = [
+  { path: '/service/allergist', titleKey: 'services.allergist', icon: <FaVial /> },
+  { path: '/service/urologist', titleKey: 'services.androlog', icon: <FaUserMd /> },
+  { path: '/service/trauma-surgeon', titleKey: 'services.bariatr', icon: <FaProcedures /> },
+  { path: '/service/gastroenterologist', titleKey: 'services.gastro', icon: <FaLungs /> },
+  { path: '/service/gynecologist', titleKey: 'services.gynecologist', icon: <FaVenus /> },
+  { path: '/service/dermatologist', titleKey: 'services.dermatologist', icon: <FaNotesMedical /> },
+  { path: '/service/pediatrician', titleKey: 'services.pediatricDentist', icon: <FaBaby /> },
+  { path: '/service/cardiology', titleKey: 'services.cardiology', icon: <FaHeart /> },
+  { path: '/service/otolaryngology', titleKey: 'services.ent', icon: <FaStethoscope /> },
+  { path: '/service/mammologist', titleKey: 'services.mammologist', icon: <FaUserNurse /> },
+  { path: '/service/neurologist', titleKey: 'services.neurologist', icon: <FaBrain /> },
+  { path: '/service/neurosurgery', titleKey: 'services.neurosurgery', icon: <FaUserInjured /> },
+];
 const OurServices = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const visibleServices = isMobile ? services.slice(0, 6) : services;
 
   return (
     <div className="bg-gray-50 py-10 px-4">
@@ -32,9 +45,8 @@ const OurServices = () => {
           {t('ourServices.title')}
         </h2>
         <div className="mx-auto mb-10 h-1 w-20 rounded bg-[var(--success-strong)]"></div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {services.map((item, index) => (
+          {visibleServices.map((item, index) => (
             <Link
               to={item.path}
               key={index}

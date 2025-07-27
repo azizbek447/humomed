@@ -37,11 +37,39 @@
     "procedurniy": "Procedurniy",
     "laboratoriya": "Laboratoriya",
     "operBlock": "Опер блок",
-    "statsionar": "Стационар",  
+    "statsionar": "Стационар",
     "doctors": "Shifokorlar",
     "residency": "Rezidentura",
     "news": "Yangiliklar",
-    "contact": "Bog‘lanish"
+    "contact": "Bog‘lanish",
+    
+   "surgeon": "Travmatolog-shifokor",
+    "cardiologist": "Kardiolog",
+    "therapist": "Terapevt",
+    "gastroenterologist": "Gastroenterolog",
+    "endocrinologist": "Endokrinolog",
+    "gynecologist": "Ginekolog",
+    "rheumatologist": "Revmatolog",
+    "pulmonologist": "Pulmonolog",
+    "infectious": "Infeksionist",
+    "hepatologist": "Gepatolog",
+    "allergist": "Allergolog",
+    "proctologist": "Proktolog",
+    "ent": "LOR (otolaringolog)",
+    "dermatologist": "Dermatolog",
+    "neurologist": "Nevropatolog",
+    "urologist": "Urolog",
+    "child_neuro": "Bolalar nevropatologi",
+    "child_gastro": "Bolalar gastroenterologi",
+    "pediatrician": "Pediatr",
+    "usg": "UZI (Ultratovush)",
+    "xray": "Rentgen",
+    "physiotherapy": "Fizioterapiya",
+    "massage": "Massaj",
+    "procedure_room": "Procedura xonasi",
+    "laboratory": "Laboratoriya",
+    "operating_room": "Operatsion blok",
+    "inpatient": "Statsionar"
   },
   "question": {
     "title": "Savolingiz bormi?",
@@ -97,7 +125,7 @@
     "operating_room": "Operatsion blok",
     "inpatient": "Statsionar"
   },
-   "ourServices": {
+  "ourServices": {
     "title": "Klinikalar yo‘nalishlari",
     "all": "Barcha yo‘nalishlar"
   },
@@ -114,5 +142,10 @@
     "mammology": "Mammologiya",
     "neurology": "Nevrologiya",
     "neurosurgery": "Neyroxirurgiya"
-  }
+  },
+  "success": {
+  "title": "Muvaffaqiyatli!",
+  "text": "Sizning so‘rovingiz muvaffaqiyatli yuborildi."
+}
+
 }

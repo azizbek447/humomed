@@ -23,9 +23,15 @@ const MapLocation = () => {
         controls: ['zoomControl', 'fullscreenControl'],
       });
 
-      const placemark = new window.ymaps.Placemark([41.2156, 69.1845], {
-        balloonContent: t('map.balloon'),
-      });
+      const placemark = new window.ymaps.Placemark(
+        [41.2156, 69.1845],
+        {
+          balloonContent: t('map.balloon'),
+        },
+        {
+          preset: 'islands#redIcon',
+        }
+      );
 
       map.geoObjects.add(placemark);
     }

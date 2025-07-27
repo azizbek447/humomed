@@ -1,6 +1,11 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
+import * as yup from 'yup';
+import { Link, useLocation } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -10,17 +15,11 @@ import {
   FaPhone,
   FaSpinner,
 } from 'react-icons/fa';
-import { IMaskInput } from 'react-imask';
-import * as yup from 'yup';
-import { Link, useLocation } from 'react-router-dom';
 
 const schema = yup.object().shape({
   name: yup.string().required('Имя обязательно'),
   email: yup.string().email('Неверный email').required('Email обязателен'),
-  phone: yup
-    .string()
-    .matches(/^\d{2} \d{3}-\d{2}-\d{2}$/, 'Формат: 90 123-45-67')
-    .required('Телефон обязателен'),
+  phone: yup.string().min(11, 'Введите корректный номер').required('Телефон обязателен'),
   comment: yup.string(),
 });
 
@@ -37,6 +36,7 @@ const ThreePartMedicalForm = () => {
     register,
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -49,12 +49,21 @@ const ThreePartMedicalForm = () => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log({ ...data, phone: '+998 ' + data.phone });
+    console.log({ ...data, phone: '+' + data.phone });
+
+    Swal.fire({
+      icon: 'success',
+      title: t('success.title'),
+      text: t('success.text'),
+      confirmButtonColor: '#0084D1',
+    });
+
     setIsSubmitting(false);
+    reset();
   };
 
   return (
-    <div className='mx-auto w-full max-w-sm space-y-6 px-4 pt-20 font-sans text-sm text-gray-700 md:pt-60'>
+    <div className='mx-auto w-full max-w-md space-y-6 px-4 pt-20 text-sm text-gray-700 md:max-w-lg md:pt-40 lg:max-w-3xl'>
       <div className='rounded-xl border border-gray-200 bg-white shadow-md'>
         <h3 className='border-b p-4 text-lg font-semibold'>Все отделения</h3>
         <ul>
@@ -74,10 +83,10 @@ const ThreePartMedicalForm = () => {
               >
                 <Link
                   to={item.path}
-                  className={`flex items-center gap-2 border-t px-4 py-2 text-base transition duration-200 ease-in-out ${
+                  className={`flex items-center gap-2 px-4 py-2 text-base ${
                     isActive || isHovered
                       ? 'bg-[var(--success-strong)] text-white'
-                      : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-white'
+                      : 'text-gray-700'
                   }`}
                 >
                   {isActive || isHovered ? <FaArrowLeft /> : <FaArrowRight />}
@@ -110,7 +119,10 @@ const ThreePartMedicalForm = () => {
             </div>
             <div className='flex items-center gap-2'>
               <FaEnvelope />
-              <a href='mailto:pmstashkent@gmail.com' className='underline hover:text-[var(--success-strong)]'>
+              <a
+                href='mailto:pmstashkent@gmail.com'
+                className='underline hover:text-[var(--success-strong)]'
+              >
                 pmstashkent@gmail.com
               </a>
             </div>
@@ -122,12 +134,14 @@ const ThreePartMedicalForm = () => {
         <h3 className='mb-4 text-lg font-bold'>Задать вопрос</h3>
         <form onSubmit={handleSubmit(onSubmit)} className='space-y-4' noValidate>
           <div>
-            <label className='mb-2 block font-medium'>Ваше имя <span className='text-red-500'>*</span></label>
+            <label className='mb-2 block font-medium'>
+              Ваше имя <span className='text-red-500'>*</span>
+            </label>
             <input
               type='text'
               placeholder='Введите ваше имя'
               {...register('name')}
-              className={`w-full rounded-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
+              className={`w-full rounded-lg border px-4 py-3 ${
                 errors.name ? 'border-red-500' : 'border-gray-200'
               }`}
             />
@@ -135,12 +149,14 @@ const ThreePartMedicalForm = () => {
           </div>
 
           <div>
-            <label className='mb-2 block font-medium'>Ваш e-mail <span className='text-red-500'>*</span></label>
+            <label className='mb-2 block font-medium'>
+              Ваш e-mail <span className='text-red-500'>*</span>
+            </label>
             <input
               type='email'
               placeholder='Введите e-mail'
               {...register('email')}
-              className={`w-full rounded-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
+              className={`w-full rounded-lg border px-4 py-3 ${
                 errors.email ? 'border-red-500' : 'border-gray-200'
               }`}
             />
@@ -148,27 +164,41 @@ const ThreePartMedicalForm = () => {
           </div>
 
           <div>
-            <label className='mb-2 block font-medium'>Телефон <span className='text-red-500'>*</span></label>
-            <div className='flex'>
-              <span className='inline-flex items-center rounded-l-lg border border-r-0 border-gray-200 bg-gray-50 px-3 py-3 text-sm text-gray-600'>
-                +998
-              </span>
-              <Controller
-                name='phone'
-                control={control}
-                render={({ field }) => (
-                  <IMaskInput
-                    {...field}
-                    mask='00 000-00-00'
-                    unmask={false}
-                    className={`flex-1 rounded-r-lg border px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none ${
-                      errors.phone ? 'border-red-500' : 'border-gray-200'
-                    }`}
-                    placeholder='90 123-45-67'
-                  />
-                )}
-              />
-            </div>
+            <label className='mb-2 block font-medium'>
+              Телефон <span className='text-red-500'>*</span>
+            </label>
+            <Controller
+              name='phone'
+              control={control}
+              render={({ field }) => (
+                <PhoneInput
+                  {...field}
+                  inputRef={field.ref}
+                  country='uz'
+                  onlyCountries={['uz']}
+                  countryCodeEditable={false}
+                  masks={{ uz: '.. ...-..-..' }}
+                  placeholder='90 123-45-67'
+                  enableAreaCodes={true}
+                  specialLabel=''
+                  inputStyle={{
+                    width: '100%',
+                    padding: '24px',
+                    paddingLeft: '50px',
+                    borderRadius: '0.5rem',
+                    borderColor: errors.phone ? 'red' : '#e5e7eb',
+                    backgroundColor: '#f9fafb',
+                  }}
+                  buttonStyle={{
+                    borderTopLeftRadius: '0.5rem',
+                    borderBottomLeftRadius: '0.5rem',
+                    borderColor: '#e5e7eb',
+                    backgroundColor: '#f9fafb',
+                  }}
+                  containerStyle={{ width: '100%' }}
+                />
+              )}
+            />
             {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>}
           </div>
 
@@ -178,14 +208,14 @@ const ThreePartMedicalForm = () => {
               rows={4}
               placeholder='Введите ваш комментарий'
               {...register('comment')}
-              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:outline-none'
+              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400'
             />
           </div>
 
           <button
             type='submit'
             disabled={isSubmitting}
-            className='flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--success-strong)] px-4 py-3 text-white transition hover:bg-[var(--success-strong)] disabled:opacity-50'
+            className='flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--success-strong)] px-4 py-3 text-white transition hover:opacity-90 disabled:opacity-50'
           >
             {isSubmitting ? (
               <>

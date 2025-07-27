@@ -41,7 +41,36 @@
     "procedurniy": "Процедурный кабинет",
     "laboratoriya": "Лаборатория",
     "operBlock": "Опер блок",
-    "statsionar": "Стационар"
+    "statsionar": "Стационар",
+     "surgeon": "Травматолог-хирург",
+    "cardiologist": "Кардиолог",
+    "therapist": "Терапевт",
+    "gastroenterologist": "Гастроэнтеролог",
+    "endocrinologist": "Эндокринолог",
+    "gynecologist": "Гинеколог",
+    "rheumatologist": "Ревматолог",
+    "pulmonologist": "Пульмонолог",
+    "infectious": "Инфекционист",
+    "hepatologist": "Гепатолог",
+    "allergist": "Аллерголог",
+    "proctologist": "Проктолог",
+    "ent": "ЛОР (отоларинголог)",
+    "dermatologist": "Дерматолог",
+    "neurologist": "Невропатолог",
+    "urologist": "Уролог",
+    "child_neuro": "Детский невропатолог",
+    "child_gastro": "Детский гастроэнтеролог",
+    "pediatrician": "Педиатр",
+    "usg": "УЗИ",
+    "xray": "Рентген",
+    "physiotherapy": "Физиотерапия",
+    "massage": "Массаж",
+    "procedure_room": "Процедурный кабинет",
+    "laboratory": "Лаборатория",
+    "operating_room": "Операционная",
+    "inpatient": "Стационар"
+    
+    
   },
   "question": {
     "title": "Возник вопрос?",
@@ -114,5 +143,10 @@
     "mammology": "Маммология",
     "neurology": "Неврология",
     "neurosurgery": "Нейрохирургия"
-  }
+  },
+  "success": {
+  "title": "Успешно!",
+  "text": "Ваш запрос был успешно отправлен."
+}
+
 }

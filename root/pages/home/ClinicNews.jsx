@@ -10,6 +10,7 @@ const data = {
       description: 'Bizning klinikamizga zamonaviy MRT uskunasi olib kelindi.',
       date: '15 июль',
       image: '/images/news/mrt-launch.jpg',
+      path: '/news/1',
     },
     {
       id: 2,
@@ -17,6 +18,7 @@ const data = {
       description: 'Juma kunlari pediatrlarimizdan bepul maslahat olishingiz mumkin.',
       date: '10 июль',
       image: '/images/news/pediatrics-free.jpg',
+      path: '/news/2',
     },
     {
       id: 3,
@@ -24,9 +26,11 @@ const data = {
       description: 'Yoz oylariga mo‘ljallangan maxsus sog‘lomlashtirish dasturimiz haqida batafsil.',
       date: '05 июль',
       image: '/images/news/summer-program.jpg',
+      path: '/news/3',
     },
   ],
 };
+
 
 const ClinicNews = () => {
   const { t } = useTranslation();

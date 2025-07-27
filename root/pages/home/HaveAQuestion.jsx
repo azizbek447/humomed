@@ -146,7 +146,7 @@ const HaveAQuestion = () => {
             <button
               type='submit'
               disabled={isSubmitting}
-              className='inline-flex items-center gap-2 rounded-lg bg-[var(--success-strong)] px-6 py-3 font-medium text-white transition hover:bg-[var(--success-strong)] disabled:bg-green-400'
+              className='inline-flex items-center gap-2 rounded-lg bg-[var(--success-strong)] px-6 py-3 font-medium text-white transition hover:bg-[var(--success-strong)] disabled:bg-[var(--success-strong)]'
             >
               {isSubmitting ? (
                 <>

@@ -9,28 +9,33 @@ import { privateRoutes, publicRoutes } from '../routes';
 import { IoHomeOutline } from 'react-icons/io5';
 import PropTypes from 'prop-types';
 
-const Breadcrumb = ({ shouldClear = false, currentPageTitle }) => {
+const Breadcrumb = ({ currentPageTitle }) => {
   const { pathname, search } = useLocation();
   const { t } = useTranslation();
-  const { breadcrumbs, addBreadcrumb, setBreadcrumb } = useBreadcrumbs();
+  const { breadcrumbs, setBreadcrumb } = useBreadcrumbs();
 
   useEffect(() => {
-    const matchingRoute = find([...privateRoutes, ...publicRoutes], route =>
-      matchPath({ path: route.path, end: true }, pathname)
+    const matchingRoute = find(
+      [...privateRoutes, ...publicRoutes],
+      route => route.path && matchPath({ path: route.path, end: true }, pathname)
     );
 
-    if (matchingRoute) {
-      shouldClear
-        ? setBreadcrumb(pathname, search)
-        : addBreadcrumb(pathname, search);
+    if (matchingRoute && pathname) {
+      setBreadcrumb(pathname, search);
     }
-  }, [shouldClear, pathname, search]);
+  }, [pathname, search]);
 
   const items = useMemo(() => {
+    if (!Array.isArray(breadcrumbs)) return [];
+
     return breadcrumbs.reduce((acc, breadcrumb) => {
-      const route = find([...privateRoutes, ...publicRoutes], r =>
-        matchPath({ path: r.path, end: true }, breadcrumb.path)
+      if (!breadcrumb?.path) return acc;
+
+      const route = find(
+        [...privateRoutes, ...publicRoutes],
+        r => r.path && matchPath({ path: r.path, end: true }, breadcrumb.path)
       );
+
       if (route?.breadcrumb) {
         acc.push({
           ...route.breadcrumb,
@@ -38,6 +43,7 @@ const Breadcrumb = ({ shouldClear = false, currentPageTitle }) => {
           query: breadcrumb.query,
         });
       }
+
       return acc;
     }, []);
   }, [breadcrumbs]);
@@ -66,24 +72,16 @@ const Breadcrumb = ({ shouldClear = false, currentPageTitle }) => {
             className="flex items-center hover:text-primary hover:underline transition-colors"
           >
             <IoHomeOutline size={16} className="mr-1" />
+            <p>Main</p>
           </Link>
         </li>
 
         {items.map((item, index) => (
           <li key={index} className="flex items-center">
             <RxSlash />
-            {index === items.length - 1 ? (
-              <span className="text-dark/80" aria-current="page">
-                {currentPageTitle || t(item.title)}
-              </span>
-            ) : (
-              <Link
-                to={item.path}
-                className="flex items-center hover:text-primary hover:underline transition-colors"
-              >
-                {t(item.title)}
-              </Link>
-            )}
+            <span className="text-dark/80" aria-current="page">
+              {currentPageTitle || formatTitle(item)}
+            </span>
           </li>
         ))}
       </ol>
@@ -92,7 +90,6 @@ const Breadcrumb = ({ shouldClear = false, currentPageTitle }) => {
 };
 
 Breadcrumb.propTypes = {
-  shouldClear: PropTypes.bool,
   currentPageTitle: PropTypes.string,
 };
 

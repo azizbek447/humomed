@@ -37,11 +37,38 @@
     "uzd": "Ultrasound (USG)",
     "rentgen": "X-ray",
     "fizioterapiya": "Physiotherapy",
-    "massaj": "Massage",
+    "massaj": "Massage Therapy",
     "procedurniy": "Procedure Room",
     "laboratoriya": "Laboratory",
-    "operBlock": "Operating Block",
-    "statsionar": "Inpatient Department"
+    "operBlock": "Operating Room",
+    "statsionar": "Inpatient Ward",
+    "surgeon": "Trauma Surgeon",
+    "cardiologist": "Cardiologist",
+    "therapist": "Therapist",
+    "gastroenterologist": "Gastroenterologist",
+    "endocrinologist": "Endocrinologist",
+    "gynecologist": "Gynecologist",
+    "rheumatologist": "Rheumatologist",
+    "pulmonologist": "Pulmonologist",
+    "infectious": "Infectious Disease Specialist",
+    "hepatologist": "Hepatologist",
+    "allergist": "Allergist",
+    "proctologist": "Proctologist",
+    "ent": "ENT (Otolaryngologist)",
+    "dermatologist": "Dermatologist",
+    "neurologist": "Neurologist",
+    "urologist": "Urologist",
+    "child_neuro": "Pediatric Neurologist",
+    "child_gastro": "Pediatric Gastroenterologist",
+    "pediatrician": "Pediatrician",
+    "usg": "Ultrasound",
+    "xray": "X-ray",
+    "physiotherapy": "Physiotherapy",
+    "massage": "Massage Therapy",
+    "procedure_room": "Procedure Room",
+    "laboratory": "Laboratory",
+    "operating_room": "Operating Room",
+    "inpatient": "Inpatient Ward"
   },
   "question": {
     "title": "Have a question?",
@@ -67,7 +94,7 @@
     "title": "Our Location",
     "balloon": "Our address"
   },
-   "clinic": {
+  "clinic": {
     "title": "Clinic Departments",
     "surgeon": "Surgeon-Traumatologist",
     "cardiologist": "Cardiologist",
@@ -97,7 +124,7 @@
     "operating_room": "Operating Room",
     "inpatient": "Inpatient Ward"
   },
-   "ourServices": {
+  "ourServices": {
     "title": "Clinic Departments",
     "all": "All Services"
   },
@@ -115,22 +142,9 @@
     "neurology": "Neurology",
     "neurosurgery": "Neurosurgery"
   },
-   "ourServicese": {
-    "title": "Отделения клиники",
-    "all": "Все направления"
-  },
-  "servicess": {
-    "allergology": "Аллергология",
-    "andrology": "Андрология",
-    "bariatrics": "Бариатрия",
-    "gastroenterology": "Гастроэнтерология",
-    "gynecology": "Гинекология",
-    "dermatology": "Дерматология",
-    "pediatric_dentistry": "Детская стоматология",
-    "cardiology": "Кардиология",
-    "ent": "ЛОР (отоларингология)",
-    "mammology": "Маммология",
-    "neurology": "Неврология",
-    "neurosurgery": "Нейрохирургия"
-  }
+  "success": {
+  "title": "Success!",
+  "text": "Your request has been sent successfully."
+}
+
 }

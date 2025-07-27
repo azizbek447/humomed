@@ -131,7 +131,7 @@ export default function DoctorsCarousel() {
             .filter((doc) => doc.id !== selectedDoctor.id)
             .map((doctor) => (
               <SwiperSlide key={doctor.id} onClick={() => handleDoctorClick(doctor)}>
-                <div className='flex h-[500px]  cursor-pointer flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+                <div className='flex h-[500px] cursor-pointer flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
                   <img
                     src={doctor.image}
                     alt={doctor.name}
