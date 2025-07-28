@@ -1,26 +1,43 @@
 import { useEffect, useState } from 'react';
+import ScrollToTopButton from 'root/components/ScrollToTopButton';
+
 import Footer from './Footer';
 import Header from './Header';
 import HeaderInfo from './HeaderInfo';
-import ScrollToTopButton from 'root/components/ScrollToTopButton';
 
 const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 100;
-      setIsScrolled((prev) => {
-        if (prev !== scrolled) {
-          return scrolled;
-        }
-        return prev;
-      });
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
+  let handleScroll;
+  useEffect(() => {
+    let throttleTimeout = null;
+
+    const throttledScroll = () => {
+      if (throttleTimeout === null) {
+        throttleTimeout = setTimeout(() => {
+          handleScroll();
+          throttleTimeout = null;
+        }, 200); // 200ms delay
+      }
+    };
+
+    window.addEventListener('scroll', throttledScroll);
+    return () => {
+      window.removeEventListener('scroll', throttledScroll);
+      if (throttleTimeout) clearTimeout(throttleTimeout);
+    };
+  }, [handleScroll]);
 
   return (
     <div className='min-h-screen'>

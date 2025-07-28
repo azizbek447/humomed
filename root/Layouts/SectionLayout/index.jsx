@@ -1,14 +1,14 @@
-import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
-import Footer from '../Footer';
-import Header from '../Header';
-import Sidebar from './Sidebar';
-import Breadcrumbs from '../../components/Breadcrumb';
-import { useWindowSize } from '../../hooks/useWindowSize';
-import HeaderInfo from '../HeaderInfo';
+import { useLocation } from 'react-router-dom';
 import ScrollToTop from 'root/components/ScrollToTop';
 import ScrollToTopButton from 'root/components/ScrollToTopButton';
+
+import Breadcrumbs from '../../components/Breadcrumb';
+import { useWindowSize } from '../../hooks/useWindowSize';
+import Footer from '../Footer';
+import Header from '../Header';
+import HeaderInfo from '../HeaderInfo';
+import Sidebar from './Sidebar';
 
 const SectionalLayout = ({ children }) => {
   const { width } = useWindowSize();
