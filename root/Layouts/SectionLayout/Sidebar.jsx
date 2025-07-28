@@ -1,11 +1,8 @@
+import 'react-phone-input-2/lib/style.css';
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import * as yup from 'yup';
-import { Link, useLocation } from 'react-router-dom';
-import Swal from 'sweetalert2';
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
+import { Controller,useForm } from 'react-hook-form';
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -15,6 +12,13 @@ import {
   FaPhone,
   FaSpinner,
 } from 'react-icons/fa';
+import PhoneInput from 'react-phone-input-2';
+import { Link, useLocation } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import * as yup from 'yup';
+
+import { appPaths } from '../../constants/paths.js';
+import { SERVICE_LIST } from '../../constants/servicesData.jsx';
 
 const schema = yup.object().shape({
   name: yup.string().required('Имя обязательно'),
@@ -22,14 +26,6 @@ const schema = yup.object().shape({
   phone: yup.string().min(11, 'Введите корректный номер').required('Телефон обязателен'),
   comment: yup.string(),
 });
-
-const branchList = [
-  { name: 'Отоларингология', path: '/otolaryngology' },
-  { name: 'Кардиология', path: '/cardiology' },
-  { name: 'Физиотерапия', path: '/physiotherapy' },
-  { name: 'Ортопедия-вертебрология', path: '/orthopedics' },
-  { name: 'Нейрохирургия', path: '/neurosurgery' },
-];
 
 const ThreePartMedicalForm = () => {
   const {
@@ -46,15 +42,14 @@ const ThreePartMedicalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log({ ...data, phone: '+' + data.phone });
 
     Swal.fire({
       icon: 'success',
-      title: t('success.title'),
-      text: t('success.text'),
+      title: 'Успешно отправлено',
+      text: 'Спасибо за ваш вопрос!',
       confirmButtonColor: '#0084D1',
     });
 
@@ -63,33 +58,36 @@ const ThreePartMedicalForm = () => {
   };
 
   return (
-    <div className='mx-auto w-full max-w-md space-y-6 px-4 pt-20 text-sm text-gray-700 md:max-w-lg md:pt-40 lg:max-w-3xl'>
+    <div className='mx-auto w-full max-w-md space-y-6 px-4 pt-32 text-sm text-gray-700 md:max-w-lg  lg:max-w-3xl'>
+      {/* Branches */}
       <div className='rounded-xl border border-gray-200 bg-white shadow-md'>
         <h3 className='border-b p-4 text-lg font-semibold'>Все отделения</h3>
         <ul>
-          {branchList.map((item, index) => {
+          {SERVICE_LIST.map((item, index) => {
             const isHovered = hoveredIndex === index;
-            const isActive = location.pathname === item.path;
+            const isActive = location.pathname === appPaths.SERVICE_DETAILS(item.key);
+            const isVisibleMobile = index < 6;
+
             return (
               <li
-                key={index}
+                key={item.path}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`border-t transition duration-200 ease-in-out ${
-                  isHovered
+                  isHovered || isActive
                     ? 'bg-[var(--success-strong)] text-white'
                     : 'text-gray-700 hover:bg-[var(--success-strong)] hover:text-white'
-                }`}
+                } ${isVisibleMobile ? 'block' : 'hidden md:block'} `}
               >
                 <Link
-                  to={item.path}
+                  to={appPaths.SERVICE_DETAILS(item.key)}
                   className={`flex items-center gap-2 px-4 py-2 text-base ${
-                    isActive || isHovered
+                    isHovered || isActive
                       ? 'bg-[var(--success-strong)] text-white'
                       : 'text-gray-700'
                   }`}
                 >
-                  {isActive || isHovered ? <FaArrowLeft /> : <FaArrowRight />}
+                  {isHovered || isActive ? <FaArrowLeft /> : <FaArrowRight />}
                   <span className='truncate'>{item.name}</span>
                 </Link>
               </li>
@@ -130,6 +128,7 @@ const ThreePartMedicalForm = () => {
         </div>
       </div>
 
+      {/* Form */}
       <div className='rounded-xl bg-white p-4 shadow-md'>
         <h3 className='mb-4 text-lg font-bold'>Задать вопрос</h3>
         <form onSubmit={handleSubmit(onSubmit)} className='space-y-4' noValidate>
@@ -141,9 +140,7 @@ const ThreePartMedicalForm = () => {
               type='text'
               placeholder='Введите ваше имя'
               {...register('name')}
-              className={`w-full rounded-lg border px-4 py-3 ${
-                errors.name ? 'border-red-500' : 'border-gray-200'
-              }`}
+              className={`w-full rounded-lg border px-4 py-3 ${errors.name ? 'border-red-500' : 'border-gray-200'}`}
             />
             {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
           </div>
@@ -156,9 +153,7 @@ const ThreePartMedicalForm = () => {
               type='email'
               placeholder='Введите e-mail'
               {...register('email')}
-              className={`w-full rounded-lg border px-4 py-3 ${
-                errors.email ? 'border-red-500' : 'border-gray-200'
-              }`}
+              className={`w-full rounded-lg border px-4 py-3 ${errors.email ? 'border-red-500' : 'border-gray-200'}`}
             />
             {errors.email && <p className='mt-1 text-sm text-red-500'>{errors.email.message}</p>}
           </div>

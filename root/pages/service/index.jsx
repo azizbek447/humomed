@@ -6,17 +6,17 @@ const Service = () => {
   const { id } = useParams();
   const service = servicesData[id];
 
-  if (!service) return <div className="pt-20 text-center">Xizmat topilmadi</div>;
+  if (!service) return <div className='pt-20 text-center'>Xizmat topilmadi</div>;
 
   return (
-    <div className="pt-20 pb-32 px-4 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">{service.title}</h1>
+    <div className='mx-auto max-w-4xl px-4 pt-10 '>
+      <h1 className='mb-6 text-3xl font-bold text-gray-800'>{service.title}</h1>
       <img
         src={service.image}
         alt={service.title}
-        className="rounded-xl shadow mb-8 w-full object-cover max-h-[400px]"
+        className='mb-8 max-h-[400px] w-full rounded-xl object-cover shadow'
       />
-      <div className="space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
+      <div className='space-y-4 text-sm leading-relaxed text-gray-700 md:text-base'>
         {service.content?.map((block, index) => {
           if (block.type === 'paragraph') {
             return (
@@ -27,12 +27,16 @@ const Service = () => {
           }
 
           if (block.type === 'title') {
-            return <p key={index} className="font-bold">{block.text}</p>;
+            return (
+              <p key={index} className='font-bold'>
+                {block.text}
+              </p>
+            );
           }
 
           if (block.type === 'list') {
             return (
-              <ul key={index} className="list-disc list-inside">
+              <ul key={index} className='list-inside list-disc'>
                 {block.items.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}

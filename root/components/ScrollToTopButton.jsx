@@ -23,14 +23,9 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`group fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 
-      rounded-full bg-[var(--success-strong)] 
-      p-3 sm:p-4 md:p-5 lg:p-6 
-      text-white shadow-lg transition duration-300 
-      hover:bg-[var(--success-strong)] hover:shadow-xl hover:shadow-blue-400 
-      ${visible ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+      className={`group fixed right-4 bottom-4 z-50 rounded-full bg-[var(--success-strong)] p-3 text-white shadow-lg transition duration-300 hover:bg-[var(--success-strong)] hover:shadow-xl hover:shadow-blue-400 sm:right-6 sm:bottom-6 sm:p-4 md:p-5 lg:p-6 ${visible ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
     >
-      <FaArrowUp className='h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500 group-hover:rotate-[360deg]' />
+      <FaArrowUp className='h-4 w-4 transition-transform duration-500 group-hover:rotate-[360deg] sm:h-5 sm:w-5' />
     </button>
   );
 };

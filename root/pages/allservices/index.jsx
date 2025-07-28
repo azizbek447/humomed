@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { appPaths } from 'root/constants/paths';
+
 import servicesData from '../../constants/servicesData';
 
 const ClinicDirections = () => {

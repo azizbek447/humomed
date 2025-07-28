@@ -1,6 +1,10 @@
 import {
-  FaInstagram, FaTelegramPlane, FaPhoneAlt,
-  FaFacebookF, FaMapMarkerAlt, FaEnvelope
+  FaInstagram,
+  FaTelegramPlane,
+  FaPhoneAlt,
+  FaFacebookF,
+  FaMapMarkerAlt,
+  FaEnvelope,
 } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
@@ -9,32 +13,30 @@ const HeaderInfo = ({ isScrolled }) => {
 
   return (
     <div
-      className={`bg-[var(--success-strong)] text-white text-sm md:text-base lg:text-[18px] font-bold transition-all duration-300 w-full z-40 
-      ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+      className={`z-40 w-full bg-[var(--success-strong)] text-sm font-bold text-white transition-all duration-300 md:text-base lg:text-[18px] ${isScrolled ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex flex-col md:flex-row justify-between items-center gap-2">
-        
-        <div className="hidden md:flex flex-col md:flex-row gap-2 md:gap-6 items-center">
-          <div className="flex items-center gap-2">
+      <div className='mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-3 md:flex-row md:px-6'>
+        <div className='hidden flex-col items-center gap-2 md:flex md:flex-row md:gap-6'>
+          <div className='flex items-center gap-2'>
             <FaMapMarkerAlt />
             <span>{t('topbar.address')}</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className='flex items-center gap-2'>
             <FaPhoneAlt />
             <span>+998 90 123 45 67</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className='flex items-center gap-2'>
             <FaEnvelope />
             <span>info@humo.uz</span>
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-end w-full md:w-auto items-center gap-3">
+        <div className='flex w-full items-center justify-center gap-3 md:w-auto md:justify-end'>
           {[FaFacebookF, FaTelegramPlane, FaInstagram].map((Icon, i) => (
             <a
               key={i}
-              href="#"
-              className="p-2 rounded-full bg-white text-[var(--success-strong)] hover:bg-[var(--success-strong)] hover:text-white transition"
+              href='#'
+              className='rounded-full bg-white p-2 text-[var(--success-strong)] transition hover:bg-[var(--success-strong)] hover:text-white'
             >
               <Icon size={16} />
             </a>

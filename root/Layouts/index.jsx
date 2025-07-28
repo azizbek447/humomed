@@ -5,11 +5,17 @@ import HeaderInfo from './HeaderInfo';
 import ScrollToTopButton from 'root/components/ScrollToTopButton';
 
 const Layout = ({ children }) => {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrolled = window.scrollY > 100;
+      setIsScrolled((prev) => {
+        if (prev !== scrolled) {
+          return scrolled;
+        }
+        return prev;
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -17,10 +23,9 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className='min-h-screen'>
       <HeaderInfo isScrolled={isScrolled} />
       <Header isScrolled={isScrolled} />
-      
       {children}
       <Footer />
       <ScrollToTopButton />

@@ -64,7 +64,7 @@ const Breadcrumb = ({ currentPageTitle }) => {
   if (!items.length) return null;
 
   return (
-    <nav className="flex font-roboto leading-6 pt-35" aria-label="Breadcrumb">
+    <nav className="flex font-roboto leading-6" aria-label="Breadcrumb">
       <ol className="flex items-center flex-wrap">
         <li className="flex items-center">
           <Link

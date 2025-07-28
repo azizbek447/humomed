@@ -46,22 +46,26 @@ const HaveAQuestion = () => {
 
   return (
     <div className='mx-auto max-w-7xl px-4 py-10'>
-      <h2 className='mb-4 text-center text-3xl font-semibold text-gray-800'>{t('question.title')}</h2>
+      <h2 className='mb-4 text-center text-3xl font-semibold text-gray-800'>
+        {t('question.title')}
+      </h2>
       <div className='mx-auto mb-10 h-1 w-20 rounded bg-[var(--success-strong)]'></div>
-      <p className='mx-auto mb-12 max-w-2xl text-center text-gray-500'>{t('question.description')}</p>
+      <p className='mx-auto mb-12 max-w-2xl text-center text-gray-500'>
+        {t('question.description')}
+      </p>
 
       <div className='flex flex-col items-center gap-10 lg:flex-row lg:items-start'>
         <div className='flex w-full justify-center lg:w-1/2'>
           <img
             src={doktorImage}
             alt='doctor'
-            className='hidden sm:block h-[300px] w-auto rounded-lg object-contain sm:h-[400px]'
+            className='hidden h-[300px] w-auto rounded-lg object-contain sm:block sm:h-[400px]'
           />
 
           <img
             src={responsiveImage}
             alt='responsive doctor'
-            className='block sm:hidden h-[300px] w-auto rounded-lg object-contain'
+            className='block h-[300px] w-auto rounded-lg object-contain sm:hidden'
           />
         </div>
 
@@ -78,8 +82,9 @@ const HaveAQuestion = () => {
               <input
                 type='text'
                 placeholder={t('question.namePlaceholder')}
-                className={`w-full rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'
-                  } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--success-strong)]`}
+                className={`w-full rounded-lg border ${
+                  errors.name ? 'border-red-500' : 'border-gray-200'
+                } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none`}
                 {...register('name')}
               />
               {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
@@ -90,13 +95,13 @@ const HaveAQuestion = () => {
                 {t('question.phone')} <span className='text-red-500'>*</span>
               </label>
               <Controller
-                name="phone"
+                name='phone'
                 control={control}
                 render={({ field }) => (
                   <PhoneInput
                     {...field}
                     inputRef={field.ref}
-                    country="uz"
+                    country='uz'
                     onlyCountries={['uz']}
                     countryCodeEditable={false}
                     placeholder={t('question.phonePlaceholder')}
@@ -119,14 +124,12 @@ const HaveAQuestion = () => {
                     containerStyle={{
                       width: '100%',
                     }}
-                    specialLabel=""
+                    specialLabel=''
                   />
                 )}
               />
 
-              {errors.phone && (
-                <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>
-              )}
+              {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>}
             </div>
           </div>
 
@@ -136,7 +139,7 @@ const HaveAQuestion = () => {
             </label>
             <textarea
               placeholder={t('question.commentPlaceholder')}
-              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--success-strong)]'
+              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none'
               rows={5}
               {...register('comment')}
             />

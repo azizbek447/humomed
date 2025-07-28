@@ -1,11 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
+
+import { useRef, useState } from 'react';
 import Breadcrumb from 'root/components/Breadcrumb';
+import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import doc1 from '../../assets/img/img_2-removebg-preview.png';
+import doc2 from '../../assets/img/img_2-removebg-preview.png';
+import doc6 from '../../assets/img/img_2-removebg-preview.png';
+import doc3 from '../../assets/img/neyxuriga.png';
+import doc4 from '../../assets/img/neyxuriga.png';
+import doc5 from '../../assets/img/neyxuriga.png';
 
 const doctors = [
   {
@@ -13,42 +21,42 @@ const doctors = [
     name: 'Dr. Nodira Alimova',
     specialty: 'Kardiolog',
     subSpecialty: 'Yurak qon-tomir kasalliklari',
-    image: '/images/doctors/doc1.jpg',
+    image: doc1,
   },
   {
     id: 2,
     name: 'Dr. Jamshid Bekmurodov',
     specialty: 'Nevrolog',
     subSpecialty: 'Markaziy asab tizimi',
-    image: '/images/doctors/doc2.jpg',
+    image: doc2,
   },
   {
     id: 3,
     name: 'Dr. Laylo Karimova',
     specialty: 'LOR (otolaringolog)',
     subSpecialty: 'Burun va quloq jarrohligi',
-    image: '/images/doctors/doc3.jpg',
+    image: doc3,
   },
   {
     id: 4,
     name: 'Dr. Aziz Xolmurodov',
     specialty: 'Ortoped',
     subSpecialty: 'Suyak va bo‘g‘imlar',
-    image: '/images/doctors/doc4.jpg',
+    image: doc4,
   },
   {
     id: 5,
     name: 'Dr. Shahzod Umarov',
     specialty: 'Endokrinolog',
     subSpecialty: 'Ichki sekretsiya bezlari',
-    image: '/images/doctors/doc5.jpg',
+    image: doc5,
   },
   {
     id: 6,
     name: 'Dr. Dilnoza Madaminova',
     specialty: 'Ginekolog',
     subSpecialty: 'Ayollar salomatligi',
-    image: '/images/doctors/doc6.jpg',
+    image: doc6,
   },
 ];
 
@@ -72,18 +80,22 @@ export default function DoctorsCarousel() {
   return (
     <div className='bg-white py-10'>
       <div className='mx-auto max-w-7xl px-4'>
-        <div className='mb-20'>
+        {/* Breadcrumb */}
+        <div className='mb-12'>
           <Breadcrumb />
         </div>
 
+        {/* Tanlangan doktor – yuqorida (rasm + ma'lumot) */}
         <div className='mb-16 flex flex-col items-center gap-10 md:flex-row'>
+          {/* Rasm */}
           <div className='flex justify-center md:w-1/2'>
             <img
               src={selectedDoctor.image}
               alt={selectedDoctor.name}
-              className='h-[350px] rounded-xl object-cover shadow-xl'
+              className='h-[350px] w-full max-w-[420px] rounded-xl object-cover shadow-xl'
             />
           </div>
+          {/* Ma'lumot */}
           <div className='text-center md:w-1/2 md:text-left'>
             <h2 className='mb-2 text-3xl font-bold text-gray-800'>{selectedDoctor.name}</h2>
             <p className='mb-1 text-xl font-medium text-[var(--success-strong)]'>
@@ -93,12 +105,13 @@ export default function DoctorsCarousel() {
               <p className='mb-4 text-lg text-gray-600'>{selectedDoctor.subSpecialty}</p>
             )}
             <p className='leading-relaxed text-gray-700'>
-              Международный член Европейского Ринологического Общества (ERS), ...
+              Международный член Европейского Ринологического Общества (ERS), с большим опытом
+              диагностики и лечения в своей области.
             </p>
           </div>
         </div>
 
-        {/* Title */}
+        {/* Sarlavha */}
         <h1 className='mb-4 text-center text-4xl font-bold text-gray-800'>
           Bizning mutaxassislarimiz
         </h1>
@@ -142,8 +155,8 @@ export default function DoctorsCarousel() {
                     <p className='text-sm text-gray-600'>{doctor.specialty}</p>
                   </div>
                   <div>
-                    <span className='text-[var(--success-strong)]hover:text-green-800 mt-4 inline-block text-sm font-medium hover:underline'>
-                      Подробнее →
+                    <span className='mt-4 inline-block text-sm font-medium text-[var(--success-strong)] hover:text-green-800 hover:underline'>
+                      Batafsil →
                     </span>
                   </div>
                 </div>
