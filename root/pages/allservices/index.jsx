@@ -9,7 +9,7 @@ const ClinicDirections = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='bg-gray-50 px-4 py-35'>
+    <div className='bg-gray-50 px-4 py-40'>
       <div className='mx-auto max-w-7xl'>
         <h2 className='mb-4 text-center text-3xl font-semibold text-gray-800'>
           {t('clinic.title')}

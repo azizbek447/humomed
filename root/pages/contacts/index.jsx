@@ -12,7 +12,7 @@ const MapLocation = () => {
   return (
     <div className='bg-white pt-20 text-center'>
       {/* Map */}
-      <div className='h-[400px]  w-full'>
+      <div className='h-[400px] w-full'>
         <YMaps
           query={{
             lang: i18n.language === 'en' ? 'en_US' : 'ru_RU',

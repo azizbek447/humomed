@@ -145,6 +145,32 @@
   "success": {
   "title": "Success!",
   "text": "Your request has been sent successfully."
-}
+},
+  "form": {
+    "all_departments": "All Departments",
+    "show_all_services": "Show all services ↓",
+    "hide_services": "Hide",
+    "schedule": "Schedule",
+    "open_hours": "Mon-Sun 24/7",
+    "contacts": "Contacts",
+    "ask_question": "Ask a Question",
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Phone",
+    "comment": "Comment",
+    "enter_name": "Enter your name",
+    "enter_email": "Enter your email",
+    "phone_placeholder": "90 123-45-67",
+    "enter_comment": "Enter your comment",
+    "send": "Send",
+    "sending": "Sending...",
+    "success_title": "Successfully Sent",
+    "success_message": "Thank you for your question!",
+    "name_required": "Name is required",
+    "email_invalid": "Invalid email",
+    "email_required": "Email is required",
+    "phone_invalid": "Enter a valid phone number",
+    "phone_required": "Phone is required"
+  }
 
 }

@@ -3,7 +3,7 @@ import Breadcrumb from 'root/components/Breadcrumb';
 
 const AboutTheClinic = () => {
   return (
-    <div className='relative bg-cover bg-center py-10'>
+    <div className='relative bg-cover bg-center py-40'>
       <div className='flex min-h-screen flex-col items-center justify-start px-4  text-center'>
         <div className='w-full max-w-7xl'>
           <div className='mb-19 text-left'>

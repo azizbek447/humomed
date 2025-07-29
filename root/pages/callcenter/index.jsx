@@ -55,7 +55,9 @@ const ResidencyNom = () => {
         </div>
 
         <div className='mx-auto mt-10 max-w-4xl space-y-4 text-gray-800'>
-          <p className='cursor-pointer text-[var(--success-strong)] underline'>Ординатура Список.docx</p>
+          <p className='cursor-pointer text-[var(--success-strong)] underline'>
+            Ординатура Список.docx
+          </p>
 
           <p>
             С целью создания удобства для абитуриентов, подающих документы в клиническую ординатуру

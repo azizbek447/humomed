@@ -42,8 +42,7 @@
     "residency": "Rezidentura",
     "news": "Yangiliklar",
     "contact": "Bog‘lanish",
-
-   "surgeon": "Travmatolog-shifokor",
+    "surgeon": "Travmatolog-shifokor",
     "cardiologist": "Kardiolog",
     "therapist": "Terapevt",
     "gastroenterologist": "Gastroenterolog",
@@ -128,7 +127,8 @@
     "breadcrumb": {
       "home": "Bosh sahifa",
       "profile": "Profil",
-      "settings": "Sozlamalar"}
+      "settings": "Sozlamalar"
+    }
   },
   "ourServices": {
     "title": "Klinikalar yo‘nalishlari",
@@ -149,8 +149,33 @@
     "neurosurgery": "Neyroxirurgiya"
   },
   "success": {
-  "title": "Muvaffaqiyatli!",
-  "text": "Sizning so‘rovingiz muvaffaqiyatli yuborildi."
-}
-
+    "title": "Muvaffaqiyatli!",
+    "text": "Sizning so‘rovingiz muvaffaqiyatli yuborildi."
+  },
+  "form": {
+    "all_departments": "Barcha bo‘limlar",
+    "show_all_services": "Barcha xizmatlarni ko‘rsatish ↓",
+    "hide_services": "Yopish",
+    "schedule": "Ish vaqti",
+    "open_hours": "Dush-Yakshanba 24/7",
+    "contacts": "Kontaktlar",
+    "ask_question": "Savol berish",
+    "name": "Ismingiz",
+    "email": "Email manzilingiz",
+    "phone": "Telefon",
+    "comment": "Izoh",
+    "enter_name": "Ismingizni kiriting",
+    "enter_email": "Emailingizni kiriting",
+    "phone_placeholder": "90 123-45-67",
+    "enter_comment": "Izohingizni kiriting",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "success_title": "Muvaffaqiyatli yuborildi",
+    "success_message": "Savolingiz uchun rahmat!",
+    "name_required": "Ism majburiy",
+    "email_invalid": "Noto‘g‘ri email",
+    "email_required": "Email majburiy",
+    "phone_invalid": "To‘g‘ri telefon raqamini kiriting",
+    "phone_required": "Telefon raqami majburiy"
+  }
 }

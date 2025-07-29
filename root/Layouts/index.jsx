@@ -9,35 +9,23 @@ const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    let throttleTimeout = null;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (throttleTimeout) return;
+
+      throttleTimeout = setTimeout(() => {
+        setIsScrolled(window.scrollY > 50);
+        throttleTimeout = null;
+      }, 200); // scroll eventni 200ms da bir ishlatadi
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  let handleScroll;
-  useEffect(() => {
-    let throttleTimeout = null;
-
-    const throttledScroll = () => {
-      if (throttleTimeout === null) {
-        throttleTimeout = setTimeout(() => {
-          handleScroll();
-          throttleTimeout = null;
-        }, 200); // 200ms delay
-      }
-    };
-
-    window.addEventListener('scroll', throttledScroll);
-    return () => {
-      window.removeEventListener('scroll', throttledScroll);
       if (throttleTimeout) clearTimeout(throttleTimeout);
     };
-  }, [handleScroll]);
+  }, []);
 
   return (
     <div className='min-h-screen'>

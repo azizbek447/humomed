@@ -147,6 +147,35 @@
   "success": {
   "title": "Успешно!",
   "text": "Ваш запрос был успешно отправлен."
+},
+
+  "form": {
+    "all_departments": "Все отделения",
+    "show_all_services": "Показать все услуги ↓",
+    "hide_services": "Скрыть",
+    "schedule": "График",
+    "open_hours": "Пн-Вс 24/7",
+    "contacts": "Контакты",
+    "ask_question": "Задать вопрос",
+    "name": "Ваше имя",
+    "email": "Ваш e-mail",
+    "phone": "Телефон",
+    "comment": "Комментарий",
+    "enter_name": "Введите ваше имя",
+    "enter_email": "Введите e-mail",
+    "phone_placeholder": "90 123-45-67",
+    "enter_comment": "Введите ваш комментарий",
+    "send": "Отправить",
+    "sending": "Отправка...",
+    "success_title": "Успешно отправлено",
+    "success_message": "Спасибо за ваш вопрос!",
+    "name_required": "Имя обязательно",
+    "email_invalid": "Неверный email",
+    "email_required": "Email обязателен",
+    "phone_invalid": "Введите корректный номер",
+    "phone_required": "Телефон обязателен"
+  }
 }
 
-}
+
+

@@ -58,6 +58,13 @@ const doctors = [
     subSpecialty: 'Ayollar salomatligi',
     image: doc6,
   },
+  {
+    id: 7,
+    name: 'Dr. Dilnoza Madaminova',
+    specialty: 'Ginekolog',
+    subSpecialty: 'Ayollar salomatligi',
+    image: doc6,
+  },
 ];
 
 export default function DoctorsCarousel() {
@@ -78,7 +85,7 @@ export default function DoctorsCarousel() {
   };
 
   return (
-    <div className='bg-white py-10'>
+    <div className='bg-white py-40'>
       <div className='mx-auto max-w-7xl px-4'>
         {/* Breadcrumb */}
         <div className='mb-12'>

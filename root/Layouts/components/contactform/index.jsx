@@ -26,9 +26,8 @@ const ContactForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     setIsSubmitting(true);
-    console.log('Submitted data:', data);
     await new Promise((resolve) => setTimeout(resolve, 2000));
     reset();
     setIsSubmitting(false);

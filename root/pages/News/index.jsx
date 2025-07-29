@@ -49,7 +49,7 @@ const ClinicNews = () => {
   ];
 
   return (
-    <div className='bg-white pt-10 pb-24'>
+    <div className='bg-white pt-40 pb-24'>
       <div className='mx-auto w-full max-w-7xl px-4'>
         {/* Breadcrumb (ixtiyoriy) */}
         <div className='mb-19'>
