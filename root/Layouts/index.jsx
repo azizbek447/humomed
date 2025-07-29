@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import ScrollToTopButton from 'root/components/ScrollToTopButton';
 
+import ScrollToTop from '../components/ScrollToTop.jsx';
 import Footer from './Footer';
 import Header from './Header';
 import HeaderInfo from './HeaderInfo';
-import ScrollToTop from '../components/ScrollToTop.jsx';
 
 const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       throttleTimeout = setTimeout(() => {
         setIsScrolled(window.scrollY > 50);
         throttleTimeout = null;
-      }, 200);
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
