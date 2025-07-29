@@ -37,7 +37,7 @@ const HeaderInfo = ({ isScrolled }) => {
           </div>
           <div className='flex items-center gap-2'>
             <FaEnvelope />
-            <span>info@humo.uz</span>
+            <span>humo@gmail.com</span>
           </div>
         </div>
 
