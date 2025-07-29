@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="bg-gray-100 text-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-        <div className="flex flex-col items-center sm:items-start text-center  sm:text-left">
+        <div className="flex flex-col sm:items-start items-start text-left">
           <img src={logo} alt="Humo Med" className="w-24 h-24 mb-4 object-contain" />
           <div className="flex gap-4">
             {[
@@ -27,7 +27,7 @@ const Footer = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-white text-green-500  hover:bg-green-500 hover:text-white transition-colors duration-300"
+                className="p-3 rounded-full bg-white text-[var(--success-strong)] hover:bg-[var(--success-strong)] hover:text-white transition-colors duration-300"
               >
                 {icon}
               </a>
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center sm:text-left">
+        <div className="text-left">
           <h3 className="font-semibold text-lg mb-4">Yangiliklar</h3>
           <ul className="space-y-3 text-sm">
             {[
@@ -52,7 +52,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="text-center sm:text-left">
+        <div className="text-left">
           <h3 className="font-semibold text-lg mb-4">Bog‘lanish</h3>
           <ul className="space-y-3 text-sm">
             {[
@@ -63,23 +63,23 @@ const Footer = () => {
               'Kurgan-Tepa, Mustaqillik 120',
             ].map((addr, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <FaMapMarkerAlt className="text-green-600 mt-1" />
+                <FaMapMarkerAlt className="text-[var(--success-strong)] mt-1" />
                 <span>{addr}</span>
               </li>
             ))}
             <li className="flex items-center gap-2">
-              <FaPhoneAlt className="text-green-600" />
+              <FaPhoneAlt className="text-[var(--success-strong)]" />
               <span>+998 55 501 03 03 (1210)</span>
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope className="text-green-600" />
+              <FaEnvelope className="text-[var(--success-strong)]" />
               <span>pmstashkent@gmail.com</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="bg-green-600 text-white text-center py-3 text-sm">
+      <div className="bg-[var(--success-strong)] text-white text-center py-3 text-sm">
         Copyright © 2019 HumoService
       </div>
     </footer>

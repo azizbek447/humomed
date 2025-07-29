@@ -35,12 +35,12 @@ const testimonials = [
 
 const TestimonialsCarousel = () => {
   return (
-    <div className="bg-white py-16">
-      <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-center text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
+    <div className='bg-white py-16'>
+      <div className='mx-auto max-w-7xl px-4'>
+        <h2 className='mb-2 text-center text-3xl font-bold text-gray-800 sm:text-4xl'>
           Отзывы наших пациентов
         </h2>
-        <div className="mx-auto mb-10 h-1 w-16 rounded bg-green-600" />
+        <div className='mx-auto mb-10 h-1 w-16 rounded bg-[var(--success-strong)]' />
 
         <Swiper
           slidesPerView={1}
@@ -57,20 +57,20 @@ const TestimonialsCarousel = () => {
           }}
         >
           {testimonials.map((item, index) => (
-            <SwiperSlide key={index} className="flex justify-center">
-              <div className="w-full max-w-sm bg-green-600 text-white rounded-2xl shadow-md p-6 flex flex-col">
-                <div className="flex items-center mb-4">
-                  <div className="w-14 h-14 rounded-full bg-white/30 p-1 mr-4">
+            <SwiperSlide key={index} className='flex justify-center'>
+              <div className='flex w-full max-w-sm flex-col rounded-2xl bg-[var(--success-strong)] p-6 text-white shadow-md'>
+                <div className='mb-4 flex items-center'>
+                  <div className='mr-4 h-14 w-14 rounded-full bg-white/30 p-1'>
                     <img
                       src={bosh}
                       alt={item.name}
-                      className="w-full h-full object-cover rounded-full"
+                      className='h-full w-full rounded-full object-cover'
                     />
                   </div>
-                  <h3 className="text-lg font-semibold">{item.name}</h3>
+                  <h3 className='text-lg font-semibold'>{item.name}</h3>
                 </div>
                 <div
-                  className="text-sm leading-relaxed overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/40 scrollbar-track-white/10"
+                  className='scrollbar-thin scrollbar-thumb-white/40 scrollbar-track-white/10 overflow-y-auto pr-2 text-sm leading-relaxed'
                   style={{ maxHeight: '130px' }}
                 >
                   {item.comment}
@@ -80,7 +80,7 @@ const TestimonialsCarousel = () => {
           ))}
         </Swiper>
 
-        <div className="swiper-pagination !mt-6" />
+        <div className='swiper-pagination !mt-6' />
       </div>
     </div>
   );

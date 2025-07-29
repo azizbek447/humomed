@@ -1,28 +1,34 @@
-import { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import {
-  FaInstagram,
-  FaTelegramPlane,
-  FaPhoneAlt,
-  FaFacebookF,
-  FaBars,
-  FaTimes,
-} from 'react-icons/fa';
+import { FaBars, FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+
 import ru from '../assets/svg/russia.svg';
 import en from '../assets/svg/us.svg';
 import uz from '../assets/svg/uz.svg';
 import logo from '../assets/images/logo.png';
 
-const Header = () => {
-  const { i18n } = useTranslation();
-  const [showTopBar, setShowTopBar] = useState(true);
-  const [lang, setLang] = useState(localStorage.getItem('lang') || 'uz');
+import { appPaths } from 'root/constants/paths';
+import { SERVICE_LIST } from '../constants/servicesData.jsx';
+
+const Header = ({ isScrolled }) => {
+  const { i18n, t } = useTranslation();
+  const location = useLocation();
+
+  const [lang, setLang] = useState('uz');
   const [isOpen, setIsOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const langRef = useRef(null);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
+  const [hoveredPath, setHoveredPath] = useState(null);
+
   const dropdownTimeout = useRef(null);
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('lang') || 'uz';
+    setLang(savedLang);
+    i18n.changeLanguage(savedLang);
+  }, [i18n]);
 
   const languages = [
     { code: 'uz', label: "O'zbekcha", icon: uz },
@@ -30,148 +36,200 @@ const Header = () => {
     { code: 'en', label: 'English', icon: en },
   ];
 
+  const navLinks = [
+    { path: '/', label: 'nav.home' },
+    { path: '/about-clinic', label: 'nav.about' },
+    {
+      label: 'nav.departments',
+      children: SERVICE_LIST.map((item) => ({
+        path: appPaths.SERVICE_DETAILS(item.key),
+        label: `nav.${item.key}`,
+      })),
+    },
+    { path: '/Doctors', label: 'nav.doctors' },
+    { path: '/news', label: 'nav.news' },
+    { path: '/contacts', label: 'nav.contact' },
+  ];
+
+  const currentLang = languages.find((l) => l.code === lang);
+
   const handleLanguageChange = (code) => {
     setLang(code);
     i18n.changeLanguage(code);
     localStorage.setItem('lang', code);
     setIsOpen(false);
+    setMobileMenu(false);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (langRef.current && !langRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const isActive = (path) => location.pathname === path;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowTopBar(window.scrollY < 60);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const currentLang = languages.find((l) => l.code === lang);
-
-  const handleMouseEnter = () => {
-    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
-    setDropdown(true);
-  };
-
-  const handleMouseLeave = () => {
-    dropdownTimeout.current = setTimeout(() => {
-      setDropdown(false);
-    }, 300);
-  };
-
-  const navLinks = (
-    <>
-      <Link to="/" className="hover:text-green-600 transition">Bosh sahifa</Link>
-      <Link to="/about" className="hover:text-green-600 transition">Klinika haqida</Link>
-
-      <div
-        className="relative group"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <span className="hover:text-green-800 transition cursor-pointer">Bo‘limlar</span>
-        <div className={`absolute left-0 mt-2 w-56 bg-white border shadow-lg rounded-md z-50 transition-all duration-200 ${dropdown ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-          <Link to="/departments/cardiology" className="block px-4 py-2 hover:bg-green-50">Kardiologiya</Link>
-          <Link to="/departments/neurology" className="block px-4 py-2 hover:bg-green-50">Nevrologiya</Link>
-          <Link to="/departments/urology" className="block px-4 py-2 hover:bg-green-50">Urologiya</Link>
-          <Link to="/departments/gynecology" className="block px-4 py-2 hover:bg-green-50">Ginekologiya</Link>
-          <Link to="/departments/dermatology" className="block px-4 py-2 hover:bg-green-50">Dermatologiya</Link>
-        </div>
-      </div>
-
-      <Link to="/doctors" className="hover:text-green-600 transition">Shifokorlar</Link>
-      <Link to="/news" className="hover:text-green-600 transition">Yangiliklar</Link>
-      <Link to="/residency" className="hover:text-green-600 transition">Ordinatura</Link>
-      <Link to="/contact" className="hover:text-green-600 transition">Kontakt</Link>
-    </>
-  );
+  const renderNavLinks = (isMobile = false) =>
+    navLinks.map((item) =>
+      item.children ? (
+        isMobile ? (
+          <div key={item.label}>
+            <button
+              className='flex w-full items-center justify-between text-left text-base font-semibold text-black sm:text-[17px]'
+              onClick={() =>
+                setMobileDropdownOpen((prev) => (prev === item.label ? null : item.label))
+              }
+            >
+              {t(item.label)}
+              <span>{mobileDropdownOpen === item.label ? '▲' : '▼'}</span>
+            </button>
+            {mobileDropdownOpen === item.label && (
+              <div className='mt-2 ml-3 space-y-1'>
+                {item.children.map((child) => (
+                  <Link
+                    key={child.path}
+                    to={child.path}
+                    className={`block rounded px-2 py-1 text-sm font-medium hover:bg-white sm:text-[15px] ${
+                      isActive(child.path)
+                        ? 'bg-[var(--success-light)] text-white'
+                        : 'text-gray-800'
+                    }`}
+                    onClick={() => setMobileMenu(false)}
+                  >
+                    {t(child.label)}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <div
+            key={item.label}
+            className='group relative'
+            onMouseEnter={() => {
+              clearTimeout(dropdownTimeout.current);
+              setDropdown(true);
+            }}
+            onMouseLeave={() => {
+              dropdownTimeout.current = setTimeout(() => setDropdown(false), 300);
+            }}
+          >
+            <span className='cursor-pointer text-base font-semibold text-black hover:text-[var(--success-strong)] lg:text-[18px]'>
+              {t(item.label)}
+            </span>
+            <div
+              className={`absolute left-0 z-50 mt-2 w-40 rounded-md border bg-white shadow-lg transition-all duration-200 sm:w-52 ${
+                dropdown ? 'visible opacity-100' : 'invisible opacity-0'
+              }`}
+            >
+              {item.children.map((child) => (
+                <Link
+                  key={child.path}
+                  to={child.path}
+                  onMouseEnter={() => setHoveredPath(child.path)}
+                  onMouseLeave={() => setHoveredPath(null)}
+                  className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold transition hover:bg-[var(--success-light)] ${
+                    isActive(child.path) || hoveredPath === child.path
+                      ? 'bg-[var(--success-light)] text-white'
+                      : 'text-gray-800'
+                  }`}
+                >
+                  {isActive(child.path) || hoveredPath === child.path ? (
+                    <FaArrowLeft />
+                  ) : (
+                    <FaArrowRight />
+                  )}
+                  {t(child.label)}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )
+      ) : (
+        <Link
+          key={item.path}
+          to={item.path}
+          className={`text-base font-semibold transition hover:text-[var(--success-strong)] lg:text-[18px] ${
+            isActive(item.path) ? 'text-[var(--success-strong)]' : 'text-black'
+          }`}
+          onClick={() => isMobile && setMobileMenu(false)}
+        >
+          {t(item.label)}
+        </Link>
+      )
+    );
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 text-[18px] font-medium">
-      {showTopBar && (
-        <div className="bg-green-600 text-white py-2 px-4 flex justify-center items-center">
-          <div className="flex gap-4">
-            {[FaFacebookF, FaTelegramPlane, FaInstagram].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white text-green-600 hover:bg-green-700 hover:text-white transition-colors duration-300"
-              >
-                <Icon />
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+    <nav
+      className={`fixed right-0 left-0 z-40 bg-white shadow-md transition-all duration-300 ${
+        isScrolled ? 'top-0' : 'top-[50px]'
+      }`}
+    >
+      <div className='mx-auto flex max-w-7xl items-center justify-between px-2 py-3 sm:px-4'>
+        <Link to='/'>
+          <img
+            src={logo}
+            alt='Logo'
+            className={`w-auto object-contain transition-all duration-300 ${
+              isScrolled ? 'h-12' : 'h-16 sm:h-20'
+            }`}
+          />
+        </Link>
 
-      <div className="bg-white shadow-md">
-        <div className="max-w-[1300px] mx-auto flex justify-between items-center px-6 py-4">
-          <Link to="/">
-            <img src={logo} alt="Logo" className="h-16 w-auto object-contain" />
-          </Link>
-
-          <div className="hidden md:flex gap-8 text-gray-800">
-            {navLinks}
-          </div>
-
-          <div className="relative hidden md:block ml-4" ref={langRef}>
-            <button onClick={() => setIsOpen(!isOpen)} className="flex items-center px-3 py-1 hover:border-green-900">
-              <img src={currentLang.icon} alt={currentLang.label} className="h-4 w-6 object-cover" />
+        <div className='hidden items-center gap-3 md:flex lg:gap-6'>
+          {renderNavLinks()}
+          <div className='relative ml-3'>
+            <button onClick={() => setIsOpen(!isOpen)} className='flex items-center'>
+              <img
+                src={currentLang.icon}
+                alt={currentLang.label}
+                className='h-4 w-6 object-cover'
+              />
             </button>
             {isOpen && (
-              <div className="absolute right-0 mt-1 w-44 rounded-md border bg-white shadow-md z-50">
+              <div className='absolute right-0 z-50 mt-2 w-36 rounded-md border bg-white text-black shadow-md sm:w-44'>
                 {languages.map((langItem) => (
                   <button
                     key={langItem.code}
                     onClick={() => handleLanguageChange(langItem.code)}
-                    className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100"
+                    className='flex w-full items-center gap-2 px-3 py-2 text-sm font-semibold hover:bg-gray-100'
                   >
-                    <img src={langItem.icon} alt={langItem.label} className="h-4 w-6 object-cover" />
+                    <img
+                      src={langItem.icon}
+                      alt={langItem.label}
+                      className='h-4 w-6 object-cover'
+                    />
                     <span>{langItem.label}</span>
                   </button>
                 ))}
               </div>
             )}
           </div>
-
-          <button
-            className="md:hidden ml-4 text-2xl text-green-700"
-            onClick={() => setMobileMenu(!mobileMenu)}
-          >
-            {mobileMenu ? <FaTimes /> : <FaBars />}
-          </button>
         </div>
 
-        {mobileMenu && (
-          <div className="md:hidden flex flex-col gap-4 px-6 pb-4 bg-white text-gray-800">
-            {navLinks}
-            <div className="mt-4">
-              {languages.map((langItem) => (
-                <button
-                  key={langItem.code}
-                  onClick={() => handleLanguageChange(langItem.code)}
-                  className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100"
-                >
-                  <img src={langItem.icon} alt={langItem.label} className="h-4 w-6 object-cover" />
-                  <span>{langItem.label}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+        <button
+          className='ml-4 text-2xl text-[var(--success-strong)] md:hidden'
+          onClick={() => {
+            setMobileMenu((prev) => !prev);
+            setMobileDropdownOpen(null);
+          }}
+        >
+          {mobileMenu ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
-    </header>
+
+      {mobileMenu && (
+        <div className='flex flex-col gap-3 bg-white px-3 pb-4 text-gray-800 md:hidden'>
+          {renderNavLinks(true)}
+          <div className='mt-3'>
+            {languages.map((langItem) => (
+              <button
+                key={langItem.code}
+                onClick={() => handleLanguageChange(langItem.code)}
+                className='flex items-center gap-2 px-3 py-2 text-sm font-semibold hover:bg-gray-100'
+              >
+                <img src={langItem.icon} alt={langItem.label} className='h-4 w-6 object-cover' />
+                <span>{langItem.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 

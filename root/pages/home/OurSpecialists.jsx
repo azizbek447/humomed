@@ -3,119 +3,139 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Statik ma'lumotlar
+// Rasmlar
+import sanjarImg from '../../assets/img/img_2-removebg-preview.png';
+import malikaImg from '../../assets/img/img_2-removebg-preview.png';
+import akmalImg from '../../assets/img/image.png';
+import healerSanjarImg from '../../assets/img/neyxuriga.png';
+import healerMalikaImg from '../../assets/img/img_2-removebg-preview.png';
+import healerAkmalImg from '../../assets/img/image.png';
+import previewImg from '../../assets/img/img_2-removebg-preview.png';
+
+// Klinik ma’lumotlar
 const clinicData = {
   doctors: [
     {
       id: 1,
       name: 'Dr. Nodira Karimova',
       specialty: 'Dermatolog',
-      image: '/images/doctors/karimova.jpg',
-      path: '/doctors/karimova',
+      image: previewImg,
+      path: '/healer',
     },
     {
       id: 2,
       name: 'Dr. Jamshid Ruziev',
       specialty: 'Kardiolog',
-      image: '/images/doctors/ruziew.jpg',
-      path: '/doctors/ruziew',
+      image: healerSanjarImg,
+      path: '/healer',
     },
     {
       id: 3,
       name: 'Dr. Dilnoza Shamsiyeva',
       specialty: 'Nevropatolog',
-      image: '/images/doctors/shamsiyeva.jpg',
-      path: '/doctors/shamsiyeva',
+      image: healerMalikaImg,
+      path: '/healer',
     },
     {
       id: 4,
       name: 'Dr. Otabek Sobirov',
       specialty: 'Travmatolog',
-      image: '/images/doctors/sobirov.jpg',
-      path: '/doctors/sobirov',
+      image: healerAkmalImg,
+      path: '/healer',
     },
     {
       id: 5,
       name: 'Dr. Farangiz Qodirova',
       specialty: 'Ginekolog',
-      image: '/images/doctors/qodirova.jpg',
-      path: '/doctors/qodirova',
+      image: sanjarImg,
+      path: '/healer',
+    },
+    {
+      id: 6,
+      name: 'Dr. Sanjar Xasanov',
+      specialty: 'Urolog',
+      image: akmalImg,
+      path: '/healer',
+    },
+    {
+      id: 7,
+      name: 'Dr. Malika Tojiyeva',
+      specialty: 'Pediatr',
+      image: malikaImg,
+      path: '/healer',
+    },
+    {
+      id: 8,
+      name: 'Dr. Akmal G‘iyosov',
+      specialty: 'Endokrinolog',
+      image: previewImg,
+      path: '/healer',
+    },
+    {
+      id: 9,
+      name: 'Dr. Islom Rajabov',
+      specialty: 'Revmatolog',
+      image: healerSanjarImg,
+      path: '/healer',
     },
   ],
 };
 
 export default function DoctorsCarousel() {
   const swiperRef = useRef(null);
-  const [autoplayStarted, setAutoplayStarted] = useState(false);
-
-  const doctors = clinicData.doctors;
-
-  const handleMouseInteraction = () => {
-    if (!autoplayStarted && swiperRef.current && swiperRef.current.autoplay) {
-      swiperRef.current.autoplay.start();
-      setAutoplayStarted(true);
-    }
-  };
 
   return (
-    <div className='bg-white py-12'>
+    <div className='bg-white py-16'>
       <div className='mx-auto max-w-7xl px-4'>
-        <h1 className='mb-4 text-center text-5xl font-bold text-gray-800'>
+        <h2 className='mb-4 text-center text-4xl font-bold text-gray-800 sm:text-5xl'>
           Bizning mutaxassislarimiz
-        </h1>
-        <div className='mx-auto mb-32 h-1 w-16 rounded bg-green-500'></div>
+        </h2>
+        <div className='mx-auto mb-12 h-1 w-16 rounded bg-[var(--success-strong)]'></div>
 
         <Swiper
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
-            swiper.autoplay.stop();
           }}
-          slidesPerView={3}
-          spaceBetween={30}
+          slidesPerView={1}
+          spaceBetween={20}
           loop={true}
           freeMode={true}
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 3500,
+            delay: 4000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: false,
+            pauseOnMouseEnter: true,
           }}
           modules={[FreeMode, Pagination, Autoplay]}
-          className='h-[520px] w-[1000px]'
           breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
+          className='h-[540px]'
         >
-          {doctors.map((doctor) => (
-            <SwiperSlide
-              key={doctor.id}
-              onMouseEnter={handleMouseInteraction}
-              onClick={handleMouseInteraction}
-            >
-              <div className='flex h-[480px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
+          {clinicData.doctors.map((doctor, index) => (
+            <SwiperSlide key={`${doctor.id}-${index}`}>
+              <div className='flex h-[500px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
                 <img
                   src={doctor.image}
                   alt={doctor.name}
-                  className='h-[320px] w-full object-cover transition-transform duration-500 ease-in-out hover:-translate-y-1 hover:scale-105'
+                  className='h-[340px] w-full object-cover transition-transform duration-500 hover:scale-105'
                 />
                 <div className='w-full bg-gray-100 p-5 text-center'>
                   <h3 className='text-lg font-semibold text-gray-800'>{doctor.name}</h3>
                   <p className='text-sm text-gray-600'>{doctor.specialty}</p>
                 </div>
-                <div>
-                  <a
-                    href={doctor.path}
-                    className='mt-4 inline-block text-sm font-medium text-green-600 hover:text-green-800 hover:underline'
-                  >
-                    Подробнее →
-                  </a>
-                </div>
+                <a
+                  href={doctor.path}
+                  className='mt-2 text-sm font-medium text-[var(--success-strong)] hover:underline'
+                >
+                  Batafsil →
+                </a>
               </div>
             </SwiperSlide>
           ))}

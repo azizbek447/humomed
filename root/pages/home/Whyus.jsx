@@ -55,24 +55,24 @@ const WhyUs = () => {
           <h1 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl'>
             Nega biz?
           </h1>
-          <div className='mx-auto h-1 w-16 rounded bg-green-500 sm:w-20'></div>
+          <div className='mx-auto h-1 w-16 rounded bg-[var(--success-strong)] sm:w-20'></div>
         </div>
 
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8'>
           {sections.map((section) => (
             <div
               key={section.key}
-              className='group rounded-lg bg-gray-100 p-6 transition-all duration-300 hover:border hover:border-green-500 hover:bg-white hover:shadow-xl focus:border focus:border-green-500 focus:bg-white focus:shadow-xl active:border active:border-green-500 active:bg-white active:shadow-xl sm:p-8'
+              className='group rounded-lg bg-gray-100 p-6 transition-all duration-300 hover:border hover:border-[var(--success-strong)] hover:bg-white hover:shadow-xl focus:border focus:border-[var(--success-strong)] focus:bg-white focus:shadow-xl active:border active:border-[var(--success-strong)] active:bg-white active:shadow-xl sm:p-8'
             >
               <div className='flex justify-center pt-6 sm:pt-8'>
-                <div className='flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-green-500 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-green-500 group-hover:bg-white group-hover:shadow-md group-focus:-translate-y-1 group-focus:border-green-500 group-focus:bg-white group-focus:shadow-md group-active:-translate-y-1 group-active:border-green-500 group-active:bg-white group-active:shadow-md'>
-                  <div className='text-3xl text-white transition-all duration-300 group-hover:text-green-600 group-focus:text-green-600 group-active:text-green-600'>
+                <div className='flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-[var(--success-strong)] transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[var(--success-strong)] group-hover:bg-white group-hover:shadow-md group-focus:-translate-y-1 group-focus:border-[var(--success-strong)] group-focus:bg-white group-focus:shadow-md group-active:-translate-y-1 group-active:border-[var(--success-strong)] group-active:bg-white group-active:shadow-md'>
+                  <div className='text-3xl text-white transition-all duration-300 group-hover:text-[var(--success-strong)] group-focus:text-[var(--success-strong)] group-active:text-[var(--success-strong)]'>
                     {section.icon}
                   </div>
                 </div>
               </div>
               <div className='px-4 pb-6 sm:pb-8'>
-                <h3 className='mb-4 text-center text-lg font-semibold text-green-600 sm:text-xl'>
+                <h3 className='mb-4 text-center text-lg font-semibold text-[var(--success-strong)] sm:text-xl'>
                   {section.title}
                 </h3>
                 <p className='text-center text-sm leading-relaxed text-gray-700 sm:text-base'>

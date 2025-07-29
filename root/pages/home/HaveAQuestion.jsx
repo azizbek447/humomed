@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import doktorImage from '../../assets/img/img_2-removebg-preview.png';
+import responsiveImage from '../../assets/img/image.png';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
-import InputMask from 'react-input-mask';
+import { useTranslation } from 'react-i18next';
 
 const HaveAQuestion = () => {
+  const { t } = useTranslation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const schema = yup.object().shape({
-    name: yup.string().required('Обязательное поле'),
-    phone: yup
-      .string()
-      .required('Обязательное поле')
-      .matches(/^\d{9}$/, 'Введите 9 цифр номера'),
+    name: yup.string().required(t('question.errors.name')),
+    phone: yup.string().required(t('question.errors.phone')).min(12, t('question.errors.phoneMin')),
     comment: yup.string(),
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -42,25 +45,30 @@ const HaveAQuestion = () => {
   };
 
   return (
-    <div className='mx-auto max-w-6xl px-4 py-10'>
-      <h2 className='mb-4 text-center text-3xl font-semibold text-gray-800'>Возник вопрос?</h2>
+    <div className='mx-auto max-w-7xl px-4 py-10'>
+      <h2 className='mb-4 text-center text-3xl font-semibold text-gray-800'>
+        {t('question.title')}
+      </h2>
+      <div className='mx-auto mb-10 h-1 w-20 rounded bg-[var(--success-strong)]'></div>
       <p className='mx-auto mb-12 max-w-2xl text-center text-gray-500'>
-        Наши врачи обладают высокой квалификации, большим опытом работы, постоянно обучаются,
-        участвуют в семинарах и конференциях.
+        {t('question.description')}
       </p>
 
-      {/* Rasm chapda, forma o‘ngda */}
       <div className='flex flex-col items-center gap-10 lg:flex-row lg:items-start'>
-        {/* Rasm */}
         <div className='flex w-full justify-center lg:w-1/2'>
           <img
             src={doktorImage}
-            alt='Доктор'
-            className='h-[300px] w-auto rounded-lg object-contain sm:h-[400px]'
+            alt='doctor'
+            className='hidden h-[300px] w-auto rounded-lg object-contain sm:block sm:h-[400px]'
+          />
+
+          <img
+            src={responsiveImage}
+            alt='responsive doctor'
+            className='block h-[300px] w-auto rounded-lg object-contain sm:hidden'
           />
         </div>
 
-        {/* Forma */}
         <form
           onSubmit={handleSubmit(onSubmit)}
           onKeyDown={handleKeyDown}
@@ -69,14 +77,14 @@ const HaveAQuestion = () => {
           <div className='grid gap-4 sm:grid-cols-2'>
             <div>
               <label className='mb-2 block text-sm font-medium text-gray-700'>
-                Ваше имя <span className='text-red-500'>*</span>
+                {t('question.name')} <span className='text-red-500'>*</span>
               </label>
               <input
                 type='text'
-                placeholder='Введите ваше имя'
+                placeholder={t('question.namePlaceholder')}
                 className={`w-full rounded-lg border ${
                   errors.name ? 'border-red-500' : 'border-gray-200'
-                } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
+                } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none`}
                 {...register('name')}
               />
               {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
@@ -84,31 +92,54 @@ const HaveAQuestion = () => {
 
             <div>
               <label className='mb-2 block text-sm font-medium text-gray-700'>
-                Телефон <span className='text-red-500'>*</span>
+                {t('question.phone')} <span className='text-red-500'>*</span>
               </label>
-              <div className='flex'>
-                <span className='inline-flex items-center rounded-l-lg border border-r-0 border-gray-200 bg-gray-50 px-3 py-3 text-sm text-gray-600'>
-                  +998
-                </span>
-                <InputMask
-                  mask='99 999-99-99'
-                  maskChar='_'
-                  placeholder='Введите номер телефона'
-                  className={`flex-1 rounded-r-lg border ${
-                    errors.phone ? 'border-red-500' : 'border-gray-200'
-                  } bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none`}
-                  {...register('phone')}
-                />
-              </div>
+              <Controller
+                name='phone'
+                control={control}
+                render={({ field }) => (
+                  <PhoneInput
+                    {...field}
+                    inputRef={field.ref}
+                    country='uz'
+                    onlyCountries={['uz']}
+                    countryCodeEditable={false}
+                    placeholder={t('question.phonePlaceholder')}
+                    masks={{ uz: '.. ...-..-..' }}
+                    enableAreaCodes={true}
+                    inputStyle={{
+                      width: '100%',
+                      padding: '24px',
+                      paddingLeft: '50px',
+                      borderRadius: '0.5rem',
+                      borderColor: errors.phone ? 'red' : '#e5e7eb',
+                      backgroundColor: '#f9fafb',
+                    }}
+                    buttonStyle={{
+                      borderTopLeftRadius: '0.5rem',
+                      borderBottomLeftRadius: '0.5rem',
+                      borderColor: '#e5e7eb',
+                      backgroundColor: '#f9fafb',
+                    }}
+                    containerStyle={{
+                      width: '100%',
+                    }}
+                    specialLabel=''
+                  />
+                )}
+              />
+
               {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>}
             </div>
           </div>
 
           <div>
-            <label className='mb-2 block text-sm font-medium text-gray-700'>Комментарий</label>
+            <label className='mb-2 block text-sm font-medium text-gray-700'>
+              {t('question.comment')}
+            </label>
             <textarea
-              placeholder='Введите ваш комментарий'
-              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none'
+              placeholder={t('question.commentPlaceholder')}
+              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none'
               rows={5}
               {...register('comment')}
             />
@@ -118,16 +149,16 @@ const HaveAQuestion = () => {
             <button
               type='submit'
               disabled={isSubmitting}
-              className='inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-medium text-white transition hover:bg-green-600 disabled:bg-green-400'
+              className='inline-flex items-center gap-2 rounded-lg bg-[var(--success-strong)] px-6 py-3 font-medium text-white transition hover:bg-[var(--success-strong)] disabled:bg-[var(--success-strong)]'
             >
               {isSubmitting ? (
                 <>
                   <FaSpinner className='h-5 w-5 animate-spin text-white' />
-                  Отправка...
+                  {t('question.sending')}
                 </>
               ) : (
                 <>
-                  Отправить
+                  {t('question.send')}
                   <FaPaperPlane className='h-4 w-4 rotate-[-45deg]' />
                 </>
               )}

@@ -1,18 +1,16 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
-import InputMask from 'react-input-mask';
+import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
 
 const ContactForm = () => {
   const schema = yup.object().shape({
     name: yup.string().required('Обязательное поле'),
     email: yup.string().email('Неверный формат e-mail').required('Обязательное поле'),
-    phone: yup
-      .string()
-      .required('Обязательное поле')
-      .matches(/^\d{9}$/, 'Введите 9 цифр номера'),
+    phone: yup.string().required('Обязательное поле').min(12, 'Введите полный номер'),
     message: yup.string(),
   });
 
@@ -21,15 +19,15 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    control,
     reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     setIsSubmitting(true);
-    console.log('Submitting:', data);
     await new Promise((resolve) => setTimeout(resolve, 2000));
     reset();
     setIsSubmitting(false);
@@ -47,7 +45,7 @@ const ContactForm = () => {
       <div className='grid items-start gap-12 lg:grid-cols-2'>
         <div>
           <h2 className='mb-4 text-3xl font-semibold text-gray-800'>Возник вопрос?</h2>
-          <div className='mx-auto mb-12 h-1 w-16 rounded bg-green-500'></div>
+          <div className='mx-auto mb-12 h-1 w-16 rounded bg-[var(--success-strong)]'></div>
           <p className='mb-12 text-gray-500'>
             Наши врачи обладают высокой квалификации, большим опытом работы, постоянно обучаются,
             участвуют в семинарах и конференциях.
@@ -59,6 +57,7 @@ const ContactForm = () => {
           onKeyDown={handleKeyDown}
           className='space-y-6 text-left'
         >
+          {/* Name */}
           <div>
             <label className='mb-2 block text-sm font-medium text-gray-700'>
               Ваше имя <span className='text-red-500'>*</span>
@@ -66,12 +65,13 @@ const ContactForm = () => {
             <input
               type='text'
               placeholder='Введите ваше имя'
-              className={`w-full rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none`}
+              className={`w-full rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none`}
               {...register('name')}
             />
             {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
           </div>
 
+          {/* Email */}
           <div>
             <label className='mb-2 block text-sm font-medium text-gray-700'>
               Email <span className='text-red-500'>*</span>
@@ -79,36 +79,58 @@ const ContactForm = () => {
             <input
               type='email'
               placeholder='Введите ваш e-mail'
-              className={`w-full rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none`}
+              className={`w-full rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none`}
               {...register('email')}
             />
             {errors.email && <p className='mt-1 text-sm text-red-500'>{errors.email.message}</p>}
           </div>
 
+          {/* Phone */}
           <div>
             <label className='mb-2 block text-sm font-medium text-gray-700'>
               Телефон <span className='text-red-500'>*</span>
             </label>
-            <div className='flex'>
-              <span className='inline-flex items-center rounded-l-lg border border-r-0 border-gray-200 bg-gray-50 px-3 py-3 text-sm text-gray-600'>
-                +998
-              </span>
-              <InputMask
-                mask='99 999-99-99'
-                maskChar='_'
-                placeholder='Введите номер телефона'
-                className={`flex-1 rounded-r-lg border ${errors.phone ? 'border-red-500' : 'border-gray-200'} bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none`}
-                {...register('phone')}
-              />
-            </div>
+            <Controller
+              name='phone'
+              control={control}
+              render={({ field }) => (
+                <PhoneInput
+                  {...field}
+                  country='uz'
+                  onlyCountries={['uz']}
+                  countryCodeEditable={false}
+                  masks={{ uz: '.. ...-..-..' }}
+                  placeholder='Введите номер телефона'
+                  inputStyle={{
+                    width: '100%',
+                    padding: '24px',
+                    paddingLeft: '50px',
+                    borderRadius: '0.5rem',
+                    borderColor: errors.phone ? 'red' : '#e5e7eb',
+                    backgroundColor: '#f9fafb',
+                  }}
+                  buttonStyle={{
+                    borderTopLeftRadius: '0.5rem',
+                    borderBottomLeftRadius: '0.5rem',
+                    borderColor: '#e5e7eb',
+                    backgroundColor: '#f9fafb',
+                  }}
+                  containerStyle={{
+                    width: '100%',
+                  }}
+                  specialLabel=''
+                />
+              )}
+            />
             {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>}
           </div>
 
+          {/* Message */}
           <div>
             <label className='mb-2 block text-sm font-medium text-gray-700'>Сообщение</label>
             <textarea
               placeholder='Введите ваше сообщение'
-              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:border-transparent focus:ring-2 focus:ring-green-500 focus:outline-none'
+              className='w-full resize-none rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-[var(--success-strong)] focus:outline-none'
               rows={5}
               {...register('message')}
               onKeyDown={(e) => {
@@ -120,11 +142,12 @@ const ContactForm = () => {
             />
           </div>
 
+          {/* Submit */}
           <div className='flex justify-end'>
             <button
               type='submit'
               disabled={isSubmitting}
-              className='inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-green-600 disabled:bg-green-400'
+              className='inline-flex items-center gap-2 rounded-lg bg-[var(--success-strong)] px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-[var(--success-strong)] disabled:opacity-60'
             >
               {isSubmitting ? (
                 <>

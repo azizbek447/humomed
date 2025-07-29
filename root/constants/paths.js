@@ -1,11 +1,15 @@
 export const appPaths = {
   HOME: '/',
-  SERVICE_RECORD_BY_FACT: '/service/by fact',
-  SERVICE_WORK_SCHEDULE: '/service/work-schedule',
-  SERVICE_TASKS: '/service/tasks',
-  SERVICE_SALARY: '/service/salary',
-  SERVICE_REMOTE_EMPLOYEES: '/service/remote-employees',
-  SERVICE_FACE_ID: '/service/face-id',
-  SERVICE_MOBILE_APP: '/service/mobile-app',
-  SERVICE_INTEGRATION: '/service/integration',
+  DOCTORS: '/doctors',
+  ABOUT_US: '/about-us',
+  CALL_CENTER: '/call-center',
+  ABOUT_CLINIC: '/about-clinic',
+  CONTACTS: '/contacts',
+  CONTROL: '/control',
+  HEALER: '/healer',
+  NEWS: '/news',
+  NEWS_DETAIL: '/news-detail',
+  ALLSERVICES: '/allservices',
+
+  SERVICE_DETAILS: (key = ':id') => '/service/' + key,
 };
