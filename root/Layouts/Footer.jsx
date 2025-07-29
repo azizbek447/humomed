@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+
 import {
   FaEnvelope,
   FaFacebookF,
