@@ -173,7 +173,10 @@
     "email_invalid": "Неверный email",
     "email_required": "Email обязателен",
     "phone_invalid": "Введите корректный номер",
-    "phone_required": "Телефон обязателен"
+    "phone_required": "Телефон обязателен",
+    "topbar": {
+      "address": "14-Б квартал, дом 365, Янгихаётский район, Ташкент"
+    }
   }
 }
 

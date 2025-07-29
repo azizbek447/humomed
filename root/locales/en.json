@@ -1,7 +1,5 @@
 {
-  "topbar": {
-    "address": "Tashkent city, Yakkasaray district"
-  },
+
   "nav": {
     "home": "Home",
     "about": "About Clinic",
@@ -171,6 +169,8 @@
     "email_required": "Email is required",
     "phone_invalid": "Enter a valid phone number",
     "phone_required": "Phone is required"
+  },
+  "topbar": {
+    "address": "Block 14-B, House 365, Yangihayot district, Tashkent"
   }
-
 }

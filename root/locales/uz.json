@@ -176,6 +176,9 @@
     "email_invalid": "Noto‘g‘ri email",
     "email_required": "Email majburiy",
     "phone_invalid": "To‘g‘ri telefon raqamini kiriting",
-    "phone_required": "Telefon raqami majburiy"
+    "phone_required": "Telefon raqami majburiy",
+    "topbar": {
+      "address": "14-B kvartal, 365-uy, Yangihayot tumani, Toshkent"
+    }
   }
 }

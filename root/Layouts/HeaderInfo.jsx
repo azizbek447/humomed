@@ -27,9 +27,8 @@ const HeaderInfo = ({ isScrolled }) => {
         <div className='hidden flex-col items-center gap-2 md:flex md:flex-row md:gap-6'>
           <div className='flex items-center gap-2'>
             <FaMapMarkerAlt />
-            <span>
-              14-Б квартал, 365 дом, Янгихаётский район, Ташкент
-            </span>
+            <span>{t('topbar.address')}</span>
+
           </div>
           <div className='flex items-center gap-2'>
             <FaPhoneAlt />
