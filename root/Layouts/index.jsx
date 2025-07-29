@@ -4,6 +4,7 @@ import ScrollToTopButton from 'root/components/ScrollToTopButton';
 import Footer from './Footer';
 import Header from './Header';
 import HeaderInfo from './HeaderInfo';
+import ScrollToTop from '../components/ScrollToTop.jsx';
 
 const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,6 +35,7 @@ const Layout = ({ children }) => {
       {children}
       <Footer />
       <ScrollToTopButton />
+      <ScrollToTop />
     </div>
   );
 };
