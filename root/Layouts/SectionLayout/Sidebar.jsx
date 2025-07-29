@@ -1,7 +1,9 @@
 import 'react-phone-input-2/lib/style.css';
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -14,7 +16,6 @@ import {
 import PhoneInput from 'react-phone-input-2';
 import { Link, useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { useTranslation } from 'react-i18next';
 import * as yup from 'yup';
 
 import { appPaths } from '../../constants/paths.js';
@@ -77,7 +78,6 @@ const ThreePartMedicalForm = () => {
 
   return (
     <div className='mx-auto w-full max-w-md space-y-6 px-4 pt-32 text-sm text-gray-700 md:max-w-lg lg:max-w-3xl'>
-      {/* Services List */}
       <div className='rounded-xl border border-gray-200 bg-white shadow-md'>
         <h3 className='border-b p-4 text-lg font-semibold'>{t('form.all_departments')}</h3>
         <ul>
@@ -122,7 +122,6 @@ const ThreePartMedicalForm = () => {
         )}
       </div>
 
-      {/* Schedule and Contact */}
       <div className='rounded-xl bg-[var(--success-strong)] text-white shadow-md'>
         <div className='border-b border-white/30 px-4 py-3'>
           <h3 className='mb-1 text-lg font-bold'>{t('form.schedule')}</h3>
@@ -155,7 +154,6 @@ const ThreePartMedicalForm = () => {
         </div>
       </div>
 
-      {/* Ask Question Form */}
       <div className='rounded-xl bg-white p-4 shadow-md'>
         <h3 className='mb-4 text-lg font-bold'>{t('form.ask_question')}</h3>
         <form onSubmit={handleSubmit(onSubmit)} className='space-y-4' noValidate>

@@ -1,14 +1,13 @@
-import { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaBars, FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaBars, FaTimes } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
+import { appPaths } from 'root/constants/paths';
 
+import logo from '../assets/images/logo.png';
 import ru from '../assets/svg/russia.svg';
 import en from '../assets/svg/us.svg';
 import uz from '../assets/svg/uz.svg';
-import logo from '../assets/images/logo.png';
-
-import { appPaths } from 'root/constants/paths';
 import { SERVICE_LIST } from '../constants/servicesData.jsx';
 
 const Header = ({ isScrolled }) => {
