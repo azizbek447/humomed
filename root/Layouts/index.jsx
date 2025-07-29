@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
       throttleTimeout = setTimeout(() => {
         setIsScrolled(window.scrollY > 50);
         throttleTimeout = null;
-      }, 200); // scroll eventni 200ms da bir ishlatadi
+      }, 200);
     };
 
     window.addEventListener('scroll', handleScroll);

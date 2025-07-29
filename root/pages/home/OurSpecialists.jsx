@@ -4,19 +4,18 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Rasmlar
+import akmalImg from '../../assets/img/image.png';
+import healerAkmalImg from '../../assets/img/image.png';
 import sanjarImg from '../../assets/img/img_2-removebg-preview.png';
 import malikaImg from '../../assets/img/img_2-removebg-preview.png';
-import akmalImg from '../../assets/img/image.png';
-import healerSanjarImg from '../../assets/img/neyxuriga.png';
 import healerMalikaImg from '../../assets/img/img_2-removebg-preview.png';
-import healerAkmalImg from '../../assets/img/image.png';
 import previewImg from '../../assets/img/img_2-removebg-preview.png';
+import healerSanjarImg from '../../assets/img/neyxuriga.png';
 
-// Klinik ma’lumotlar
 const clinicData = {
   doctors: [
     {
@@ -130,12 +129,12 @@ export default function DoctorsCarousel() {
                   <h3 className='text-lg font-semibold text-gray-800'>{doctor.name}</h3>
                   <p className='text-sm text-gray-600'>{doctor.specialty}</p>
                 </div>
-                <a
-                  href={doctor.path}
+                <Link
+                  to={doctor.path}
                   className='mt-2 text-sm font-medium text-[var(--success-strong)] hover:underline'
                 >
                   Batafsil →
-                </a>
+                </Link>
               </div>
             </SwiperSlide>
           ))}
