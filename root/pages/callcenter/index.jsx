@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import h1img from '../../assets/images/heder.webp';
 
 const ResidencyNom = () => {
   const location = useLocation(); // Joriy sahifani aniqlash uchun

@@ -9,8 +9,7 @@ import PatientFeedback from './PatientFeedback.jsx';
 import ClinicNews from './ClinicNews.jsx';
 import HaveAQuestion from './HaveAQuestion.jsx';
 import MapLocation from './MapLocation.jsx';
-
-
+import FridaySale from './FridaySale.jsx';
 
 const Home = () => {
   return (
@@ -19,6 +18,7 @@ const Home = () => {
       <OurServices />
       <WhoAreWe />
       <Whyus />
+      <FridaySale />
       <OurSpecialists />
       <PatientFeedback />
       <ClinicNews />

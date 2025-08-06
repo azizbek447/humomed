@@ -56,21 +56,21 @@ const Footer = () => {
         <div className='text-left'>
           <h3 className='mb-4 text-lg font-semibold'>Bog‘lanish</h3>
           <ul className='space-y-3 text-sm'>
-            {[
-              'Yunusobod t., A. Timura, 119A',
-              'Buxoro, K. Muxtorov, "Prof Med Service"',
-              'Qarshi, Xodjayev MFY, Bunyodkor',
-              'Andijon, Luchka 26',
-              'Kurgan-Tepa, Mustaqillik 120',
-            ].map((addr, idx) => (
-              <li key={idx} className='flex items-start gap-2'>
-                <FaMapMarkerAlt className='mt-1 text-[var(--success-strong)]' />
-                <span>{addr}</span>
-              </li>
-            ))}
+            <li className='flex items-start gap-2'>
+              <FaMapMarkerAlt className='mt-1 text-[var(--success-strong)]' />
+              <span>Sergeli, Yangi-hayot tumani, 14B, Olchazor MFY, Shokirariq 365</span>
+            </li>
             <li className='flex items-center gap-2'>
               <FaPhoneAlt className='text-[var(--success-strong)]' />
-              <span>+998-78-777-03-03</span>
+              <span>Asosiy telefon: +998 33 901 50 60</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <FaPhoneAlt className='text-[var(--success-strong)]' />
+              <span>Call-markaz: +998 90 176 11 10</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <FaPhoneAlt className='text-[var(--success-strong)]' />
+              <span>Ishonch telefoni: +998 90 177 11 10</span>
             </li>
             <li className='flex items-center gap-2'>
               <FaEnvelope className='text-[var(--success-strong)]' />
@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
 
       <div className='bg-[var(--success-strong)] py-3 text-center text-sm text-white'>
-        Copyright © 2019 HumoService
+        Copyright © 2021 HumoService
       </div>
     </footer>
   );

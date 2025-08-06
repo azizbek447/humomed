@@ -21,8 +21,18 @@ import * as yup from 'yup';
 import { appPaths } from '../../constants/paths.js';
 import { SERVICE_LIST } from '../../constants/servicesData.jsx';
 
+const schema = (t) =>
+  yup.object().shape({
+    name: yup.string().required(t('form.name_required')),
+    email: yup.string().email(t('form.email_invalid')).required(t('form.email_required')),
+    phone: yup.string().min(11, t('form.phone_invalid')).required(t('form.phone_required')),
+    comment: yup.string(),
+  });
+
 const ThreePartMedicalForm = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+
   const {
     register,
     handleSubmit,
@@ -30,17 +40,9 @@ const ThreePartMedicalForm = () => {
     reset,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(
-      yup.object().shape({
-        name: yup.string().required(t('form.name_required')),
-        email: yup.string().email(t('form.email_invalid')).required(t('form.email_required')),
-        phone: yup.string().min(11, t('form.phone_invalid')).required(t('form.phone_required')),
-        comment: yup.string(),
-      })
-    ),
+    resolver: yupResolver(schema(t)),
   });
 
-  const location = useLocation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [showAllServices, setShowAllServices] = useState(false);
@@ -50,10 +52,9 @@ const ThreePartMedicalForm = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) {
-        setShowAllServices(true);
-      }
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      setShowAllServices(!mobile);
     };
 
     handleResize();
@@ -63,6 +64,7 @@ const ThreePartMedicalForm = () => {
 
   const onSubmit = async () => {
     setIsSubmitting(true);
+
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     Swal.fire({
@@ -89,7 +91,7 @@ const ThreePartMedicalForm = () => {
 
             return (
               <li
-                key={item.path}
+                key={item.key}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`border-t transition duration-200 ease-in-out ${
@@ -122,6 +124,7 @@ const ThreePartMedicalForm = () => {
         )}
       </div>
 
+      {/* Contact Info */}
       <div className='rounded-xl bg-[var(--success-strong)] text-white shadow-md'>
         <div className='border-b border-white/30 px-4 py-3'>
           <h3 className='mb-1 text-lg font-bold'>{t('form.schedule')}</h3>
@@ -197,7 +200,6 @@ const ThreePartMedicalForm = () => {
               render={({ field }) => (
                 <PhoneInput
                   {...field}
-                  inputRef={field.ref}
                   country='uz'
                   onlyCountries={['uz']}
                   countryCodeEditable={false}

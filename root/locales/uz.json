@@ -180,5 +180,30 @@
     "topbar": {
       "address": "14-B kvartal, 365-uy, Yangihayot tumani, Toshkent"
     }
+
+  },
+  "features": {
+    "title": "Ko‘p tarmoqli tibbiyot markazi",
+    "founded": "2021-yil 10-oktyabrda tashkil topgan",
+    "successful_operations": "1000 dan ortiq muvaffaqiyatli operatsiyalar bajarildi",
+    "equipment": "Yevropadan yuqori aniqlikdagi zamonaviy uskunalar",
+    "specialists": "Yuqori malakali va tajribali mutaxassislar",
+    "lab": "Shaxsiy zamonaviy laboratoriyaga ega",
+    "consult": "Bepul maslahat olish"
+  },
+  "juma": {
+    "title": "Juma Aksiyasi",
+    "discount": "50% chegirma!",
+    "services": {
+      "lor": "LOR (konsultatsiya)",
+      "gynecologist": "Ginekolog",
+      "endocrinologist": "Endokrinolog",
+      "gastroenterologist": "Gastroenterolog",
+      "cardiologist": "Kardiolog",
+      "pediatrician": "Pediatr",
+      "lab": "Laboratoriya"
+    },
+    "lab_tests": "OAK, SAHR",
+    "free": "BEPUL!"
   }
 }
