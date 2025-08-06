@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const MapLocation = () => {
@@ -39,16 +39,11 @@ const MapLocation = () => {
 
   return (
     <div className='bg-white px-4 py-16 text-center'>
-      <h2 className='mb-4 text-2xl font-bold text-gray-800 sm:text-3xl'>
-        {t('map.title')}
-      </h2>
+      <h2 className='mb-4 text-2xl font-bold text-gray-800 sm:text-3xl'>{t('map.title')}</h2>
       <div className='mx-auto mb-10 h-1 w-20 rounded bg-[var(--success-strong)]'></div>
 
       <div className='mx-auto w-full max-w-7xl overflow-hidden rounded-[40px] border-4 border-[var(--success-strong)] shadow-md'>
-        <div
-          ref={mapRef}
-          className='relative h-72 w-full sm:h-96 md:h-[400px]'
-        />
+        <div ref={mapRef} className='relative h-72 w-full sm:h-96 md:h-[400px]' />
       </div>
     </div>
   );

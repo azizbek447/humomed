@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import heder from '../../assets/images/heder.webp';
+
+import heder from '../../assets/images/img.png';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -10,22 +11,21 @@ const Home = () => {
       <img
         src={heder}
         alt='header'
-        className='w-full max-h-screen object-cover sm:h-[80vh] h-[60vh]'
+        className='h-[60vh] max-h-screen w-full object-cover sm:h-[80vh]'
       />
 
       <div className='absolute inset-0 bg-black/60' />
 
       <div className='absolute inset-0 z-10 flex items-center justify-center px-4 sm:px-8'>
-        <div className='w-full max-w-4xl'>
+        <div className='w-full max-w-7xl'>
           <div className='flex flex-col items-center text-center text-white sm:items-center md:items-start md:text-left'>
             <h2 className='mb-6 text-2xl leading-snug font-extrabold sm:text-3xl md:text-4xl lg:text-5xl'>
               {t('features.title')}
             </h2>
 
             <ul className='space-y-3 text-base font-medium sm:text-lg md:text-xl'>
-              <li>• {t('features.since')}</li>
-              <li>• {t('features.operations')}</li>
-              <li>• {t('features.patients')}</li>
+              <li>• {t('features.founded')}</li>
+              <li>• {t('features.successful_operations')}</li>
               <li>• {t('features.equipment')}</li>
               <li>• {t('features.specialists')}</li>
               <li>• {t('features.lab')}</li>

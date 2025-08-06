@@ -172,5 +172,30 @@
   },
   "topbar": {
     "address": "Block 14-B, House 365, Yangihayot district, Tashkent"
+  },
+  "features": {
+    "title": "Multidisciplinary Medical Center",
+    "founded": "Founded on October 10, 2021",
+    "successful_operations": "More than 1000 successful surgeries performed",
+    "equipment": "High-precision modern equipment from Europe",
+    "specialists": "Highly qualified and experienced specialists",
+    "lab": "Equipped with a modern in-house laboratory",
+    "consult": "Get a free consultation"
+},
+  "juma": {
+    "title": "Friday Discount",
+    "discount": "50% OFF!",
+    "services": {
+      "lor": "ENT (consultation)",
+      "gynecologist": "Gynecologist",
+      "endocrinologist": "Endocrinologist",
+      "gastroenterologist": "Gastroenterologist",
+      "cardiologist": "Cardiologist",
+      "pediatrician": "Pediatrician",
+      "lab": "Laboratory"
+    },
+    "lab_tests": "CBC, ESR",
+    "free": "FREE!"
   }
+
 }

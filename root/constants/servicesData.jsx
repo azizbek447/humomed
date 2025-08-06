@@ -1442,4 +1442,3 @@ export const SERVICE_LIST = Object.entries(servicesData).map(([key, value]) => (
 }));
 
 export default servicesData;
-
