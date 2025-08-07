@@ -1,48 +1,23 @@
 {
   "topbar": {
-    "address": "г. Ташкент, Яккасарайский район"
+    "address": "Тошкент ш., Янгихаёт тумани, 14-Б квартал, 365-уй"
   },
   "nav": {
-    "home": "Главная",
-    "about": "О клинике",
-    "departments": "Отделения",
-    "cardio": "Кардиология",
-    "neuro": "Нейрохирургия",
-    "uro": "Физиотерапия",
-    "gyn": "Отоларингология",
-    "derma": "Ортопедия",
-    "doctors": "Врачи",
+    "home": "Бош саҳифа",
+    "about": "Клиника ҳақида",
+    "departments": "Бўлимлар",
+    "doctors": "Шифокорлар",
     "residency": "Резидентура",
-    "news": "Новости",
-    "contact": "Контакты",
-    "hirurgTravmatolog": "Хирург-Травматолог",
-    "kardiolog": "Кардиолог",
-    "terapevt": "Терапевт",
-    "gastroenterolog": "Гастроэнтеролог",
-    "endokrinolog": "Эндокринолог",
-    "ginekolog": "Гинеколог",
-    "revmatolog": "Ревматолог",
-    "pulmonolog": "Пульмонолог",
-    "infeksionist": "Инфекционист",
-    "gepatolog": "Гепатолог",
-    "allergolog": "Аллерголог",
-    "pragtolog": "Проктолог",
-    "lor": "ЛОР",
-    "dermatolog": "Дерматолог",
-    "nevropatolog": "Невропатолог",
-    "urolog": "Уролог",
-    "detskiyNevropatolog": "Детский невропатолог",
-    "detskiyGastroenterolog": "Детский гастроэнтеролог",
-    "pediator": "Педиатр",
-    "uzd": "УЗИ",
-    "rentgen": "Рентген",
-    "fizioterapiya": "Физиотерапия",
-    "massaj": "Массаж",
-    "procedurniy": "Процедурный кабинет",
-    "laboratoriya": "Лаборатория",
-    "operBlock": "Опер блок",
-    "statsionar": "Стационар",
-    "surgeon": "Травматолог-хирург",
+    "news": "Янгиликлар",
+    "contact": "Алоқа"
+  },
+  "departments": {
+    "cardiology": "Кардиология",
+    "neurosurgery": "Нейрохирургия",
+    "orthopedics": "Ортопедия",
+    "ent": "Отоларингология (ЛОР)",
+    "physiotherapy": "Физиотерапия",
+    "surgeon": "Хирург-травматолог",
     "cardiologist": "Кардиолог",
     "therapist": "Терапевт",
     "gastroenterologist": "Гастроэнтеролог",
@@ -54,79 +29,56 @@
     "hepatologist": "Гепатолог",
     "allergist": "Аллерголог",
     "proctologist": "Проктолог",
-    "ent": "ЛОР (отоларинголог)",
     "dermatologist": "Дерматолог",
     "neurologist": "Невропатолог",
     "urologist": "Уролог",
-    "child_neuro": "Детский невропатолог",
-    "child_gastro": "Детский гастроэнтеролог",
+    "child_neurologist": "Болалар невропатологи",
+    "child_gastroenterologist": "Болалар гастроэнтерологи",
     "pediatrician": "Педиатр",
-    "usg": "УЗИ",
+    "ultrasound": "УТТ (УЗИ)",
     "xray": "Рентген",
-    "physiotherapy": "Физиотерапия",
     "massage": "Массаж",
-    "procedure_room": "Процедурный кабинет",
+    "procedure_room": "Процедура хонаси",
     "laboratory": "Лаборатория",
-    "operating_room": "Операционная",
-    "inpatient": "Стационар"
+    "operating_room": "Операция блоки",
+    "inpatient": "Стационар",
+    "andrology": "Андрология",
+    "bariatrics": "Бариатрия",
+    "pediatric_dentistry": "Болалар стоматологияси",
+    "mammology": "Маммология",
+    "neurology": "Неврология"
   },
-  "question": {
-    "title": "Возник вопрос?",
-    "description": "Наши врачи обладают высокой квалификацией, большим опытом работы...",
-    "name": "Ваше имя",
-    "namePlaceholder": "Введите ваше имя",
+  "question_form": {
+    "title": "Саволингиз борми?",
+    "description": "Бизнинг шифокорларимиз юқори малакали ва катта тажрибага эга",
+    "name": "Исмингиз",
+    "name_placeholder": "Исмингизни киритинг",
     "phone": "Телефон",
-    "phonePlaceholder": "Введите номер телефона",
-    "comment": "Комментарий",
-    "commentPlaceholder": "Введите ваш комментарий",
-    "send": "Отправить",
-    "sending": "Отправка..."
+    "phone_placeholder": "Телефон рақамингизни киритинг",
+    "comment": "Изоҳ",
+    "comment_placeholder": "Изоҳингизни киритинг",
+    "send": "Жўнатиш",
+    "sending": "Жўнатилмоқда..."
   },
   "errors": {
-    "name": "Обязательное поле",
-    "phone": "Обязательное поле",
-    "phoneMin": "Неполный номер телефона"
+    "name_required": "Исм киритиш мажбурий",
+    "phone_required": "Телефон рақами киритиш мажбурий",
+    "phone_invalid": "Телефон рақами тўлиқ эмас"
   },
-  "whoAreWe": {
-    "title": "Кто мы такие?"
+  "about_clinic": {
+    "title": "Биз киммиз?",
+    "description": "Кўп тармоқли тиббий марказ, 2021 йил 10 октябрда таъсис топган",
+    "features": {
+      "successful_operations": "1000 дан ортиқ муваффақиятли операция ўтказилди",
+      "equipment": "Европадан олиб келинган юқори аниқликдаги замонавий ускуналар",
+      "specialists": "Юқори малакали ва тажрибали мутахассислар",
+      "lab": "Ўз замонавий лабораториямиз",
+      "consult": "Бепул консультация олиш"
+    }
   },
   "map": {
-    "title": "Где мы находимся?",
-    "balloon": "Наш адрес"
-  },
-  "clinic": {
-    "title": "Направления клиники",
-    "surgeon": "Хирург-Травматолог",
-    "cardiologist": "Кардиолог",
-    "therapist": "Терапевт",
-    "gastroenterologist": "Гастроэнтеролог",
-    "endocrinologist": "Эндокринолог",
-    "gynecologist": "Гинеколог",
-    "rheumatologist": "Ревматолог",
-    "pulmonologist": "Пульмонолог",
-    "infectious": "Инфекционист",
-    "hepatologist": "Гепатолог",
-    "allergist": "Аллерголог",
-    "proctologist": "Проктолог",
-    "ent": "ЛОР (отоларинголог)",
-    "dermatologist": "Дерматолог",
-    "neurologist": "Невропатолог",
-    "urologist": "Уролог",
-    "child_neuro": "Детский невропатолог",
-    "child_gastro": "Детский гастроэнтеролог",
-    "pediatrician": "Педиатр",
-    "usg": "УЗИ",
-    "xray": "Рентген",
-    "physiotherapy": "Физиотерапия",
-    "massage": "Массаж",
-    "procedure_room": "Процедурная",
-    "laboratory": "Лаборатория",
-    "operating_room": "Операционный блок",
-    "inpatient": "Стационар"
-  },
-  "ourServices": {
-    "title": "Отделения клиники",
-    "all": "Все направления"
+    "title": "Биз қаердамиз?",
+    "balloon": "Манзил: Тошкент ш., Янгихаёт тумани, 14-Б квартал, 365-уй"
   },
   "services": {
     "neurologist": {
@@ -151,7 +103,7 @@
       "title": "Гинекология"
     },
     "ent": {
-      "title": "ЛОР (отоларинголог)"
+      "title": "ЛОР (оториноларинголог)"
     },
     "hepatologist": {
       "title": "Гепатология"
@@ -163,7 +115,7 @@
       "title": "Ревматология"
     },
     "ultrasound": {
-      "title": "Ультразвуковое исследование (УЗИ)"
+      "title": "УЗИ (ультразвуковое исследование)"
     },
     "xray": {
       "title": "Рентген"
@@ -189,6 +141,9 @@
     "trauma": {
       "title": "Травматолог-ортопед"
     },
+    "cardiology": {
+      "title": "Кардиология"
+    },
     "allergology": "Аллергология",
     "andrology": "Андрология",
     "bariatrics": "Бариатрия",
@@ -196,70 +151,52 @@
     "gynecology": "Гинекология",
     "dermatology": "Дерматология",
     "pediatric_dentistry": "Детская стоматология",
-    "cardiology": "Кардиология",
-    "ent": "ЛОР (отоларингология)",
     "mammology": "Маммология",
     "neurology": "Неврология",
     "neurosurgery": "Нейрохирургия"
   },
-  "success": {
-    "title": "Успешно!",
-    "text": "Ваш запрос был успешно отправлен."
-  },
   "form": {
-    "all_departments": "Все отделения",
-    "show_all_services": "Показать все услуги ↓",
-    "hide_services": "Скрыть",
-    "schedule": "График",
-    "open_hours": "Пн-Вс 24/7",
-    "contacts": "Контакты",
-    "ask_question": "Задать вопрос",
-    "name": "Ваше имя",
-    "email": "Ваш e-mail",
+    "all_departments": "Барча бўлимлар",
+    "show_all_services": "Барча хизматларни кўрсатиш ↓",
+    "hide_services": "Яшириш",
+    "schedule": "Иш жадвали",
+    "open_hours": "Душанба-Якшанба 24/7",
+    "contacts": "Алоқа",
+    "ask_question": "Савол бериш",
+    "name": "Исмингиз",
+    "email": "Электрон почта",
     "phone": "Телефон",
-    "comment": "Комментарий",
-    "enter_name": "Введите ваше имя",
-    "enter_email": "Введите e-mail",
+    "comment": "Изоҳ",
+    "enter_name": "Исмингизни киритинг",
+    "enter_email": "Электрон почтангизни киритинг",
     "phone_placeholder": "90 123-45-67",
-    "enter_comment": "Введите ваш комментарий",
-    "send": "Отправить",
-    "sending": "Отправка...",
-    "success_title": "Успешно отправлено",
-    "success_message": "Спасибо за ваш вопрос!",
-    "name_required": "Имя обязательно",
-    "email_invalid": "Неверный email",
-    "email_required": "Email обязателен",
-    "phone_invalid": "Введите корректный номер",
-    "phone_required": "Телефон обязателен",
-    "topbar": {
-      "address": "14-Б квартал, дом 365, Янгихаётский район, Ташкент"
-    }
+    "enter_comment": "Изоҳингизни киритинг",
+    "send": "Жўнатиш",
+    "sending": "Жўнатилмоқда...",
+    "success_title": "Муваффақиятли жўнатилди",
+    "success_message": "Саволингиз учун раҳмат!",
+    "name_required": "Исм киритиш мажбурий",
+    "email_invalid": "Электрон почта хато",
+    "email_required": "Электрон почта киритиш мажбурий",
+    "phone_invalid": "Тўғри телефон рақами киритинг",
+    "phone_required": "Телефон рақами киритиш мажбурий"
   },
-  "features": {
-    "title": "Многопрофильный медицинский центр",
-    "founded": "Основан 10 октября 2021 года",
-    "successful_operations": "Проведено более 1000 успешных операций",
-    "equipment": "Высокоточное современное оборудование из Европы",
-    "specialists": "Высококвалифицированные и опытные специалисты",
-    "lab": "Собственная современная лаборатория",
-    "consult": "Получить бесплатную консультацию"
+  "success": {
+    "title": "Муваффақият!",
+    "text": "Сизнинг сўровингиз муваффақиятли жўнатилди."
   },
-  "juma": {
-    "title": "Пятничная Акция",
-    "discount": "Скидка 50%!",
+  "friday_promo": {
+    "title": "Жума акцияси",
+    "discount": "50% чегирма!",
     "services": {
-      "lor": "ЛОР (консультация)",
+      "ent": "ЛОР (консультация)",
       "gynecologist": "Гинеколог",
       "endocrinologist": "Эндокринолог",
       "gastroenterologist": "Гастроэнтеролог",
       "cardiologist": "Кардиолог",
       "pediatrician": "Педиатр",
-      "lab": "Лаборатория"
+      "lab": "Лаборатория (ОАК, СОЭ)"
     },
-    "lab_tests": "ОАК, СОЭ",
-    "free": "БЕСПЛАТНО!"
+    "free": "БЕПУЛ!"
   }
 }
-
-
-

@@ -1,26 +1,27 @@
 import 'react';
+
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
 import servicesData from '../../constants/servicesData';
+import { useMemo } from 'react';
 
 const Service = () => {
   const { id } = useParams();
-  const { i18n } = useTranslation();
-  const service = servicesData[id];
+  const { i18n, t } = useTranslation();
+  const service = useMemo(() => servicesData(t)[id], [t, id]);
 
   if (!service) return <div className='pt-20 text-center'>Xizmat topilmadi</div>;
 
   const lang = i18n.language || 'uz';
-  const title = service.title?.[lang] || service.title?.uz || '';
-  const content = service.content?.[lang] || service.content?.uz || [];
+  const content = service.content[lang] || service.content['uz'];
 
   return (
     <div className='mx-auto max-w-4xl px-4 pt-10'>
-      <h1 className='mb-6 text-3xl font-bold text-gray-800'>{title}</h1>
+      <h1 className='mb-6 text-3xl font-bold text-gray-800'>{service.title}</h1>
       <img
         src={service.image}
-        alt={title}
+        alt={service.title}
         className='mb-8 max-h-[400px] w-full rounded-xl object-cover shadow'
       />
       <div className='space-y-4 text-sm leading-relaxed text-gray-700 md:text-base'>

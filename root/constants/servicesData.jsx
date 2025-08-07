@@ -40,9 +40,8 @@ import therapistImage from '../assets/img/therapistImage.png';
 import traumaImage from '../assets/img/traumaImage.png';
 import dermatologistImage from '../assets/img/traumaImage.png';
 import ultrasoundImage from '../assets/img/Ортопедия.png';
-import { t } from 'i18next';
 
-const servicesData = {
+const servicesData = (t) => ({
   cardiology: {
     icon: <FaHeart />,
     title: t('services.cardiology.title'),
@@ -4048,12 +4047,6 @@ const servicesData = {
       ],
     },
   },
-};
-
-export const SERVICE_LIST = Object.entries(servicesData).map(([key, value]) => ({
-  ...value,
-  key,
-  name: value.title,
-}));
+});
 
 export default servicesData;

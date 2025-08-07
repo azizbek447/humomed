@@ -195,6 +195,9 @@
     "trauma": {
       "title": "Travmatolog-ortoped"
     },
+    "cardiology": {
+      "title": "Kardiologiya"
+    },
     "allergology": "Allergologiya",
     "andrology": "Andrologiya",
     "bariatrics": "Bariatriya",
@@ -202,8 +205,6 @@
     "gynecology": "Ginekologiya",
     "dermatology": "Dermatologiya",
     "pediatric_dentistry": "Bolalar stomatologiyasi",
-    "cardiology": "Kardiologiya",
-    "ent": "LOR (otolaringologiya)",
     "mammology": "Mammologiya",
     "neurology": "Nevrologiya",
     "neurosurgery": "Neyroxirurgiya"
@@ -240,10 +241,7 @@
     "topbar": {
       "address": "14-B kvartal, 365-uy, Yangihayot tumani, Toshkent"
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
   },
   "features": {
     "title": "Ko‘p tarmoqli tibbiyot markazi",

@@ -1,7 +1,7 @@
 import 'react-phone-input-2/lib/style.css';
 
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import {
@@ -19,7 +19,7 @@ import Swal from 'sweetalert2';
 import * as yup from 'yup';
 
 import { appPaths } from '../../constants/paths.js';
-import { SERVICE_LIST } from '../../constants/servicesData.jsx';
+import servicesData from '../../constants/servicesData.jsx';
 
 const schema = (t) =>
   yup.object().shape({
@@ -78,20 +78,22 @@ const ThreePartMedicalForm = () => {
     reset();
   };
 
+  const services = useMemo(() => servicesData(t) ?? {}, [t]);
+
   return (
     <div className='mx-auto w-full max-w-md space-y-6 px-4 pt-32 text-sm text-gray-700 md:max-w-lg lg:max-w-3xl'>
       <div className='rounded-xl border border-gray-200 bg-white shadow-md'>
         <h3 className='border-b p-4 text-lg font-semibold'>{t('form.all_departments')}</h3>
         <ul>
-          {SERVICE_LIST.map((item, index) => {
+          {Object.entries(services).map(([key, details], index) => {
             const isHovered = hoveredIndex === index;
-            const isActive = location.pathname === appPaths.SERVICE_DETAILS(item.key);
+            const isActive = location.pathname === appPaths.SERVICE_DETAILS(key);
             const shouldShow = showAllServices || index < visibleServicesCount;
             if (!shouldShow) return null;
 
             return (
               <li
-                key={item.key}
+                key={key}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`border-t transition duration-200 ease-in-out ${
@@ -101,18 +103,18 @@ const ThreePartMedicalForm = () => {
                 }`}
               >
                 <Link
-                  to={appPaths.SERVICE_DETAILS(item.key)}
+                  to={appPaths.SERVICE_DETAILS(key)}
                   className='flex items-center gap-2 px-4 py-2 text-base'
                 >
                   {isHovered || isActive ? <FaArrowLeft /> : <FaArrowRight />}
-                  <span className='truncate'>{item.name}</span>
+                  <span className='truncate'>{details.title}</span>
                 </Link>
               </li>
             );
           })}
         </ul>
 
-        {isMobile && SERVICE_LIST.length > visibleServicesCount && (
+        {isMobile && Object.entries(services).length > visibleServicesCount && (
           <div className='border-t p-4 text-center'>
             <button
               onClick={() => setShowAllServices((prev) => !prev)}

@@ -8,7 +8,7 @@ import logo from '../assets/images/logo.png';
 import ru from '../assets/svg/russia.svg';
 import en from '../assets/svg/us.svg';
 import uz from '../assets/svg/uz.svg';
-import { SERVICE_LIST } from '../constants/servicesData.jsx';
+import servicesData from '../constants/servicesData.jsx';
 
 const Header = ({ isScrolled }) => {
   const { i18n, t } = useTranslation();
@@ -40,9 +40,9 @@ const Header = ({ isScrolled }) => {
     { path: '/about-clinic', label: 'nav.about' },
     {
       label: 'nav.departments',
-      children: SERVICE_LIST.map((item) => ({
-        path: appPaths.SERVICE_DETAILS(item.key),
-        label: `nav.${item.key}`,
+      children: Object.keys(servicesData(t)).map((key) => ({
+        path: appPaths.SERVICE_DETAILS(key),
+        label: `nav.${key}`,
       })),
     },
     { path: '/Doctors', label: 'nav.doctors' },

@@ -17,7 +17,7 @@ const ClinicDirections = () => {
         <div className='mx-auto mb-10 h-1 w-20 rounded bg-[var(--success-strong)]'></div>
 
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
-          {Object.entries(servicesData).map(([key, data]) => (
+          {Object.entries(servicesData(t)).map(([key, data]) => (
             <Link
               to={appPaths.SERVICE_DETAILS(key)}
               key={key}

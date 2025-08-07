@@ -18,10 +18,10 @@ const OurServices = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const allServicesArray = Object.entries(servicesData);
+  const allServicesArray = Object.entries(servicesData(t));
   const visibleServices = isMobile
     ? allServicesArray.slice(0, 6)
-    : allServicesArray.slice(0, 12); // 👈 katta ekranda faqat 12 ta
+    : allServicesArray.slice(0, 12);
 
   return (
     <div className='bg-gray-50 px-4 py-10'>
