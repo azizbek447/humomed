@@ -129,6 +129,66 @@
     "all": "Все направления"
   },
   "services": {
+    "neurologist": {
+      "title": "Неврология"
+    },
+    "pediatrician": {
+      "title": "Педиатрия"
+    },
+    "therapist": {
+      "title": "Терапия"
+    },
+    "pulmonologist": {
+      "title": "Пульмонология"
+    },
+    "dermatologist": {
+      "title": "Дерматология"
+    },
+    "allergist": {
+      "title": "Аллергология"
+    },
+    "gynecologist": {
+      "title": "Гинекология"
+    },
+    "ent": {
+      "title": "ЛОР (отоларинголог)"
+    },
+    "hepatologist": {
+      "title": "Гепатология"
+    },
+    "proctologist": {
+      "title": "Проктология"
+    },
+    "rheumatologist": {
+      "title": "Ревматология"
+    },
+    "ultrasound": {
+      "title": "Ультразвуковое исследование (УЗИ)"
+    },
+    "xray": {
+      "title": "Рентген"
+    },
+    "physiotherapy": {
+      "title": "Физиотерапия"
+    },
+    "massage": {
+      "title": "Массажная терапия"
+    },
+    "procedure_room": {
+      "title": "Процедурный кабинет"
+    },
+    "laboratory": {
+      "title": "Лаборатория"
+    },
+    "operating_room": {
+      "title": "Операционная"
+    },
+    "inpatient": {
+      "title": "Стационарное лечение"
+    },
+    "trauma": {
+      "title": "Травматолог-ортопед"
+    },
     "allergology": "Аллергология",
     "andrology": "Андрология",
     "bariatrics": "Бариатрия",
@@ -174,7 +234,6 @@
     "topbar": {
       "address": "14-Б квартал, дом 365, Янгихаётский район, Ташкент"
     }
-
   },
   "features": {
     "title": "Многопрофильный медицинский центр",

@@ -241,7 +241,7 @@ const servicesData = {
   },
   neurologist: {
     icon: <FaBrain />,
-    title: 'Nevrologiya',
+    title: t('services.neurologist.title'),
     image: neuroImage,
     content: {
       uz: [
@@ -437,7 +437,7 @@ const servicesData = {
   },
   pediatrician: {
     icon: <FaBaby />,
-    title: 'Pediatriya',
+    title: t('services.pediatrician.title'),
     image: pediatricImage,
     content: {
       uz: [
@@ -633,7 +633,7 @@ const servicesData = {
   },
   therapist: {
     icon: <FaUserMd />,
-    title: 'Terapiya',
+    title: t('services.therapist.title'),
     image: therapistImage,
     content: {
       uz: [
@@ -829,7 +829,7 @@ const servicesData = {
   },
   pulmonologist: {
     icon: <FaLungs />,
-    title: 'Pulmonologiya',
+    title: t('services.pulmonologist.title'),
     image: pulmonologistImage,
     content: {
       uz: [
@@ -1025,7 +1025,7 @@ const servicesData = {
   },
   dermatologist: {
     icon: <FaNotesMedical />,
-    title: 'Dermatologiya',
+    title: t('services.dermatologist.title'),
     image: dermatologistImage,
     content: {
       uz: [
@@ -1221,7 +1221,7 @@ const servicesData = {
   },
   allergist: {
     icon: <FaVial />,
-    title: 'Allergologiya',
+    title: t('services.allergist.title'),
     image: allergistImage,
     content: {
       uz: [
@@ -1417,7 +1417,7 @@ const servicesData = {
   },
   gynecologist: {
     icon: <FaVenus />,
-    title: 'Ginekologiya',
+    title: t('services.gynecologist.title'),
     image: gynecologistImage,
     content: {
       uz: [
@@ -1613,7 +1613,7 @@ const servicesData = {
   },
   ent: {
     icon: <FaStethoscope />,
-    title: 'LOR (otolaringolog)',
+    title: t('services.ent.title'),
     image: entImage,
     content: {
       uz: [
@@ -1809,7 +1809,7 @@ const servicesData = {
   },
   hepatologist: {
     icon: <FaUserNurse />,
-    title: 'Gepatologiya',
+    title: t('services.hepatologist.title'),
     image: hepatologistImage,
     content: {
       uz: [
@@ -2005,7 +2005,7 @@ const servicesData = {
   },
   proctologist: {
     icon: <FaProcedures />,
-    title: 'Proktologiya',
+    title: t('services.proctologist.title'),
     image: proctologistImage,
     content: {
       uz: [
@@ -2201,7 +2201,7 @@ const servicesData = {
   },
   rheumatologist: {
     icon: <FaHands />,
-    title: 'Revmatologiya',
+    title: t('services.rheumatologist.title'),
     image: rheumatologistImage,
     content: {
       uz: [
@@ -2397,7 +2397,7 @@ const servicesData = {
   },
   ultrasound: {
     icon: <FaMicroscope />,
-    title: 'Ultratovush tekshiruvi (UZI)',
+    title: t('services.ultrasound.title'),
     image: ultrasoundImage,
     content: {
       uz: [
@@ -2608,7 +2608,7 @@ const servicesData = {
   },
   xray: {
     icon: <FaXRay />,
-    title: 'Rentgen',
+    title: t('services.xray.title'),
     image: xrayImage,
     content: {
       uz: [
@@ -2813,7 +2813,7 @@ const servicesData = {
   },
   physiotherapy: {
     icon: <FaHands />,
-    title: 'Fizioterapiya',
+    title: t('services.physiotherapy.title'),
     image: physiotherapyImage,
     content: {
       uz: [
@@ -3024,7 +3024,7 @@ const servicesData = {
   },
   massage: {
     icon: <FaUserPlus />,
-    title: 'Massaj terapiyasi',
+    title: t('services.massage.title'),
     image: massageImage,
     content: {
       uz: [
@@ -3238,7 +3238,7 @@ const servicesData = {
   },
   procedure_room: {
     icon: <FaSyringe />,
-    title: 'Muolajalar xonasi',
+    title: t('services.procedure_room.title'),
     image: procedureImage,
     content: {
       uz: [
@@ -3404,7 +3404,7 @@ const servicesData = {
   },
   laboratory: {
     icon: <FaMicroscope />,
-    title: 'Laboratoriya',
+    title: t('services.laboratory.title'),
     image: laboratoryImage,
     content: {
       uz: [
@@ -3573,7 +3573,7 @@ const servicesData = {
   },
   operating_room: {
     icon: <FaProcedures />,
-    title: 'Operatsiya xonasi',
+    title: t('services.operating_room.title'),
     image: operatingRoomImage,
     content: {
       uz: [
@@ -3721,7 +3721,7 @@ const servicesData = {
   },
   inpatient: {
     icon: <FaBed />,
-    title: 'Statsionar davolash',
+    title: t('services.inpatient.title'),
     image: inpatientImage,
     content: {
       uz: [
@@ -3857,7 +3857,7 @@ const servicesData = {
   },
   trauma: {
     icon: <FaUserInjured />,
-    title: 'Травматолог-ортопед',
+    title: t('services.trauma.title'),
     image: traumaImage,
     content: {
       uz: [

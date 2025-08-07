@@ -1,5 +1,4 @@
 {
-
   "nav": {
     "home": "Home",
     "about": "About Clinic",
@@ -127,75 +126,135 @@
     "all": "All Services"
   },
   "services": {
-    "allergology": "Allergology",
-    "andrology": "Andrology",
-    "bariatrics": "Bariatrics",
-    "gastroenterology": "Gastroenterology",
-    "gynecology": "Gynecology",
-    "dermatology": "Dermatology",
-    "pediatric_dentistry": "Pediatric Dentistry",
-    "cardiology": "Cardiology",
-    "ent": "ENT (Otolaryngology)",
-    "mammology": "Mammology",
-    "neurology": "Neurology",
-    "neurosurgery": "Neurosurgery"
-  },
-  "success": {
-  "title": "Success!",
-  "text": "Your request has been sent successfully."
-},
-  "form": {
-    "all_departments": "All Departments",
-    "show_all_services": "Show all services ↓",
-    "hide_services": "Hide",
-    "schedule": "Schedule",
-    "open_hours": "Mon-Sun 24/7",
-    "contacts": "Contacts",
-    "ask_question": "Ask a Question",
-    "name": "Your Name",
-    "email": "Your Email",
-    "phone": "Phone",
-    "comment": "Comment",
-    "enter_name": "Enter your name",
-    "enter_email": "Enter your email",
-    "phone_placeholder": "90 123-45-67",
-    "enter_comment": "Enter your comment",
-    "send": "Send",
-    "sending": "Sending...",
-    "success_title": "Successfully Sent",
-    "success_message": "Thank you for your question!",
-    "name_required": "Name is required",
-    "email_invalid": "Invalid email",
-    "email_required": "Email is required",
-    "phone_invalid": "Enter a valid phone number",
-    "phone_required": "Phone is required"
-  },
-  "topbar": {
-    "address": "Block 14-B, House 365, Yangihayot district, Tashkent"
-  },
-  "features": {
-    "title": "Multidisciplinary Medical Center",
-    "founded": "Founded on October 10, 2021",
-    "successful_operations": "More than 1000 successful surgeries performed",
-    "equipment": "High-precision modern equipment from Europe",
-    "specialists": "Highly qualified and experienced specialists",
-    "lab": "Equipped with a modern in-house laboratory",
-    "consult": "Get a free consultation"
-},
-  "juma": {
-    "title": "Friday Discount",
-    "discount": "50% OFF!",
     "services": {
-      "lor": "ENT (consultation)",
-      "gynecologist": "Gynecologist",
-      "endocrinologist": "Endocrinologist",
-      "gastroenterologist": "Gastroenterologist",
-      "cardiologist": "Cardiologist",
-      "pediatrician": "Pediatrician",
-      "lab": "Laboratory"
+      "neurologist": {
+        "title": "Neurology"
+      },
+      "pediatrician": {
+        "title": "Pediatrics"
+      },
+      "therapist": {
+        "title": "Therapy"
+      },
+      "pulmonologist": {
+        "title": "Pulmonology"
+      },
+      "dermatologist": {
+        "title": "Dermatology"
+      },
+      "allergist": {
+        "title": "Allergology"
+      },
+      "gynecologist": {
+        "title": "Gynecology"
+      },
+      "ent": {
+        "title": "ENT (Otolaryngologist)"
+      },
+      "hepatologist": {
+        "title": "Hepatology"
+      },
+      "proctologist": {
+        "title": "Proctology"
+      },
+      "rheumatologist": {
+        "title": "Rheumatology"
+      },
+      "ultrasound": {
+        "title": "Ultrasound Examination (USG)"
+      },
+      "xray": {
+        "title": "X-ray"
+      },
+      "physiotherapy": {
+        "title": "Physiotherapy"
+      },
+      "massage": {
+        "title": "Massage Therapy"
+      },
+      "procedure_room": {
+        "title": "Procedure Room"
+      },
+      "laboratory": {
+        "title": "Laboratory"
+      },
+      "operating_room": {
+        "title": "Operating Room"
+      },
+      "inpatient": {
+        "title": "Inpatient Treatment"
+      },
+      "trauma": {
+        "title": "Traumatologist-Orthopedist"
+      },
+      "allergology": "Allergology",
+      "andrology": "Andrology",
+      "bariatrics": "Bariatrics",
+      "gastroenterology": "Gastroenterology",
+      "gynecology": "Gynecology",
+      "dermatology": "Dermatology",
+      "pediatric_dentistry": "Pediatric Dentistry",
+      "cardiology": "Cardiology",
+      "ent": "ENT (Otolaryngology)",
+      "mammology": "Mammology",
+      "neurology": "Neurology",
+      "neurosurgery": "Neurosurgery"
     },
-    "lab_tests": "CBC, ESR",
-    "free": "FREE!"
-  }
-
-}
+    "success": {
+      "title": "Success!",
+      "text": "Your request has been sent successfully."
+    },
+    "form": {
+      "all_departments": "All Departments",
+      "show_all_services": "Show all services ↓",
+      "hide_services": "Hide",
+      "schedule": "Schedule",
+      "open_hours": "Mon-Sun 24/7",
+      "contacts": "Contacts",
+      "ask_question": "Ask a Question",
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone",
+      "comment": "Comment",
+      "enter_name": "Enter your name",
+      "enter_email": "Enter your email",
+      "phone_placeholder": "90 123-45-67",
+      "enter_comment": "Enter your comment",
+      "send": "Send",
+      "sending": "Sending...",
+      "success_title": "Successfully Sent",
+      "success_message": "Thank you for your question!",
+      "name_required": "Name is required",
+      "email_invalid": "Invalid email",
+      "email_required": "Email is required",
+      "phone_invalid": "Enter a valid phone number",
+      "phone_required": "Phone is required"
+    },
+    "topbar": {
+      "address": "Block 14-B, House 365, Yangihayot district, Tashkent"
+    },
+    "features": {
+      "title": "Multidisciplinary Medical Center",
+      "founded": "Founded on October 10, 2021",
+      "successful_operations": "More than 1000 successful surgeries performed",
+      "equipment": "High-precision modern equipment from Europe",
+      "specialists": "Highly qualified and experienced specialists",
+      "lab": "Equipped with a modern in-house laboratory",
+      "consult": "Get a free consultation"
+    },
+    "juma": {
+      "title": "Friday Discount",
+      "discount": "50% OFF!",
+      "services": {
+        "lor": "ENT (consultation)",
+        "gynecologist": "Gynecologist",
+        "endocrinologist": "Endocrinologist",
+        "gastroenterologist": "Gastroenterologist",
+        "cardiologist": "Cardiologist",
+        "pediatrician": "Pediatrician",
+        "lab": "Laboratory"
+      },
+      "lab_tests": "CBC, ESR",
+      "free": "FREE!"
+    }
+  }}

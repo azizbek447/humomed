@@ -135,6 +135,66 @@
     "all": "Barcha yo‘nalishlar"
   },
   "services": {
+    "neurologist": {
+      "title": "Nevrologiya"
+    },
+    "pediatrician": {
+      "title": "Pediatriya"
+    },
+    "therapist": {
+      "title": "Terapiya"
+    },
+    "pulmonologist": {
+      "title": "Pulmonologiya"
+    },
+    "dermatologist": {
+      "title": "Dermatologiya"
+    },
+    "allergist": {
+      "title": "Allergologiya"
+    },
+    "gynecologist": {
+      "title": "Ginekologiya"
+    },
+    "ent": {
+      "title": "LOR (otolaringolog)"
+    },
+    "hepatologist": {
+      "title": "Gepatologiya"
+    },
+    "proctologist": {
+      "title": "Proktologiya"
+    },
+    "rheumatologist": {
+      "title": "Revmatologiya"
+    },
+    "ultrasound": {
+      "title": "Ultratovush tekshiruvi (UZI)"
+    },
+    "xray": {
+      "title": "Rentgen"
+    },
+    "physiotherapy": {
+      "title": "Fizioterapiya"
+    },
+    "massage": {
+      "title": "Massaj terapiyasi"
+    },
+    "procedure_room": {
+      "title": "Muolajalar xonasi"
+    },
+    "laboratory": {
+      "title": "Laboratoriya"
+    },
+    "operating_room": {
+      "title": "Operatsiya xonasi"
+    },
+    "inpatient": {
+      "title": "Statsionar davolash"
+    },
+    "trauma": {
+      "title": "Travmatolog-ortoped"
+    },
     "allergology": "Allergologiya",
     "andrology": "Andrologiya",
     "bariatrics": "Bariatriya",
@@ -180,7 +240,6 @@
     "topbar": {
       "address": "14-B kvartal, 365-uy, Yangihayot tumani, Toshkent"
     }
-
   },
   "features": {
     "title": "Ko‘p tarmoqli tibbiyot markazi",

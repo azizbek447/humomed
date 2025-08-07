@@ -12,14 +12,15 @@ const Service = () => {
   if (!service) return <div className='pt-20 text-center'>Xizmat topilmadi</div>;
 
   const lang = i18n.language || 'uz';
-  const content = service.content[lang] || service.content['uz'];
+  const title = service.title?.[lang] || service.title?.uz || '';
+  const content = service.content?.[lang] || service.content?.uz || [];
 
   return (
     <div className='mx-auto max-w-4xl px-4 pt-10'>
-      <h1 className='mb-6 text-3xl font-bold text-gray-800'>{service.title}</h1>
+      <h1 className='mb-6 text-3xl font-bold text-gray-800'>{title}</h1>
       <img
         src={service.image}
-        alt={service.title}
+        alt={title}
         className='mb-8 max-h-[400px] w-full rounded-xl object-cover shadow'
       />
       <div className='space-y-4 text-sm leading-relaxed text-gray-700 md:text-base'>
