@@ -1,5 +1,4 @@
 import 'react';
-
 import {
   FaEnvelope,
   FaFacebookF,
@@ -8,13 +7,16 @@ import {
   FaPhoneAlt,
   FaTelegramPlane,
 } from 'react-icons/fa';
-
 import logo from '../assets/images/logo.png';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className='bg-gray-100 text-gray-800'>
       <div className='mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-3'>
+        {/* Logo & Social */}
         <div className='flex flex-col items-start text-left sm:items-start'>
           <img src={logo} alt='Humo Med' className='mb-4 h-24 w-24 object-contain' />
           <div className='flex gap-4'>
@@ -36,14 +38,11 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* News */}
         <div className='text-left'>
-          <h3 className='mb-4 text-lg font-semibold'>Yangiliklar</h3>
+          <h3 className='mb-4 text-lg font-semibold'>{t('footer.news')}</h3>
           <ul className='space-y-3 text-sm'>
-            {[
-              { title: 'Innovatsion uskunalar', date: '30 Iyul 2021' },
-              { title: 'Yangi filial ochildi', date: '30 Iyul 2021' },
-              { title: 'Bepul maslahat kunlari', date: '30 Iyul 2021' },
-            ].map(({ title, date }, idx) => (
+            {t('footer.newsList', { returnObjects: true }).map(({ title, date }, idx) => (
               <li key={idx}>
                 <strong>{title}</strong>
                 <br />
@@ -53,35 +52,37 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Contact */}
         <div className='text-left'>
-          <h3 className='mb-4 text-lg font-semibold'>Bog‘lanish</h3>
+          <h3 className='mb-4 text-lg font-semibold'>{t('footer.contact')}</h3>
           <ul className='space-y-3 text-sm'>
             <li className='flex items-start gap-2'>
               <FaMapMarkerAlt className='mt-1 text-[var(--success-strong)]' />
-              <span>Sergeli, Yangi-hayot tumani, 14B, Olchazor MFY, Shokirariq 365</span>
+              <span>{t('footer.address')}</span>
             </li>
             <li className='flex items-center gap-2'>
               <FaPhoneAlt className='text-[var(--success-strong)]' />
-              <span>Asosiy telefon: +998 33 901 50 60</span>
+              <span>{t('footer.phoneMain')}</span>
             </li>
             <li className='flex items-center gap-2'>
               <FaPhoneAlt className='text-[var(--success-strong)]' />
-              <span>Call-markaz: +998 90 176 11 10</span>
+              <span>{t('footer.phoneCallCenter')}</span>
             </li>
             <li className='flex items-center gap-2'>
               <FaPhoneAlt className='text-[var(--success-strong)]' />
-              <span>Ishonch telefoni: +998 90 177 11 10</span>
+              <span>{t('footer.phoneTrust')}</span>
             </li>
             <li className='flex items-center gap-2'>
               <FaEnvelope className='text-[var(--success-strong)]' />
-              <span>humo@gmail.com</span>
+              <span>{t('footer.email')}</span>
             </li>
           </ul>
         </div>
       </div>
 
+      {/* Copyright */}
       <div className='bg-[var(--success-strong)] py-3 text-center text-sm text-white'>
-        Copyright © 2021 HumoService
+        {t('footer.copyright')}
       </div>
     </footer>
   );

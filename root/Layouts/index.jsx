@@ -22,9 +22,27 @@ const Layout = ({ children }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       if (throttleTimeout) clearTimeout(throttleTimeout);
+    };
+  }, []);
+
+  useEffect(() => {
+    const saveScrollPosition = () => {
+      localStorage.setItem('scrollPos', window.scrollY);
+    };
+
+    window.addEventListener('beforeunload', saveScrollPosition);
+
+    const pos = localStorage.getItem('scrollPos');
+    if (pos) {
+      window.scrollTo(0, parseInt(pos, 10));
+    }
+
+    return () => {
+      window.removeEventListener('beforeunload', saveScrollPosition);
     };
   }, []);
 

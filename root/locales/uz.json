@@ -70,18 +70,6 @@
     "operating_room": "Operatsion blok",
     "inpatient": "Statsionar"
   },
-  "question": {
-    "title": "Savolingiz bormi?",
-    "description": "Shifokorlarimiz yuqori malakaga ega, katta tajribaga ega va doimiy o‘qib borishadi...",
-    "name": "Ismingiz",
-    "namePlaceholder": "Ismingizni kiriting",
-    "phone": "Telefon",
-    "phonePlaceholder": "Telefon raqamingizni kiriting",
-    "comment": "Izoh",
-    "commentPlaceholder": "Izohingizni yozing",
-    "send": "Yuborish",
-    "sending": "Yuborilmoqda..."
-  },
   "errors": {
     "name": "Maydon toʻldirilishi shart",
     "phone": "Maydon toʻldirilishi shart",
@@ -135,6 +123,24 @@
     "all": "Barcha yo‘nalishlar"
   },
   "services": {
+    "gastroenterology": {
+      "title": "Gastroenterologiya"
+    },
+    "endocrinology": {
+      "title": "Endokrinologiya"
+    },
+    "infectionist": {
+      "title": "Infeksionist"
+    },
+    "urologist": {
+      "title": "Urologiya"
+    },
+    "pediatricNeuro": {
+      "title": "Bolalar nevrologiyasi"
+    },
+    "pediatricGastro": {
+      "title": "Bolalar gastroenterologiyasi"
+    },
     "neurologist": {
       "title": "Nevrologiya"
     },
@@ -201,13 +207,63 @@
     "allergology": "Allergologiya",
     "andrology": "Andrologiya",
     "bariatrics": "Bariatriya",
-    "gastroenterology": "Gastroenterologiya",
     "gynecology": "Ginekologiya",
     "dermatology": "Dermatologiya",
     "pediatric_dentistry": "Bolalar stomatologiyasi",
     "mammology": "Mammologiya",
     "neurology": "Nevrologiya",
     "neurosurgery": "Neyroxirurgiya"
+  },
+  "footer": {
+    "news": "Yangiliklar",
+    "newsList": [
+      {
+        "title": "Innovatsion uskunalar",
+        "date": "30 Iyul 2021"
+      },
+      {
+        "title": "Yangi filial ochildi",
+        "date": "30 Iyul 2021"
+      },
+      {
+        "title": "Bepul maslahat kunlari",
+        "date": "30 Iyul 2021"
+      }
+    ],
+    "contact": "Bog‘lanish",
+    "address": "Sergeli, Yangi-hayot tumani, 14B, Olchazor MFY, Shokirariq 365",
+    "phoneMain": "Asosiy telefon: +998 33 901 50 60",
+    "phoneCallCenter": "Call-markaz: +998 90 176 11 10",
+    "phoneTrust": "Ishonch telefoni: +998 90 177 11 10",
+    "email": "humo@gmail.com",
+    "copyright": "Copyright © 2021 HumoService"
+  },
+  "whyUs": {
+    "title": "Nega biz?",
+    "professionalism": {
+      "title": "Professionalizm",
+      "description": "Markazda 20 dan ortiq shifokor va 30 dan ortiq tibbiyot mutaxassisi mehnat qiladi, ulardan 10 dan ortig‘i ilmiy daraja va faxriy unvonga ega bo‘lib, nufuzli tibbiyot birlashmalariga a’zo bo‘lib, 90 foizi oliy va birinchi malaka toifali mutaxassislardir."
+    },
+    "equipment": {
+      "title": "Yuqori texnologiyali uskunalar",
+      "description": "Klinika Germaniya, Italiya, Finlyandiya, Shveytsariya, Yaponiya, Janubiy Koreya kabi davlatlarning eng zamonaviy yuqori aniqlikdagi asbob-uskunalari bilan jihozlangan, bu esa davolashni uch barobar samaraliroq va sifatli o‘tkazish imkonini beradi."
+    },
+    "convenience": {
+      "title": "Qulaylik",
+      "description": "Klinika “hammasi birda” tizimi bo‘yicha ishlaydi, ya’ni bemor klinikadan chiqmagan holda barcha zarur xizmatlarni oladi. Uning ixtiyorida eng ilg'or MRI va KT diagnostikasi, ultratovush, endoskopik va lazer texnologiyalari, o'z laboratoriyasi mavjud bo'lib, u yerda 3000 ga yaqin turdagi testlarni o'tkazish mumkin."
+    },
+    "innovations": {
+      "title": "Innovatsiyalar",
+      "description": "Har yili klinika eng so'nggi innovatsiyalarni amalga oshirish uchun kuch sarflaydi. Misol uchun, klinikada endoskopik va lazer texnologiyalari yordamida intervertebral churra bo'yicha operatsiyalarni amalga oshiradigan yagona klinika mavjud."
+    },
+    "safety": {
+      "title": "Xavfsizlik",
+      "description": "O'z amaliyotida klinika barcha asboblar va jihozlarni sterilizatsiya qilish uchun olti bosqichli tizimdan foydalanadi. Har bir bemordan keyin barcha sirtlar yaxshilab sterilizatsiya qilinadi."
+    },
+    "comfort": {
+      "title": "Qulay muhit",
+      "description": "Klinika har bir bemorning yashashi qulay bo'lishini ta'minlash uchun ishlaydi. Xizmat ko'rsatishning yuqori darajasi: qulay ish tartibi, tibbiyot markaziga har bir tashrif buyuruvchiga individual yondashuv, sezgir va ehtiyotkor xodimlar."
+    }
   },
   "success": {
     "title": "Muvaffaqiyatli!",
@@ -241,7 +297,6 @@
     "topbar": {
       "address": "14-B kvartal, 365-uy, Yangihayot tumani, Toshkent"
     }
-
   },
   "features": {
     "title": "Ko‘p tarmoqli tibbiyot markazi",
@@ -266,5 +321,60 @@
     },
     "lab_tests": "OAK, SAHR",
     "free": "BEPUL!"
+  },
+  "question": {
+    "title": "Savolingiz bormi?",
+    "description": "Quyidagi forma orqali bizga murojaat qiling, siz bilan tez orada bog‘lanamiz.",
+    "name": "Ism",
+    "namePlaceholder": "Ismingizni kiriting",
+    "phone": "Telefon raqami",
+    "phonePlaceholder": "Telefon raqamingizni kiriting",
+    "comment": "Izoh (ixtiyoriy)",
+    "commentPlaceholder": "Xabaringizni shu yerga yozing...",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "errors": {
+      "name": "Ism kiritish majburiy",
+      "phone": "Telefon raqami majburiy",
+      "phoneMin": "Telefon raqami to‘liq bo‘lishi kerak"
+    }
+  },
+  "about": {
+    "weAreHappy": "Biz har doim yordam berishga tayyormiz",
+    "title": "Biz haqimizda",
+    "paragraphs": [
+      "“Humo Med” tibbiyot markazi – Toshkent shahrida joylashgan, yurak-qon tomir kasalliklari, qorin bo'shlig'i kasalliklari, burun bo'shlig'i kasalliklari, suyak shikastlanishlari, nerv kasalliklari va urologik kasalliklarni chuqur o'rganish va davolashga ixtisoslashgan zamonaviy ko'p tarmoqli davolash-profilaktika muassasasi hisoblanadi.",
+      "Markazimizda yuqori malakali shifokorlar va tajribali tibbiyot mutaxassislari faoliyat olib boradilar. Har bir mutaxassis o'z sohasida katta tajribaga ega bo'lib, zamonaviy usullar va ilg'or texnologiyalar yordamida bemorlarga yordam beradi.",
+      "Humo Med quyidagi yo'nalishlarda chuqur faoliyat yuritadi: yurak-qon tomir kasalliklari; qorin bo'shlig'i organlari kasalliklari; burun bo'shlig'i va LOR muammolari; suyak shikastlanishlari va ortopedik muolajalar; nerv kasalliklari; urologik kasalliklar; bemorlar uchun protsedura xizmati; UZI tekshiruvlari va laboratoriya xizmatlari.",
+      "Markazimiz “hammasi bir joyda” tamoyili asosida ishlaydi — bemor barcha zarur tashxis va davolash xizmatlarini bir joyda oladi. Zamonaviy diagnostika va laboratoriya uskunalari bemorlarimiz uchun yuqori qulaylik va aniqlik ta'minlaydi.",
+      "Humo Med xavfsizlik va sifatni taʼminlash maqsadida sterilizatsiya va sanitariya protokollariga jiddiy e'tibor qaratadi."
+    ],
+    "advantagesTitle": "Humo Med klinikasida davolanishning 6 ta afzalligi:",
+    "advantages": [
+      {
+        "title": "Professionalizm.",
+        "desc": "Tajribali va malakali shifokorlar jamoasi."
+      },
+      {
+        "title": "Zamonaviy uskunalar.",
+        "desc": "Yuqori aniqlikdagi diagnostika va davolash texnologiyalari."
+      },
+      {
+        "title": "Qulaylik.",
+        "desc": "Barcha xizmatlar bir joyda — “all in one” tamoyili."
+      },
+      {
+        "title": "Innovatsiyalar.",
+        "desc": "Davolash va diagnostikada eng so'nggi yutuqlarni qo'llash."
+      },
+      {
+        "title": "Xavfsizlik.",
+        "desc": "Olti bosqichli sterilizatsiya tizimi va qat'iy sanitariya nazorati."
+      },
+      {
+        "title": "Komfort.",
+        "desc": "Har bir bemorga individual va eʼtiborli yondashuv."
+      }
+    ]
   }
 }

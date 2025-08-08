@@ -1,5 +1,6 @@
 import {
   FaBaby,
+  FaBalanceScale,
   FaBed,
   FaBrain,
   FaHands,
@@ -14,32 +15,42 @@ import {
   FaUserMd,
   FaUserNurse,
   FaUserPlus,
+  FaUtensils,
   FaVenus,
   FaVial,
+  FaVirus,
   FaXRay,
 } from 'react-icons/fa';
 
-import cardioImage from '../assets/img/cardioImage.png';
-import hepatologistImage from '../assets/img/Fizoterapiya.png';
-import massageImage from '../assets/img/massageImage.png';
-import neuroImage from '../assets/img/neuroImage.png';
-import proctologistImage from '../assets/img/neuroImage.png';
-import operatingRoomImage from '../assets/img/operatingRoomImage.png';
-import pulmonologistImage from '../assets/img/otgolagiya.png';
-import allergistImage from '../assets/img/otgolagiya.png';
-import gynecologistImage from '../assets/img/otgolagiya.png';
-import entImage from '../assets/img/otgolagiya.png';
-import rheumatologistImage from '../assets/img/otgolagiya.png';
-import xrayImage from '../assets/img/otgolagiya.png';
-import physiotherapyImage from '../assets/img/otgolagiya.png';
-import procedureImage from '../assets/img/otgolagiya.png';
-import laboratoryImage from '../assets/img/otgolagiya.png';
-import inpatientImage from '../assets/img/otgolagiya.png';
-import pediatricImage from '../assets/img/pediatricImage.png';
-import therapistImage from '../assets/img/therapistImage.png';
-import traumaImage from '../assets/img/traumaImage.png';
-import dermatologistImage from '../assets/img/traumaImage.png';
-import ultrasoundImage from '../assets/img/Ортопедия.png';
+// Shifokor va bo'lim rasmlari importlari
+
+import traumaImage from '../assets/img/traumaImage.png'; // Xirurg-Travmatolog
+import cardioImage from '../assets/img/cardioImage.png'; // Kardiolog
+import therapistImage from '../assets/img/therapistImage.png'; // Terapevt
+import gastroImage from '../assets/images/Gastroenterolog.png'; // Gastroenterolog
+import endoImage from '../assets/images/Jarayon.png'; // Endokrinolog
+import gynecologistImage from '../assets/images/Ginekolog.png'; // Ginekolog
+import rheumatologistImage from '../assets/img/otgolagiya.png'; // Revmatolog
+import pulmonologistImage from '../assets/img/otgolagiya.png'; // Pulmonolog
+import infectionistImage from '../assets/images/Terapevt-kardiolog.png'; // Infeksionist
+import hepatologistImage from '../assets/img/Fizoterapiya.png'; // Gepatolog
+import allergistImage from '../assets/img/otgolagiya.png'; // Allergolog
+import proctologistImage from '../assets/images/Terapevt.png'; // Pragtolog
+import entImage from '../assets/images/lor.png'; // Lor
+import dermatologistImage from '../assets/images/Operatsiya.png'; // Dermatolog
+import neuroImage from '../assets/img/neuroImage.png'; // Nevropatolog
+import urologistImage from '../assets/images/Operatsiya.png'; // Urolog
+import pediatricNeuroImage from '../assets/images/Gastroenterolog.png'; // Detskiy Nevropatolog
+import pediatricGastroImage from '../assets/images/Terapevt.png'; // Detskiy Gastroenterolog
+import pediatricImage from '../assets/img/pediatricImage.png'; // Pediator
+import ultrasoundImage from '../assets/img/Ортопедия.png'; // UZD
+import xrayImage from '../assets/img/otgolagiya.png'; // RENTGEN
+import physiotherapyImage from '../assets/img/otgolagiya.png'; // Fizioterapiya
+import massageImage from '../assets/img/massageImage.png'; // Massaj
+import procedureImage from '../assets/img/otgolagiya.png'; // Procedurniy
+import laboratoryImage from '../assets/img/otgolagiya.png'; // Laboratoriya
+import operatingRoomImage from '../assets/img/operatingRoomImage.png'; // Опер блок
+import inpatientImage from '../assets/img/otgolagiya.png'; // Стационар
 
 const servicesData = (t) => ({
   cardiology: {
@@ -826,6 +837,406 @@ const servicesData = (t) => ({
       ],
     },
   },
+  gastroenterology: {
+    icon: <FaStethoscope />,
+    title: t('services.gastroenterology.title'),
+    image: gastroImage,
+    content: {
+      uz: [
+        {
+          type: 'paragraph',
+          text: 'Gastroenterolog — oshqozon-ichak trakti, jigar, o‘t pufagi va ovqat hazm qilish tizimining boshqa organlari bilan bog‘liq kasalliklarni aniqlaydigan va davolaydigan mutaxassis',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: '"Humo Med" klinikasida gastroenterologlar zamonaviy endoskopik usullar, laborator tahlillar va individual davolash rejalarini taklif etadi. Ular oshqozon yarasi, gastrit, gepatit, pankreatit, o‘t yo‘llari kasalliklari va ichak yallig‘lanishlari kabi ko‘plab kasalliklarni aniqlaydi va davolaydi.',
+        },
+        {
+          type: 'title',
+          text: 'Sabablar va xavf omillari',
+        },
+        {
+          type: 'paragraph',
+          text: 'Noto‘g‘ri ovqatlanish, spirtli ichimliklarni suiiste’mol qilish, stress, H. pylori infeksiyasi, dori vositalari va genetik omillar oshqozon-ichak kasalliklari xavfini oshiradi.',
+        },
+        {
+          type: 'title',
+          text: 'Asosiy simptomlar:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Qorin og‘rig‘i yoki noqulaylik',
+            'Ko‘ngil aynishi va qayt qilish',
+            'Qorin shishishi va gaz',
+            'Ovqat hazm qilishning buzilishi',
+            'Qonli najas yoki qora najas',
+            'Qabziyat yoki diareya',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Qachon vrachga murojaat qilish kerak?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Agar uzoq davom etuvchi qorin og‘rig‘i, ovqat hazm qilish muammolari, qonli najas yoki keskin vazn yo‘qotish kuzatilsa — darhol gastroenterologga murojaat qiling.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnostika va davolash',
+        },
+        {
+          type: 'paragraph',
+          text: 'Gastroskopiya, kolonoskopiya, ultratovush, qon va najas tahlillari orqali tashxis qo‘yiladi. Davolash dori vositalari, parhez, endoskopik muolajalar yoki jarrohlikni o‘z ichiga olishi mumkin.',
+        },
+        {
+          type: 'title',
+          text: 'Nega aynan Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Tajribali gastroenterologlar',
+            'Zamonaviy endoskopik va laborator diagnostika',
+            'Individual davolash rejasi',
+            'Qulay va xavfsiz muhit',
+            'Profilaktika va kuzatuv xizmatlari',
+          ],
+        },
+      ],
+      ru: [
+        {
+          type: 'paragraph',
+          text: 'Гастроэнтеролог — специалист, диагностирующий и лечащий заболевания желудочно-кишечного тракта, печени и желчевыводящих путей',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'В "Humo Med" гастроэнтерологи используют современные эндоскопические методы, лабораторные анализы и индивидуальные планы лечения для диагностики и терапии гастрита, язвы, гепатита, панкреатита и других заболеваний.',
+        },
+        {
+          type: 'title',
+          text: 'Причины и факторы риска',
+        },
+        {
+          type: 'paragraph',
+          text: 'Неправильное питание, злоупотребление алкоголем, стресс, инфекция H. pylori, лекарства и наследственная предрасположенность повышают риск болезней ЖКТ.',
+        },
+        {
+          type: 'title',
+          text: 'Основные симптомы:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Боль или дискомфорт в животе',
+            'Тошнота и рвота',
+            'Вздутие и газы',
+            'Нарушения пищеварения',
+            'Кровь в стуле или чёрный стул',
+            'Запор или диарея',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Когда обращаться к врачу?',
+        },
+        {
+          type: 'paragraph',
+          text: 'При длительной боли в животе, нарушениях пищеварения, крови в стуле или резкой потере веса — немедленно обратитесь к гастроэнтерологу.',
+        },
+        {
+          type: 'title',
+          text: 'Диагностика и лечение',
+        },
+        {
+          type: 'paragraph',
+          text: 'Используются гастроскопия, колоноскопия, УЗИ, анализы крови и кала. Лечение включает медикаменты, диету, эндоскопические процедуры или хирургию.',
+        },
+        {
+          type: 'title',
+          text: 'Почему именно Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Опытные врачи',
+            'Современная эндоскопическая и лабораторная диагностика',
+            'Индивидуальный план лечения',
+            'Комфортные условия',
+            'Профилактика и наблюдение',
+          ],
+        },
+      ],
+      en: [
+        {
+          type: 'paragraph',
+          text: 'A gastroenterologist is a specialist who diagnoses and treats disorders of the digestive tract, liver and biliary system',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'At "Humo Med", gastroenterologists use modern endoscopic methods, lab tests, and personalized treatment plans to manage gastritis, ulcers, hepatitis, pancreatitis, biliary diseases, and more.',
+        },
+        {
+          type: 'title',
+          text: 'Causes and Risk Factors',
+        },
+        {
+          type: 'paragraph',
+          text: 'Poor diet, alcohol abuse, stress, H. pylori infection, medications, and genetic predisposition increase the risk of gastrointestinal diseases.',
+        },
+        {
+          type: 'title',
+          text: 'Main Symptoms:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Abdominal pain or discomfort',
+            'Nausea and vomiting',
+            'Bloating and gas',
+            'Digestive disturbances',
+            'Blood in stool or black stool',
+            'Constipation or diarrhea',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'When to See a Doctor?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Seek a gastroenterologist if you have persistent abdominal pain, digestive problems, blood in stool, or sudden weight loss.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnosis and Treatment',
+        },
+        {
+          type: 'paragraph',
+          text: 'Diagnosis includes gastroscopy, colonoscopy, ultrasound, blood and stool tests. Treatment may involve medication, diet, endoscopic therapy, or surgery.',
+        },
+        {
+          type: 'title',
+          text: 'Why Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Experienced gastroenterologists',
+            'Modern endoscopic and laboratory diagnostics',
+            'Personalized treatment plan',
+            'Comfortable and safe environment',
+            'Prevention and follow-up services',
+          ],
+        },
+      ],
+    },
+  },
+
+  endocrinology: {
+    icon: <FaBalanceScale />,
+    title: t('services.endocrinology.title'),
+    image: endoImage,
+    content: {
+      uz: [
+        {
+          type: 'paragraph',
+          text: 'Endokrinolog — gormonlar va endokrin tizim kasalliklarini aniqlash va davolash bo‘yicha mutaxassis',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: '"Humo Med" klinikasida endokrinologlar qandli diabet, qalqonsimon bez kasalliklari, gormon buzilishlari, metabolik sindrom va boshqa endokrin muammolarni davolashda yuqori malakaga ega.',
+        },
+        {
+          type: 'title',
+          text: 'Sabablar va xavf omillari',
+        },
+        {
+          type: 'paragraph',
+          text: 'Genetika, noto‘g‘ri ovqatlanish, ortiqcha vazn, stress, infektsiyalar va ayrim dori vositalari endokrin kasalliklarni keltirib chiqaradi.',
+        },
+        {
+          type: 'title',
+          text: 'Asosiy simptomlar:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Doimiy charchoq',
+            'Vazn o‘zgarishi',
+            'Issiq yoki sovuqqa sezgirlik',
+            'Soch to‘kilishi yoki teri o‘zgarishlari',
+            'Tez-tez chanqash yoki siyish',
+            'Gormonal tsikl buzilishlari',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Qachon vrachga murojaat qilish kerak?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Agar sizda yuqoridagi belgilar yoki gormonlar bilan bog‘liq muammolar mavjud bo‘lsa — endokrinologga murojaat qiling.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnostika va davolash',
+        },
+        {
+          type: 'paragraph',
+          text: 'Qon tahlillari (TSH, T4, insulin va boshqalar), ultratovush, glyukoza testi yordamida tashxis qo‘yiladi. Davolash dori terapiyasi, gormon almashtirish yoki hayot tarzini o‘zgartirish orqali amalga oshiriladi.',
+        },
+        {
+          type: 'title',
+          text: 'Nega aynan Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Tajribali endokrinologlar',
+            'Zamonaviy laborator diagnostika',
+            'Individual davolash yondashuvi',
+            'Kompleks profilaktika',
+            'Doimiy kuzatuv va maslahat',
+          ],
+        },
+      ],
+      ru: [
+        {
+          type: 'paragraph',
+          text: 'Эндокринолог — специалист по диагностике и лечению заболеваний гормональной и эндокринной системы',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'В "Humo Med" эндокринологи лечат сахарный диабет, болезни щитовидной железы, гормональные нарушения, метаболические синдромы и другие эндокринные заболевания.',
+        },
+        {
+          type: 'title',
+          text: 'Причины и факторы риска',
+        },
+        {
+          type: 'paragraph',
+          text: 'Генетическая предрасположенность, неправильное питание, лишний вес, стресс, инфекции и некоторые лекарства вызывают эндокринные заболевания.',
+        },
+        {
+          type: 'title',
+          text: 'Основные симптомы:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Постоянная усталость',
+            'Изменение веса',
+            'Чувствительность к жаре или холоду',
+            'Выпадение волос или изменения кожи',
+            'Частая жажда или мочеиспускание',
+            'Нарушения гормонального цикла',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Когда обращаться к врачу?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Если у вас есть вышеперечисленные симптомы или подозрение на гормональные нарушения — обратитесь к эндокринологу.',
+        },
+        {
+          type: 'title',
+          text: 'Диагностика и лечение',
+        },
+        {
+          type: 'paragraph',
+          text: 'Проводятся анализы крови на гормоны (TSH, T4, инсулин и др.), УЗИ, тесты на глюкозу. Лечение включает медикаменты, гормональную терапию или изменение образа жизни.',
+        },
+        {
+          type: 'title',
+          text: 'Почему именно Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Опытные эндокринологи',
+            'Современная лабораторная диагностика',
+            'Индивидуальный подход к лечению',
+            'Комплексная профилактика',
+            'Длительное наблюдение и консультации',
+          ],
+        },
+      ],
+      en: [
+        {
+          type: 'paragraph',
+          text: 'An endocrinologist is a specialist in diagnosing and treating hormonal and endocrine disorders',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'At "Humo Med", endocrinologists treat diabetes, thyroid disorders, hormonal imbalances, metabolic syndromes, and other endocrine conditions.',
+        },
+        {
+          type: 'title',
+          text: 'Causes and Risk Factors',
+        },
+        {
+          type: 'paragraph',
+          text: 'Genetics, poor diet, excess weight, stress, infections, and certain medications contribute to endocrine diseases.',
+        },
+        {
+          type: 'title',
+          text: 'Main Symptoms:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Persistent fatigue',
+            'Weight changes',
+            'Sensitivity to heat or cold',
+            'Hair loss or skin changes',
+            'Frequent thirst or urination',
+            'Hormonal cycle irregularities',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'When to See a Doctor?',
+        },
+        {
+          type: 'paragraph',
+          text: 'If you experience the above symptoms or suspect a hormonal disorder, see an endocrinologist.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnosis and Treatment',
+        },
+        {
+          type: 'paragraph',
+          text: 'Diagnosis includes blood tests (TSH, T4, insulin, etc.), ultrasound, glucose testing. Treatment involves medications, hormone therapy, or lifestyle changes.',
+        },
+        {
+          type: 'title',
+          text: 'Why Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Experienced endocrinologists',
+            'Modern laboratory diagnostics',
+            'Individual treatment approach',
+            'Comprehensive prevention',
+            'Ongoing follow-up and consultations',
+          ],
+        },
+      ],
+    },
+  },
+
   pulmonologist: {
     icon: <FaLungs />,
     title: t('services.pulmonologist.title'),
@@ -1022,6 +1433,199 @@ const servicesData = (t) => ({
       ],
     },
   },
+  infectionist: {
+    icon: <FaVirus />,
+    title: t('services.infectionist.title'),
+    image: infectionistImage,
+    content: {
+      uz: [
+        {
+          type: 'paragraph',
+          text: 'Infeksionist – yuqumli kasalliklarni aniqlash, davolash va oldini olish bilan shug‘ullanuvchi mutaxassis',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: '"Humo Med" klinikasida infeksionist zamonaviy laboratoriya uskunalari yordamida virusli, bakterial va parazitar infeksiyalarni aniqlaydi hamda davolash rejasini tuzadi.',
+        },
+        {
+          type: 'title',
+          text: 'Sabablar va xavf omillari',
+        },
+        {
+          type: 'paragraph',
+          text: 'Zaif immunitet, gigiyena qoidalariga rioya qilmaslik, ifloslangan oziq-ovqat va suv, yuqumli kasallik bilan kasallangan shaxs bilan aloqa qilish infeksiyalar xavfini oshiradi.',
+        },
+        {
+          type: 'title',
+          text: 'Asosiy simptomlar:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Isitma',
+            'Holssizlik',
+            'Bosh og‘rig‘i',
+            'Ko‘ngil aynishi yoki qusish',
+            'Diareya yoki ich ketishi',
+            'Teri toshmalari',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Qachon vrachga murojaat qilish kerak?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Agar yuqoridagi simptomlardan birini sezsangiz yoki o‘zingizda yuqumli kasallikdan shubhalansangiz, darhol infeksionistga murojaat qiling.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnostika va davolash',
+        },
+        {
+          type: 'paragraph',
+          text: 'Laboratoriya tahlillari (qon, siydik, najas), PZR testlar, serologik tekshiruvlar yordamida tashxis qo‘yiladi. Davolash dori vositalari, virusga qarshi preparatlar, antibiotiklar yoki simptomatik terapiya orqali olib boriladi.',
+        },
+        {
+          type: 'title',
+          text: 'Nega aynan Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Yuqori malakali infeksionist shifokorlar',
+            'Aniq va tezkor diagnostika',
+            'Zamonaviy laboratoriya uskunalari',
+            'Har bir bemorga individual yondashuv',
+            'Infeksiyalardan himoya bo‘yicha tavsiyalar',
+          ],
+        },
+      ],
+      ru: [
+        {
+          type: 'paragraph',
+          text: 'Инфекционист – специалист по диагностике, лечению и профилактике инфекционных заболеваний',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'В клинике "Humo Med" инфекционист с помощью современного лабораторного оборудования выявляет вирусные, бактериальные и паразитарные инфекции, а также разрабатывает план лечения.',
+        },
+        {
+          type: 'title',
+          text: 'Причины и факторы риска',
+        },
+        {
+          type: 'paragraph',
+          text: 'Ослабленный иммунитет, несоблюдение правил гигиены, загрязнённая пища и вода, контакт с больным человеком повышают риск инфекций.',
+        },
+        {
+          type: 'title',
+          text: 'Основные симптомы:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Повышенная температура',
+            'Слабость',
+            'Головная боль',
+            'Тошнота или рвота',
+            'Диарея',
+            'Кожная сыпь',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Когда обращаться к врачу?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Если вы заметили вышеуказанные симптомы или подозреваете у себя инфекцию, немедленно обратитесь к инфекционисту.',
+        },
+        {
+          type: 'title',
+          text: 'Диагностика и лечение',
+        },
+        {
+          type: 'paragraph',
+          text: 'Диагностика проводится с помощью лабораторных анализов (кровь, моча, кал), ПЦР-тестов, серологических исследований. Лечение может включать противовирусные препараты, антибиотики и симптоматическую терапию.',
+        },
+        {
+          type: 'title',
+          text: 'Почему именно Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Опытные инфекционисты',
+            'Точная и быстрая диагностика',
+            'Современное лабораторное оборудование',
+            'Индивидуальный подход к каждому пациенту',
+            'Рекомендации по профилактике инфекций',
+          ],
+        },
+      ],
+      en: [
+        {
+          type: 'paragraph',
+          text: 'An infectionist is a specialist who diagnoses, treats, and prevents infectious diseases',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'At "Humo Med" clinic, an infectionist uses modern laboratory equipment to detect viral, bacterial, and parasitic infections and develops a personalized treatment plan.',
+        },
+        {
+          type: 'title',
+          text: 'Causes and Risk Factors',
+        },
+        {
+          type: 'paragraph',
+          text: 'Weakened immune system, poor hygiene, contaminated food and water, and contact with infected individuals increase the risk of infections.',
+        },
+        {
+          type: 'title',
+          text: 'Main Symptoms:',
+        },
+        {
+          type: 'list',
+          items: ['Fever', 'Weakness', 'Headache', 'Nausea or vomiting', 'Diarrhea', 'Skin rash'],
+        },
+        {
+          type: 'title',
+          text: 'When to See a Doctor?',
+        },
+        {
+          type: 'paragraph',
+          text: 'If you experience any of the above symptoms or suspect an infection, seek medical attention from an infectionist immediately.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnosis and Treatment',
+        },
+        {
+          type: 'paragraph',
+          text: 'Diagnosis is carried out using laboratory tests (blood, urine, stool), PCR tests, and serological studies. Treatment may include antiviral drugs, antibiotics, or symptomatic therapy.',
+        },
+        {
+          type: 'title',
+          text: 'Why Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Highly qualified infectionists',
+            'Accurate and fast diagnostics',
+            'Modern laboratory equipment',
+            'Individual approach to each patient',
+            'Infection prevention recommendations',
+          ],
+        },
+      ],
+    },
+  },
+
   dermatologist: {
     icon: <FaNotesMedical />,
     title: t('services.dermatologist.title'),
@@ -2810,6 +3414,596 @@ const servicesData = (t) => ({
       ],
     },
   },
+  urologist: {
+    icon: <FaUserMd />,
+    title: t('services.urologist.title'),
+    image: urologistImage,
+    content: {
+      uz: [
+        {
+          type: 'paragraph',
+          text: 'Urolog – siydik chiqarish tizimi va erkak jinsiy salomatligi bilan bog‘liq kasalliklarni aniqlovchi va davolovchi mutaxassis',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'Urolog buyrak, siydik pufagi, prostata va siydik yo‘llari kasalliklarini aniqlaydi va davolaydi. "Humo Med" klinikasida zamonaviy diagnostika uskunalari yordamida tekshiruvdan o‘tasiz.',
+        },
+        {
+          type: 'title',
+          text: 'Sabablar va xavf omillari',
+        },
+        {
+          type: 'paragraph',
+          text: 'Infeksiyalar, toshlar, gormonal buzilishlar, yomon odatlar (chekish, alkogol), gigiyena qoidalariga amal qilmaslik, hamda genetik moyillik urologik kasalliklar xavfini oshiradi.',
+        },
+        {
+          type: 'title',
+          text: 'Asosiy simptomlar:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Siydik chiqarishda og‘riq yoki qiyinchilik',
+            'Qon aralash siydik',
+            'Tez-tez siydik chiqarish',
+            'Bel sohasida og‘riq',
+            'Prostata bilan bog‘liq muammolar',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Qachon vrachga murojaat qilish kerak?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Agar siydik chiqarishda o‘zgarishlar, og‘riq yoki yuqoridagi simptomlardan biri kuzatilsa, darhol urologga murojaat qiling.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnostika va davolash',
+        },
+        {
+          type: 'paragraph',
+          text: 'Ultratovush tekshiruvi (UZI), siydik va qon tahlillari, sistoskopiya va boshqa usullar orqali tashxis qo‘yiladi. Davolash dori vositalari, fizioterapiya yoki jarrohlik amaliyotini o‘z ichiga olishi mumkin.',
+        },
+        {
+          type: 'title',
+          text: 'Nega aynan Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Malakali urolog mutaxassislar',
+            'Zamonaviy diagnostika uskunalari',
+            'Bemorga individual yondashuv',
+            'Qulay va xavfsiz davolash muhiti',
+            'Profilaktika bo‘yicha tavsiyalar',
+          ],
+        },
+      ],
+      ru: [
+        {
+          type: 'paragraph',
+          text: 'Уролог – специалист, который выявляет и лечит заболевания мочевыделительной системы и мужского здоровья',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'Уролог диагностирует и лечит заболевания почек, мочевого пузыря, простаты и мочевых путей. В клинике "Humo Med" обследование проводится с использованием современного оборудования.',
+        },
+        {
+          type: 'title',
+          text: 'Причины и факторы риска',
+        },
+        {
+          type: 'paragraph',
+          text: 'Инфекции, камни, гормональные нарушения, вредные привычки (курение, алкоголь), несоблюдение гигиены и генетическая предрасположенность повышают риск урологических заболеваний.',
+        },
+        {
+          type: 'title',
+          text: 'Основные симптомы:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Боль или затруднение при мочеиспускании',
+            'Кровь в моче',
+            'Частое мочеиспускание',
+            'Боль в пояснице',
+            'Проблемы с простатой',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Когда обращаться к врачу?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Если вы заметили изменения при мочеиспускании, боль или один из вышеуказанных симптомов, немедленно обратитесь к урологу.',
+        },
+        {
+          type: 'title',
+          text: 'Диагностика и лечение',
+        },
+        {
+          type: 'paragraph',
+          text: 'Диагноз ставится с помощью УЗИ, анализа мочи и крови, цистоскопии и других методов. Лечение может включать медикаментозную терапию, физиотерапию или хирургическое вмешательство.',
+        },
+        {
+          type: 'title',
+          text: 'Почему именно Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Опытные урологи',
+            'Современное диагностическое оборудование',
+            'Индивидуальный подход к каждому пациенту',
+            'Комфортные и безопасные условия лечения',
+            'Рекомендации по профилактике',
+          ],
+        },
+      ],
+      en: [
+        {
+          type: 'paragraph',
+          text: 'A urologist is a specialist who diagnoses and treats diseases of the urinary system and male reproductive health',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'A urologist treats conditions of the kidneys, bladder, prostate, and urinary tract. At "Humo Med" clinic, examinations are carried out using modern diagnostic equipment.',
+        },
+        {
+          type: 'title',
+          text: 'Causes and Risk Factors',
+        },
+        {
+          type: 'paragraph',
+          text: 'Infections, stones, hormonal imbalances, bad habits (smoking, alcohol), poor hygiene, and genetic predisposition increase the risk of urological diseases.',
+        },
+        {
+          type: 'title',
+          text: 'Main Symptoms:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Pain or difficulty urinating',
+            'Blood in urine',
+            'Frequent urination',
+            'Lower back pain',
+            'Prostate-related issues',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'When to See a Doctor?',
+        },
+        {
+          type: 'paragraph',
+          text: 'If you notice changes in urination, pain, or any of the above symptoms, consult a urologist immediately.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnosis and Treatment',
+        },
+        {
+          type: 'paragraph',
+          text: 'Diagnosis is carried out using ultrasound, urine and blood tests, cystoscopy, and other methods. Treatment may involve medication, physiotherapy, or surgery.',
+        },
+        {
+          type: 'title',
+          text: 'Why Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Experienced urologists',
+            'Modern diagnostic equipment',
+            'Individual approach to each patient',
+            'Comfortable and safe treatment environment',
+            'Prevention and health recommendations',
+          ],
+        },
+      ],
+    },
+  },
+  pediatricNeuro: {
+    icon: <FaBrain />,
+    title: t('services.pediatricNeuro.title'),
+    image: pediatricNeuroImage,
+    content: {
+      uz: [
+        {
+          type: 'paragraph',
+          text: 'Bola nevropatologi – bolalarda asab tizimi kasalliklarini aniqlovchi va davolovchi mutaxassis',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: '"Humo Med" klinikasida bolalarning asab tizimi bilan bog‘liq turli kasalliklar zamonaviy usullar yordamida tashxis qilinadi va davolanadi.',
+        },
+        {
+          type: 'title',
+          text: 'Sabablar va xavf omillari',
+        },
+        {
+          type: 'paragraph',
+          text: 'Tug‘ma asab tizimi nuqsonlari, bosh miya shikastlanishlari, infeksiyalar, genetik kasalliklar, kislorod yetishmovchiligi va rivojlanishdagi kechikishlar bolalarda nevrologik muammolarni keltirib chiqarishi mumkin.',
+        },
+        {
+          type: 'title',
+          text: 'Asosiy simptomlar:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Rivojlanish bosqichlarida kechikish (o‘tirish, yurish, gapirish)',
+            'Tez-tez yoki uzoq davom etuvchi bosh og‘rig‘i',
+            'Tutqanoq (epilepsiya) xurujlari',
+            'Harakat muvofiqlashuvi buzilishi',
+            'Mushak tonusining ortishi yoki pasayishi',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Qachon vrachga murojaat qilish kerak?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Agar bolangizda yuqoridagi belgilar kuzatilsa yoki asab tizimiga oid boshqa shubhali simptomlar mavjud bo‘lsa, darhol nevropatologga murojaat qiling.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnostika va davolash',
+        },
+        {
+          type: 'paragraph',
+          text: 'Diagnostika EEG, MRT, ultratovush, laborator tahlillar va klinik ko‘rik yordamida amalga oshiriladi. Davolash medikamentoz terapiya, fizioterapiya va reabilitatsiya dasturlarini o‘z ichiga oladi.',
+        },
+        {
+          type: 'title',
+          text: 'Nega aynan Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Bolalar nevrologiyasi bo‘yicha malakali mutaxassislar',
+            'Zamonaviy diagnostika uskunalari',
+            'Har bir bemorga individual yondashuv',
+            'Reabilitatsiya va psixologik qo‘llab-quvvatlash',
+            'Ota-onalar uchun maslahat va tavsiyalar',
+          ],
+        },
+      ],
+      ru: [
+        {
+          type: 'paragraph',
+          text: 'Детский невролог – специалист, диагностирующий и лечащий заболевания нервной системы у детей',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'В клинике "Humo Med" проводится диагностика и лечение различных заболеваний нервной системы у детей с использованием современных методов.',
+        },
+        {
+          type: 'title',
+          text: 'Причины и факторы риска',
+        },
+        {
+          type: 'paragraph',
+          text: 'Врожденные патологии нервной системы, черепно-мозговые травмы, инфекции, генетические заболевания, гипоксия и задержка развития могут вызывать неврологические проблемы у детей.',
+        },
+        {
+          type: 'title',
+          text: 'Основные симптомы:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Задержка развития (сидение, ходьба, речь)',
+            'Частые или продолжительные головные боли',
+            'Приступы судорог (эпилепсия)',
+            'Нарушение координации движений',
+            'Повышенный или пониженный мышечный тонус',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Когда обращаться к врачу?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Если у вашего ребенка наблюдаются вышеперечисленные симптомы или другие признаки проблем с нервной системой, необходимо обратиться к детскому неврологу.',
+        },
+        {
+          type: 'title',
+          text: 'Диагностика и лечение',
+        },
+        {
+          type: 'paragraph',
+          text: 'Диагностика проводится с помощью ЭЭГ, МРТ, ультразвука, лабораторных анализов и клинического осмотра. Лечение включает медикаментозную терапию, физиотерапию и реабилитационные программы.',
+        },
+        {
+          type: 'title',
+          text: 'Почему именно Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Опытные специалисты по детской неврологии',
+            'Современное диагностическое оборудование',
+            'Индивидуальный подход к каждому пациенту',
+            'Реабилитация и психологическая поддержка',
+            'Консультации и рекомендации для родителей',
+          ],
+        },
+      ],
+      en: [
+        {
+          type: 'paragraph',
+          text: 'A pediatric neurologist is a specialist who diagnoses and treats nervous system disorders in children',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'At "Humo Med" clinic, various nervous system conditions in children are diagnosed and treated using modern techniques.',
+        },
+        {
+          type: 'title',
+          text: 'Causes and Risk Factors',
+        },
+        {
+          type: 'paragraph',
+          text: 'Congenital nervous system defects, brain injuries, infections, genetic disorders, oxygen deficiency, and developmental delays can cause neurological problems in children.',
+        },
+        {
+          type: 'title',
+          text: 'Main Symptoms:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Developmental delays (sitting, walking, speaking)',
+            'Frequent or prolonged headaches',
+            'Seizures (epilepsy)',
+            'Movement coordination disorders',
+            'Increased or decreased muscle tone',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'When to See a Doctor?',
+        },
+        {
+          type: 'paragraph',
+          text: 'If your child shows any of the above signs or other suspicious neurological symptoms, consult a pediatric neurologist immediately.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnosis and Treatment',
+        },
+        {
+          type: 'paragraph',
+          text: 'Diagnosis includes EEG, MRI, ultrasound, laboratory tests, and clinical examination. Treatment may involve medication, physiotherapy, and rehabilitation programs.',
+        },
+        {
+          type: 'title',
+          text: 'Why Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Experienced pediatric neurology specialists',
+            'Modern diagnostic equipment',
+            'Individual approach to each patient',
+            'Rehabilitation and psychological support',
+            'Consultations and advice for parents',
+          ],
+        },
+      ],
+    },
+  },
+
+  pediatricGastro: {
+    icon: <FaUtensils />,
+    title: t('services.pediatricGastro.title'),
+    image: pediatricGastroImage,
+    content: {
+      uz: [
+        {
+          type: 'paragraph',
+          text: 'Bola gastroenterologi – bolalarda ovqat hazm qilish tizimi kasalliklarini aniqlovchi va davolovchi mutaxassis',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: '"Humo Med" klinikasida bolalarda oshqozon, ichak va boshqa ovqat hazm qilish tizimi kasalliklari samarali davolanadi.',
+        },
+        {
+          type: 'title',
+          text: 'Sabablar va xavf omillari',
+        },
+        {
+          type: 'paragraph',
+          text: 'Noto‘g‘ri ovqatlanish, ovqat allergiyasi, infeksiyalar, genetik moyillik, ichak mikroflorasining buzilishi va surunkali kasalliklar gastroenterologik muammolarga olib kelishi mumkin.',
+        },
+        {
+          type: 'title',
+          text: 'Asosiy simptomlar:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Qorin og‘rishi yoki noqulaylik',
+            'Doimiy qabziyat yoki diareya',
+            'Ovqatdan keyin qusish yoki ko‘ngil aynishi',
+            'Vaznning yetarlicha oshmasligi',
+            'Ishtahaning pasayishi',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Qachon vrachga murojaat qilish kerak?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Agar bolangizda yuqoridagi belgilar muntazam takrorlansa, vaqtida gastroenterolog ko‘rigidan o‘tkazing.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnostika va davolash',
+        },
+        {
+          type: 'paragraph',
+          text: 'Endoskopiya, ultratovush, laborator tahlillar va boshqa usullar orqali tashxis qo‘yiladi. Davolashga dieta, dori vositalari va fizioterapiya kiradi.',
+        },
+        {
+          type: 'title',
+          text: 'Nega aynan Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Bolalar gastroenterologiyasi bo‘yicha malakali shifokorlar',
+            'Zamonaviy tibbiy texnologiyalar',
+            'Individual davolash rejasi',
+            'Bola uchun qulay va xavfsiz sharoit',
+            'Ota-onalar uchun profilaktika bo‘yicha tavsiyalar',
+          ],
+        },
+      ],
+      ru: [
+        {
+          type: 'paragraph',
+          text: 'Детский гастроэнтеролог – специалист, диагностирующий и лечащий заболевания пищеварительной системы у детей',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'В клинике "Humo Med" эффективно лечат заболевания желудка, кишечника и других органов пищеварительной системы у детей.',
+        },
+        {
+          type: 'title',
+          text: 'Причины и факторы риска',
+        },
+        {
+          type: 'paragraph',
+          text: 'Неправильное питание, пищевая аллергия, инфекции, генетическая предрасположенность, нарушение микрофлоры кишечника и хронические заболевания могут вызывать гастроэнтерологические проблемы.',
+        },
+        {
+          type: 'title',
+          text: 'Основные симптомы:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Боль или дискомфорт в животе',
+            'Постоянные запоры или диарея',
+            'Рвота или тошнота после еды',
+            'Недостаточный набор веса',
+            'Снижение аппетита',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'Когда обращаться к врачу?',
+        },
+        {
+          type: 'paragraph',
+          text: 'Если у вашего ребенка регулярно наблюдаются вышеуказанные симптомы, необходимо обратиться к детскому гастроэнтерологу.',
+        },
+        {
+          type: 'title',
+          text: 'Диагностика и лечение',
+        },
+        {
+          type: 'paragraph',
+          text: 'Диагностика проводится с помощью эндоскопии, ультразвука, лабораторных анализов и других методов. Лечение включает диету, медикаменты и физиотерапию.',
+        },
+        {
+          type: 'title',
+          text: 'Почему именно Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Опытные врачи по детской гастроэнтерологии',
+            'Современные медицинские технологии',
+            'Индивидуальный план лечения',
+            'Комфортные и безопасные условия для ребенка',
+            'Рекомендации по профилактике для родителей',
+          ],
+        },
+      ],
+      en: [
+        {
+          type: 'paragraph',
+          text: 'A pediatric gastroenterologist is a specialist who diagnoses and treats digestive system disorders in children',
+          bold: true,
+        },
+        {
+          type: 'paragraph',
+          text: 'At "Humo Med" clinic, stomach, intestinal, and other digestive system conditions in children are treated effectively.',
+        },
+        {
+          type: 'title',
+          text: 'Causes and Risk Factors',
+        },
+        {
+          type: 'paragraph',
+          text: 'Poor nutrition, food allergies, infections, genetic predisposition, intestinal microbiota imbalance, and chronic diseases can lead to gastroenterological problems.',
+        },
+        {
+          type: 'title',
+          text: 'Main Symptoms:',
+        },
+        {
+          type: 'list',
+          items: [
+            'Abdominal pain or discomfort',
+            'Persistent constipation or diarrhea',
+            'Vomiting or nausea after meals',
+            'Insufficient weight gain',
+            'Loss of appetite',
+          ],
+        },
+        {
+          type: 'title',
+          text: 'When to See a Doctor?',
+        },
+        {
+          type: 'paragraph',
+          text: 'If your child regularly experiences the above symptoms, schedule a visit to a pediatric gastroenterologist.',
+        },
+        {
+          type: 'title',
+          text: 'Diagnosis and Treatment',
+        },
+        {
+          type: 'paragraph',
+          text: 'Diagnosis is made through endoscopy, ultrasound, laboratory tests, and other methods. Treatment may include dietary adjustments, medications, and physiotherapy.',
+        },
+        {
+          type: 'title',
+          text: 'Why Humo Med?',
+        },
+        {
+          type: 'list',
+          items: [
+            'Experienced pediatric gastroenterology doctors',
+            'Modern medical technology',
+            'Personalized treatment plan',
+            'Comfortable and safe environment for the child',
+            'Prevention tips for parents',
+          ],
+        },
+      ],
+    },
+  },
+
   physiotherapy: {
     icon: <FaHands />,
     title: t('services.physiotherapy.title'),

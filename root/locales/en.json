@@ -12,19 +12,6 @@
     "residency": "Residency",
     "news": "News",
     "contact": "Contact"
-
-  },
-  "question": {
-    "title": "Have a question?",
-    "description": "Our doctors are highly qualified, experienced, and constantly improving through seminars and conferences.",
-    "name": "Your name",
-    "namePlaceholder": "Enter your name",
-    "phone": "Phone",
-    "phonePlaceholder": "Enter your phone number",
-    "comment": "Comment",
-    "commentPlaceholder": "Write your comment",
-    "send": "Send",
-    "sending": "Sending..."
   },
   "errors": {
     "name": "This field is required",
@@ -72,7 +59,49 @@
     "title": "Clinic Departments",
     "all": "All Services"
   },
+  "footer": {
+    "news": "News",
+    "newsList": [
+      {
+        "title": "Innovative equipment",
+        "date": "30 July 2021"
+      },
+      {
+        "title": "New branch opened",
+        "date": "30 July 2021"
+      },
+      {
+        "title": "Free consultation days",
+        "date": "30 July 2021"
+      }
+    ],
+    "contact": "Contact",
+    "address": "Sergeli, Yangi-hayot district, 14B, Olchazor MFY, Shokirariq 365",
+    "phoneMain": "Main phone: +998 33 901 50 60",
+    "phoneCallCenter": "Call center: +998 90 176 11 10",
+    "phoneTrust": "Hotline: +998 90 177 11 10",
+    "email": "humo@gmail.com",
+    "copyright": "Copyright © 2021 HumoService"
+  },
   "services": {
+    "gastroenterology": {
+      "title": "Gastroenterology"
+    },
+    "endocrinology": {
+      "title": "Endocrinology"
+    },
+    "infectionist": {
+      "title": "Infectious Disease Specialist"
+    },
+    "urologist": {
+      "title": "Urology"
+    },
+    "pediatricNeuro": {
+      "title": "Pediatric Neurology"
+    },
+    "pediatricGastro": {
+      "title": "Pediatric Gastroenterology"
+    },
     "neurologist": {
       "title": "Neurology"
     },
@@ -139,7 +168,6 @@
     "allergology": "Allergology",
     "andrology": "Andrology",
     "bariatrics": "Bariatrics",
-    "gastroenterology": "Gastroenterology",
     "gynecology": "Gynecology",
     "dermatology": "Dermatology",
     "pediatric_dentistry": "Pediatric dentistry",
@@ -150,6 +178,33 @@
   "success": {
     "title": "Success!",
     "text": "Your request has been sent successfully."
+  },
+  "whyUs": {
+    "title": "Why Us?",
+    "professionalism": {
+      "title": "Professionalism",
+      "description": "The center employs more than 20 doctors and over 30 medical specialists, of whom more than 10 hold scientific degrees and honorary titles, are members of prestigious medical associations, and 90% are top-level and first-class specialists."
+    },
+    "equipment": {
+      "title": "High-Tech Equipment",
+      "description": "The clinic is equipped with the most modern, high-precision equipment from countries such as Germany, Italy, Finland, Switzerland, Japan, and South Korea, which makes treatment three times more effective and of higher quality."
+    },
+    "convenience": {
+      "title": "Convenience",
+      "description": "The clinic operates on an 'all-in-one' system, meaning the patient receives all necessary services without leaving the clinic. It has state-of-the-art MRI and CT diagnostics, ultrasound, endoscopic and laser technologies."
+    },
+    "innovations": {
+      "title": "Innovations",
+      "description": "Every year, the clinic strives to implement the latest innovations. For example, it is the only clinic performing intervertebral hernia surgeries using endoscopic and laser technologies."
+    },
+    "safety": {
+      "title": "Safety",
+      "description": "The clinic uses a six-step sterilization system for all tools and equipment. After each patient, all surfaces are thoroughly sterilized."
+    },
+    "comfort": {
+      "title": "Comfortable Environment",
+      "description": "The clinic ensures that every patient has a comfortable stay. High service standards include convenient working hours, an individual approach to each visitor, and attentive and caring staff."
+    }
   },
   "form": {
     "all_departments": "All Departments",
@@ -180,6 +235,23 @@
   "topbar": {
     "address": "Block 14-B, House 365, Yangihayot district, Tashkent"
   },
+  "question": {
+    "title": "Have a question?",
+    "description": "Fill out the form below and we’ll get back to you shortly.",
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "phone": "Phone number",
+    "phonePlaceholder": "Enter your phone number",
+    "comment": "Comment (optional)",
+    "commentPlaceholder": "Write your message here...",
+    "send": "Send",
+    "sending": "Sending...",
+    "errors": {
+      "name": "Name is required",
+      "phone": "Phone number is required",
+      "phoneMin": "Phone number must be complete"
+    }
+  },
   "features": {
     "title": "Multidisciplinary Medical Center",
     "founded": "Founded on October 10, 2021",
@@ -203,6 +275,44 @@
     },
     "lab_tests": "CBC, ESR",
     "free": "FREE!"
+  },
+  "about": {
+    "weAreHappy": "We are always happy to help",
+    "title": "About the Clinic",
+    "paragraphs": [
+      "“Humo Med” is a modern multidisciplinary medical centre in Tashkent specializing in in-depth diagnostics and treatment of cardiovascular diseases, abdominal disorders, nasal (ENT) conditions, bone injuries, neurological diseases and urological disorders.",
+      "Our centre employs highly qualified doctors and experienced medical specialists. Each specialist has substantial experience and uses advanced methods and modern technologies to help patients.",
+      "Humo Med provides comprehensive services in: cardiovascular diagnostics and treatment; abdominal organ diseases; ENT issues; orthopedic care for bone injuries; neurology; urology; procedure services for patients; ultrasound examinations; and laboratory blood tests.",
+      "Working on the “all-in-one” principle, the centre ensures that patients receive all necessary diagnostics and treatments in one place. Modern ultrasound, laboratory and diagnostic equipment guarantee convenience and accuracy.",
+      "Humo Med places strong emphasis on safety and quality, following strict sterilization and sanitation protocols."
+    ],
+    "advantagesTitle": "6 advantages of treatment at Humo Med:",
+    "advantages": [
+      {
+        "title": "Professionalism.",
+        "desc": "A team of experienced and qualified doctors."
+      },
+      {
+        "title": "Modern equipment.",
+        "desc": "High-precision diagnostic and treatment technologies."
+      },
+      {
+        "title": "Convenience.",
+        "desc": "All services available in one place — “all in one”."
+      },
+      {
+        "title": "Innovations.",
+        "desc": "Applying the latest advances in diagnostics and therapy."
+      },
+      {
+        "title": "Safety.",
+        "desc": "A multi-stage sterilization system and strict sanitation control."
+      },
+      {
+        "title": "Comfort.",
+        "desc": "Individual and attentive approach to every patient."
+      }
+    ]
   }
 }
 

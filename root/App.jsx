@@ -7,6 +7,7 @@ import routes from './routes';
 function App() {
   return (
     <Router>
+
       <Routes>
         {routes.map(({ path, element, layout: Layout = ({ children }) => <>
               {children}

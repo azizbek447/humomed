@@ -17,6 +17,7 @@ const SectionalLayout = ({ children }) => {
   const isHomePage = location.pathname === '/';
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // 🔹 Header scroll shadow uchun
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -25,6 +26,23 @@ const SectionalLayout = ({ children }) => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const saveScrollPosition = () => {
+      localStorage.setItem('scrollPos', window.scrollY);
+    };
+
+    window.addEventListener('beforeunload', saveScrollPosition);
+
+    const pos = localStorage.getItem('scrollPos');
+    if (pos) {
+      window.scrollTo(0, parseInt(pos, 10));
+    }
+
+    return () => {
+      window.removeEventListener('beforeunload', saveScrollPosition);
     };
   }, []);
 
@@ -54,4 +72,5 @@ const SectionalLayout = ({ children }) => {
     </div>
   );
 };
+
 export default SectionalLayout;
