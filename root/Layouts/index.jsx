@@ -6,43 +6,43 @@ import Footer from './Footer';
 import Header from './Header';
 import HeaderInfo from './HeaderInfo';
 
+if (typeof window !== 'undefined' && 'scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    let throttleTimeout = null;
+    const savedPosition = localStorage.getItem('scrollPosition');
+    if (savedPosition) {
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedPosition));
+        localStorage.removeItem('scrollPosition');
+      }, 50);
+    }
 
-    const handleScroll = () => {
-      if (throttleTimeout) return;
-
-      throttleTimeout = setTimeout(() => {
-        setIsScrolled(window.scrollY > 50);
-        throttleTimeout = null;
-      });
+    const handleBeforeUnload = () => {
+      localStorage.setItem('scrollPosition', window.scrollY.toString());
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('beforeunload', handleBeforeUnload);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (throttleTimeout) clearTimeout(throttleTimeout);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
 
   useEffect(() => {
-    const saveScrollPosition = () => {
-      localStorage.setItem('scrollPos', window.scrollY);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('beforeunload', saveScrollPosition);
+    setIsScrolled(window.scrollY > 50);
 
-    const pos = localStorage.getItem('scrollPos');
-    if (pos) {
-      window.scrollTo(0, parseInt(pos, 10));
-    }
-
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('beforeunload', saveScrollPosition);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

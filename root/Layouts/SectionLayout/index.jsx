@@ -17,10 +17,12 @@ const SectionalLayout = ({ children }) => {
   const isHomePage = location.pathname === '/';
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // 🔹 Header scroll shadow uchun
+  const [scrollPos, setScrollPos] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setScrollPos(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -30,21 +32,8 @@ const SectionalLayout = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    const saveScrollPosition = () => {
-      localStorage.setItem('scrollPos', window.scrollY);
-    };
-
-    window.addEventListener('beforeunload', saveScrollPosition);
-
-    const pos = localStorage.getItem('scrollPos');
-    if (pos) {
-      window.scrollTo(0, parseInt(pos, 10));
-    }
-
-    return () => {
-      window.removeEventListener('beforeunload', saveScrollPosition);
-    };
-  }, []);
+    window.scrollTo(0, scrollPos);
+  }, [scrollPos]);
 
   return (
     <div className='flex min-h-screen flex-col'>
@@ -52,9 +41,7 @@ const SectionalLayout = ({ children }) => {
       <Header isScrolled={isScrolled} />
 
       <div
-        className={`flex w-full ${
-          isMobile ? 'flex-col' : 'flex-row'
-        } mx-auto max-w-7xl gap-6 px-4 py-6 md:px-6 lg:px-8`}
+        className={`flex w-full ${isMobile ? 'flex-col' : 'flex-row'} mx-auto max-w-7xl gap-6 px-4 py-6 md:px-6 lg:px-8`}
       >
         <main className={`${isMobile ? 'order-1' : ''} w-full pt-35 lg:w-[72%]`}>
           {!isHomePage && <Breadcrumbs />}
