@@ -8,6 +8,7 @@ export const appPaths = {
   CONTROL: '/control',
   HEALER: '/healer',
   NEWS: '/news',
+  NEWS_SERVICE_DETAILS: (key = ':id') => '/news/service/' + key,
   NEWS_DETAIL: '/news-detail',
   ALLSERVICES: '/allservices',
 

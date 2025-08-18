@@ -22,35 +22,34 @@ import {
   FaXRay,
 } from 'react-icons/fa';
 
-// Shifokor va bo'lim rasmlari importlari
-
-import traumaImage from '../assets/img/traumaImage.png'; // Xirurg-Travmatolog
-import cardioImage from '../assets/img/cardioImage.png'; // Kardiolog
-import therapistImage from '../assets/img/therapistImage.png'; // Terapevt
 import gastroImage from '../assets/images/Gastroenterolog.png'; // Gastroenterolog
-import endoImage from '../assets/images/Jarayon.png'; // Endokrinolog
+import pediatricNeuroImage from '../assets/images/Gastroenterolog.png'; // Detskiy Nevropatolog
 import gynecologistImage from '../assets/images/Ginekolog.png'; // Ginekolog
-import rheumatologistImage from '../assets/img/otgolagiya.png'; // Revmatolog
-import pulmonologistImage from '../assets/img/otgolagiya.png'; // Pulmonolog
-import infectionistImage from '../assets/images/Terapevt-kardiolog.png'; // Infeksionist
-import hepatologistImage from '../assets/img/Fizoterapiya.png'; // Gepatolog
-import allergistImage from '../assets/img/otgolagiya.png'; // Allergolog
-import proctologistImage from '../assets/images/Terapevt.png'; // Pragtolog
+import endoImage from '../assets/images/Jarayon.png'; // Endokrinolog
 import entImage from '../assets/images/lor.png'; // Lor
 import dermatologistImage from '../assets/images/Operatsiya.png'; // Dermatolog
-import neuroImage from '../assets/img/neuroImage.png'; // Nevropatolog
 import urologistImage from '../assets/images/Operatsiya.png'; // Urolog
-import pediatricNeuroImage from '../assets/images/Gastroenterolog.png'; // Detskiy Nevropatolog
+import proctologistImage from '../assets/images/Terapevt.png'; // Pragtolog
 import pediatricGastroImage from '../assets/images/Terapevt.png'; // Detskiy Gastroenterolog
-import pediatricImage from '../assets/img/pediatricImage.png'; // Pediator
-import ultrasoundImage from '../assets/img/Ортопедия.png'; // UZD
+import infectionistImage from '../assets/images/Terapevt-kardiolog.png'; // Infeksionist
+import cardioImage from '../assets/img/cardioImage.png'; // Kardiolog
+import hepatologistImage from '../assets/img/Fizoterapiya.png'; // Gepatolog
+import massageImage from '../assets/img/massageImage.png'; // Massaj
+import neuroImage from '../assets/img/neuroImage.png'; // Nevropatolog
+import operatingRoomImage from '../assets/img/operatingRoomImage.png'; // Опер блок
+import rheumatologistImage from '../assets/img/otgolagiya.png'; // Revmatolog
+import pulmonologistImage from '../assets/img/otgolagiya.png'; // Pulmonolog
+import allergistImage from '../assets/img/otgolagiya.png'; // Allergolog
 import xrayImage from '../assets/img/otgolagiya.png'; // RENTGEN
 import physiotherapyImage from '../assets/img/otgolagiya.png'; // Fizioterapiya
-import massageImage from '../assets/img/massageImage.png'; // Massaj
 import procedureImage from '../assets/img/otgolagiya.png'; // Procedurniy
 import laboratoryImage from '../assets/img/otgolagiya.png'; // Laboratoriya
-import operatingRoomImage from '../assets/img/operatingRoomImage.png'; // Опер блок
 import inpatientImage from '../assets/img/otgolagiya.png'; // Стационар
+import pediatricImage from '../assets/img/pediatricImage.png'; // Pediator
+import therapistImage from '../assets/img/therapistImage.png'; // Terapevt
+// Shifokor va bo'lim rasmlari importlari
+import traumaImage from '../assets/img/traumaImage.png'; // Xirurg-Travmatolog
+import ultrasoundImage from '../assets/img/Ортопедия.png'; // UZD
 
 const servicesData = (t) => ({
   cardiology: {

@@ -19,9 +19,7 @@ const OurServices = () => {
   }, []);
 
   const allServicesArray = Object.entries(servicesData(t));
-  const visibleServices = isMobile
-    ? allServicesArray.slice(0, 6)
-    : allServicesArray.slice(0, 12);
+  const visibleServices = isMobile ? allServicesArray.slice(0, 6) : allServicesArray.slice(0, 12);
 
   return (
     <div className='bg-gray-50 px-4 py-10'>
@@ -41,7 +39,7 @@ const OurServices = () => {
               <div className='rounded-full bg-[var(--success-strong)]/10 p-2 text-2xl text-[var(--success-strong)]'>
                 {item.icon}
               </div>
-              <span className='text-lg font-medium text-gray-800'>{t(`clinic.${key}`)}</span>
+              <span className='text-lg font-medium text-gray-800'>{t(item.title)}</span>
             </Link>
           ))}
         </div>

@@ -1,100 +1,29 @@
-import React from 'react';
+import 'react';
+
+import { useNavigate } from 'react-router-dom';
 import Breadcrumb from 'root/components/Breadcrumb';
 
-import sanjarImg from '../../assets/img/img_2-removebg-preview.png';
-import malikaImg from '../../assets/img/img_2-removebg-preview.png';
-import akmalImg from '../../assets/img/image.png';
-import healerSanjarImg from '../../assets/img/neyxuriga.png';
-import healerMalikaImg from '../../assets/img/img_2-removebg-preview.png';
-import healerAkmalImg from '../../assets/img/image.png';
-import previewImg from '../../assets/img/img_2-removebg-preview.png';
+import { doctorsData } from '../../constants/doctorsData.jsx';
 
 export default function DoctorsGrid() {
-  const doctors = [
-    {
-      id: 1,
-      name: 'Dr. Sanjar Xasanov',
-      specialty: 'Kardiolog',
-      image: previewImg,
-      path: '/healer',
-    },
-    {
-      id: 2,
-      name: 'Dr. Malika Karimova',
-      specialty: 'Nevropatolog',
-      image: previewImg,
-      path: '/healer',
-    },
-    {
-      id: 3,
-      name: 'Dr. Akmal Shukurov',
-      specialty: 'Travmatolog',
-      image: healerAkmalImg,
-      path: '/healer',
-    },
-    {
-      id: 4,
-      name: 'Dr. Sanjar Xasanov',
-      specialty: 'Kardiolog',
-      image: healerSanjarImg,
-      path: '/healer',
-    },
-    {
-      id: 5,
-      name: 'Dr. Sanjar Xasanov',
-      specialty: 'Kardiolog',
-      image: sanjarImg,
-      path: '/healer',
-    },
-    {
-      id: 6,
-      name: 'Dr. Malika Karimova',
-      specialty: 'Nevropatolog',
-      image: malikaImg,
-      path: '/healer',
-    },
-    {
-      id: 7,
-      name: 'Dr. Akmal Shukurov',
-      specialty: 'Travmatolog',
-      image: akmalImg,
-      path: '/healer',
-    },
-    {
-      id: 8,
-      name: 'Dr. Sanjar Xasanov',
-      specialty: 'Kardiolog',
-      image: healerSanjarImg,
-      path: '/healer',
-    },
-    {
-      id: 9,
-      name: 'Dr. Malika Karimova',
-      specialty: 'Nevropatolog',
-      image: healerMalikaImg,
-      path: '/healer',
-    },
-  ];
+  const navigate = useNavigate();
 
   return (
     <div className='bg-white pt-40 pb-24'>
       <div className='mx-auto w-full max-w-7xl px-4'>
-        {/* Breadcrumb */}
         <div className='mb-19'>
           <Breadcrumb />
         </div>
 
-        {/* Title */}
         <div className='text-center'>
           <h1 className='mb-6 text-4xl font-bold text-gray-800'>Bizning mutaxassislarimiz</h1>
           <div className='mx-auto mb-25 h-1 w-24 rounded bg-[var(--success-strong)]'></div>
         </div>
 
-        {/* Doctors grid */}
         <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-          {doctors.map((doctor, index) => (
+          {doctorsData.map((doctor) => (
             <div
-              key={index}
+              key={doctor.id}
               className='flex flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md transition-transform'
             >
               <div className='group h-[390px] w-[390px] overflow-hidden'>
@@ -110,12 +39,13 @@ export default function DoctorsGrid() {
                   {doctor.name}
                 </h3>
                 <p className='text-sm text-gray-600'>{doctor.specialty}</p>
-                <a
-                  href={doctor.path}
+
+                <button
+                  onClick={() => navigate('/healer', { state: { doctorId: doctor.id } })}
                   className='mt-3 inline-block text-sm font-medium text-[var(--success-strong)] hover:text-green-800 hover:underline'
                 >
                   Подробнее →
-                </a>
+                </button>
               </div>
             </div>
           ))}

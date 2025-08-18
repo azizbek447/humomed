@@ -1,15 +1,15 @@
 import React from 'react';
 
+import Carousel from '../../components/Carousel.jsx';
+import ClinicNews from './ClinicNews.jsx';
+import FridaySale from './FridaySale.jsx';
+import HaveAQuestion from './HaveAQuestion.jsx';
 import Main from './Main.jsx';
+import MapLocation from './MapLocation.jsx';
 import OurServices from './OurServices .jsx';
+import PatientFeedback from './PatientFeedback.jsx';
 import WhoAreWe from './WhoArewe.jsx';
 import Whyus from './Whyus.jsx';
-import OurSpecialists from './OurSpecialists.jsx';
-import PatientFeedback from './PatientFeedback.jsx';
-import ClinicNews from './ClinicNews.jsx';
-import HaveAQuestion from './HaveAQuestion.jsx';
-import MapLocation from './MapLocation.jsx';
-import FridaySale from './FridaySale.jsx';
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
       <WhoAreWe />
       <Whyus />
       <FridaySale />
-      <OurSpecialists />
+      <Carousel />
       <PatientFeedback />
       <ClinicNews />
       <HaveAQuestion />

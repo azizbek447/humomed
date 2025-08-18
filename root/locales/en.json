@@ -313,6 +313,55 @@
         "desc": "Individual and attentive approach to every patient."
       }
     ]
+  },
+  "ClinicNews": {
+    "item1": {
+      "title": "A new cardiology department has opened",
+      "description1": "Our clinic has launched a modern cardiology department.",
+      "description2": "Diagnosis is carried out using the latest technologies.",
+      "description3": "Specialist doctors are available."
+    },
+    "item2": {
+      "title": "New generation MRI and ultrasound equipment has arrived",
+      "description1": "Diagnostics have become faster.",
+      "description2": "Results are more accurate and reliable.",
+      "description3": "Comfortable conditions for patients are provided."
+    },
+    "item3": {
+      "title": "An international medical seminar was held",
+      "description1": "Foreign specialists took part in the seminar.",
+      "description2": "Clinical experience was shared.",
+      "description3": "Modern treatment methods were discussed."
+    },
+    "item4": {
+      "title": "A new branch opened in Tashkent",
+      "description1": "The branch is located in the city center.",
+      "description2": "All services are available.",
+      "description3": "Convenient and fast service is guaranteed."
+    },
+    "item5": {
+      "title": "24/7 Ultrasound, cardiologist-therapist and procedures",
+      "description1": "Services are available day and night.",
+      "description2": "20% discount from 00:00 to 07:00.",
+      "description3": "Fast and quality assistance is guaranteed."
+    },
+    "item6": {
+      "title": "Weekly bonus",
+      "description1": "Special discount for active clients.",
+      "description2": "Valid for 7 days.",
+      "description3": "New bonuses every week."
+    }
+  },
+  "testimonials": {
+    "title": "Reviews of Humo Med Clinic Patients",
+    "item1": "I visited Humo Med Clinic for the first time and was deeply impressed. The doctors were very attentive and answered all my questions in detail. During the treatment, I felt safe and well taken care of. The conditions are modern and comfortable.",
+    "item2": "I really liked this clinic. As a patient, I can say that the sincerity of the staff and their service culture left a huge impression on me. Every stage was well organized, and the doctors were both experienced and kind. I am very satisfied with the result.",
+    "item3": "For me, the most important thing is attention and quality service. At Humo Med Clinic, I found exactly that. From the consultation to the entire treatment process, everything was handled professionally and in a very comfortable way.",
+    "item4": "As Azamqulov Abilqul, I can say I was very pleased with my visit to this clinic. The doctors’ attentive and caring attitude impressed me. They not only treat patients but also provide moral support. The service level is high, and the facilities are modern.",
+    "item5": "As Arslonova Bahor, I can only speak positively about Humo Med Clinic. The attention to patients, the comfortable conditions, and the experienced doctors made me very happy. Everything was well organized, and the results exceeded my expectations.",
+    "item6": "I am Eshmatova Manzura, and I used the services of Humo Med Clinic. I am very pleased with my experience. The doctors were highly attentive, and the staff were friendly and supportive. What impressed me most was the way they treated patients with genuine care and respect. Every step was clearly explained, and throughout the process I felt safe, valued, and truly cared for.",
+    "item7": "As Jumanazarov Bunyod, I can confidently say that I found everything I expected at this clinic. The service is excellent, the doctors are professional, and the staff are welcoming. I especially appreciated how they supported patients and lifted their spirits.",
+    "item8": "I, Boboyev Mansur, visited Humo Med Clinic and had a wonderful experience. Modern technology, professional doctors, and a friendly environment amazed me. The results were excellent, and I highly recommend it to everyone!"
   }
 }
 

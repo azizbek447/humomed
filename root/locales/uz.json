@@ -376,5 +376,56 @@
         "desc": "Har bir bemorga individual va eʼtiborli yondashuv."
       }
     ]
+  },
+  "ClinicNews": {
+    "title": "Klinika yangiliklari",
+    "readMore": "Batafsil",
+    "item1": {
+      "title": "Yangi kardiologiya bo‘limi ochildi",
+      "description1": "Klinikamizda zamonaviy kardiologiya bo‘limi ishga tushdi.",
+      "description2": "Eng yangi texnologiyalar asosida tashxis qo‘yiladi.",
+      "description3": "Mutaxassis shifokorlar xizmat ko‘rsatmoqda."
+    },
+    "item2": {
+      "title": "MRI va ultratovush uchun yangi avlod jihozlari keldi",
+      "description1": "Diagnostika jarayonlari tezlashdi.",
+      "description2": "Natijalar aniq va ishonchli bo‘ladi.",
+      "description3": "Bemorlar uchun qulay sharoitlar yaratildi."
+    },
+    "item3": {
+      "title": "Xalqaro tibbiy seminar o‘tkazildi",
+      "description1": "Seminarda chet el mutaxassislari ishtirok etdi.",
+      "description2": "Klinik tajriba almashildi.",
+      "description3": "Zamonaviy davolash usullari muhokama qilindi."
+    },
+    "item4": {
+      "title": "Toshkentda yangi filial ochildi",
+      "description1": "Yangi filial markaziy hududda joylashgan.",
+      "description2": "Barcha xizmatlar mavjud.",
+      "description3": "Qulay va tezkor xizmat ko‘rsatiladi."
+    },
+    "item5": {
+      "title": "24/7 Ultratovush, terapevt-kardiolog va protseduralar",
+      "description1": "Kecha-kunduz xizmat ko‘rsatiladi.",
+      "description2": "00:00 dan 07:00 gacha 20% chegirma.",
+      "description3": "Tezkor va sifatli yordam kafolatlanadi."
+    },
+    "item6": {
+      "title": "Haftalik bonus",
+      "description1": "Faol mijozlar uchun maxsus chegirma.",
+      "description2": "7 kun davomida amal qiladi.",
+      "description3": "Har hafta yangi bonuslar taqdim etiladi."
+    }
+  },
+  "testimonials": {
+    "title": "Humo Med klinikasi mijozlarining fikrlari",
+    "item1": "Men Humo Med klinikasiga birinchi marta tashrif buyurdim va juda yaxshi taassurot qoldirdi. Shifokorlar juda diqqatli, har bir savolimga alohida e’tibor bilan javob berishdi. Davolanish jarayonida o‘zimni ishonchli qo‘llarda his qildim. Sharoitlari ham juda qulay va zamonaviy.",
+    "item2": "Bu klinika menga juda yoqdi. Normo‘minuva Muslima sifatida ayta olamanki, xodimlarning samimiyligi va xizmat ko‘rsatish madaniyati menga katta taassurot qoldirdi. Har bir bosqich puxta tashkil qilingan, shifokorlar esa tajribali va mehribon. Natijadan juda mamnun qoldim.",
+    "item3": "Men uchun eng muhim narsa – e’tibor va sifatli xizmat. Eshnazarova Gulchehra sifatida ayta olamanki, Humo Med klinikasida shu narsani topdim. Konsultatsiyadan tortib barcha davolash jarayonlarigacha hammasi juda professional va qulay tarzda o‘tdi.",
+    "item4": "Azamqulov Abilqul sifatida, men bu klinikada bo‘lganimdan juda xursandman. Shifokorlarning e’tiborli va samimiy munosabati meni hayratda qoldirdi. Ular nafaqat davolashadi, balki ruhiy qo‘llab-quvvatlashadi ham. Servis darajasi yuqori, sharoitlari zamonaviy.",
+    "item5": "Arslonova Bahor sifatida Humo Med klinikasi haqida faqat yaxshi gaplarni ayta olaman. Mijozlarga bo‘lgan e’tibor, qulay sharoit va tajribali shifokorlar meni juda mamnun qildi. Hamma jarayonlar juda tartibli, natijasi esa kutilganidan ham yaxshiroq bo‘ldi.",
+    "item6": "Men Eshmatova Manzura, Humo Med klinikasida xizmatlardan foydalandim va juda xursandman. Shifokorlar juda e’tiborli, xodimlar esa samimiy. Ayniqsa, bemorga bo‘lgan munosabat juda yuqori darajada. Har bir bosqich puxta tushuntirildi, jarayon davomida o‘zimni ishonchli qo‘llarda his qildim. O‘zimni qadrlangan va e’tibor markazida bo‘lgandek sezdim.",
+    "item7": "Jumanazarov Bunyod sifatida shuni ayta olamanki, bu klinikada men o‘zim kutgan barcha sifatlarni topdim. Servis juda yaxshi, shifokorlar professional, xodimlar esa do‘stona. Ayniqsa, bemorlarni qo‘llab-quvvatlashlari va ularning kayfiyatini ko‘tarishlari meni xursand qildi.",
+    "item8": "Men, Boboyev Mansur, Humo Med klinikasiga tashrif buyurdim va juda yaxshi taassurot qoldirdi. Zamonaviy texnologiyalar, tajribali shifokorlar va samimiy muhit meni hayratda qoldirdi. Jarayon davomida barcha bosqichlar aniq tushuntirildi va hech qanday ortiqcha tashvish sezmadim. Natija juda yaxshi bo‘ldi, barchaga tavsiya qilaman!"
   }
 }

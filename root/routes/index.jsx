@@ -1,5 +1,6 @@
-import React from 'react';
+import 'react';
 
+import NewsDetail from '../constants/NewServiceData.jsx';
 import { appPaths } from '../constants/paths';
 import MainLayout from '../Layouts';
 import SectionalLayout from '../Layouts/SectionLayout';
@@ -15,7 +16,7 @@ import Healer from '../pages/healer';
 // Pages
 import Home from '../pages/home';
 import News from '../pages/News';
-import NewsDetail from '../pages/newsDetail';
+import NewService from '../pages/News/NewsService.jsx';
 import Service from '../pages/service';
 
 export const publicRoutes = [
@@ -91,6 +92,12 @@ export const publicRoutes = [
     element: <Service />,
     layout: SectionalLayout,
     breadcrumb: { title: 'allergist' },
+  },
+  {
+    path: appPaths.NEWS_SERVICE_DETAILS(),
+    element: <NewService />,
+    layout: SectionalLayout,
+    breadcrumb: { title: 'News' },
   },
 
   {

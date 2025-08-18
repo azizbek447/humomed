@@ -1,39 +1,51 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import newsImage from '../../assets/img/img_1.png';
 
-const data = {
-  news: [
-    {
-      id: 1,
-      title: 'Yangi diagnostika uskunasi ishga tushirildi',
-      description: 'Bizning klinikamizga zamonaviy MRT uskunasi olib kelindi.',
-      date: '15 июль',
-      path: '/news/1',
-    },
-    {
-      id: 2,
-      title: 'Pediatriya bo‘yicha bepul maslahatlar',
-      description: 'Juma kunlari pediatrlarimizdan bepul maslahat olishingiz mumkin.',
-      date: '10 июль',
-      path: '/news/2',
-    },
-    {
-      id: 3,
-      title: 'Yozgi sog‘lomlashtirish dasturi boshlandi',
-      description: 'Yoz oylariga mo‘ljallangan maxsus sog‘lomlashtirish dasturimiz haqida batafsil.',
-      date: '05 июль',
-      path: '/news/3',
-    },
-  ],
-};
+import newsImage from '../../assets/img/img_1.png';
+import { appPaths } from '../../constants/paths.js'; // ✅ qo‘shildi
 
 const ClinicNews = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const newsItems = data.news.slice(0, 3);
+  const newsItems = [
+    {
+      id: 1,
+      title: t('ClinicNews.item1.title'),
+      description: [
+        t('ClinicNews.item1.description1'),
+        t('ClinicNews.item1.description2'),
+        t('ClinicNews.item1.description3'),
+      ],
+      date: '17 IYUL',
+    },
+    {
+      id: 2,
+      title: t('ClinicNews.item2.title'),
+      description: [
+        t('ClinicNews.item2.description1'),
+        t('ClinicNews.item2.description2'),
+        t('ClinicNews.item2.description3'),
+      ],
+      date: '10 IYUL',
+    },
+    {
+      id: 3,
+      title: t('ClinicNews.item3.title'),
+      description: [
+        t('ClinicNews.item3.description1'),
+        t('ClinicNews.item3.description2'),
+        t('ClinicNews.item3.description3'),
+      ],
+      date: '05 IYUL',
+    },
+  ];
+
+  const handleNewsClick = (id) => {
+    const newsPath = appPaths.NEWS_SERVICE_DETAILS(id);
+    navigate(newsPath);
+  };
 
   return (
     <div className='mx-auto max-w-7xl bg-white py-10'>
@@ -51,38 +63,41 @@ const ClinicNews = () => {
                 key={item.id}
                 className='group mx-auto w-full max-w-sm overflow-hidden transition'
               >
-                <div className=''>
-                  <div className='relative mb-4 overflow-hidden rounded-md'>
-                    <img
-                      src={newsImage}
-                      alt={item.title}
-                      className='h-56 w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
-                    />
-                  </div>
-
-                  <div className='mb-4 flex items-center gap-4'>
-                    <div className='flex h-14 w-14 flex-col items-center justify-center rounded-full bg-gray-100 text-sm font-semibold text-black'>
-                      <div className='text-lg font-bold'>{day}</div>
-                      <div className='text-xs uppercase'>{month}</div>
-                    </div>
-
-                    <h3
-                      className='cursor-pointer text-base font-bold text-gray-800 hover:text-[var(--success-strong)] sm:text-lg'
-                      onClick={() => navigate(item.path)}
-                    >
-                      {item.title}
-                    </h3>
-                  </div>
-
-                  <p className='mb-4 text-sm text-gray-500'>{item.description}</p>
-
-                  <button
-                    onClick={() => navigate(item.path)}
-                    className='inline-flex items-center rounded-full border border-[var(--success-strong)] px-4 py-2 text-sm font-medium text-[var(--success-strong)] transition hover:bg-[var(--success-strong)] hover:text-white'
-                  >
-                    {t('ClinicNews.readMore', 'Подробнее')} →
-                  </button>
+                <div className='relative mb-4 overflow-hidden rounded-md'>
+                  <img
+                    src={newsImage}
+                    alt={item.title}
+                    className='h-56 w-full cursor-pointer object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                    onClick={() => handleNewsClick(item.id)}
+                  />
                 </div>
+
+                <div className='mb-4 flex items-center gap-4'>
+                  <div className='flex h-14 w-14 flex-col items-center justify-center rounded-full bg-gray-100 text-sm font-semibold text-black'>
+                    <div className='text-lg font-bold'>{day}</div>
+                    <div className='text-xs uppercase'>{month}</div>
+                  </div>
+
+                  <h3
+                    className='cursor-pointer text-base font-bold text-gray-800 hover:text-[var(--success-strong)] sm:text-lg'
+                    onClick={() => handleNewsClick(item.id)}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+
+                <div className='mb-4 space-y-1 text-sm text-gray-500'>
+                  {item.description.map((desc, idx) => (
+                    <p key={idx}>{desc}</p>
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => handleNewsClick(item.id)}
+                  className='inline-flex items-center rounded-full border border-[var(--success-strong)] px-4 py-2 text-sm font-medium text-[var(--success-strong)] transition hover:bg-[var(--success-strong)] hover:text-white'
+                >
+                  {t('ClinicNews.readMore')} →
+                </button>
               </div>
             );
           })}
@@ -90,7 +105,7 @@ const ClinicNews = () => {
 
         <div className='mt-10 text-center'>
           <button
-            onClick={() => navigate('/service/news')}
+            onClick={() => navigate('/news')}
             className='rounded-full border border-[var(--success-strong)] px-6 py-2 text-[var(--success-strong)] transition hover:bg-[var(--success-strong)] hover:text-white'
           >
             {t('ClinicNews.allArticles', 'Все статьи')} →

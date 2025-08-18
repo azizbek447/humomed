@@ -40,9 +40,9 @@ const Header = ({ isScrolled }) => {
     { path: '/about-clinic', label: 'nav.about' },
     {
       label: 'nav.departments',
-      children: Object.keys(servicesData(t)).map((key) => ({
+      children: Object.entries(servicesData(t)).map(([key, details]) => ({
         path: appPaths.SERVICE_DETAILS(key),
-        label: `nav.${key}`,
+        label: details.title,
       })),
     },
     { path: '/Doctors', label: 'nav.doctors' },

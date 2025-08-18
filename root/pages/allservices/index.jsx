@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { appPaths } from 'root/constants/paths';
@@ -26,7 +26,7 @@ const ClinicDirections = () => {
               <div className='rounded-full bg-[var(--success-strong)]/10 p-2 text-2xl text-[var(--success-strong)]'>
                 {data.icon}
               </div>
-              <span className='text-lg font-medium text-gray-800'>{t(`clinic.${key}`)}</span>
+              <span className='text-lg font-medium text-gray-800'>{t(data.title)}</span>
             </Link>
           ))}
         </div>
