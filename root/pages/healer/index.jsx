@@ -33,7 +33,6 @@ export default function Doctors() {
         </div>
 
         <div className='mb-16 flex flex-col gap-10 md:flex-row md:items-start'>
-          {/* Rasm chap tomonda */}
           <div className='flex justify-center'>
             <img
               src={selectedDoctor.image}
@@ -42,7 +41,6 @@ export default function Doctors() {
             />
           </div>
 
-          {/* Matn o‘ng tomonda */}
           <div className='text-left md:w-2/3'>
             <h2 className='mb-2 text-3xl font-bold text-gray-800'>{selectedDoctor.name}</h2>
             <p className='mb-1 text-xl font-medium text-[var(--success-strong)]'>
@@ -61,7 +59,6 @@ export default function Doctors() {
           </div>
         </div>
 
-        {/* Carousel qisqa malumot uchun */}
         <DoctorsCarousel
           doctors={doctorsData}
           selectedDoctor={selectedDoctor}

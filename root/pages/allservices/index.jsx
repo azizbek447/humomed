@@ -1,9 +1,11 @@
 import 'react';
+
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { appPaths } from 'root/constants/paths';
 
 import servicesData from '../../constants/servicesData';
+import Breadcrumb from '../../components/Breadcrumb.jsx';
 
 const ClinicDirections = () => {
   const { t } = useTranslation();
@@ -11,6 +13,9 @@ const ClinicDirections = () => {
   return (
     <div className='bg-gray-50 px-4 py-40'>
       <div className='mx-auto max-w-7xl'>
+        <div className='mb-4 text-left'>
+          <Breadcrumb />
+        </div>
         <h2 className='mb-4 text-center text-3xl font-semibold text-gray-800'>
           {t('clinic.title')}
         </h2>

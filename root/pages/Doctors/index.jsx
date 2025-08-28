@@ -2,11 +2,12 @@ import 'react';
 
 import { useNavigate } from 'react-router-dom';
 import Breadcrumb from 'root/components/Breadcrumb';
-
 import { doctorsData } from '../../constants/doctorsData.jsx';
+import { useTranslation } from 'react-i18next';
 
 export default function DoctorsGrid() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className='bg-white pt-40 pb-24'>
@@ -16,7 +17,7 @@ export default function DoctorsGrid() {
         </div>
 
         <div className='text-center'>
-          <h1 className='mb-6 text-4xl font-bold text-gray-800'>Bizning mutaxassislarimiz</h1>
+          <h1 className='mb-6 text-4xl font-bold text-gray-800'>{t('ourSpecialists')}</h1>
           <div className='mx-auto mb-25 h-1 w-24 rounded bg-[var(--success-strong)]'></div>
         </div>
 
@@ -44,7 +45,7 @@ export default function DoctorsGrid() {
                   onClick={() => navigate('/healer', { state: { doctorId: doctor.id } })}
                   className='mt-3 inline-block text-sm font-medium text-[var(--success-strong)] hover:text-green-800 hover:underline'
                 >
-                  Подробнее →
+                  {t('moreDetails')} →
                 </button>
               </div>
             </div>
