@@ -1,7 +1,8 @@
-import previewImg from '../assets/images/lor.png';
-import healerMalikaImg from '../assets/img/image.png';
-import healerSanjarImg from '../assets/img/img.png';
-import healerAkmalImg from '../assets/img/img_2-removebg-preview.png';
+import previewImg from '../assets/images/ulugbek.png';
+
+import Baxtiyor from '../assets/images/Baxtiyor.png';
+import Dinara from '../assets/img/ginekolig.png';
+
 import sanjarImg from '../assets/img/img_2-removebg-preview.png';
 import akmalImg from '../assets/img/neyxuriga.png';
 import malikaImg from '../assets/img/neyxuriga.png';
@@ -9,30 +10,30 @@ import malikaImg from '../assets/img/neyxuriga.png';
 export const doctorsData = [
   {
     id: 1,
-    name: 'Dr. Nodira Karimova',
-    specialty: 'Dermatolog',
+    name: 'Dr. Ulugbek Nazarov',
+    specialty: 'Terapевt, Kardiolog, Anesteziolog-Reanimatolog',
+    subSpecialty: 'Ichki kasalliklar, yurak kasalliklari, reanimatsiya',
     image: previewImg,
-    path: '/healer',
   },
   {
     id: 2,
-    name: 'Dr. Jamshid Ruziev',
-    specialty: 'Kardiolog',
-    image: healerSanjarImg,
-    path: '/healer',
+    name: 'Dr. Dinara Davletova',
+    specialty: 'Akusher-ginekolog, UZI mutaxassisi',
+    subSpecialty: 'Homiladorlik va ayollar salomatligi',
+    image: Dinara,
   },
   {
     id: 3,
-    name: 'Dr. Dilnoza Shamsiyeva',
-    specialty: 'Nevropatolog',
-    image: healerMalikaImg,
-    path: '/healer',
+    name: 'Dr. Bakhtiyor Mannapov',
+    specialty: 'Jarroh, Endoskopist, Gastroenterolog',
+    subSpecialty: 'Oshqozon-ichak kasalliklari, jarrohlik',
+    image: Baxtiyor,
   },
   {
     id: 4,
     name: 'Dr. Otabek Sobirov',
     specialty: 'Travmatolog',
-    image: healerAkmalImg,
+    image: Baxtiyor,
     path: '/healer',
   },
   {
@@ -67,7 +68,7 @@ export const doctorsData = [
     id: 9,
     name: 'Dr. Islom Rajabov',
     specialty: 'Revmatolog',
-    image: healerSanjarImg,
+    image: Baxtiyor,
     path: '/healer',
   },
 ];

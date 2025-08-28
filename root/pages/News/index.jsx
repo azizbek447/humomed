@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import Breadcrumb from 'root/components/Breadcrumb';
 
 import newsImage from '../../assets/img/img_1.png';
+// import Bonus from '../../assets/img/bonus.png';
+import yangifilyal from '../../assets/img/2филиал.png';
+import cardiologiya from '../../assets/img/yangi_kardiologiya.png';
 import { appPaths } from '../../constants/paths';
 
 const ClinicNews = () => {
@@ -20,6 +23,8 @@ const ClinicNews = () => {
         t('ClinicNews.item1.description3'),
       ],
       date: '17 IYUL',
+      image: yangifilyal,
+
     },
     {
       id: 2,
@@ -30,6 +35,7 @@ const ClinicNews = () => {
         t('ClinicNews.item2.description3'),
       ],
       date: '10 IYUL',
+      image: yangifilyal,
     },
     {
       id: 3,
@@ -40,6 +46,7 @@ const ClinicNews = () => {
         t('ClinicNews.item3.description3'),
       ],
       date: '05 IYUL',
+      image: cardiologiya,
     },
     {
       id: 4,
@@ -50,6 +57,8 @@ const ClinicNews = () => {
         t('ClinicNews.item4.description3'),
       ],
       date: '01 IYUL',
+      image: yangifilyal,
+
     },
     {
       id: 5,
@@ -60,6 +69,8 @@ const ClinicNews = () => {
         t('ClinicNews.item5.description3'),
       ],
       date: '25 IYUN',
+      image: yangifilyal,
+
     },
     {
       id: 6,
@@ -70,6 +81,7 @@ const ClinicNews = () => {
         t('ClinicNews.item6.description3'),
       ],
       date: '15 IYUN',
+      image: cardiologiya,
     },
   ];
 
@@ -98,7 +110,7 @@ const ClinicNews = () => {
               <div key={item.id} className='group overflow-hidden transition-transform'>
                 <div className='relative mb-4 flex justify-center overflow-hidden'>
                   <img
-                    src={newsImage}
+                    src={item.image}
                     alt={item.title}
                     className='w-full cursor-pointer rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
                     onClick={() => handleNewsClick(item.id)}
@@ -118,7 +130,14 @@ const ClinicNews = () => {
                   </h3>
                 </div>
 
-                <p className='mb-4 text-gray-500'>{item.description}</p>
+                {/* description list */}
+                {item.description && (
+                  <ul className='mb-4 list-disc pl-5 text-gray-500'>
+                    {item.description.map((desc, index) => (
+                      <li key={index}>{desc}</li>
+                    ))}
+                  </ul>
+                )}
 
                 <button
                   onClick={() => handleNewsClick(item.id)}

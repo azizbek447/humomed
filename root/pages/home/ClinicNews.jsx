@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import newsImage from '../../assets/img/img_1.png';
-import { appPaths } from '../../constants/paths.js'; // ✅ qo‘shildi
+import { appPaths } from '../../constants/paths.js';
+import yangifilyal from '../../assets/img/2филиал.png';
+import cardiologiya from '../../assets/img/yangi_kardiologiya.png'; // ✅ qo‘shildi
 
 const ClinicNews = () => {
   const { t } = useTranslation();
@@ -19,6 +21,7 @@ const ClinicNews = () => {
         t('ClinicNews.item1.description3'),
       ],
       date: '17 IYUL',
+      image: yangifilyal,
     },
     {
       id: 2,
@@ -29,6 +32,7 @@ const ClinicNews = () => {
         t('ClinicNews.item2.description3'),
       ],
       date: '10 IYUL',
+      image: yangifilyal,
     },
     {
       id: 3,
@@ -39,6 +43,7 @@ const ClinicNews = () => {
         t('ClinicNews.item3.description3'),
       ],
       date: '05 IYUL',
+      image: cardiologiya,
     },
   ];
 
@@ -65,9 +70,9 @@ const ClinicNews = () => {
               >
                 <div className='relative mb-4 overflow-hidden rounded-md'>
                   <img
-                    src={newsImage}
+                    src={item.image}
                     alt={item.title}
-                    className='h-56 w-full cursor-pointer object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                    className='w-full cursor-pointer rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
                     onClick={() => handleNewsClick(item.id)}
                   />
                 </div>

@@ -9,10 +9,12 @@ import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { doctorsData } from '../constants/doctorsData.jsx';
+import { useTranslation } from 'react-i18next';
 
 export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor, onDoctorClick }) {
   const swiperRef = useRef(null);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const filteredDoctors = (doctors || []).filter((d) => d.id !== selectedDoctor?.id);
 
@@ -20,7 +22,7 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
     <div className='w-full bg-white py-16'>
       <div className='mx-auto max-w-7xl px-4'>
         <h2 className='mb-4 text-center text-4xl font-bold text-gray-800 sm:text-5xl'>
-          Bizning mutaxassislarimiz
+          {t('ourSpecialists')}
         </h2>
         <div className='mx-auto mb-12 h-1 w-16 rounded bg-[var(--success-strong)]'></div>
 
@@ -52,7 +54,7 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
                 <img
                   src={doctor.image}
                   alt={doctor.name}
-                  className='h-[340px] w-full object-cover transition-transform duration-500 hover:scale-105'
+                  className='h-[350px] w-full object-cover transition-transform duration-500 hover:scale-105'
                 />
                 <div className='w-full bg-gray-100 p-5 text-center'>
                   <h3 className='text-lg font-semibold text-gray-800'>{doctor.name}</h3>
@@ -63,9 +65,9 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
                     onDoctorClick?.(doctor);
                     navigate('/healer', { state: { doctorId: doctor.id } });
                   }}
-                  className='mt-2 text-sm font-medium text-[var(--success-strong)] hover:underline'
+                  className='mt-5 text-sm font-medium text-[var(--success-strong)] hover:underline'
                 >
-                  Batafsil →
+                  {t('moreDetails')} →
                 </button>
               </div>
             </SwiperSlide>

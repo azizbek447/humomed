@@ -22,7 +22,7 @@ const Service = () => {
       <img
         src={service.image}
         alt={service.title}
-        className='mb-8 max-h-[400px] w-full rounded-xl object-cover shadow'
+        className='mb-8 max-h-[600px] w-full rounded-xl object-cover shadow'
       />
       <div className='space-y-4 text-sm leading-relaxed text-gray-700 md:text-base'>
         {content.map((block, index) => {
