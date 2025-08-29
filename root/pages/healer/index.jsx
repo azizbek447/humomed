@@ -43,8 +43,13 @@ export default function Doctors() {
           <Breadcrumb />
         </div>
 
+<<<<<<< HEAD
         <div className='mb-12 flex flex-col gap-6 sm:mb-14 sm:gap-8 md:flex-row md:items-start lg:mb-16 lg:gap-10'>
           <div className='flex justify-center md:w-1/3 lg:w-1/4'>
+=======
+        <div className='mb-16 flex flex-col gap-10 md:flex-row md:items-start'>
+          <div className='flex justify-center'>
+>>>>>>> origin/main
             <img
               src={selectedDoctor.image}
               alt={getText(selectedDoctor.name)}
@@ -52,6 +57,7 @@ export default function Doctors() {
             />
           </div>
 
+<<<<<<< HEAD
           <div className='text-left md:w-2/3 lg:w-3/4'>
             <h2 className='mb-2 text-2xl font-bold text-gray-800 sm:text-3xl lg:text-4xl'>
               {getText(selectedDoctor.name)}
@@ -59,6 +65,12 @@ export default function Doctors() {
 
             <p className='mb-1 text-lg font-medium text-[var(--success-strong)] sm:text-xl lg:text-2xl'>
               {getText(selectedDoctor.specialty)}
+=======
+          <div className='text-left md:w-2/3'>
+            <h2 className='mb-2 text-3xl font-bold text-gray-800'>{selectedDoctor.name}</h2>
+            <p className='mb-1 text-xl font-medium text-[var(--success-strong)]'>
+              {selectedDoctor.specialty}
+>>>>>>> origin/main
             </p>
 
             {selectedDoctor.subSpecialty && (
