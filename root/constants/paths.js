@@ -11,6 +11,7 @@ export const appPaths = {
   NEWS_SERVICE_DETAILS: (key = ':id') => '/news/service/' + key,
   NEWS_DETAIL: '/news-detail',
   ALLSERVICES: '/allservices',
+  HOSPITAL: '/hospital',
 
   SERVICE_DETAILS: (key = ':id') => '/service/' + key,
 };

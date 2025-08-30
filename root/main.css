@@ -15,9 +15,6 @@
     /* green-800 */
     --success-dark: #0084D1;
     /* green-900 */
-    --success-light: #0084D1;
-    --success-strong: #0084D1;
-    --success-dark: #0084D1;
 }
 .swiper-pagination-bullet {
   background-color: #0084D1 !important; 
@@ -29,7 +26,10 @@
 }
 
 .container {
-    max-width: 1360px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
+}
+.layout-container {
+    @apply mx-auto  max-w-7xl items-center justify-between px-2 py-3 sm:px-4;
 }

@@ -18,6 +18,7 @@ import Home from '../pages/home';
 import News from '../pages/News';
 import NewService from '../pages/News/NewsService.jsx';
 import Service from '../pages/service';
+import Hospital from '../pages/hospital';
 
 export const publicRoutes = [
   {
@@ -79,6 +80,12 @@ export const publicRoutes = [
     element: <NewsDetail />,
     layout: MainLayout,
     breadcrumb: { title: 'news_detail' },
+  },
+  {
+    path: appPaths.HOSPITAL,
+    element: <Hospital />,
+    layout: MainLayout,
+    breadcrumb: { title: 'HOSPITAL' },
   },
   {
     path: appPaths.ALLSERVICES,

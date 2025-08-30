@@ -37,7 +37,7 @@ export default function Doctors() {
   if (!selectedDoctor) return null;
 
   return (
-    <div className='bg-white py-20 sm:py-28 md:py-32 lg:py-40'>
+    <div className='bg-white py-30 sm:py-40 md:py-32 lg:py-40'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mb-8 sm:mb-10 lg:mb-12'>
           <Breadcrumb />
@@ -48,7 +48,7 @@ export default function Doctors() {
             <img
               src={selectedDoctor.image}
               alt={getText(selectedDoctor.name)}
-              className='max-h-[400px] w-full max-w-sm rounded-lg object-contain shadow-xl sm:max-h-[500px] sm:max-w-md md:max-w-none lg:max-h-[550px]'
+              className='max-h-[400px] w-full max-w-sm object-contain sm:max-h-[400px] sm:max-w-md md:max-w-none lg:max-h-[550px]'
             />
           </div>
 

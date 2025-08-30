@@ -29,14 +29,14 @@ const SectionalLayout = ({ children }) => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className='bg-white'>
       <HeaderInfo isScrolled={isScrolled} />
       <Header isScrolled={isScrolled} />
 
       <div
-        className={`flex ${isMobile ? 'flex-col' : 'flex-row'} mx-auto max-w-7xl gap-6 px-4 py-6 md:px-6 lg:px-8`}
+        className={`flex ${isMobile ? 'flex-col' : 'flex-row'} mx-auto max-w-7xl gap-6 px-4 py-2 py-30 md:px-6 lg:px-8`}
       >
-        <main className={`${isMobile ? 'order-1' : ''} w-full pt-35 lg:w-[72%]`}>
+        <main className={`${isMobile ? 'order-1' : ''} w-full lg:w-[72%]`}>
           {!isHomePage && <Breadcrumbs />}
           {children}
         </main>
