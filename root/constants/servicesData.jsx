@@ -26,26 +26,26 @@ import gastroImage from '../assets/img/gastiranolig.png'; // Gastroenterolog
 import pediatricNeuroImage from '../assets/images/Gastroenterolog.png'; // Detskiy Nevropatolog
 import gynecologistImage from '../assets/img/ginekolig.png'; // Ginekolog
 import endoImage from '../assets/images/Jarayon.png'; // Endokrinolog
-import entImage from '../assets/images/lor.png'; // Lor
-import dermatologistImage from '../assets/images/Operatsiya.png'; // Dermatolog
+import entImage from '../assets/img/lor.png'; // Lor
+import dermatologistImage from '../assets/img/rengen2.png'; // Dermatolog
 import urologistImage from '../assets/images/Operatsiya.png'; // Urolog
 import proctologistImage from '../assets/images/Terapevt.png'; // Pragtolog             procedureImage
 import pediatricGastroImage from '../assets/images/Gastroenterolog.png'; // Detskiy Gastroenterolog
 import infectionistImage from '../assets/images/Terapevt-kardiolog.png'; // Infeksionist
-import cardioImage from '../assets/img/cardioImage.png'; // Kardiolog
-import hepatologistImage from '../assets/img/Fizoterapiya.png'; // Gepatolog
+import cardioImage from '../assets/img/Терапия-Кардиология.png'; // Kardiolog
+import hepatologistImage from '../assets/img/pediatriya.png'; // Gepatolog
 import massageImage from '../assets/img/massageImage.png'; // Massaj
-import neuroImage from '../assets/img/neuroImage.png'; // Nevropatolog
+import neuroImage from '../assets/images/Operatsiya.png'; // Nevropatolog
 import operatingRoomImage from '../assets/img/operatingRoomImage.png'; // Опер блок
-import rheumatologistImage from '../assets/img/otgolagiya.png'; // Revmatolog
-import pulmonologistImage from '../assets/img/otgolagiya.png'; // Pulmonolog
+import rheumatologistImage from '../assets/img/ginrkolig.png'; // Revmatolog
+import pulmonologistImage from '../assets/img/Uzd2.png'; // Pulmonolog
 import allergistImage from '../assets/img/otgolagiya.png'; // Allergolog
 import xrayImage from '../assets/img/rentgin.png'; // RENTGEN
 import physiotherapyImage from '../assets/img/fizoterapiya.png'; // Fizioterapiya
 import procedureImage from '../assets/img/Болалар_xonasi.png'; // Procedurniy
 import laboratoryImage from '../assets/img/labaratorika.png'; // Laboratoriya
-import inpatientImage from '../assets/img/otgolagiya.png'; // Стационар
-import pediatricImage from '../assets/img/pediatricImage.png'; // Pediator
+import inpatientImage from '../assets/img/Эндокринолог.png'; // Стационар
+import pediatricImage from '../assets/img/pediatriya.png'; // Pediator
 import therapistImage from '../assets/images/Terapevt.png'; // Terapevt
 // Shifokor va bo'lim rasmlari importlari
 import traumaImage from '../assets/img/traumaImage.png'; // Xirurg-Travmatolog

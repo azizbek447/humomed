@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import heder from '../../assets/images/img.png';
+import heder from '../../assets/images/humo.png';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -11,11 +11,10 @@ const Home = () => {
       <img
         src={heder}
         alt='header'
-        className='h-[60vh] max-h-screen w-full object-cover sm:h-[80vh]'
+        className='h-[80vh] max-h-screen w-full object-cover sm:h-[86vh]'
       />
 
-      <div className='absolute inset-0 bg-black/60' />
-
+      <div className='absolute top-0 left-0 h-full w-1/2 bg-gradient-to-r from-black/30 to-transparent backdrop-blur-sm' />
       <div className='absolute inset-0 z-10 flex items-center justify-center px-4 sm:px-8'>
         <div className='w-full max-w-7xl'>
           <div className='flex flex-col items-center text-center text-white sm:items-center md:items-start md:text-left'>

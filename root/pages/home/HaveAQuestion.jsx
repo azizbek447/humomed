@@ -1,6 +1,5 @@
 import React from 'react';
 import doktorImage from '../../assets/img/img_2-removebg-preview.png';
-import responsiveImage from '../../assets/img/image.png';
 import { useTranslation } from 'react-i18next';
 import ContactForm from '../../components/ContactForm.jsx';
 
@@ -23,11 +22,6 @@ const HaveAQuestion = () => {
             src={doktorImage}
             alt='doctor'
             className='hidden h-[300px] w-auto rounded-lg object-contain sm:block sm:h-[400px]'
-          />
-          <img
-            src={responsiveImage}
-            alt='responsive doctor'
-            className='block h-[300px] w-auto rounded-lg object-contain sm:hidden'
           />
         </div>
 

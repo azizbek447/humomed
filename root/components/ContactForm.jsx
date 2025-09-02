@@ -12,7 +12,6 @@ import * as yup from 'yup';
 const schema = (t) =>
   yup.object().shape({
     name: yup.string().required(t('form.name_required')),
-    email: yup.string().email(t('form.email_invalid')).required(t('form.email_required')),
     phone: yup.string().min(11, t('form.phone_invalid')).required(t('form.phone_required')),
     comment: yup.string(),
   });
@@ -81,7 +80,6 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Telegram ga yuborish
       const telegramResult = await sendToTelegram(data);
 
       if (telegramResult.success) {
@@ -129,21 +127,6 @@ const ContactForm = () => {
 
         <div>
           <label className='mb-2 block font-medium'>
-            {t('form.email')} <span className='text-red-500'>*</span>
-          </label>
-          <input
-            type='email'
-            placeholder={t('form.enter_email')}
-            {...register('email')}
-            className={`w-full rounded-lg border px-4 py-3 ${
-              errors.email ? 'border-red-500' : 'border-gray-200'
-            }`}
-          />
-          {errors.email && <p className='mt-1 text-sm text-red-500'>{errors.email.message}</p>}
-        </div>
-
-        <div>
-          <label className='mb-2 block font-medium'>
             {t('form.phone')} <span className='text-red-500'>*</span>
           </label>
           <Controller
@@ -176,6 +159,17 @@ const ContactForm = () => {
             )}
           />
           {errors.phone && <p className='mt-1 text-sm text-red-500'>{errors.phone.message}</p>}
+        </div>
+        <div>
+          <label className='mb-2 block font-medium'>{t('form.email')}</label>
+          <input
+            type='email'
+            placeholder={t('form.enter_email')}
+            {...register('email')}
+            className={`w-full rounded-lg border px-4 py-3 ${
+              errors.email ? 'border-red-500' : 'border-gray-200'
+            }`}
+          />
         </div>
 
         <div>

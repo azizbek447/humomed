@@ -1,13 +1,11 @@
-import React from 'react';
-import previewImg from '../assets/images/ulugbek.png';
 import Baxtiyor from '../assets/images/Baxtiyor.png';
+import Gulbahor from '../assets/images/gulbahor.png';
+import sanjarImg from '../assets/images/img_1.png';
+import previewImg from '../assets/images/ulugbek.png';
 import Dinara from '../assets/img/ginekolig.png';
-import healerAkmalImg from '../assets/img/img_2-removebg-preview.png';
-import sanjarImg from '../assets/img/img_2-removebg-preview.png';
 import akmalImg from '../assets/img/neyxuriga.png';
 import malikaImg from '../assets/img/neyxuriga.png';
 
-// Doctor ma'lumotlari (i18n)
 export const doctorDetails = [
   {
     id: 1,
@@ -161,43 +159,60 @@ export const doctorDetails = [
 
   {
     id: 4,
-    image: healerAkmalImg,
+    image: Gulbahor,
     name: {
-      uz: 'Dr. Mohira Sattorova',
-      ru: 'Др. Мохира Сатторова',
-      en: 'Dr. Mohira Sattorova',
+      uz: 'Dr. Gulbahor Jiyanova',
+      ru: 'Др. Гульбахор Жиянова',
+      en: 'Dr. Gulbahor Jiyanova',
     },
     specialty: {
-      uz: 'Oftalmolog',
-      ru: 'Офтальмолог',
-      en: 'Ophthalmologist',
+      uz: 'Akusher-ginekolog',
+      ru: 'Акушер-гинеколог',
+      en: 'Obstetrician-gynecologist',
     },
     subSpecialty: {
-      uz: "Ko'z jarrohligi va lazer muolajalari",
-      ru: 'Хирургия глаза и лазерные процедуры',
-      en: 'Eye surgery and laser procedures',
+      uz: 'Jarrohlik akusherlik va ginekologiya',
+      ru: 'Хирургическое акушерство и гинекология',
+      en: 'Surgical obstetrics and gynecology',
     },
     birthDate: { uz: '—', ru: '—', en: '—' },
     birthPlace: { uz: '—', ru: '—', en: '—' },
-    education: { uz: '—', ru: '—', en: '—' },
-    experience: { uz: '12 yil', ru: '12 лет', en: '12 years' },
+    education: {
+      uz: '1995-yil Samarqand tibbiyot instituti',
+      ru: '1995 г. Самаркандский медицинский институт',
+      en: '1995 Samarkand Medical Institute',
+    },
+    experience: {
+      uz: '30 yildan ortiq',
+      ru: 'Более 30 лет',
+      en: 'Over 30 years',
+    },
     workTime: { uz: '—', ru: '—', en: '—' },
     phone: '',
     content: {
       uz: [
-        '12 yillik tajribaga ega oftalmolog.',
-        "Katarakta va glaukoma jarrohligi bo'yicha tajribali.",
-        "Lazer muolajalari yordamida ko'rishni yaxshilash bo'yicha mutaxassis.",
+        '1996-yilda Surxondaryo viloyati Muzrabot tumanida tug‘ruq bo‘limida akusher-ginekolog sifatida faoliyat boshlagan.',
+        '1998-yildan Termiz shahrida tez tibbiy yordam shifoxonasida vrach-konsultant va shahar tug‘ruqxonasida akusher-ginekolog bo‘lib ishlagan.',
+        '2001–2009-yillarda Muzrabot tumani tug‘ruqxonasida jarroh akusher-ginekolog sifatida faoliyat yuritgan.',
+        '2009-yilda BAA, Jidda shahridagi Al Kaira gospitalida jarroh akusher-ginekolog bo‘lib ishlagan.',
+        '2021-yilda Istanbul shahridagi Medipol xususiy ko‘p tarmoqli shifoxonasida akusher-ginekolog sifatida ishlagan.',
+        '2024-yildan Toshkent shahridagi Humo Med xususiy klinikasida oliy toifali akusher-ginekolog sifatida faoliyat yuritmoqda.',
       ],
       ru: [
-        'Офтальмолог с 12-летним стажем.',
-        'Опытный специалист по хирургии катаракты и глаукомы.',
-        'Квалифицирован в лазерных процедурах для улучшения зрения.',
+        'В 1996 г. начала работать акушером-гинекологом в родильном отделении Музрабадского района Сурхандарьинской области.',
+        'С 1998 г. работала врачом-консультантом в Термезской скорой помощи и акушером-гинекологом в городской родильной больнице.',
+        'В 2001–2009 гг. продолжала деятельность в качестве хирурга акушера-гинеколога в родильном доме Музрабадского района.',
+        'В 2009 г. трудилась в г. Джидда (ОАЭ) в госпитале Al Kaira как хирург акушер-гинеколог.',
+        'В 2021 г. работала в Стамбуле (Турция) в многопрофильной частной клинике Medipol.',
+        'С 2024 г. трудится в Ташкенте в частной клинике Humo Med как врач акушер-гинеколог высшей категории.',
       ],
       en: [
-        'Ophthalmologist with 12 years of experience.',
-        'Experienced in cataract and glaucoma surgery.',
-        'Specialist in laser procedures for vision improvement.',
+        'In 1996, she began her career as an obstetrician-gynecologist in the maternity ward of Muzrabot district, Surkhandarya region.',
+        'Since 1998, she has worked as a consultant physician in Termez Emergency Hospital and as an obstetrician-gynecologist in the city maternity hospital.',
+        'From 2001 to 2009, she continued her practice as a surgical obstetrician-gynecologist in Muzrabot district maternity hospital.',
+        'In 2009, she worked in Jeddah, UAE, at Al Kaira Hospital as a surgical obstetrician-gynecologist.',
+        'In 2021, she practiced at Medipol Private Multidisciplinary Hospital in Istanbul, Turkey.',
+        'Since 2024, she has been working as a senior obstetrician-gynecologist at Humo Med Private Clinic in Tashkent.',
       ],
     },
   },

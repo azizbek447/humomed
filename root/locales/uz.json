@@ -10,6 +10,7 @@
     "neuro": "Neyroxirurgiya",
     "uro": "Fizioterapiya",
     "gyn": "Otorinolaringologiya",
+    "hospital": "Shifoxona",
     "derma": "Ortopediya",
     "hirurgTravmatolog": "Xirurg-Travmatolog",
     "kardiolog": "Kardiolog",
@@ -428,6 +429,19 @@
     "item7": "Jumanazarov Bunyod sifatida shuni ayta olamanki, bu klinikada men o‘zim kutgan barcha sifatlarni topdim. Servis juda yaxshi, shifokorlar professional, xodimlar esa do‘stona. Ayniqsa, bemorlarni qo‘llab-quvvatlashlari va ularning kayfiyatini ko‘tarishlari meni xursand qildi.",
     "item8": "Men, Boboyev Mansur, Humo Med klinikasiga tashrif buyurdim va juda yaxshi taassurot qoldirdi. Zamonaviy texnologiyalar, tajribali shifokorlar va samimiy muhit meni hayratda qoldirdi. Jarayon davomida barcha bosqichlar aniq tushuntirildi va hech qanday ortiqcha tashvish sezmadim. Natija juda yaxshi bo‘ldi, barchaga tavsiya qilaman!"
   },
-  "ourSpecialists": "Bizning mutaxassislarimiz",
-  "moreDetails": "Batafsil"
+  "main": "Asosiy",
+  "doctors": "Shifokorlar",
+  "about_us": "Biz haqimizda",
+  "call_center": "Call-markaz",
+  "about_clinic": "Klinika haqida",
+  "contacts": "Aloqa",
+  "control": "Nazorat",
+  "healer": "Shifokorlar jamoasi",
+  "news": "Yangiliklar",
+  "news_detail": "Yangilik tafsilotlari",
+
+
+"ourSpecialists": "Bizning mutaxassislarimiz",
+  "moreDetails": "Batafsil",
+  "title": "Yangiliklar"
 }

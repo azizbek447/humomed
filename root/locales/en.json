@@ -11,7 +11,8 @@
     "doctors": "Doctors",
     "residency": "Residency",
     "news": "News",
-    "contact": "Contact"
+    "contact": "Contact",
+    "hospital": "Hospital"
   },
   "errors": {
     "name": "This field is required",
@@ -363,6 +364,16 @@
     "item7": "As Jumanazarov Bunyod, I can confidently say that I found everything I expected at this clinic. The service is excellent, the doctors are professional, and the staff are welcoming. I especially appreciated how they supported patients and lifted their spirits.",
     "item8": "I, Boboyev Mansur, visited Humo Med Clinic and had a wonderful experience. Modern technology, professional doctors, and a friendly environment amazed me. The results were excellent, and I highly recommend it to everyone!"
   },
+  "main": "Home",
+  "doctors": "Doctors",
+  "about_us": "About us",
+  "call_center": "Call center",
+  "about_clinic": "About clinic",
+  "contacts": "Contacts",
+  "control": "Control",
+  "healer": "Medical team",
+  "news": "News",
+  "news_detail": "News detail",
   "ourSpecialists": "Our Specialists",
   "moreDetails": "More details"
 }

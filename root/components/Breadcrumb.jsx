@@ -1,13 +1,14 @@
-import { useBreadcrumbs } from '../hooks/useBreadcrumbs';
-import { Link, matchPath, useLocation } from 'react-router-dom';
 import { find } from 'lodash';
-import { useTranslation } from 'react-i18next';
-import { useEffect, useMemo, useCallback } from 'react';
-import { RxSlash } from 'react-icons/rx';
-import { appPaths } from '../constants/paths';
-import { privateRoutes, publicRoutes } from '../routes';
-import { IoHomeOutline } from 'react-icons/io5';
 import PropTypes from 'prop-types';
+import { useCallback, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { IoHomeOutline } from 'react-icons/io5';
+import { RxSlash } from 'react-icons/rx';
+import { Link, matchPath, useLocation } from 'react-router-dom';
+
+import { appPaths } from '../constants/paths';
+import { useBreadcrumbs } from '../hooks/useBreadcrumbs';
+import { privateRoutes, publicRoutes } from '../routes';
 
 const Breadcrumb = ({ currentPageTitle }) => {
   const { pathname, search } = useLocation();
@@ -17,7 +18,7 @@ const Breadcrumb = ({ currentPageTitle }) => {
   useEffect(() => {
     const matchingRoute = find(
       [...privateRoutes, ...publicRoutes],
-      route => route.path && matchPath({ path: route.path, end: true }, pathname)
+      (route) => route.path && matchPath({ path: route.path, end: true }, pathname)
     );
 
     if (matchingRoute && pathname) {
@@ -33,7 +34,7 @@ const Breadcrumb = ({ currentPageTitle }) => {
 
       const route = find(
         [...privateRoutes, ...publicRoutes],
-        r => r.path && matchPath({ path: r.path, end: true }, breadcrumb.path)
+        (r) => r.path && matchPath({ path: r.path, end: true }, breadcrumb.path)
       );
 
       if (route?.breadcrumb) {
@@ -51,7 +52,7 @@ const Breadcrumb = ({ currentPageTitle }) => {
   const formatTitle = useCallback(
     (item) =>
       item.icon ? (
-        <span className="inline-flex items-center gap-1">
+        <span className='inline-flex items-center gap-1'>
           {item.icon}
           {t(item.title)}
         </span>
@@ -64,22 +65,22 @@ const Breadcrumb = ({ currentPageTitle }) => {
   if (!items.length) return null;
 
   return (
-    <nav className="flex font-roboto leading-6" aria-label="Breadcrumb">
-      <ol className="flex items-center flex-wrap">
-        <li className="flex items-center">
+    <nav className='font-roboto flex leading-6' aria-label='Breadcrumb'>
+      <ol className='flex flex-wrap items-center'>
+        <li className='flex items-center'>
           <Link
             to={appPaths.HOME}
-            className="flex items-center hover:text-primary hover:underline transition-colors"
+            className='hover:text-primary flex items-center transition-colors hover:underline'
           >
-            <IoHomeOutline size={16} className="mr-1" />
+            <IoHomeOutline size={16} className='mr-1' />
             <p>Main</p>
           </Link>
         </li>
 
         {items.map((item, index) => (
-          <li key={index} className="flex items-center">
+          <li key={index} className='flex items-center'>
             <RxSlash />
-            <span className="text-dark/80" aria-current="page">
+            <span className='text-dark/80' aria-current='page'>
               {currentPageTitle || formatTitle(item)}
             </span>
           </li>

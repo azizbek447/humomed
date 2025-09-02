@@ -47,8 +47,8 @@ const Header = ({ isScrolled }) => {
     },
     { path: '/Doctors', label: 'nav.doctors' },
     { path: '/news', label: 'nav.news' },
-    { path: '/contacts', label: 'nav.contact' },
     { path: '/hospital', label: 'nav.hospital' },
+    { path: '/contacts', label: 'nav.contact' },
   ];
 
   const currentLang = languages.find((l) => l.code === lang);

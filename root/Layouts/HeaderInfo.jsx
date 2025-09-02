@@ -28,11 +28,10 @@ const HeaderInfo = ({ isScrolled }) => {
           <div className='flex items-center gap-2'>
             <FaMapMarkerAlt />
             <span>{t('topbar.address')}</span>
-
           </div>
           <div className='flex items-center gap-2'>
             <FaPhoneAlt />
-            <span>+998-78-777-03-03</span>
+            <span>+998-33-901-50-60</span>
           </div>
           <div className='flex items-center gap-2'>
             <FaEnvelope />

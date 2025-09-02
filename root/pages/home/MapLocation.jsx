@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const MapLocation = () => {
@@ -18,13 +18,13 @@ const MapLocation = () => {
 
     function init() {
       const map = new window.ymaps.Map(mapRef.current, {
-        center: [41.2156, 69.1845],
+        center: [41.211383, 69.203701],
         zoom: 16,
         controls: ['zoomControl', 'fullscreenControl'],
       });
 
       const placemark = new window.ymaps.Placemark(
-        [41.2156, 69.1845],
+        [41.211383, 69.203701],
         {
           balloonContent: t('map.balloon'),
         },

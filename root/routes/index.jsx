@@ -85,7 +85,7 @@ export const publicRoutes = [
     path: appPaths.HOSPITAL,
     element: <Hospital />,
     layout: MainLayout,
-    breadcrumb: { title: 'HOSPITAL' },
+    breadcrumb: { title: 'nav.hospital' },
   },
   {
     path: appPaths.ALLSERVICES,
@@ -93,7 +93,6 @@ export const publicRoutes = [
     layout: MainLayout,
     breadcrumb: { title: 'allservices' },
   },
-
   {
     path: appPaths.SERVICE_DETAILS(),
     element: <Service />,
@@ -104,9 +103,8 @@ export const publicRoutes = [
     path: appPaths.NEWS_SERVICE_DETAILS(),
     element: <NewService />,
     layout: SectionalLayout,
-    breadcrumb: { title: 'News' },
+    breadcrumb: { title: 'news_service' },
   },
-
   {
     path: '*',
     element: <Error404 />,

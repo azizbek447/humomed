@@ -3,9 +3,10 @@ import previewImg from '../assets/images/ulugbek.png';
 import Baxtiyor from '../assets/images/Baxtiyor.png';
 import Dinara from '../assets/img/ginekolig.png';
 
-import sanjarImg from '../assets/img/img_2-removebg-preview.png';
+import sanjarImg from '../assets/images/img_1.png';
 import akmalImg from '../assets/img/neyxuriga.png';
 import malikaImg from '../assets/img/neyxuriga.png';
+import Gulbahor from '../assets/images/gulbahor.png';
 
 export const doctorsData = [
   {
@@ -31,10 +32,10 @@ export const doctorsData = [
   },
   {
     id: 4,
-    name: 'Dr. Otabek Sobirov',
-    specialty: 'Travmatolog',
-    image: Baxtiyor,
-    path: '/healer',
+    image: Gulbahor,
+    name: 'Dr. Gulbahor Jiyanova',
+    specialty: 'Akusher-ginekolog',
+    subSpecialty: 'Jarrohlik akusherlik va ginekologiya',
   },
   {
     id: 5,
