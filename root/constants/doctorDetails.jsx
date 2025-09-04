@@ -1,15 +1,15 @@
 import Baxtiyor from '../assets/images/Baxtiyor.png';
 import Gulbahor from '../assets/images/gulbahor.png';
-import sanjarImg from '../assets/images/img_1.png';
-import previewImg from '../assets/images/ulugbek.png';
+import hoshimImg from '../assets/images/hoshimImg.png';
+import nurlibekImg from '../assets/images/img_1.png';
+import shirina from '../assets/images/shirina.png';
+import Ulugbek from '../assets/images/ulugbek.png';
 import Dinara from '../assets/img/ginekolig.png';
-import akmalImg from '../assets/img/neyxuriga.png';
-import malikaImg from '../assets/img/neyxuriga.png';
 
 export const doctorDetails = [
   {
     id: 1,
-    image: previewImg,
+    image: Ulugbek,
     name: {
       uz: 'Nazarov Ulug‘bek Shaxobiddinovich',
       ru: 'Назаров Улугбек Шахобиддинович',
@@ -216,139 +216,164 @@ export const doctorDetails = [
       ],
     },
   },
-
   {
     id: 5,
-    image: sanjarImg,
+    image: shirina,
     name: {
-      uz: 'Dr. Akmal Xolmatov',
-      ru: 'Др. Акмал Холматов',
-      en: 'Dr. Akmal Kholmatov',
+      uz: 'Maxmudova Shirina Maxmud qizi',
+      ru: 'Махмудова Ширина Махмуд кизи',
+      en: 'Shirina Makhmudova Maxmud qizi',
     },
     specialty: {
-      uz: 'Ortoped-travmatolog',
-      ru: 'Ортопед-травматолог',
-      en: 'Orthopedic traumatologist',
+      uz: 'Pediatr shifokor',
+      ru: 'Врач-педиатр',
+      en: 'Pediatric doctor',
     },
     subSpecialty: {
-      uz: 'Sport jarohatlari va suyak jarrohligi',
-      ru: 'Спортивные травмы и костная хирургия',
-      en: 'Sports injuries and bone surgery',
+      uz: '—',
+      ru: '—',
+      en: '—',
     },
-    birthDate: { uz: '—', ru: '—', en: '—' },
-    birthPlace: { uz: '—', ru: '—', en: '—' },
-    education: { uz: '—', ru: '—', en: '—' },
-    experience: { uz: '20 yil', ru: '20 лет', en: '20 years' },
-    workTime: { uz: '—', ru: '—', en: '—' },
-    phone: '',
+    birthDate: {
+      uz: '02.08.1993',
+      ru: '02.08.1993',
+      en: '02.08.1993',
+    },
+    birthPlace: {
+      uz: 'Jizzax viloyati',
+      ru: 'Джизакская область',
+      en: 'Jizzakh region',
+    },
+    education: {
+      uz: 'Toshkent Pediatriya tibbiyot instituti – 6 yil, Respublika shoshilinch tibbiy yordam ilmiy markazi – 2 yil',
+      ru: 'Ташкентский педиатрический медицинский институт – 6 лет, Республиканский научный центр скорой медицинской помощи – 2 года',
+      en: 'Tashkent Pediatric Medical Institute – 6 years, Republican Scientific Center of Emergency Medical Care – 2 years',
+    },
+    experience: {
+      uz: '3 yil',
+      ru: '3 года',
+      en: '3 years',
+    },
+    workTime: {
+      uz: '09:00 – 24:00',
+      ru: '09:00 – 24:00',
+      en: '09:00 – 24:00',
+    },
+    phone: '+998 90 321 11 13',
     content: {
       uz: [
-        "20 yildan beri ortopediya va travmatologiya yo'nalishida faoliyat yuritadi.",
-        'Sport jarohatlari va suyak sinishlarini davolashda katta tajribaga ega.',
-        "Protezlash va reabilitatsiya bo'yicha yuqori malakali mutaxassis.",
+        'Pediatr shifokor sifatida 3 yillik ish tajribasiga ega.',
+        'Yangi hayot 66-poliklinikasida faoliyat yuritadi.',
       ],
-      ru: [
-        'Ортопед-травматолог с 20-летним стажем.',
-        'Имеет опыт в лечении спортивных травм и переломов костей.',
-        'Специалист в области протезирования и реабилитации.',
-      ],
+      ru: ['Врач-педиатр с 3-летним опытом работы.', "Работает в поликлинике №66 'Янги хаёт'."],
       en: [
-        'Orthopedic traumatologist with 20 years of experience.',
-        'Experienced in treating sports injuries and bone fractures.',
-        'Specialist in prosthetics and rehabilitation.',
+        'Pediatric doctor with 3 years of work experience.',
+        'Currently works at Yangi Hayot Clinic No. 66.',
       ],
     },
   },
 
   {
     id: 6,
-    image: akmalImg,
+    image: nurlibekImg, // siz rasmi qo'yadigan o'zgaruvchi
     name: {
-      uz: "Dr. Malika To'xtayeva",
-      ru: 'Др. Малика Тухтаева',
-      en: 'Dr. Malika Tukhtayeva',
+      uz: 'Maxatov Nurlibek',
+      ru: 'Махатов Нурлибек',
+      en: 'Nurlibek Makhatoв',
     },
     specialty: {
-      uz: 'Ginekolog',
-      ru: 'Гинеколог',
-      en: 'Gynecologist',
+      uz: 'Otorinolaringolog',
+      ru: 'Оториноларинголог',
+      en: 'Otorhinolaryngologist (ENT)',
     },
     subSpecialty: {
-      uz: 'Reproduktiv salomatlik va homiladorlik kuzatuvi',
-      ru: 'Репродуктивное здоровье и ведение беременности',
-      en: 'Reproductive health and pregnancy monitoring',
+      uz: 'LOR kasalliklari',
+      ru: 'Болезни ЛОР',
+      en: 'ENT diseases',
     },
-    birthDate: { uz: '—', ru: '—', en: '—' },
+    birthDate: { uz: '16.04.1996', ru: '16.04.1996', en: '16.04.1996' },
     birthPlace: { uz: '—', ru: '—', en: '—' },
-    education: { uz: '—', ru: '—', en: '—' },
-    experience: { uz: '15+ yil', ru: 'более 15 лет', en: 'over 15 years' },
-    workTime: { uz: '—', ru: '—', en: '—' },
-    phone: '',
-    content: {
-      uz: [
-        '15 yildan ortiq tajribaga ega ginekolog.',
-        "Homiladorlik kuzatuvi va ayollar salomatligi bo'yicha mutaxassis.",
-        'Bepushtlik muammolari va davolashda katta tajribaga ega.',
-      ],
-      ru: [
-        'Гинеколог с более чем 15-летним опытом.',
-        'Специалист по ведению беременности и женскому здоровью.',
-        'Имеет большой опыт в лечении бесплодия.',
-      ],
-      en: [
-        'Gynecologist with over 15 years of experience.',
-        "Specialist in pregnancy monitoring and women's health.",
-        'Extensive experience in infertility treatment.',
-      ],
+    education: {
+      uz: 'Toshkent Tibbiyot Akademiyasi (bakalavr), Toshkent Stomatologiya Instituti – otorinolaringologiya ordinaturasi',
+      ru: 'Ташкентская медицинская академия (бакалавр), Ташкентский стоматологический институт – ординатура по оториноларингологии',
+      en: 'Tashkent Medical Academy (Bachelor), Tashkent State Dental Institute – residency in otorhinolaryngology',
     },
-  },
-
-  {
-    id: 7,
-    image: malikaImg,
-    name: {
-      uz: 'Dr. Farrux Usmonov',
-      ru: 'Др. Фаррух Усмонов',
-      en: 'Dr. Farrukh Usmonov',
-    },
-    specialty: {
-      uz: 'Urolog',
-      ru: 'Уролог',
-      en: 'Urologist',
-    },
-    subSpecialty: {
-      uz: 'Buyrak va siydik tizimi kasalliklari',
-      ru: 'Заболевания почек и мочевыводящей системы',
-      en: 'Kidney and urinary system diseases',
-    },
-    birthDate: { uz: '—', ru: '—', en: '—' },
-    birthPlace: { uz: '—', ru: '—', en: '—' },
-    education: { uz: '—', ru: '—', en: '—' },
     experience: { uz: '—', ru: '—', en: '—' },
     workTime: { uz: '—', ru: '—', en: '—' },
     phone: '',
     content: {
       uz: [
-        "Buyrak va siydik yo'llari kasalliklari bo'yicha tajribali urolog.",
-        "Prostata kasalliklari va endoskopik muolajalar bo'yicha yuqori malakali.",
-        'Erkaklar salomatligi va reproduktiv tizimda katta tajribaga ega.',
+        'Humo Med, LOR Medical Service va ID Medical klinikalarida faoliyat olib borgan.',
+        'IELTS sertifikati (2021), USMLE STEP1 Pass (2024).',
       ],
       ru: [
-        'Опытный уролог по заболеваниям почек и мочевыводящих путей.',
-        'Специалист по заболеваниям простаты и эндоскопическим процедурам.',
-        'Имеет опыт в области мужского здоровья и репродуктивной системы.',
+        'Работал в клиниках Humo Med, LOR Medical Service и ID Medical.',
+        'IELTS сертификат (2021), USMLE STEP1 Pass (2024).',
       ],
       en: [
-        'Experienced urologist in kidney and urinary tract diseases.',
-        'Skilled in prostate disorders and endoscopic procedures.',
-        'Extensive experience in men’s health and reproductive system.',
+        'Worked at Humo Med, LOR Medical Service, and ID Medical clinics.',
+        'IELTS Certificate (2021), USMLE STEP1 Pass (2024).',
+      ],
+    },
+  },
+  {
+    id: 7,
+    image: hoshimImg,
+    name: {
+      uz: 'Abdullayev Hoshim Raximovich',
+      ru: 'Абдуллаев Хошим Рахимович',
+      en: 'Hoshim Abdullaev Rakhimovich',
+    },
+    specialty: {
+      uz: 'Dermatovenerolog, UTT shifokori',
+      ru: 'Дерматовенеролог, врач УЗИ',
+      en: 'Dermatovenereologist, Ultrasound doctor',
+    },
+    subSpecialty: {
+      uz: '—',
+      ru: '—',
+      en: '—',
+    },
+    birthDate: { uz: '28.02.1972', ru: '28.02.1972', en: '28.02.1972' },
+    birthPlace: {
+      uz: 'Qashqadaryo viloyati, Kitob tumani',
+      ru: 'Кашкадарьинская область, Китабский район',
+      en: 'Kitob district, Kashkadarya region',
+    },
+    education: {
+      uz: 'Buxoro Davlat Tibbiyot Instituti, 1996 yil',
+      ru: 'Бухарский государственный медицинский институт, 1996 год',
+      en: 'Bukhara State Medical Institute, 1996',
+    },
+    experience: {
+      uz: '2016 yildan buyon UTT shifokori',
+      ru: 'С 2016 года врач УЗИ',
+      en: 'Ultrasound doctor since 2016',
+    },
+    workTime: { uz: '—', ru: '—', en: '—' },
+    phone: '+998 91 460 19 72',
+    content: {
+      uz: [
+        'Dermato-venerolog sifatida malakaga ega.',
+        '2016 yildan buyon UTT shifokori sifatida faoliyat yuritmoqda.',
+        'Hozirda HumoMed klinikasida ishlaydi.',
+      ],
+      ru: [
+        'Имеет квалификацию дерматовенеролога.',
+        'С 2016 года работает врачом УЗИ.',
+        'В настоящее время работает в клинике HumoMed.',
+      ],
+      en: [
+        'Qualified as a dermatovenereologist.',
+        'Working as an ultrasound doctor since 2016.',
+        'Currently works at HumoMed clinic.',
       ],
     },
   },
 
   {
     id: 8,
-    image: previewImg,
+    image: Ulugbek,
     name: {
       uz: 'Dr. Saida Rasulova',
       ru: 'Др. Саида Расулова',
