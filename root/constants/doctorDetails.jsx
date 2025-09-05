@@ -5,6 +5,8 @@ import nurlibekImg from '../assets/images/img_1.png';
 import shirina from '../assets/images/shirina.png';
 import Ulugbek from '../assets/images/ulugbek.png';
 import Dinara from '../assets/img/ginekolig.png';
+import shodmanovImg from '../assets/images/shodmanovImg.png';
+import Gafur from '../assets/images/Gafur.png';
 
 export const doctorDetails = [
   {
@@ -161,9 +163,9 @@ export const doctorDetails = [
     id: 4,
     image: Gulbahor,
     name: {
-      uz: 'Dr. Gulbahor Jiyanova',
-      ru: 'Др. Гульбахор Жиянова',
-      en: 'Dr. Gulbahor Jiyanova',
+      uz: ' Gulbahor Jiyanova',
+      ru: '. Гульбахор Жиянова',
+      en: ' Gulbahor Jiyanova',
     },
     specialty: {
       uz: 'Akusher-ginekolog',
@@ -187,7 +189,8 @@ export const doctorDetails = [
       ru: 'Более 30 лет',
       en: 'Over 30 years',
     },
-    workTime: { uz: '—', ru: '—', en: '—' },
+    workTime: { uz: '24/7', ru: '24/7', en: '24/7' },
+
     phone: '',
     content: {
       uz: [
@@ -275,7 +278,7 @@ export const doctorDetails = [
 
   {
     id: 6,
-    image: nurlibekImg, // siz rasmi qo'yadigan o'zgaruvchi
+    image: nurlibekImg,
     name: {
       uz: 'Maxatov Nurlibek',
       ru: 'Махатов Нурлибек',
@@ -292,14 +295,26 @@ export const doctorDetails = [
       en: 'ENT diseases',
     },
     birthDate: { uz: '16.04.1996', ru: '16.04.1996', en: '16.04.1996' },
-    birthPlace: { uz: '—', ru: '—', en: '—' },
+    birthPlace: {
+      uz: 'Toshkent viloyati, Parkent tumani',
+      ru: 'Ташкентская область, Паркентский район',
+      en: 'Parkent district, Tashkent region',
+    },
     education: {
       uz: 'Toshkent Tibbiyot Akademiyasi (bakalavr), Toshkent Stomatologiya Instituti – otorinolaringologiya ordinaturasi',
       ru: 'Ташкентская медицинская академия (бакалавр), Ташкентский стоматологический институт – ординатура по оториноларингологии',
       en: 'Tashkent Medical Academy (Bachelor), Tashkent State Dental Institute – residency in otorhinolaryngology',
     },
-    experience: { uz: '—', ru: '—', en: '—' },
-    workTime: { uz: '—', ru: '—', en: '—' },
+    experience: {
+      uz: '5 yil tajriba',
+      ru: '5 лет опыта',
+      en: '5 years of experience',
+    },
+    workTime: {
+      uz: '14:00 – 00:00 (navbatchilik kunlariga qarab)',
+      ru: '14:00 – 00:00 (в зависимости от дежурных дней)',
+      en: '14:00 – 00:00 (depending on duty days)',
+    },
     phone: '',
     content: {
       uz: [
@@ -316,6 +331,7 @@ export const doctorDetails = [
       ],
     },
   },
+
   {
     id: 7,
     image: hoshimImg,
@@ -350,7 +366,8 @@ export const doctorDetails = [
       ru: 'С 2016 года врач УЗИ',
       en: 'Ultrasound doctor since 2016',
     },
-    workTime: { uz: '—', ru: '—', en: '—' },
+    workTime: { uz: '24/7', ru: '24/7', en: '24/7' },
+
     phone: '+998 91 460 19 72',
     content: {
       uz: [
@@ -373,54 +390,72 @@ export const doctorDetails = [
 
   {
     id: 8,
-    image: Ulugbek,
+    image: shodmanovImg,
     name: {
-      uz: 'Dr. Saida Rasulova',
-      ru: 'Др. Саида Расулова',
-      en: 'Dr. Saida Rasulova',
+      uz: 'Shodmanov Sohibali Jumaboyevich',
+      ru: 'Шодманов Сохибали Жумабоевич',
+      en: 'Sohibali Shodmanov Jumaboyevich',
     },
     specialty: {
-      uz: 'Endokrinolog',
-      ru: 'Эндокринолог',
-      en: 'Endocrinologist',
+      uz: 'Vrach rentgenolog',
+      ru: 'Врач рентгенолог',
+      en: 'Radiologist',
     },
     subSpecialty: {
-      uz: 'Qandli diabet va qalqonsimon bez kasalliklari',
-      ru: 'Сахарный диабет и заболевания щитовидной железы',
-      en: 'Diabetes and thyroid diseases',
+      uz: '—',
+      ru: '—',
+      en: '—',
     },
-    birthDate: { uz: '—', ru: '—', en: '—' },
-    birthPlace: { uz: '—', ru: '—', en: '—' },
-    education: { uz: '—', ru: '—', en: '—' },
-    experience: { uz: '14 yil', ru: '14 лет', en: '14 years' },
-    workTime: { uz: '—', ru: '—', en: '—' },
-    phone: '',
+    birthDate: { uz: '20.12.1989', ru: '20.12.1989', en: '20.12.1989' },
+    birthPlace: {
+      uz: "Samarqand viloyati, Qo'shirobot tumani, Qo'rg'on mahallasi, Oqtepa qishlog'i, 92-uy",
+      ru: 'Самаркандская область, Кушработский район, махалля Кургон, кишлак Октапа, дом 92',
+      en: 'Samarkand region, Kushrabot district, Qorgon mahalla, Oqtepa village, house 92',
+    },
+    education: {
+      uz: '2017-yilda Toshkent Pediatriya Tibbiyot Instituti. Ordinatura — Respublika ixtisoslashtirilgan xirurgiya markazi (V.V. Vahidov nomli), tibbiy radiologiya bo‘limida.',
+      ru: 'В 2017 году окончил ТашПМИ. Ординатура — Республиканский специализированный центр хирургии им. В.В. Вахидова, отделение медицинской радиологии.',
+      en: 'Graduated in 2017 from Tashkent Pediatric Medical Institute. Residency at the Republican Specialized Surgery Center named after V.V. Vakhidov, Department of Medical Radiology.',
+    },
+    experience: {
+      uz: '2017–2021 yillarda RNCEMP 8-podstansiyada shoshilinch yordam shifokori. 2021-yildan hozirga qadar Zangiota tuman TMOda UTT va rentgen diagnostika bo‘limida ishlaydi.',
+      ru: 'С 2017 по 2021 годы — врач экстренной помощи в РНЦЭМП 8-й подстанции. С 2021 года по настоящее время работает в Зангиатинском районном медобъединении, отделение УЗД и рентгенодиагностики.',
+      en: 'From 2017 to 2021, worked as an emergency doctor at RNCEMP, 8th substation. Since 2021, works at Zangiata District Medical Association, Department of Ultrasound and X-ray diagnostics.',
+    },
+    workTime: { uz: '24/7', ru: '24/7', en: '24/7' },
+    phone: '+998 50 009 78 52',
     content: {
       uz: [
-        '14 yillik tajribaga ega endokrinolog.',
-        'Qandli diabetni tashxislash va davolashda yetakchi mutaxassis.',
-        "Qalqonsimon bez kasalliklari va gormonal buzilishlar bo'yicha tajribaga ega.",
+        '2017-yilda Toshkent Pediatriya Tibbiyot Institutini tamomlagan.',
+        'Ordinaturani Respublika ixtisoslashtirilgan xirurgiya markazida (V.V. Vahidov nomli) tibbiy radiologiya bo‘limida o‘tgan.',
+        '2017–2021 yillarda RNCEMP 8-podstansiyada shoshilinch yordam shifokori bo‘lib ishlagan.',
+        '2021-yildan hozirga qadar Zangiota tuman TMOda UTT va rentgen diagnostika bo‘limida ishlaydi.',
+        'Hozirda bosh rentgenolog sifatida faoliyat yuritmoqda.',
       ],
       ru: [
-        'Эндокринолог с 14-летним стажем.',
-        'Опытный специалист по диагностике и лечению диабета.',
-        'Занимается заболеваниями щитовидной железы и гормональными нарушениями.',
+        'В 2017 году окончил ТашПМИ.',
+        'Проходил ординатуру в Республиканском специализированном центре хирургии им. В.В. Вахидова, отделение медицинской радиологии.',
+        'С 2017 по 2021 годы работал врачом экстренной помощи в РНЦЭМП 8-й подстанции.',
+        'С 2021 года по настоящее время работает в Зангиатинском районном медобъединении, в отделении УЗД и рентгенографии.',
+        'В данный момент является главным врачом-рентгенологом.',
       ],
       en: [
-        'Endocrinologist with 14 years of experience.',
-        'Specialist in diagnosis and treatment of diabetes.',
-        'Experienced in thyroid diseases and hormonal disorders.',
+        'Graduated in 2017 from Tashkent Pediatric Medical Institute.',
+        'Completed residency at the Republican Specialized Surgery Center named after V.V. Vakhidov, Department of Medical Radiology.',
+        'From 2017 to 2021, worked as an emergency doctor at RNCEMP, 8th substation.',
+        'Since 2021, works at Zangiata District Medical Association, in the Department of Ultrasound and X-ray diagnostics.',
+        'Currently serves as the chief radiologist.',
       ],
     },
   },
 
   {
     id: 9,
-    image: Baxtiyor,
+    image: Gafur,
     name: {
-      uz: 'Dr. Diyorbek Mirzayev',
-      ru: 'Др. Диёрбек Мирзаев',
-      en: 'Dr. Diyorbek Mirzayev',
+      uz: ' Diyorbek Mirzayev',
+      ru: '. Диёрбек Мирзаев',
+      en: ' Diyorbek Mirzayev',
     },
     specialty: {
       uz: 'Psixolog',
@@ -436,7 +471,8 @@ export const doctorDetails = [
     birthPlace: { uz: '—', ru: '—', en: '—' },
     education: { uz: '—', ru: '—', en: '—' },
     experience: { uz: '—', ru: '—', en: '—' },
-    workTime: { uz: '—', ru: '—', en: '—' },
+    workTime: { uz: '24/7', ru: '24/7', en: '24/7' },
+
     phone: '',
     content: {
       uz: [

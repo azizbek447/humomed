@@ -5,6 +5,8 @@ import nurlibekImg from '../assets/images/img_1.png';
 import shirina from '../assets/images/shirina.png';
 import Ulugbek from '../assets/images/ulugbek.png';
 import Dinara from '../assets/img/ginekolig.png';
+import shodmanovImg from '../assets/images/shodmanovImg.png';
+import Gafur from '../assets/images/Gafur.png';
 
 export const doctorsData = [
   {
@@ -58,16 +60,16 @@ export const doctorsData = [
   },
   {
     id: 8,
-    name: 'Dr. Akmal G‘iyosov',
-    specialty: 'Endokrinolog',
-    image: Ulugbek,
+    name: 'Shodmanov Sohibali Jumaboyevich',
+    specialty: 'Vrach rentgenolog',
+    image: shodmanovImg,
     path: '/healer',
   },
   {
     id: 9,
     name: 'Dr. Islom Rajabov',
     specialty: 'Revmatolog',
-    image: Baxtiyor,
+    image: Gafur,
     path: '/healer',
   },
 ];

@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { doctorsData } from '../constants/doctorsData.jsx';
 import { useTranslation } from 'react-i18next';
+import ScrollToTop from './ScrollToTop.jsx';
 
 export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor, onDoctorClick }) {
   const swiperRef = useRef(null);
@@ -60,6 +61,8 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
                   <h3 className='text-lg font-semibold text-gray-800'>{doctor.name}</h3>
                   <p className='text-sm text-gray-600'>{doctor.specialty}</p>
                 </div>
+                <ScrollToTop />
+
                 <button
                   onClick={() => {
                     onDoctorClick?.(doctor);
