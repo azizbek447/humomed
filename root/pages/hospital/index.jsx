@@ -1,67 +1,70 @@
 import React from 'react';
 import { FaGem, FaShieldAlt, FaCrown } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import Breadcrumb from '../../components/Breadcrumb.jsx';
 
-const plans = [
-  {
-    title: "SIMURG'",
-    price: '400 000',
-    features: [
-      'Hamshira va shifokor nazorati 24/7',
-      'Fizioterapiya',
-      'Massaj',
-      'Ignaterapiya',
-      'Muolajalar',
-      'Bitta UTT tekshiruvi',
-      'Standart 6 ta laboratoriya tahlillari',
-      'Dorilarsiz',
-    ],
-    note: 'Narx ikki kishilik joylashuvda bir kishi uchun amal qiladi',
-    icon: <FaGem />,
-  },
-  {
-    title: 'VELVET',
-    price: '600 000',
-    features: [
-      'Hamshira va shifokor nazorati 24/7',
-      'Fizioterapiya',
-      'Massaj',
-      'Ignaterapiya',
-      'Kerakli barcha shifokorlar ko‘rigi',
-      'Muolajalar',
-      'Barcha UTT tekshiruvi',
-      'Standart 6 ta laboratoriya tahlillari',
-      'Barcha dori vositalar sizdan hech narsa talab qilinmaydi',
-    ],
-    note: 'Narx ikki kishilik joylashuvda bir kishi uchun amal qiladi',
-    icon: <FaShieldAlt />,
-  },
-  {
-    title: 'HUMO ROYAL',
-    price: '1 100 000',
-    features: [
-      'Shaxsiy hamshira nazorati 24/7',
-      'Barcha shifokorlar ko‘rigi',
-      'To‘liq dori vositalari',
-      'Standart 6 ta laboratoriya analiz tahlillari',
-      'Barcha UTT tekshiruvlari',
-      'Kengroq qulaylik ko‘proq xizmat ko‘rsatish',
-      'To‘liroq qulaylik ma’lumotlari alohida posterdа',
-      'Ikki kishilik joylashuvda alohida xona',
-    ],
-    note: '',
-    icon: <FaCrown />,
-  },
-];
-
 export default function Pricing() {
+  const { t } = useTranslation();
+
+  const plans = [
+    {
+      title: "SIMURG'",
+      price: '400 000',
+      features: [
+        t('plans.simurg.features.0'),
+        t('plans.simurg.features.1'),
+        t('plans.simurg.features.2'),
+        t('plans.simurg.features.3'),
+        t('plans.simurg.features.4'),
+        t('plans.simurg.features.5'),
+        t('plans.simurg.features.6'),
+        t('plans.simurg.features.7'),
+      ],
+      note: t('plans.simurg.note'),
+      icon: <FaGem />,
+    },
+    {
+      title: 'VELVET',
+      price: '600 000',
+      features: [
+        t('plans.velvet.features.0'),
+        t('plans.velvet.features.1'),
+        t('plans.velvet.features.2'),
+        t('plans.velvet.features.3'),
+        t('plans.velvet.features.4'),
+        t('plans.velvet.features.5'),
+        t('plans.velvet.features.6'),
+        t('plans.velvet.features.7'),
+        t('plans.velvet.features.8'),
+      ],
+      note: t('plans.velvet.note'),
+      icon: <FaShieldAlt />,
+    },
+    {
+      title: 'HUMO ROYAL',
+      price: '1 100 000',
+      features: [
+        t('plans.royal.features.0'),
+        t('plans.royal.features.1'),
+        t('plans.royal.features.2'),
+        t('plans.royal.features.3'),
+        t('plans.royal.features.4'),
+        t('plans.royal.features.5'),
+        t('plans.royal.features.6'),
+        t('plans.royal.features.7'),
+      ],
+      note: t('plans.royal.note'),
+      icon: <FaCrown />,
+    },
+  ];
+
   return (
     <div className='mx-auto min-h-screen max-w-7xl bg-white px-4 py-35 sm:px-6 lg:px-8'>
       <div className='mb-14'>
         <Breadcrumb />
       </div>
       <h1 className='mb-10 text-center text-2xl font-bold text-[var(--success-strong)] sm:text-3xl lg:text-4xl'>
-        HUMO HOSPITAL
+        {t('hospital_name')}
       </h1>
       <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3'>
         {plans.map((plan, index) => (
@@ -77,7 +80,7 @@ export default function Pricing() {
                 {plan.title}
               </h2>
               <p className='mt-2 text-xl font-semibold text-[var(--success-strong)] sm:text-2xl'>
-                {plan.price} so'm
+                {plan.price} {t('currency')}
               </p>
             </div>
 

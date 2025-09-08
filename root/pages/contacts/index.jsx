@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ContactForm from '../../components/ContactForm.jsx';
 
 const MapLocation = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const coords = [41.2156, 69.1845];
   const zoom = 16;
@@ -45,29 +45,26 @@ const MapLocation = () => {
           {/* Info */}
           <div className='grid grid-cols-1 gap-8 text-left sm:grid-cols-2'>
             <div>
-              <h3 className='mb-2 text-lg font-bold'>Локация</h3>
-              <p>Юнусабадский р-н, проспект А.Тимура, 119А</p>
+              <h3 className='mb-2 text-lg font-bold'>{t('location.title')}</h3>
+              <p>{t('location.address')}</p>
               <a
                 href='#'
                 className='mt-2 inline-block text-[var(--success-strong)] hover:underline'
               >
-                Показать локацию на карте
+                {t('location.show_on_map')}
               </a>
             </div>
             <div>
-              <h3 className='mb-2 text-lg font-bold'>Контакты</h3>
-              <p>Телефон: +998 33 901 50 60</p>
-              <p>Call center:+998 90 176 11 10</p>
-              <p>Email: support@kent@gmail.com</p>
+              <h3 className='mb-2 text-lg font-bold'>{t('contacts.title')}</h3>
+              <p>{t('contacts.phone')}: +998 33 901 50 60</p>
+              <p>{t('contacts.call_center')}: +998 90 176 11 10</p>
+              <p>{t('contacts.email')}: support@kent@gmail.com</p>
             </div>
             <div>
-              <h3 className='mb-2 text-lg font-bold'>График работы</h3>
-              <p>24/7</p>
+              <h3 className='mb-2 text-lg font-bold'>{t('work_schedule.title')}</h3>
+              <p>{t('work_schedule.hours')}</p>
             </div>
           </div>
-
-          {/* Form */}
-          {/* Form */}
           <ContactForm />
         </div>
       </div>

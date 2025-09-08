@@ -379,6 +379,22 @@
   "whoAreWe": {
     "title": "Who Are We?"
   },
+  "location": {
+    "title": "Location",
+    "address": "Yunusabad district, A.Timur avenue, 119A",
+    "show_on_map": "Show location on map"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "contacts": "Contacts",
+    "phone": "Phone",
+    "call_center": "Call center",
+    "email": "Email"
+  },
+  "work_schedule": {
+    "title": "Work Schedule",
+    "hours": "24/7"
+  },
   "doctor": {
     "birthDate": "Date of Birth",
     "birthPlace": "Place of Birth",
@@ -393,12 +409,55 @@
   "about_us": "About us",
   "call_center": "Call center",
   "about_clinic": "About clinic",
-  "contacts": "Contacts",
   "control": "Control",
   "healer": "Medical team",
   "news": "News",
   "news_detail": "News detail",
   "ourSpecialists": "Our Specialists",
-  "moreDetails": "More details"
+  "moreDetails": "More details",
+  "hospital_name": "HUMO HOSPITAL",
+  "currency": "UZS",
+  "plans": {
+    "simurg": {
+      "features": [
+        "Nurse and doctor supervision 24/7",
+        "Physiotherapy",
+        "Massage",
+        "Acupuncture",
+        "Treatments",
+        "One ultrasound examination",
+        "Standard 6 laboratory tests",
+        "Without medications"
+      ],
+      "note": "The price applies per person in a double room"
+    },
+    "velvet": {
+      "features": [
+        "Nurse and doctor supervision 24/7",
+        "Physiotherapy",
+        "Massage",
+        "Acupuncture",
+        "All necessary doctor consultations",
+        "Treatments",
+        "All ultrasound examinations",
+        "Standard 6 laboratory tests",
+        "All medicines included, nothing required from you"
+      ],
+      "note": "The price applies per person in a double room"
+    },
+    "royal": {
+      "features": [
+        "Personal nurse supervision 24/7",
+        "All doctor consultations",
+        "Full medication package",
+        "Standard 6 laboratory analyses",
+        "All ultrasound examinations",
+        "More comfort and extended services",
+        "Detailed comfort information provided separately",
+        "Private room in a double accommodation"
+      ],
+      "note": ""
+    }
+  }
 }
 

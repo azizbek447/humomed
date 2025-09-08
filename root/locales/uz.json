@@ -458,12 +458,71 @@
   "about_us": "Biz haqimizda",
   "call_center": "Call-markaz",
   "about_clinic": "Klinika haqida",
-  "contacts": "Aloqa",
   "control": "Nazorat",
   "healer": "Shifokorlar jamoasi",
   "news": "Yangiliklar",
   "news_detail": "Yangilik tafsilotlari",
   "ourSpecialists": "Bizning mutaxassislarimiz",
   "moreDetails": "Batafsil",
-  "title": "Yangiliklar"
+  "title": "Yangiliklar",
+  "location": {
+    "title": "Manzil",
+    "address": "Yunusobod tumani, A.Temur prospekti, 119A",
+    "show_on_map": "Xaritada ko‘rsatish"
+  },
+  "contacts": {
+    "title": "Aloqa",
+    "contacts": "Aloqa",
+    "phone": "Telefon",
+    "call_center": "Call markaz",
+    "email": "Elektron pochta"
+  },
+  "work_schedule": {
+    "title": "Ish vaqti",
+    "hours": "24/7"
+  },
+  "hospital_name": "HUMO HOSPITAL",
+  "currency": "so'm",
+  "plans": {
+    "simurg": {
+      "features": [
+        "Hamshira va shifokor nazorati 24/7",
+        "Fizioterapiya",
+        "Massaj",
+        "Ignaterapiya",
+        "Muolajalar",
+        "Bitta UTT tekshiruvi",
+        "Standart 6 ta laboratoriya tahlillari",
+        "Dorilarsiz"
+      ],
+      "note": "Narx ikki kishilik joylashuvda bir kishi uchun amal qiladi"
+    },
+    "velvet": {
+      "features": [
+        "Hamshira va shifokor nazorati 24/7",
+        "Fizioterapiya",
+        "Massaj",
+        "Ignaterapiya",
+        "Kerakli barcha shifokorlar ko‘rigi",
+        "Muolajalar",
+        "Barcha UTT tekshiruvi",
+        "Standart 6 ta laboratoriya tahlillari",
+        "Barcha dori vositalar sizdan hech narsa talab qilinmaydi"
+      ],
+      "note": "Narx ikki kishilik joylashuvda bir kishi uchun amal qiladi"
+    },
+    "royal": {
+      "features": [
+        "Shaxsiy hamshira nazorati 24/7",
+        "Barcha shifokorlar ko‘rigi",
+        "To‘liq dori vositalari",
+        "Standart 6 ta laboratoriya analiz tahlillari",
+        "Barcha UTT tekshiruvlari",
+        "Kengroq qulaylik ko‘proq xizmat ko‘rsatish",
+        "To‘liroq qulaylik ma’lumotlari alohida posterdа",
+        "Ikki kishilik joylashuvda alohida xona"
+      ],
+      "note": ""
+    }
+  }
 }

@@ -47,7 +47,7 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
           freeMode
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}

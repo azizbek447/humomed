@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import heder from '../../assets/images/img_5.png';
+import heder from '../../assets/images/humomed.png';
 
 const Home = () => {
   const { t } = useTranslation();
