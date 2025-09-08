@@ -29,8 +29,10 @@ const Home = () => {
               <li>• {t('features.specialists')}</li>
               <li>• {t('features.lab')}</li>
             </ul>
-
-            <button className='mt-8 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow transition hover:bg-gray-200 sm:mt-10 sm:text-base'>
+            <button
+              onClick={() => window.open('https://t.me/Humomedcenter', '_blank')}
+              className='mt-8 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow transition hover:bg-gray-200 sm:mt-10 sm:text-base'
+            >
               {t('features.consult')}
             </button>
           </div>
