@@ -416,9 +416,7 @@
   "whoAreWe": {
     "title": "Кто мы?"
   },
-
-
-"doctor": {
+  "doctor": {
     "birthDate": "Дата рождения",
     "birthPlace": "Место рождения",
     "education": "Образование",
@@ -431,6 +429,7 @@
     "about_clinic": "О клинике",
     "service": "Услуги"
   },
+  "news_service": "Служба новостей",
   "main": "Главная",
   "doctors": "Врачи",
   "about_us": "О нас",
