@@ -72,7 +72,7 @@ const ClinicNews = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className='w-full cursor-pointer h-[300px] rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
+                    className='h-[300px] w-full cursor-pointer rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
                     onClick={() => handleNewsClick(item.id)}
                   />
                 </div>
