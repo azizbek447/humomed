@@ -9,7 +9,6 @@ import shodmanovImg from '../assets/images/shodmanovImg.png';
 import Gafur from '../assets/images/Gafur.png';
 import Nemat from '../assets/images/Nemat.png';
 
-
 export const doctorDetails = [
   {
     id: 1,
@@ -348,7 +347,7 @@ export const doctorDetails = [
   },
 
   {
-    id: 7,
+    id: 10,
     image: hoshimImg,
     name: {
       uz: 'Abdullayev Hoshim Raximovich',
@@ -527,7 +526,7 @@ export const doctorDetails = [
     },
   },
   {
-    id: 10,
+    id: 7,
     image: Nemat,
     name: {
       uz: 'Nemat Narzullaevich',

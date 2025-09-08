@@ -17,10 +17,8 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  // 'ru-RU' -> 'ru'
   const lang = (i18n.language || 'uz').split('-')[0];
 
-  // UI uchun til bo‘yicha flatten
   const localizedDoctors = useMemo(() => {
     const list = Array.isArray(doctors) ? doctors : [];
     const filtered = selectedDoctor?.id ? list.filter((d) => d.id !== selectedDoctor.id) : list;
