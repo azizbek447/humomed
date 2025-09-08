@@ -1,13 +1,28 @@
 import 'react';
 
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Breadcrumb from 'root/components/Breadcrumb';
+
 import { doctorsData } from '../../constants/doctorsData.jsx';
-import { useTranslation } from 'react-i18next';
 
 export default function DoctorsGrid() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = (i18n.language || 'uz').split('-')[0];
+
+  const localizedDoctors = useMemo(
+    () =>
+      doctorsData.map((d) => ({
+        ...d,
+        _name: d?.name?.[lang] ?? d?.name?.uz ?? '',
+        _specialty: d?.specialty?.[lang] ?? d?.specialty?.uz ?? '',
+        _subSpecialty: d?.subSpecialty?.[lang] ?? d?.subSpecialty?.uz ?? '',
+      })),
+    [lang]
+  );
 
   return (
     <div className='bg-white pt-40 pb-24'>
@@ -22,24 +37,28 @@ export default function DoctorsGrid() {
         </div>
 
         <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-          {doctorsData.map((doctor) => (
+          {localizedDoctors.map((doctor) => (
             <div
               key={doctor.id}
               className='flex flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md transition-transform'
             >
-              <div className='group   overflow-hidden'>
+              <div className='group overflow-hidden'>
                 <img
                   src={doctor.image}
-                  alt={doctor.name}
+                  alt={doctor._name || 'Doctor'}
                   className='h-[400px] w-[400px] rounded-xl object-cover transition-[border-radius] duration-500 ease-linear group-hover:rounded-full'
+                  onError={(e) => {
+                    e.currentTarget.src = '/placeholder.png';
+                  }}
                 />
               </div>
 
               <div className='w-full bg-white p-5 text-center'>
                 <h3 className='text-lg font-semibold text-gray-800 hover:text-[var(--success-strong)]'>
-                  {doctor.name}
+                  {doctor._name}
                 </h3>
-                <p className='text-sm text-gray-600'>{doctor.specialty}</p>
+
+                <p className='text-sm text-gray-600'>{doctor._specialty}</p>
 
                 <button
                   onClick={() => navigate('/healer', { state: { doctorId: doctor.id } })}

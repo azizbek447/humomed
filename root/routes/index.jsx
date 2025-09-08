@@ -13,7 +13,6 @@ import Control from '../pages/control';
 import Doctors from '../pages/Doctors';
 import Error404 from '../pages/error/Error.404';
 import Healer from '../pages/healer';
-// Pages
 import Home from '../pages/home';
 import News from '../pages/News';
 import NewService from '../pages/News/NewsService.jsx';
@@ -91,13 +90,13 @@ export const publicRoutes = [
     path: appPaths.ALLSERVICES,
     element: <Allservices />,
     layout: MainLayout,
-    breadcrumb: { title: 'allservices' },
+    breadcrumb: { title: 'services' },
   },
   {
     path: appPaths.SERVICE_DETAILS(),
     element: <Service />,
     layout: SectionalLayout,
-    breadcrumb: { title: 'allergist' },
+    breadcrumb: { title: 'service' },
   },
   {
     path: appPaths.NEWS_SERVICE_DETAILS(),

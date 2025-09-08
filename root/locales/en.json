@@ -19,9 +19,6 @@
     "phone": "This field is required",
     "phoneMin": "Phone number is incomplete"
   },
-  "whoAreWe": {
-    "title": "Who are we?"
-  },
   "map": {
     "title": "Our Location",
     "balloon": "Our address"
@@ -55,10 +52,6 @@
     "laboratory": "Laboratory",
     "operating_room": "Operating Room",
     "inpatient": "Inpatient Ward"
-  },
-  "ourServices": {
-    "title": "Clinic Departments",
-    "all": "All Services"
   },
   "footer": {
     "news": "News",
@@ -316,6 +309,7 @@
     ]
   },
   "ClinicNews": {
+    "allArticles": "All articles",
     "item1": {
       "title": "A new cardiology department has opened",
       "description1": "Our clinic has launched a modern cardiology department.",
@@ -347,10 +341,19 @@
       "description3": "Fast and quality assistance is guaranteed."
     },
     "item6": {
-      "title": "Weekly bonus",
-      "description1": "Special discount for active clients.",
-      "description2": "Valid for 7 days.",
-      "description3": "New bonuses every week."
+      "title": "24/7 Home X-ray and Fluorography Now Available",
+      "description1": "Advanced X-ray and fluorography now at your home.",
+      "description2": "Safe, accurate scans with nano-tube technology.",
+      "description3": "Book now: +99897 424 54 42 / +99897 779 54 42."
+    },
+    "features": {
+      "title": "Our main features",
+      "founded": "Founded in 2005",
+      "successful_operations": "More than 10,000 successful operations",
+      "equipment": "Modern medical equipment",
+      "specialists": "Highly qualified specialists",
+      "lab": "Advanced laboratory",
+      "consult": "Get a consultation"
     }
   },
   "testimonials": {
@@ -363,6 +366,26 @@
     "item6": "I am Eshmatova Manzura, and I used the services of Humo Med Clinic. I am very pleased with my experience. The doctors were highly attentive, and the staff were friendly and supportive. What impressed me most was the way they treated patients with genuine care and respect. Every step was clearly explained, and throughout the process I felt safe, valued, and truly cared for.",
     "item7": "As Jumanazarov Bunyod, I can confidently say that I found everything I expected at this clinic. The service is excellent, the doctors are professional, and the staff are welcoming. I especially appreciated how they supported patients and lifted their spirits.",
     "item8": "I, Boboyev Mansur, visited Humo Med Clinic and had a wonderful experience. Modern technology, professional doctors, and a friendly environment amazed me. The results were excellent, and I highly recommend it to everyone!"
+  },
+  "ourServices": {
+    "title": "Our Services",
+    "all": "View All Services"
+  },
+  "breadcrumb": {
+    "main": "Main",
+    "about_clinic": "About the Clinic",
+    "service": "Services"
+  },
+  "whoAreWe": {
+    "title": "Who Are We?"
+  },
+  "doctor": {
+    "birthDate": "Date of Birth",
+    "birthPlace": "Place of Birth",
+    "education": "Education",
+    "experience": "Experience",
+    "workTime": "Working Hours",
+    "phone": "Phone"
   },
   "main": "Home",
   "doctors": "Doctors",

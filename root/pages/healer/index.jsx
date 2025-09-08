@@ -12,7 +12,7 @@ export default function Doctors() {
   const location = useLocation();
   const doctorIdFromState = location.state?.doctorId;
 
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const lang = i18n.language || 'uz';
 
   const getText = (field) => {
@@ -73,7 +73,7 @@ export default function Doctors() {
                   {getText(selectedDoctor.birthDate) && (
                     <tr className='hover:bg-gray-50'>
                       <td className='w-32 px-3 py-3 font-medium text-gray-600 sm:w-40 sm:px-4 lg:w-48'>
-                        Tug'ilgan sana
+                        {t('doctor.birthDate')}
                       </td>
                       <td className='px-3 py-3 font-semibold sm:px-4'>
                         {getText(selectedDoctor.birthDate)}
@@ -83,7 +83,7 @@ export default function Doctors() {
                   {getText(selectedDoctor.birthPlace) && (
                     <tr className='hover:bg-gray-50'>
                       <td className='w-32 px-3 py-3 font-medium text-gray-600 sm:w-40 sm:px-4 lg:w-48'>
-                        Tug'ilgan joyi
+                        {t('doctor.birthPlace')}
                       </td>
                       <td className='px-3 py-3 font-semibold sm:px-4'>
                         {getText(selectedDoctor.birthPlace)}
@@ -93,7 +93,7 @@ export default function Doctors() {
                   {getText(selectedDoctor.education) && (
                     <tr className='hover:bg-gray-50'>
                       <td className='w-32 px-3 py-3 align-top font-medium text-gray-600 sm:w-40 sm:px-4 lg:w-48'>
-                        Ta'lim
+                        {t('doctor.education')}
                       </td>
                       <td className='px-3 py-3 font-semibold whitespace-pre-line sm:px-4'>
                         {getText(selectedDoctor.education)}
@@ -103,7 +103,7 @@ export default function Doctors() {
                   {getText(selectedDoctor.experience) && (
                     <tr className='hover:bg-gray-50'>
                       <td className='w-32 px-3 py-3 font-medium text-gray-600 sm:w-40 sm:px-4 lg:w-48'>
-                        Tajribasi
+                        {t('doctor.experience')}
                       </td>
                       <td className='px-3 py-3 font-semibold sm:px-4'>
                         {getText(selectedDoctor.experience)}
@@ -113,7 +113,7 @@ export default function Doctors() {
                   {getText(selectedDoctor.workTime) && (
                     <tr className='hover:bg-gray-50'>
                       <td className='w-32 px-3 py-3 align-top font-medium text-gray-600 sm:w-40 sm:px-4 lg:w-48'>
-                        Ish vaqti
+                        {t('doctor.workTime')}
                       </td>
                       <td className='px-3 py-3 font-semibold whitespace-pre-line sm:px-4'>
                         {getText(selectedDoctor.workTime)}
@@ -123,7 +123,7 @@ export default function Doctors() {
                   {selectedDoctor.phone && (
                     <tr className='hover:bg-gray-50'>
                       <td className='w-32 px-3 py-3 font-medium text-gray-600 sm:w-40 sm:px-4 lg:w-48'>
-                        Telefon
+                        {t('doctor.phone')}
                       </td>
                       <td className='px-3 py-3 font-semibold text-blue-600 sm:px-4'>
                         <a href={`tel:${selectedDoctor.phone}`} className='hover:underline'>

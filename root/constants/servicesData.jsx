@@ -48,7 +48,7 @@ import inpatientImage from '../assets/img/Эндокринолог.png'; // Ст
 import pediatricImage from '../assets/img/pediatriya.png'; // Pediator
 import therapistImage from '../assets/images/Terapevt.png'; // Terapevt
 // Shifokor va bo'lim rasmlari importlari
-import traumaImage from '../assets/img/traumaImage.png'; // Xirurg-Travmatolog
+import traumaImage from '../assets/img/img_3.png'; // Xirurg-Travmatolog
 import ultrasoundImage from '../assets/img/uze.png'; // UZD
 
 const servicesData = (t) => ({

@@ -76,9 +76,6 @@
     "phone": "Maydon toʻldirilishi shart",
     "phoneMin": "Telefon raqami to‘liq emas"
   },
-  "whoAreWe": {
-    "title": "Biz kimmiz?"
-  },
   "map": {
     "title": "Bizning manzil",
     "balloon": "Bizning manzil"
@@ -118,10 +115,6 @@
       "profile": "Profil",
       "settings": "Sozlamalar"
     }
-  },
-  "ourServices": {
-    "title": "Klinikalar yo‘nalishlari",
-    "all": "Barcha yo‘nalishlar"
   },
   "services": {
     "gastroenterology": {
@@ -379,6 +372,7 @@
     ]
   },
   "ClinicNews": {
+    "allArticles": "Barcha maqolalar",
     "title": "Klinika yangiliklari",
     "readMore": "Batafsil",
     "item1": {
@@ -412,10 +406,19 @@
       "description3": "Tezkor va sifatli yordam kafolatlanadi."
     },
     "item6": {
-      "title": "Haftalik bonus",
-      "description1": "Faol mijozlar uchun maxsus chegirma.",
-      "description2": "7 kun davomida amal qiladi.",
-      "description3": "Har hafta yangi bonuslar taqdim etiladi."
+      "title": "Uyda rentgen va flyurografiya xizmati – 24/7 siz bilan",
+      "description1": "Zamonaviy rentgen va flyuorografiya endi uyingizda.",
+      "description2": "Xavfsiz va aniq tashxis – nano-trubkali texnologiya.",
+      "description3": "Buyurtma uchun: +99897 424 54 42 / +99897 779 54 42."
+    },
+    "features": {
+      "title": "Bizning asosiy afzalliklarimiz",
+      "founded": "2005-yilda tashkil etilgan",
+      "successful_operations": "10 000 dan ortiq muvaffaqiyatli operatsiyalar",
+      "equipment": "Zamonaviy tibbiy uskunalar",
+      "specialists": "Yuqori malakali mutaxassislar",
+      "lab": "Rivojlangan laboratoriya",
+      "consult": "Konsultatsiya olish"
     }
   },
   "testimonials": {
@@ -429,6 +432,26 @@
     "item7": "Jumanazarov Bunyod sifatida shuni ayta olamanki, bu klinikada men o‘zim kutgan barcha sifatlarni topdim. Servis juda yaxshi, shifokorlar professional, xodimlar esa do‘stona. Ayniqsa, bemorlarni qo‘llab-quvvatlashlari va ularning kayfiyatini ko‘tarishlari meni xursand qildi.",
     "item8": "Men, Boboyev Mansur, Humo Med klinikasiga tashrif buyurdim va juda yaxshi taassurot qoldirdi. Zamonaviy texnologiyalar, tajribali shifokorlar va samimiy muhit meni hayratda qoldirdi. Jarayon davomida barcha bosqichlar aniq tushuntirildi va hech qanday ortiqcha tashvish sezmadim. Natija juda yaxshi bo‘ldi, barchaga tavsiya qilaman!"
   },
+  "ourServices": {
+    "title": "Bizning xizmatlarimiz",
+    "all": "Barcha xizmatlarni ko‘rish"
+  },
+  "breadcrumb": {
+    "main": "Bosh sahifa",
+    "about_clinic": "Klinika haqida",
+    "service": "Xizmatlar"
+  },
+  "whoAreWe": {
+    "title": "Biz kimmiz?"
+  },
+  "doctor": {
+    "birthDate": "Tug'ilgan sana",
+    "birthPlace": "Tug'ilgan joyi",
+    "education": "Ta'limi",
+    "experience": "Tajribasi",
+    "workTime": "Ish vaqti",
+    "phone": "Telefon"
+  },
   "main": "Asosiy",
   "doctors": "Shifokorlar",
   "about_us": "Biz haqimizda",
@@ -439,9 +462,7 @@
   "healer": "Shifokorlar jamoasi",
   "news": "Yangiliklar",
   "news_detail": "Yangilik tafsilotlari",
-
-
-"ourSpecialists": "Bizning mutaxassislarimiz",
+  "ourSpecialists": "Bizning mutaxassislarimiz",
   "moreDetails": "Batafsil",
   "title": "Yangiliklar"
 }

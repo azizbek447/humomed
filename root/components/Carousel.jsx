@@ -3,7 +3,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,9 +15,23 @@ import ScrollToTop from './ScrollToTop.jsx';
 export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor, onDoctorClick }) {
   const swiperRef = useRef(null);
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const filteredDoctors = (doctors || []).filter((d) => d.id !== selectedDoctor?.id);
+  // 'ru-RU' -> 'ru'
+  const lang = (i18n.language || 'uz').split('-')[0];
+
+  // UI uchun til bo‘yicha flatten
+  const localizedDoctors = useMemo(() => {
+    const list = Array.isArray(doctors) ? doctors : [];
+    const filtered = selectedDoctor?.id ? list.filter((d) => d.id !== selectedDoctor.id) : list;
+
+    return filtered.map((d) => ({
+      ...d,
+      _name: d?.name?.[lang] ?? d?.name?.uz ?? '',
+      _specialty: d?.specialty?.[lang] ?? d?.specialty?.uz ?? '',
+      _subSpecialty: d?.subSpecialty?.[lang] ?? d?.subSpecialty?.uz ?? '',
+    }));
+  }, [doctors, selectedDoctor?.id, lang]);
 
   return (
     <div className='w-full bg-white py-16'>
@@ -28,13 +42,11 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
         <div className='mx-auto mb-12 h-1 w-16 rounded bg-[var(--success-strong)]'></div>
 
         <Swiper
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={1}
           spaceBetween={20}
-          loop={true}
-          freeMode={true}
+          loop
+          freeMode
           pagination={{ clickable: true }}
           autoplay={{
             delay: 4000,
@@ -49,20 +61,23 @@ export default function DoctorsCarousel({ doctors = doctorsData, selectedDoctor,
           }}
           className='h-[540px]'
         >
-          {filteredDoctors.map((doctor) => (
+          {localizedDoctors.map((doctor) => (
             <SwiperSlide key={doctor.id}>
               <div className='flex h-[500px] flex-col items-center overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'>
                 <img
                   src={doctor.image}
-                  alt={doctor.name}
+                  alt={doctor._name || 'Doctor'}
                   className='h-[350px] w-full object-cover transition-transform duration-500 hover:scale-105'
+                  onError={(e) => {
+                    e.currentTarget.src = '/placeholder.png'; // fallback rasm
+                  }}
                 />
                 <div className='w-full bg-gray-100 p-5 text-center'>
-                  <h3 className='text-lg font-semibold text-gray-800'>{doctor.name}</h3>
-                  <p className='text-sm text-gray-600'>{doctor.specialty}</p>
+                  <h3 className='text-lg font-semibold text-gray-800'>{doctor._name}</h3>
+                  <p className='text-sm text-gray-600'>{doctor._specialty}</p>
                 </div>
-                <ScrollToTop />
 
+                <ScrollToTop />
                 <button
                   onClick={() => {
                     onDoctorClick?.(doctor);

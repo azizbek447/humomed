@@ -7,6 +7,8 @@ import Ulugbek from '../assets/images/ulugbek.png';
 import Dinara from '../assets/img/ginekolig.png';
 import shodmanovImg from '../assets/images/shodmanovImg.png';
 import Gafur from '../assets/images/Gafur.png';
+import Nemat from '../assets/images/Nemat.png';
+
 
 export const doctorDetails = [
   {
@@ -163,9 +165,9 @@ export const doctorDetails = [
     id: 4,
     image: Gulbahor,
     name: {
-      uz: ' Gulbahor Jiyanova',
-      ru: '. Гульбахор Жиянова',
-      en: ' Gulbahor Jiyanova',
+      uz: 'Gulbahor Jiyanova',
+      ru: 'Гульбахор Жиянова',
+      en: 'Gulbahor Jiyanova',
     },
     specialty: {
       uz: 'Akusher-ginekolog',
@@ -177,8 +179,16 @@ export const doctorDetails = [
       ru: 'Хирургическое акушерство и гинекология',
       en: 'Surgical obstetrics and gynecology',
     },
-    birthDate: { uz: '—', ru: '—', en: '—' },
-    birthPlace: { uz: '—', ru: '—', en: '—' },
+    birthDate: {
+      uz: '21.07.1972',
+      ru: '21.07.1972',
+      en: '21.07.1972',
+    },
+    birthPlace: {
+      uz: 'Buxoro viloyati, Kogon shahri',
+      ru: 'Бухарская область, город Каган',
+      en: 'Kogon city, Bukhara region',
+    },
     education: {
       uz: '1995-yil Samarqand tibbiyot instituti',
       ru: '1995 г. Самаркандский медицинский институт',
@@ -189,7 +199,11 @@ export const doctorDetails = [
       ru: 'Более 30 лет',
       en: 'Over 30 years',
     },
-    workTime: { uz: '24/7', ru: '24/7', en: '24/7' },
+    workTime: {
+      uz: 'Seshanba, Chorshanba, Shanba (9:00–17:00)',
+      ru: 'Вторник, Среда, Суббота (9:00–17:00)',
+      en: 'Tuesday, Wednesday, Saturday (9:00–17:00)',
+    },
 
     phone: '',
     content: {
@@ -219,6 +233,7 @@ export const doctorDetails = [
       ],
     },
   },
+
   {
     id: 5,
     image: shirina,
@@ -453,42 +468,123 @@ export const doctorDetails = [
     id: 9,
     image: Gafur,
     name: {
-      uz: ' Diyorbek Mirzayev',
-      ru: '. Диёрбек Мирзаев',
-      en: ' Diyorbek Mirzayev',
+      uz: 'Ahmedov G‘afur Safarboevich',
+      ru: 'Ахмедов Гафур Сафарбоевич',
+      en: 'Ahmedov Gafur Safarboevich',
     },
     specialty: {
-      uz: 'Psixolog',
-      ru: 'Психолог',
-      en: 'Psychologist',
+      uz: 'Kardiolog, Terapevt, Funktsional diagnostika shifokori',
+      ru: 'Кардиолог, Терапевт, Врач функциональной диагностики',
+      en: 'Cardiologist, Therapist, Functional Diagnostics Doctor',
     },
     subSpecialty: {
-      uz: 'Kognitiv-terapevtik yondashuv',
-      ru: 'Когнитивно-терапевтический подход',
-      en: 'Cognitive-therapeutic approach',
+      uz: '—',
+      ru: '—',
+      en: '—',
     },
-    birthDate: { uz: '—', ru: '—', en: '—' },
-    birthPlace: { uz: '—', ru: '—', en: '—' },
-    education: { uz: '—', ru: '—', en: '—' },
-    experience: { uz: '—', ru: '—', en: '—' },
-    workTime: { uz: '24/7', ru: '24/7', en: '24/7' },
-
+    birthDate: {
+      uz: '22.06.1976',
+      ru: '22.06.1976',
+      en: '22.06.1976',
+    },
+    birthPlace: {
+      uz: 'Xorazm viloyati',
+      ru: 'Хорезмская область',
+      en: 'Khorezm region',
+    },
+    education: {
+      uz: 'Toshkent tibbiyot akademiyasi',
+      ru: 'Ташкентская медицинская академия',
+      en: 'Tashkent Medical Academy',
+    },
+    experience: {
+      uz: '21 yil',
+      ru: '21 год',
+      en: '21 years',
+    },
+    workTime: {
+      uz: 'Dushanbadan Shanbagacha 09:00-17:00',
+      ru: 'С понедельника по субботу 09:00-17:00',
+      en: 'Monday to Saturday 09:00-17:00',
+    },
     phone: '',
     content: {
       uz: [
-        'Stress, depressiya va shaxsiy muammolarni yengishda yordam beradi.',
-        "Kognitiv-terapevtik yondashuv bo'yicha mutaxassis.",
-        "Bolalar va kattalar psixologiyasi bo'yicha maslahat beradi.",
+        'Kardiologiya va terapiya bo‘yicha tajribali mutaxassis.',
+        'Funktsional diagnostika bo‘yicha amaliyotchi.',
+        '21 yillik tajribaga ega.',
       ],
       ru: [
-        'Помогает справиться со стрессом, депрессией и личными проблемами.',
-        'Специалист по когнитивно-терапевтическому подходу.',
-        'Консультирует по детской и взрослой психологии.',
+        'Опытный специалист по кардиологии и терапии.',
+        'Практикующий врач по функциональной диагностике.',
+        'Имеет 21 год опыта.',
       ],
       en: [
-        'Helps with stress, depression, and personal issues.',
-        'Specialist in cognitive-therapeutic approach.',
-        'Provides counseling in child and adult psychology.',
+        'Experienced specialist in cardiology and therapy.',
+        'Practicing doctor in functional diagnostics.',
+        'Has 21 years of experience.',
+      ],
+    },
+  },
+  {
+    id: 10,
+    image: Nemat,
+    name: {
+      uz: 'Nemat Narzullaevich',
+      ru: 'Немат Нарзуллаевич',
+      en: 'Nemat Narzullaevich',
+    },
+    specialty: {
+      uz: 'Jarroh, Hirurg, Travmatolog, Ortoped, Urolog',
+      ru: 'Хирург, Травматолог, Ортопед, Уролог',
+      en: 'Surgeon, Traumatologist, Orthopedist, Urologist',
+    },
+    subSpecialty: {
+      uz: '—',
+      ru: '—',
+      en: '—',
+    },
+    birthDate: {
+      uz: '19.12.1950',
+      ru: '19.12.1950',
+      en: '19.12.1950',
+    },
+    birthPlace: {
+      uz: 'Shahrisabz shahri',
+      ru: 'г. Шахрисабз',
+      en: 'Shahrisabz city',
+    },
+    education: {
+      uz: 'Toshkent GosMI',
+      ru: 'Ташкент ГосМИ',
+      en: 'Tashkent State Medical Institute',
+    },
+    experience: {
+      uz: '52 yil',
+      ru: '52 года',
+      en: '52 years',
+    },
+    workTime: {
+      uz: 'Dushanbadan Shanbagacha 09:00-17:00',
+      ru: 'С понедельника по субботу 09:00-17:00',
+      en: 'Monday to Saturday 09:00-17:00',
+    },
+    phone: '',
+    content: {
+      uz: [
+        'Jarrohlik va travmatologiya bo‘yicha katta tajribaga ega mutaxassis.',
+        'Ortopediya va urologiya yo‘nalishida faoliyat yuritadi.',
+        '52 yillik ish tajribasiga ega.',
+      ],
+      ru: [
+        'Опытный специалист в области хирургии и травматологии.',
+        'Работает в направлениях ортопедии и урологии.',
+        'Имеет 52 года опыта.',
+      ],
+      en: [
+        'Experienced specialist in surgery and traumatology.',
+        'Works in orthopedics and urology.',
+        'Has 52 years of experience.',
       ],
     },
   },

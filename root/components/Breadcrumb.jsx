@@ -73,7 +73,7 @@ const Breadcrumb = ({ currentPageTitle }) => {
             className='hover:text-primary flex items-center transition-colors hover:underline'
           >
             <IoHomeOutline size={16} className='mr-1' />
-            <p>Main</p>
+            <p>{t('main')}</p>
           </Link>
         </li>
 

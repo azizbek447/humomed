@@ -1,12 +1,18 @@
+import qonbosimi from '../assets/images/qonbosimi.png';
+import MRI from '../assets/images/img_4.png';
+import yangifilyal from '../assets/img/2филиал.png';
+import semenar from '../assets/images/img_3.png';
+import ultratovush from '../assets/img/New-diagnostic-equipment .png';
+import rentgin from '../assets/images/rentgenga.png'
+
 const newServiceData = (t) => ({
-  // 1) New Cardiology Department Opened
   1: {
     title: {
       en: 'New Cardiology Department Opened',
       uz: 'Yangi kardiologiya bo‘limi ochildi',
       ru: 'Открылось новое кардиологическое отделение',
     },
-    image: 'placeholder_image_cardiology.jpg',
+    image: qonbosimi,
     content: {
       en: [
         {
@@ -96,7 +102,7 @@ const newServiceData = (t) => ({
       uz: 'MRI va ultratovush uchun yangi avlod jihozlari keldi',
       ru: 'Поступило новое поколение оборудования для МРТ и УЗИ',
     },
-    image: 'placeholder_image_equipment.jpg', // Replace with actual image path or data
+    image: MRI,
     content: {
       en: [
         {
@@ -180,13 +186,13 @@ const newServiceData = (t) => ({
   },
 
   // 3) Medical Seminar Held
-  3: {
+  4: {
     title: {
       en: 'International Medical Seminar Held',
       uz: 'Xalqaro tibbiy seminar o‘tkazildi',
       ru: 'Проведен международный медицинский семинар',
     },
-    image: 'placeholder_image_seminar.jpg', // Replace with actual image path or data
+    image: semenar,
     content: {
       en: [
         {
@@ -270,13 +276,13 @@ const newServiceData = (t) => ({
   },
 
   // 4) New Branch Opened
-  4: {
+  3: {
     title: {
       en: 'New Branch Opened in Tashkent',
       uz: 'Toshkentda yangi filial ochildi',
       ru: 'Открылся новый филиал в Ташкенте',
     },
-    image: 'placeholder_image_branch.jpg', // Replace with actual image path or data
+    image: yangifilyal,
     content: {
       en: [
         {
@@ -357,7 +363,7 @@ const newServiceData = (t) => ({
       uz: '24/7 Ultratovush, terapevt-kardiolog va protseduralar: 00:00 dan 07:00 gacha 20% chegirma',
       ru: 'Круглосуточные УЗИ, терапевт-кардиолог и процедуры: 20% скидка с 00:00 до 07:00',
     },
-    image: 'placeholder_image_24_7.jpg', // Replace with actual image path or data
+    image: ultratovush,
     content: {
       en: [
         {
@@ -434,79 +440,94 @@ const newServiceData = (t) => ({
   // 6) Weekly Bonus – Discounts for Active Clients
   6: {
     title: {
-      en: 'Weekly Bonus: 20% Discount for Active Clients for 7 Days',
-      uz: 'Haftalik bonus: Faol mijozlar uchun 7 kun davomida 20% chegirma',
-      ru: 'Еженедельный бонус: 20% скидка для активных клиентов на 7 дней',
+      en: 'Mobile X-ray and Fluorography – Safe Diagnostics at Your Home 24/7',
+      uz: 'Mobil rentgen va flyurografiya – uyingizda xavfsiz tashxis 24/7',
+      ru: 'Мобильный рентген и флюорография — безопасная диагностика у вас дома 24/7',
     },
-    image: 'placeholder_image_bonus.jpg', // Replace with actual image path or data
+    image: rentgin,
     content: {
       en: [
         {
           type: 'paragraph',
-          text: 'Our clinic has introduced a bonus program for patients who regularly monitor their health. Each week, active clients receive a 20% discount on selected services and blood tests for 7 days. The program encourages preventive medicine and supports regular check-ups.',
+          text: 'Skip the clinic queues — we bring cutting-edge diagnostic services straight to your home. Our mobile X-ray and fluorography services operate 24/7 to ensure you get timely, safe, and precise diagnostics when you need it most.',
         },
         {
           type: 'paragraph',
-          text: 'The process to benefit from discounts is simple: check your active status in your personal account, book eligible services, and apply the discount automatically. Tests are conducted quickly and accurately, with results delivered digitally; doctor recommendations are provided based on an individualized plan.',
+          text: 'Our certified medical team uses advanced nano-tube digital X-ray equipment to provide high-resolution images with minimal radiation exposure. Whether it’s a preventive scan or an urgent need — we’ve got you covered.',
         },
         {
           type: 'list',
           items: [
-            'Affordable preventive check-ups',
-            'Motivational reminders and plans',
-            'Online results and follow-up',
-            'Compatibility with loyalty points',
+            'Available 24/7 – anytime, anywhere',
+            'Nano-tube digital X-ray – safe and ultra-accurate',
+            'Fluorography – fast and preventive lung screening',
+            'Comfort of diagnostics at your own home',
+            'Flexible pricing – fair and agreed upon in advance',
           ],
         },
         {
           type: 'paragraph',
-          text: 'Our goal is to improve health through early diagnosis and continuous monitoring. Your activity is the key to a healthy future.',
+          text: 'To schedule your home visit, just give us a call:',
+        },
+        {
+          type: 'paragraph',
+          text: '+99897 424 54 42  |  +99897 779 54 42',
         },
       ],
       uz: [
         {
           type: 'paragraph',
-          text: 'Klinikamiz sog‘lig‘ini muntazam ravishda kuzatib boradigan bemorlar uchun bonus dasturini joriy etdi. Har hafta faol mijozlar tanlangan xizmatlar va qon tahlillari uchun 7 kun davomida 20% chegirma oladi. Dastur profilaktik tibbiyotni rag‘batlantiradi va muntazam tekshiruvlarni qo‘llab-quvvatlaydi.',
+          text: 'Navbat kutishsiz tashxis – zamonaviy tibbiy xizmatlar endi bevosita uyingizda! 24/7 faoliyat yurituvchi mobil rentgen va flyurografiya xizmati orqali siz istalgan vaqtda xavfsiz va aniq tekshiruvdan o‘ta olasiz.',
         },
         {
           type: 'paragraph',
-          text: 'Chegirmalardan foydalanish jarayoni oddiy: shaxsiy kabinetingizda faol holatingizni tekshiring, mos xizmatlarga ro‘yxatdan o‘ting va chegirmani avtomatik ravishda qo‘llang. Tahlillar tez va aniq o‘tkaziladi, natijalar raqamli shaklda yetkazib beriladi; shifokor tavsiyalari shaxsiylashtirilgan rejaga asoslangan holda taqdim etiladi.',
+          text: 'Malakali shifokorlarimiz zamonaviy nano-trubkali raqamli rentgen uskunalaridan foydalanadi. Ular yuqori aniqlikdagi tasvirlarni minimal nurlanish bilan taqdim etadi. Profilaktik tekshiruvmi yoki shoshilinch yordammi – biz har doim tayyormiz.',
         },
         {
           type: 'list',
           items: [
-            'Arzon profilaktik tekshiruvlar',
-            'Motivatsion eslatmalar va rejalarga',
-            'Onlayn natijalar va kuzatuv',
-            'Sadoqat ballari bilan moslik',
+            '24/7 xizmat – kunu tun, istalgan vaqtda',
+            'Nano-trubkali raqamli rentgen – xavfsiz va aniq tashxis',
+            'Flyuorografiya – o‘pka uchun tezkor profilaktik tekshiruv',
+            'Uyingizda qulay va ishonchli xizmat',
+            'Narxlar – oldindan kelishilgan, halol va shaffof',
           ],
         },
         {
           type: 'paragraph',
-          text: 'Bizning maqsadimiz erta tashxis va doimiy monitoring orqali sog‘liqni yaxshilashdir. Sizning faolligingiz sog‘lom kelajakning kalitidir.',
+          text: 'Xizmatga buyurtma berish uchun bizga qo‘ng‘iroq qiling:',
+        },
+        {
+          type: 'paragraph',
+          text: '+99897 424 54 42  |  +99897 779 54 42',
         },
       ],
       ru: [
         {
           type: 'paragraph',
-          text: 'Наша клиника запустила бонусную программу для пациентов, регулярно следящих за своим здоровьем. Каждую неделю активные клиенты получают скидку 20% на избранные услуги и анализы крови в течение 7 дней. Программа поощряет профилактическую медицину и поддерживает регулярные осмотры.',
+          text: 'Больше никаких очередей в клиниках — теперь передовые диагностические услуги доступны прямо у вас дома! Мы предоставляем мобильные рентген и флюорографию круглосуточно, 24/7.',
         },
         {
           type: 'paragraph',
-          text: 'Процесс использования скидок прост: проверьте свой активный статус в личном кабинете, запишитесь на подходящие услуги и автоматически примените скидку. Анализы проводятся быстро и точно, результаты доставляются в цифровом виде; рекомендации врачей предоставляются на основе индивидуального плана.',
+          text: 'Наши сертифицированные врачи используют современное цифровое рентген-оборудование с нанотрубками, которое обеспечивает высокую точность изображений при минимальном облучении. Нужна профилактика или срочная диагностика — мы рядом.',
         },
         {
           type: 'list',
           items: [
-            'Доступные профилактические осмотры',
-            'Мотивационные напоминания и планы',
-            'Онлайн-результаты и наблюдение',
-            'Совместимость с бонусными баллами',
+            'Круглосуточно — 24/7 в любое время и день',
+            'Цифровой рентген на нанотрубках — безопасно и точно',
+            'Флюорография — экспресс-проверка состояния легких',
+            'Удобство и комфорт прямо у вас дома',
+            'Цены — честные и согласованные заранее',
           ],
         },
         {
           type: 'paragraph',
-          text: 'Наша цель — улучшение здоровья через раннюю диагностику и непрерывное наблюдение. Ваша активность — залог здорового будущего.',
+          text: 'Чтобы заказать выезд, просто позвоните нам:',
+        },
+        {
+          type: 'paragraph',
+          text: '+99897 424 54 42  |  +99897 779 54 42',
         },
       ],
     },

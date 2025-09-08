@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import newsImage from '../../assets/img/img_1.png';
-import { appPaths } from '../../constants/paths.js';
+import ULT from '../../assets/images/ULT.png';
 import yangifilyal from '../../assets/img/2филиал.png';
-import cardiologiya from '../../assets/img/yangi_kardiologiya.png'; // ✅ qo‘shildi
+import cardiologiya from '../../assets/img/yangi_kardiologiya.png';
+import { appPaths } from '../../constants/paths.js';
 
 const ClinicNews = () => {
   const { t } = useTranslation();
@@ -21,7 +21,7 @@ const ClinicNews = () => {
         t('ClinicNews.item1.description3'),
       ],
       date: '17 IYUL',
-      image: yangifilyal,
+      image: cardiologiya,
     },
     {
       id: 2,
@@ -32,18 +32,18 @@ const ClinicNews = () => {
         t('ClinicNews.item2.description3'),
       ],
       date: '10 IYUL',
-      image: yangifilyal,
+      image: ULT,
     },
     {
       id: 3,
-      title: t('ClinicNews.item3.title'),
+      title: t('ClinicNews.item4.title'),
       description: [
-        t('ClinicNews.item3.description1'),
-        t('ClinicNews.item3.description2'),
-        t('ClinicNews.item3.description3'),
+        t('ClinicNews.item4.description1'),
+        t('ClinicNews.item4.description2'),
+        t('ClinicNews.item4.description3'),
       ],
-      date: '05 IYUL',
-      image: cardiologiya,
+      date: '01 IYUL',
+      image: yangifilyal,
     },
   ];
 
@@ -72,7 +72,7 @@ const ClinicNews = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className='w-full cursor-pointer rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
+                    className='w-full cursor-pointer h-[300px] rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
                     onClick={() => handleNewsClick(item.id)}
                   />
                 </div>

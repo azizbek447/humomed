@@ -3,10 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Breadcrumb from 'root/components/Breadcrumb';
 
-import newsImage from '../../assets/img/img_1.png';
-// import Bonus from '../../assets/img/bonus.png';
 import yangifilyal from '../../assets/img/2филиал.png';
 import cardiologiya from '../../assets/img/yangi_kardiologiya.png';
+import rentgenga from '../../assets/images/rent.png';
+import ULT from '../../assets/images/ULT.png';
+import MRI from '../../assets/images/MRI.png';
+import semenar from '../../assets/images/img_3.png';
 import { appPaths } from '../../constants/paths';
 
 const ClinicNews = () => {
@@ -23,8 +25,7 @@ const ClinicNews = () => {
         t('ClinicNews.item1.description3'),
       ],
       date: '17 IYUL',
-      image: yangifilyal,
-
+      image: cardiologiya,
     },
     {
       id: 2,
@@ -35,21 +36,10 @@ const ClinicNews = () => {
         t('ClinicNews.item2.description3'),
       ],
       date: '10 IYUL',
-      image: yangifilyal,
+      image: ULT,
     },
     {
       id: 3,
-      title: t('ClinicNews.item3.title'),
-      description: [
-        t('ClinicNews.item3.description1'),
-        t('ClinicNews.item3.description2'),
-        t('ClinicNews.item3.description3'),
-      ],
-      date: '05 IYUL',
-      image: cardiologiya,
-    },
-    {
-      id: 4,
       title: t('ClinicNews.item4.title'),
       description: [
         t('ClinicNews.item4.description1'),
@@ -58,8 +48,19 @@ const ClinicNews = () => {
       ],
       date: '01 IYUL',
       image: yangifilyal,
-
     },
+    {
+      id: 4,
+      title: t('ClinicNews.item3.title'),
+      description: [
+        t('ClinicNews.item3.description1'),
+        t('ClinicNews.item3.description2'),
+        t('ClinicNews.item3.description3'),
+      ],
+      date: '05 IYUL',
+      image: semenar,
+    },
+
     {
       id: 5,
       title: t('ClinicNews.item5.title'),
@@ -69,8 +70,7 @@ const ClinicNews = () => {
         t('ClinicNews.item5.description3'),
       ],
       date: '25 IYUN',
-      image: yangifilyal,
-
+      image: MRI,
     },
     {
       id: 6,
@@ -81,7 +81,7 @@ const ClinicNews = () => {
         t('ClinicNews.item6.description3'),
       ],
       date: '15 IYUN',
-      image: cardiologiya,
+      image: rentgenga,
     },
   ];
 
@@ -112,7 +112,7 @@ const ClinicNews = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className='w-full cursor-pointer rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
+                    className='h-[300px] w-full cursor-pointer rounded-md object-cover transition-transform duration-300 ease-in-out hover:scale-105'
                     onClick={() => handleNewsClick(item.id)}
                   />
                 </div>
