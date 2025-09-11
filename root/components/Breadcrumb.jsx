@@ -81,7 +81,7 @@ const Breadcrumb = ({ currentPageTitle }) => {
           <li key={index} className='flex items-center'>
             <RxSlash />
             <span className='text-dark/80' aria-current='page'>
-              {currentPageTitle || formatTitle(item)}
+              {currentPageTitle ?? formatTitle(item)}
             </span>
           </li>
         ))}

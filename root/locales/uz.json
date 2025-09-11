@@ -422,6 +422,18 @@
     }
   },
   "testimonials": {
+    "hafiza_name": "Hurramova Hafiza",
+    "muslima_name": "Normo‘minova Muslima",
+    "gulchehra_name": "Eshnazarova Gulchehra",
+    "abilqul_name": "Azamqulov Abilqul",
+    "bahor_name": "Arslonova Bahor",
+    "manzura_name": "Eshmatova Manzura",
+    "bunyod_name": "Jumanazarov Bunyod",
+    "mansur_name": "Boboyev Mansur",
+
+    "hafiza_comment": "1-izoh uzbekcha...",
+    "muslima_comment": "2-izoh uzbekcha...",
+
     "title": "Humo Med klinikasi mijozlarining fikrlari",
     "item1": "Men Humo Med klinikasiga birinchi marta tashrif buyurdim va juda yaxshi taassurot qoldirdi. Shifokorlar juda diqqatli, har bir savolimga alohida e’tibor bilan javob berishdi. Davolanish jarayonida o‘zimni ishonchli qo‘llarda his qildim. Sharoitlari ham juda qulay va zamonaviy.",
     "item2": "Bu klinika menga juda yoqdi. Normo‘minuva Muslima sifatida ayta olamanki, xodimlarning samimiyligi va xizmat ko‘rsatish madaniyati menga katta taassurot qoldirdi. Har bir bosqich puxta tashkil qilingan, shifokorlar esa tajribali va mehribon. Natijadan juda mamnun qoldim.",
@@ -523,6 +535,21 @@
         "Ikki kishilik joylashuvda alohida xona"
       ],
       "note": ""
+    },
+    "main": "Asosiy",
+    "doctors": "Shifokorlar",
+    "about_us": "Biz haqimizda",
+    "call_center": "Call markazi",
+    "about_clinic": "Klinika haqida",
+    "contacts": "Kontaktlar",
+    "control": "Boshqaruv",
+    "healer": "Shifokor",
+    "news": "Yangiliklar",
+    "news_detail": "Yangilik tafsilotlari",
+    "nav": {
+      "hospital": "Shifoxona"
     }
-  }
+  },
+  "service": "Xizmat",
+  "allservices": "Barcha xizmatlar"
 }

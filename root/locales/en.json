@@ -357,6 +357,16 @@
     }
   },
   "testimonials": {
+    "hafiza_name": "Hafiza Khurramova",
+    "muslima_name": "Muslima Normominova",
+    "gulchehra_name": "Gulchehra Eshnazarova",
+    "abilqul_name": "Abilqul Azamqulov",
+    "bahor_name": "Bahor Arslonova",
+    "manzura_name": "Manzura Eshmatova",
+    "bunyod_name": "Bunyod Jumanazarov",
+    "mansur_name": "Mansur Boboyev",
+    "hafiza_comment": "1st comment in English...",
+    "muslima_comment": "2nd comment in English...",
     "title": "Reviews of Humo Med Clinic Patients",
     "item1": "I visited Humo Med Clinic for the first time and was deeply impressed. The doctors were very attentive and answered all my questions in detail. During the treatment, I felt safe and well taken care of. The conditions are modern and comfortable.",
     "item2": "I really liked this clinic. As a patient, I can say that the sincerity of the staff and their service culture left a huge impression on me. Every stage was well organized, and the doctors were both experienced and kind. I am very satisfied with the result.",
@@ -457,7 +467,22 @@
         "Private room in a double accommodation"
       ],
       "note": ""
+    },
+    "main": "Home",
+    "doctors": "Doctors",
+    "about_us": "About us",
+    "call_center": "Call center",
+    "about_clinic": "About clinic",
+    "contacts": "Contacts",
+    "control": "Control",
+    "healer": "Healer",
+    "news": "News",
+    "news_detail": "News details",
+    "nav": {
+      "hospital": "Hospital"
     }
-  }
+  },
+  "allservices": "All services",
+  "service": "Service"
 }
 

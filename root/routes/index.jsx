@@ -1,4 +1,4 @@
-import 'react';
+import React from 'react';
 
 import NewsDetail from '../constants/NewServiceData.jsx';
 import { appPaths } from '../constants/paths';
@@ -90,7 +90,7 @@ export const publicRoutes = [
     path: appPaths.ALLSERVICES,
     element: <Allservices />,
     layout: MainLayout,
-    breadcrumb: { title: 'services' },
+    breadcrumb: { title: 'allservices' },
   },
   {
     path: appPaths.SERVICE_DETAILS(),

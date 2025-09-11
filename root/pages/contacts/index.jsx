@@ -6,7 +6,7 @@ import ContactForm from '../../components/ContactForm.jsx';
 const MapLocation = () => {
   const { t, i18n } = useTranslation();
 
-  const coords = [41.2156, 69.1845];
+  const coords = [41.211244, 69.203628];
   const zoom = 16;
 
   return (
@@ -46,7 +46,7 @@ const MapLocation = () => {
           <div className='grid grid-cols-1 gap-8 text-left sm:grid-cols-2'>
             <div>
               <h3 className='mb-2 text-lg font-bold'>{t('location.title')}</h3>
-              <p>{t('location.address')}</p>
+              <span>{t('topbar.address')}</span>
               <a
                 href='#'
                 className='mt-2 inline-block text-[var(--success-strong)] hover:underline'

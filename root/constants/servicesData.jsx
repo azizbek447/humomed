@@ -36,7 +36,7 @@ import cardioImage from '../assets/img/Терапия-Кардиология.png
 import hepatologistImage from '../assets/img/Стационар_xonasi.png'; // Gepatolog
 import massageImage from '../assets/img/massageImage.png'; // Massaj
 import neuroImage from '../assets/images/lor.png'; // Nevropatolog
-import operatingRoomImage from '../assets/img/operatingRoomImage.png'; // Опер блок
+import operatingRoomImage from '../assets/images/operatsiyon.png'; // Опер блок
 import rheumatologistImage from '../assets/img/ginrkolig.png'; // Revmatolog
 import pulmonologistImage from '../assets/img/Uzd2.png'; // Pulmonolog
 import allergistImage from '../assets/img/otgolagiya.png'; // Allergolog

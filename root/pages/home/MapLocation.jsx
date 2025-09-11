@@ -18,13 +18,13 @@ const MapLocation = () => {
 
     function init() {
       const map = new window.ymaps.Map(mapRef.current, {
-        center: [41.211383, 69.203701],
+        center: [41.211244, 69.203628],
         zoom: 16,
         controls: ['zoomControl', 'fullscreenControl'],
       });
 
       const placemark = new window.ymaps.Placemark(
-        [41.211383, 69.203701],
+        [41.211244, 69.203628],
         {
           balloonContent: t('map.balloon'),
         },

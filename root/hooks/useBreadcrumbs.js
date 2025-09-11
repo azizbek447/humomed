@@ -1,8 +1,8 @@
-import { useState } from "react";
-import storage from "../utils/storage";
-import { findIndex } from "lodash";
+import { useState } from 'react';
+import storage from '../utils/storage';
+import { findIndex } from 'lodash';
 
-const BREADCRUMB_KEY = "BREADCRUMBS"; // appConfig o‘rniga
+const BREADCRUMB_KEY = 'BREADCRUMBS'; // appConfig o‘rniga
 
 export const useBreadcrumbs = () => {
   const [breadcrumbs, setBreadcrumbs] = useState(() => {

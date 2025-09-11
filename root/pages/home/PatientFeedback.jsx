@@ -1,9 +1,9 @@
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'react';
+// Autoplay uchun alohida css shart emas
 
 import { useTranslation } from 'react-i18next';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import bosh from '../../assets/img/img.png';
@@ -37,7 +37,13 @@ const TestimonialsCarousel = () => {
             el: '.swiper-pagination',
             clickable: true,
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 3000, // 3 soniyada bir marta almashadi
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true, // sichqon kirsa to‘xtab tursin
+          }}
+          loop={true}
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
@@ -46,8 +52,9 @@ const TestimonialsCarousel = () => {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index} className='flex justify-center'>
-              <div className='flex w-full max-w-sm flex-col rounded-2xl bg-[var(--success-strong)] p-6 text-white shadow-md'>
-                <div className='mb-4 flex items-center'>
+              {/* Umumiy balandlik: */}
+              <div className='flex h-64 w-full max-w-sm flex-col rounded-2xl bg-[var(--success-strong)] p-6 text-white shadow-md'>
+                <div className='mb-3 flex items-center'>
                   <div className='mr-4 h-14 w-14 rounded-full bg-white/30 p-1'>
                     <img
                       src={bosh}
@@ -55,14 +62,11 @@ const TestimonialsCarousel = () => {
                       className='h-full w-full rounded-full object-cover'
                     />
                   </div>
-                  <h3 className='text-lg font-semibold'>{item.name}</h3>
+                  <h3 className='line-clamp-1 text-lg font-semibold'>{item.name}</h3>
                 </div>
-                <div
-                  className='scrollbar-thin scrollbar-thumb-white/40 scrollbar-track-white/10 overflow-y-auto pr-2 text-sm leading-relaxed'
-                  style={{ maxHeight: '130px' }}
-                >
-                  {item.comment}
-                </div>
+
+                {/* Matn qismi: skroll YO‘Q, balandlik flex bilan boshqariladi */}
+                <div className='flex-1 overflow-hidden text-sm leading-relaxed'>{item.comment}</div>
               </div>
             </SwiperSlide>
           ))}
